@@ -28,7 +28,7 @@ const Stack = () => {
               return (
                 <div
                   key={item.id}
-                  className="w-[10vw] mx-12 flex items-center justify-center gap-4"
+                  className="mx-12 flex items-center justify-center gap-4"
                 >
                   <h4
                     style={{ color: "#f7fbff" }}
@@ -46,7 +46,7 @@ const Stack = () => {
               return (
                 <div
                   key={item.id}
-                  className="w-[10vw] mx-12 flex items-center justify-center gap-4"
+                  className="mx-12 flex items-center justify-center gap-4"
                 >
                   <h4
                     style={{ color: "#f7fbff" }}
@@ -65,7 +65,7 @@ const Stack = () => {
                 <div
                   key={item.id}
                   style={{ color: "#f7fbff" }}
-                  className="w-[10vw] mx-12 flex items-center justify-center gap-4"
+                  className="mx-12 flex items-center justify-center gap-4"
                 >
                   <h4
                     className="font-custom font-[700]
@@ -83,7 +83,7 @@ const Stack = () => {
                 <div
                   key={item.id}
                   style={{ color: "#f7fbff" }}
-                  className="w-[10vw] mx-12 flex items-center justify-center gap-4"
+                  className="mx-12 flex items-center justify-center gap-4"
                 >
                   <h4
                     className="font-custom font-[700]
@@ -101,7 +101,7 @@ const Stack = () => {
                 <div
                   style={{ color: "#f7fbff" }}
                   key={item.id}
-                  className="w-[10vw] mx-12 flex items-center justify-center gap-4"
+                  className="mx-12 flex items-center justify-center gap-4"
                 >
                   <h4
                     className="font-custom font-[700]

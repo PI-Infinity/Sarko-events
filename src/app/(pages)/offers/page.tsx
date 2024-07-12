@@ -12,12 +12,12 @@ const Offers = () => {
     <div
       style={{ display: loading ? "none" : "flex" }}
       className="w-full h-[95vh]
-    pr-[8%] pt-[100px] desktop:pt-[164px] text-white
+    pr-[8%] pt-[116px] desktop:pt-[164px] text-white
     flex-col items-center
     overflow-y-auto"
     >
       <div className="w-[90%] desktop:w-[70%] pb-32 desktop:px-24 slide-in-top flex flex-col items-center gap-6">
-        <h2 className="text-2xl font-bold mb-4 whitespace-nowrap w-full">
+        <h2 className="text-2xl font-bold mb-2 desktop:mb-4 whitespace-nowrap w-full">
           What I Can Create
         </h2>
         <div className="list-disc list-inside w-full">

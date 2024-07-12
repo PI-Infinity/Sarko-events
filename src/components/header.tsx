@@ -7,6 +7,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { MdList } from "react-icons/md";
 import { CiMenuFries } from "react-icons/ci";
+import Image from "next/image";
 
 const Header = () => {
   // theme
@@ -27,7 +28,7 @@ const Header = () => {
     >
       <ProgressBar
         height="0.2rem"
-        color="#fff"
+        color="#f7fbff"
         options={{ showSpinner: false }}
         shallowRouting
       />
@@ -36,8 +37,9 @@ const Header = () => {
       flex items-center justify-between
       py-4 desktop:py-[20px] px-[5%] border-b-[1.5px] border-b-[rgba(255,255,255,0.1)]"
       >
-        <Link href="/">
-          <h1 className="text-[36px] scale-up text-textlight cursor-pointer whitespace-nowrap">
+        <Link href="/" className="flex items-center gap-4 scale-up ">
+          <Image src="/logo-white.png" width={48} height={48} alt="tp" />
+          <h1 className="text-[32px] text-textlight cursor-pointer whitespace-nowrap">
             TP-Showcase
           </h1>
         </Link>

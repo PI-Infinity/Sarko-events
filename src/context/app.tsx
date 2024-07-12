@@ -26,7 +26,12 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   //** theme */
-  const [theme, setTheme] = useState("");
+  const [theme, setTheme] = useState({
+    id: "blue",
+    gradient: "linear-gradient(black, #001429, #007aff)",
+    fill: "#007aff",
+    text: "#f7fbff",
+  });
 
   useLayoutEffect(() => {
     const localTheme = localStorage.getItem("tp-showcase:theme");
@@ -76,7 +81,7 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
       id: "TypeScript",
     },
     {
-      id: "React",
+      id: "ReactJs",
     },
     {
       id: "NextJs",
@@ -94,10 +99,13 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
       id: "MongoDB",
     },
     {
+      id: "GraphQl",
+    },
+    {
       id: "Socket.io",
     },
     {
-      id: "UI/UX",
+      id: "UI/UX Design",
     },
     {
       id: "TailwindCss",
