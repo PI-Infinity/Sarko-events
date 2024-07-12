@@ -8,13 +8,20 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {
+        circular: ["Circular Std", "sans-serif"],
+        custom: ["sf-pro-text-light", "Inter", "sans-serif"],
+      },
+      screens: {
+        tablet: "640px",
+        desktop: "1280px",
+      },
+      textColor: {
+        textlight: "#f7fbff",
       },
     },
   },
   plugins: [],
 };
+
 export default config;
