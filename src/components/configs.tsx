@@ -31,7 +31,7 @@ const Configs = () => {
         background: "rgba(255,255,255,0.05)",
       }}
     >
-      <div className="flex flex-col items-center gap-3 h-full">
+      <div className="flex flex-col items-center justify-center gap-3 h-full">
         {colors.map((item: any) => {
           return (
             <div

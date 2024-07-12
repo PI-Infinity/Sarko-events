@@ -19,44 +19,34 @@ const Projects = () => {
     {
       id: "Geo - Market",
       description: "Unique georgian online marketplace",
-      img: "/tp.jpg",
+      img: "/geo-market.png",
       link: "https://geomarket.shop",
+    },
+
+    {
+      id: "Wordex",
+      description: "English/Georgian words learning app",
+      img: "/wordex.png",
+      comment: "Mobile only",
+      link: "https://beautyverse.ge",
+      ios: "yes",
+      android: "yes",
     },
     {
       id: "BeautyVerse",
-      description: "Unique georgian online marketplace",
-      img: "/tp.jpg",
+      description: "World of Beauty & Self Care",
+      img: "/beautyverse.jpg",
       comment: "Mobile Only",
       link: "https://beautyverse.ge",
       ios: "yes",
       android: "yes",
     },
     {
-      id: "BeautyVerse1",
-      description: "Unique georgian online marketplace",
-      img: "/tp.jpg",
+      id: "ELAN Georgia",
+      description: "E-commerce system for Beauty Brand",
+      img: "/elangeorgia.jpg",
       comment: "Mobile only",
-      link: "https://beautyverse.ge",
-      ios: "yes",
-      android: "yes",
-    },
-    {
-      id: "BeautyVerse2",
-      description: "Unique georgian online marketplace",
-      img: "/tp.jpg",
-      comment: "Mobile only",
-      link: "https://beautyverse.ge",
-      ios: "yes",
-      android: "yes",
-    },
-    {
-      id: "BeautyVerse3",
-      description: "Unique georgian online marketplace",
-      img: "/tp.jpg",
-      comment: "Mobile only",
-      link: "https://beautyverse.ge",
-      ios: "yes",
-      android: "yes",
+      link: "https://elanofficial.ge",
     },
   ];
   return (
@@ -70,20 +60,27 @@ const Projects = () => {
       {projects?.map((item: any, index: number) => {
         return (
           <div
-            className="w-full  desktop:w-[60%] shadow-md rounded-xl flex
+            className="w-full  desktop:w-[60%] shadow-sm rounded-xl flex
           flex-col gap-4 p-4 bg-[rgba(255,255,255,0.05)]"
             key={index}
           >
             <div className="flex items-center">
-              <Image
-                className="object-cover rounded-xl"
-                src={item.img}
-                width={isMobile ? 100 : 150}
-                height={isMobile ? 100 : 150}
-                alt="img"
-              />
-
               <div
+                className="relative overflow-hidden"
+                style={{
+                  minWidth: isMobile ? "100px" : "150px",
+                  minHeight: isMobile ? "100px" : "150px",
+                }}
+              >
+                <Image
+                  className="object-cover rounded-xl"
+                  src={item.img}
+                  alt="img"
+                  fill
+                />
+              </div>
+              <div
+                style={{ color: theme.text }}
                 className="desktop:h-[150px] h-[100px] p-4 desktop:p-6 rounded-[10px] w-full ml-2 desktop:ml-4 shadow-sm bg-[rgba(255,255,255,0.02)]
             flex items-center justify-between relative"
               >
@@ -107,7 +104,10 @@ const Projects = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="rounded-full py-1 px-3 text-sm font-semibold shadow-sm cursor-pointer hover:opacity-[0.8]"
-                    style={{ background: theme.active, color: theme.text }}
+                    style={{
+                      background: theme.text,
+                      color: theme.secondaryText,
+                    }}
                     href={item.link}
                   >
                     Link
@@ -117,7 +117,10 @@ const Projects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="rounded-full py-1 px-3 text-sm font-semibold shadow-sm cursor-pointer hover:opacity-[0.8]"
-                      style={{ background: theme.active, color: theme.text }}
+                      style={{
+                        background: theme.text,
+                        color: theme.secondaryText,
+                      }}
                       href={item.android}
                     >
                       Android
@@ -128,7 +131,10 @@ const Projects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="rounded-full py-1 px-3 text-sm font-semibold shadow-sm cursor-pointer hover:opacity-[0.8]"
-                      style={{ background: theme.active, color: theme.text }}
+                      style={{
+                        background: theme.text,
+                        color: theme.secondaryText,
+                      }}
                       href={item.ios}
                     >
                       iOS
@@ -143,7 +149,7 @@ const Projects = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full py-1 px-3 text-sm font-semibold shadow-sm cursor-pointer hover:opacity-[0.8]"
-                style={{ background: theme.active, color: theme.text }}
+                style={{ background: theme.text, color: theme.secondaryText }}
                 href={item.link}
               >
                 Link
@@ -153,7 +159,7 @@ const Projects = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-full py-1 px-3 text-sm font-semibold shadow-sm cursor-pointer hover:opacity-[0.8]"
-                  style={{ background: theme.active, color: theme.text }}
+                  style={{ background: theme.text, color: theme.secondaryText }}
                   href={item.android}
                 >
                   Android
@@ -164,7 +170,7 @@ const Projects = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-full py-1 px-3 text-sm font-semibold shadow-sm cursor-pointer hover:opacity-[0.8]"
-                  style={{ background: theme.active, color: theme.text }}
+                  style={{ background: theme.text, color: theme.secondaryText }}
                   href={item.ios}
                 >
                   iOS

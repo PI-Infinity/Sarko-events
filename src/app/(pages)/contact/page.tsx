@@ -5,7 +5,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
 const Contact = () => {
-  const { loading, isMobile } = useAppContext();
+  const { loading, isMobile, theme } = useAppContext();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -17,20 +17,20 @@ const Contact = () => {
       <a
         href="mailto:Tornike.Pirtakhia@Gmail.com"
         className="cursor-pointer flex items center gap-2"
-        style={{ textDecoration: "underline", color: "#f7fbff" }}
+        style={{ textDecoration: "underline", color: theme.text }}
       >
-        <MdEmail size={isMobile ? 24 : 32} />{" "}
-        <h3 className="text-md desktop:text-xl" style={{ color: "#f7fbff" }}>
+        <MdEmail size={isMobile ? 24 : 32} color="" />{" "}
+        <h3 className="text-md desktop:text-xl" style={{ color: theme.text }}>
           Tornike.Pirtakhia@Gmail.com
         </h3>
       </a>
       <a
         href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQHjIwoDMKvnSAAAAZCihvVAHc0X9RgNI5llxtNO8w7l5eNNEruRoBtt1FvTg93soohFdTedci2hbl_OETM_jI2lm6l4sYRk8au_FM1D9nG-2CskdhwZCCCw8FMfTbxrZbSMhug=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Ftornike-pirtakhia-2b9b57201%3Futm_source%3Dshare%26utm_campaign%3Dshare_via%26utm_content%3Dprofile%26utm_medium%3Dios_app"
         className="cursor-pointer flex items center gap-2"
-        style={{ textDecoration: "underline", color: "#f7fbff" }}
+        style={{ textDecoration: "underline", color: theme.text }}
       >
-        <FaLinkedin size={isMobile ? 24 : 32} />
-        <h3 className="text-md desktop:text-xl" style={{ color: "#f7fbff" }}>
+        <FaLinkedin size={isMobile ? 24 : 32} color="" />
+        <h3 className="text-md desktop:text-xl" style={{ color: theme.text }}>
           Tornike Pirtakhia
         </h3>
       </a>

@@ -11,7 +11,7 @@ const Components = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const projects = [
+  const components = [
     {
       id: "Sarko Events",
       img: "/tp.jpg",
@@ -19,44 +19,34 @@ const Components = () => {
     {
       id: "Geo - Market",
       description: "Unique georgian online marketplace",
-      img: "/tp.jpg",
+      img: "/geo-market.png",
       link: "https://geomarket.shop",
+    },
+
+    {
+      id: "Wordex",
+      description: "English/Georgian words learning app",
+      img: "/wordex.png",
+      comment: "Mobile only",
+      link: "https://beautyverse.ge",
+      ios: "yes",
+      android: "yes",
     },
     {
       id: "BeautyVerse",
-      description: "Unique georgian online marketplace",
-      img: "/tp.jpg",
+      description: "World of Beauty & Self Care",
+      img: "/beautyverse.jpg",
       comment: "Mobile Only",
       link: "https://beautyverse.ge",
       ios: "yes",
       android: "yes",
     },
     {
-      id: "BeautyVerse1",
-      description: "Unique georgian online marketplace",
-      img: "/tp.jpg",
+      id: "ELAN Georgia",
+      description: "E-commerce system for Beauty Brand",
+      img: "/elangeorgia.jpg",
       comment: "Mobile only",
-      link: "https://beautyverse.ge",
-      ios: "yes",
-      android: "yes",
-    },
-    {
-      id: "BeautyVerse2",
-      description: "Unique georgian online marketplace",
-      img: "/tp.jpg",
-      comment: "Mobile only",
-      link: "https://beautyverse.ge",
-      ios: "yes",
-      android: "yes",
-    },
-    {
-      id: "BeautyVerse3",
-      description: "Unique georgian online marketplace",
-      img: "/tp.jpg",
-      comment: "Mobile only",
-      link: "https://beautyverse.ge",
-      ios: "yes",
-      android: "yes",
+      link: "https://elanofficial.ge",
     },
   ];
   return (
@@ -67,10 +57,10 @@ const Components = () => {
       flex-col items-center gap-4
       overflow-y-auto pb-[140px] px-4"
     >
-      {projects?.map((item: any, index: number) => {
+      {components?.map((item: any, index: number) => {
         return (
           <div
-            className="w-full  desktop:w-[60%] shadow-md rounded-xl flex
+            className="w-full  desktop:w-[60%] shadow-sm rounded-xl flex
           flex-col gap-4 p-4 bg-[rgba(255,255,255,0.05)]"
             key={index}
           >
@@ -84,6 +74,7 @@ const Components = () => {
               />
 
               <div
+                style={{ color: theme.text }}
                 className="desktop:h-[150px] h-[100px] p-4 desktop:p-6 rounded-[10px] w-full ml-2 desktop:ml-4 shadow-sm bg-[rgba(255,255,255,0.02)]
             flex items-center justify-between relative"
               >
@@ -107,7 +98,10 @@ const Components = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="rounded-full py-1 px-3 text-sm font-semibold shadow-sm cursor-pointer hover:opacity-[0.8]"
-                    style={{ background: theme.fill, color: theme.text }}
+                    style={{
+                      background: theme.text,
+                      color: theme.secondaryText,
+                    }}
                     href={item.link}
                   >
                     Link
@@ -117,7 +111,10 @@ const Components = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="rounded-full py-1 px-3 text-sm font-semibold shadow-sm cursor-pointer hover:opacity-[0.8]"
-                      style={{ background: theme.fill, color: theme.text }}
+                      style={{
+                        background: theme.text,
+                        color: theme.secondaryText,
+                      }}
                       href={item.android}
                     >
                       Android
@@ -128,7 +125,10 @@ const Components = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="rounded-full py-1 px-3 text-sm font-semibold shadow-sm cursor-pointer hover:opacity-[0.8]"
-                      style={{ background: theme.fill, color: theme.text }}
+                      style={{
+                        background: theme.text,
+                        color: theme.secondaryText,
+                      }}
                       href={item.ios}
                     >
                       iOS
@@ -143,7 +143,7 @@ const Components = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full py-1 px-3 text-sm font-semibold shadow-sm cursor-pointer hover:opacity-[0.8]"
-                style={{ background: theme.fill, color: theme.text }}
+                style={{ background: theme.text, color: theme.secondaryText }}
                 href={item.link}
               >
                 Link
@@ -153,7 +153,7 @@ const Components = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-full py-1 px-3 text-sm font-semibold shadow-sm cursor-pointer hover:opacity-[0.8]"
-                  style={{ background: theme.fill, color: theme.text }}
+                  style={{ background: theme.text, color: theme.secondaryText }}
                   href={item.android}
                 >
                   Android
@@ -164,7 +164,7 @@ const Components = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-full py-1 px-3 text-sm font-semibold shadow-sm cursor-pointer hover:opacity-[0.8]"
-                  style={{ background: theme.fill, color: theme.text }}
+                  style={{ background: theme.text, color: theme.secondaryText }}
                   href={item.ios}
                 >
                   iOS

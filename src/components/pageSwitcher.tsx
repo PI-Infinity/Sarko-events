@@ -25,12 +25,12 @@ const PageSwitcher = () => {
               pathname === "/contact"
                 ? "/skills"
                 : pathname === "/skills"
-                ? "/components"
-                : pathname === "/components"
+                ? "/uiuxcomponents"
+                : pathname === "/uiuxcomponents"
                 ? "/projects"
                 : pathname === "/projects"
                 ? "/offers"
-                : "/about"
+                : "/"
             }
             style={{
               backdropFilter: "blur(10px)",
@@ -45,7 +45,7 @@ const PageSwitcher = () => {
           </Link>
         </div>
       )}
-      {pathname !== "contact" && (
+      {pathname !== "/contact" && (
         <div
           className={`absolute ${
             pathname === "/" ? "right-[15%]" : "right-[5%]"
@@ -56,13 +56,13 @@ const PageSwitcher = () => {
         >
           <Link
             href={
-              pathname === "about"
+              pathname === "/"
                 ? "/offers"
-                : pathname === "offers"
+                : pathname === "/offers"
                 ? "/projects"
-                : pathname === "projects"
-                ? "/components"
-                : pathname === "components"
+                : pathname === "/projects"
+                ? "/uiuxcomponents"
+                : pathname === "/uiuxcomponents"
                 ? "/skills"
                 : "/contact"
             }

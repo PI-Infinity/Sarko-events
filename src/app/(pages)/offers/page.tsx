@@ -26,19 +26,19 @@ const Offers = () => {
             <div className="font-custom ml-4 desktop:ml-8 list-circle list-inside">
               <div className="flex gap-2">
                 <div>
-                  <MdDone color={theme.active} size={24} />
+                  <MdDone color={theme.text} size={24} />
                 </div>
                 Online stores for selling products and services.
               </div>
               <div className="flex gap-2">
                 <div>
-                  <MdDone color={theme.active} size={24} />
+                  <MdDone color={theme.text} size={24} />
                 </div>
                 Marketplaces connecting multiple sellers with buyers.
               </div>
               <div className="flex gap-2">
                 <div>
-                  <MdDone color={theme.active} size={24} />
+                  <MdDone color={theme.text} size={24} />
                 </div>
                 Custom shopping carts and payment gateways.
               </div>
@@ -49,20 +49,20 @@ const Offers = () => {
             <div className="font-custom ml-4 desktop:ml-8 list-circle list-inside">
               <div className="flex gap-2">
                 <div>
-                  <MdDone color={theme.active} size={24} />
+                  <MdDone color={theme.text} size={24} />
                 </div>
                 Social networking sites with user profiles, friend connections,
                 and news feeds.
               </div>
               <div className="flex gap-2">
                 <div>
-                  <MdDone color={theme.active} size={24} />
+                  <MdDone color={theme.text} size={24} />
                 </div>
                 Messaging and chat applications with real-time communication.
               </div>
               <div className="flex gap-2">
                 <div>
-                  <MdDone color={theme.active} size={24} />
+                  <MdDone color={theme.text} size={24} />
                 </div>
                 Content sharing platforms for images, videos, and blogs.
               </div>
@@ -73,14 +73,14 @@ const Offers = () => {
             <div className="font-custom ml-4 desktop:ml-8 list-circle list-inside">
               <div className="flex gap-2">
                 <div>
-                  <MdDone color={theme.active} size={24} />
+                  <MdDone color={theme.text} size={24} />
                 </div>
                 Prototype versions of products to validate ideas and gather user
                 feedback.
               </div>
               <div className="flex gap-2">
                 <div>
-                  <MdDone color={theme.active} size={24} />
+                  <MdDone color={theme.text} size={24} />
                 </div>
                 Basic functional versions of complex applications to attract
                 initial users and investors.
@@ -92,14 +92,14 @@ const Offers = () => {
             <div className="font-custom ml-4 desktop:ml-8 list-circle list-inside">
               <div className="flex gap-2">
                 <div>
-                  <MdDone color={theme.active} size={24} />
+                  <MdDone color={theme.text} size={24} />
                 </div>
                 Tools for managing customer interactions, sales processes, and
                 support tickets.
               </div>
               <div className="flex gap-2">
                 <div>
-                  <MdDone color={theme.active} size={24} />
+                  <MdDone color={theme.text} size={24} />
                 </div>
                 Integration with marketing automation and analytics tools.
               </div>
@@ -110,13 +110,13 @@ const Offers = () => {
             <div className="font-custom ml-4 desktop:ml-8 list-circle list-inside">
               <div className="flex gap-2">
                 <div>
-                  <MdDone color={theme.active} size={24} />
+                  <MdDone color={theme.text} size={24} />
                 </div>
                 Platforms for managing and publishing digital content.
               </div>
               <div className="flex gap-2">
                 <div>
-                  <MdDone color={theme.active} size={24} />
+                  <MdDone color={theme.text} size={24} />
                 </div>
                 Customizable templates and plugins for various content types.
               </div>
@@ -127,13 +127,13 @@ const Offers = () => {
             <div className="font-custom ml-4 desktop:ml-8 list-circle list-inside">
               <div className="flex gap-2">
                 <div>
-                  <MdDone color={theme.active} size={24} />
+                  <MdDone color={theme.text} size={24} />
                 </div>
                 Centralized access points for information and services.
               </div>
               <div className="flex gap-2">
                 <div>
-                  <MdDone color={theme.active} size={24} />
+                  <MdDone color={theme.text} size={24} />
                 </div>
                 User dashboards with personalized content and tools.
               </div>
@@ -144,14 +144,14 @@ const Offers = () => {
             <div className="font-custom ml-4 desktop:ml-8 list-circle list-inside">
               <div className="flex gap-2">
                 <div>
-                  <MdDone color={theme.active} size={24} />
+                  <MdDone color={theme.text} size={24} />
                 </div>
                 Software-as-a-Service platforms for delivering software over the
                 internet.
               </div>
               <div className="flex gap-2">
                 <div>
-                  <MdDone color={theme.active} size={24} />
+                  <MdDone color={theme.text} size={24} />
                 </div>
                 Subscription-based models with multi-tenant architecture.
               </div>
@@ -162,14 +162,14 @@ const Offers = () => {
             <div className="font-custom ml-4 desktop:ml-8 list-circle list-inside">
               <div className="flex gap-2">
                 <div>
-                  <MdDone color={theme.active} size={24} />
+                  <MdDone color={theme.text} size={24} />
                 </div>
                 Internal tools for managing business operations, such as HR,
                 finance, and project management.
               </div>
               <div className="flex gap-2">
                 <div>
-                  <MdDone color={theme.active} size={24} />
+                  <MdDone color={theme.text} size={24} />
                 </div>
                 Integration with existing enterprise systems and databases.
               </div>
@@ -180,14 +180,14 @@ const Offers = () => {
             <div className="font-custom ml-4 desktop:ml-8 list-circle list-inside">
               <div className="flex gap-2">
                 <div>
-                  <MdDone color={theme.active} size={24} />
+                  <MdDone color={theme.text} size={24} />
                 </div>
                 Applications with real-time updates, such as live chat,
                 collaborative editing, and data visualization.
               </div>
               <div className="flex gap-2">
                 <div>
-                  <MdDone color={theme.active} size={24} />
+                  <MdDone color={theme.text} size={24} />
                 </div>
                 Use of WebSockets and other technologies for real-time
                 communication.
@@ -199,14 +199,14 @@ const Offers = () => {
             <div className="font-custom ml-4 desktop:ml-8 list-circle list-inside">
               <div className="flex gap-2">
                 <div>
-                  <MdDone color={theme.active} size={24} />
+                  <MdDone color={theme.text} size={24} />
                 </div>
                 Online learning management systems (LMS) for courses, quizzes,
                 and assignments.
               </div>
               <div className="flex gap-2">
                 <div>
-                  <MdDone color={theme.active} size={24} />
+                  <MdDone color={theme.text} size={24} />
                 </div>
                 Virtual classrooms and video conferencing tools.
               </div>
@@ -217,13 +217,13 @@ const Offers = () => {
             <div className="font-custom ml-4 desktop:ml-8 list-circle list-inside">
               <div className="flex gap-2">
                 <div>
-                  <MdDone color={theme.active} size={24} />
+                  <MdDone color={theme.text} size={24} />
                 </div>
                 Cross-platform mobile apps using frameworks like React Native.
               </div>
               <div className="flex gap-2">
                 <div>
-                  <MdDone color={theme.active} size={24} />
+                  <MdDone color={theme.text} size={24} />
                 </div>
                 Integration with native device features and third-party APIs.
               </div>
@@ -234,13 +234,13 @@ const Offers = () => {
             <div className="font-custom ml-4 desktop:ml-8 list-circle list-inside">
               <div className="flex gap-2">
                 <div>
-                  <MdDone color={theme.active} size={24} />
+                  <MdDone color={theme.text} size={24} />
                 </div>
                 RESTfdiv and GraphQL APIs for backend services.
               </div>
               <div className="flex gap-2">
                 <div>
-                  <MdDone color={theme.active} size={24} />
+                  <MdDone color={theme.text} size={24} />
                 </div>
                 Microservices architecture for scalable and modular
                 applications.
@@ -252,16 +252,15 @@ const Offers = () => {
             <div className="font-custom ml-4 desktop:ml-8 list-circle list-inside">
               <div className="flex gap-2">
                 <div>
-                  <MdDone color={theme.active} size={24} />
+                  <MdDone color={theme.text} size={24} />
                 </div>
                 Responsive web applications with dynamic user interfaces.
               </div>
               <div className="flex gap-2">
                 <div>
-                  <MdDone color={theme.active} size={24} />
+                  <MdDone color={theme.text} size={24} />
                 </div>
-                Use of modern JavaScript frameworks like React, Angular, or
-                Vue.js.
+                Use of modern JavaScript framework React/NextJs.
               </div>
             </div>
           </div>
@@ -270,14 +269,14 @@ const Offers = () => {
             <div className="font-custom ml-4 desktop:ml-8 list-circle list-inside">
               <div className="flex gap-2">
                 <div>
-                  <MdDone color={theme.active} size={24} />
+                  <MdDone color={theme.text} size={24} />
                 </div>
                 Web applications with offline capabilities and native app-like
                 experiences.
               </div>
               <div className="flex gap-2">
                 <div>
-                  <MdDone color={theme.active} size={24} />
+                  <MdDone color={theme.text} size={24} />
                 </div>
                 Use of service workers and manifest files for enhanced
                 performance.
@@ -289,14 +288,14 @@ const Offers = () => {
             <div className="font-custom ml-4 desktop:ml-8 list-circle list-inside">
               <div className="flex gap-2">
                 <div>
-                  <MdDone color={theme.active} size={24} />
+                  <MdDone color={theme.text} size={24} />
                 </div>
                 Dashboards and analytics platforms for visualizing and analyzing
                 data.
               </div>
               <div className="flex gap-2">
                 <div>
-                  <MdDone color={theme.active} size={24} />
+                  <MdDone color={theme.text} size={24} />
                 </div>
                 Integration with big data technologies and databases.
               </div>

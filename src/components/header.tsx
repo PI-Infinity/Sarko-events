@@ -11,7 +11,8 @@ import Image from "next/image";
 
 const Header = () => {
   // theme
-  const { theme, loading, menuItems, setMobileMenu } = useAppContext();
+  const { theme, loading, menuItems, setMobileMenu, isMobile } =
+    useAppContext();
 
   const pathname = usePathname();
 
@@ -37,14 +38,22 @@ const Header = () => {
       flex items-center justify-between
       py-4 desktop:py-[20px] px-[5%] border-b-[1.5px] border-b-[rgba(255,255,255,0.1)]"
       >
-        <Link href="/" className="flex items-center gap-4 scale-up ">
-          <Image
-            src="/logo-white.png"
-            width={48}
-            height={48}
-            alt="tp"
-            color={theme.text}
-          />
+        <Link href="/" className="flex items-center gap-4 scale-up">
+          <div
+            className={`${
+              theme.id === "light" &&
+              "h-[48px] w-[48px] flex items-center justify-center rounded-full"
+            }`}
+            style={{ background: theme.id === "light" ? theme.text : "none" }}
+          >
+            <Image
+              src="/logo-white.png"
+              width={theme.id === "light" ? 36 : 42}
+              height={theme.id === "light" ? 36 : 42}
+              alt="tp"
+              color={theme.text}
+            />
+          </div>
           <h1
             style={{ color: theme.text }}
             className="text-[32px] text-textlight cursor-pointer whitespace-nowrap"

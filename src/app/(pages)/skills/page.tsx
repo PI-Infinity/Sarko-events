@@ -16,8 +16,11 @@ const Skills = () => {
       {skills.map((item: any) => {
         return (
           <div key={item.id} className="mx-12 flex items-center gap-4">
-            <h4 className="font-custom font-[700] flex items-center gap-2 text-md text-textlight whitespace-nowrap">
-              <MdDone color={theme.fill} size={24} />
+            <h4
+              style={{ color: theme.text }}
+              className="font-custom font-[700] flex items-center gap-2 text-md text-textlight whitespace-nowrap"
+            >
+              <MdDone color={theme.text} size={24} />
               {item.id}
             </h4>
           </div>
