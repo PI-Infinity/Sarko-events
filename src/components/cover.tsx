@@ -13,6 +13,7 @@ const Cover = () => {
 
   return (
     <div
+      style={{ color: theme.text }}
       className="overflow-y-auto h-[85vh] w-[100vw] slide-in-right text-textlight
     desktop:mt-[100px] pt-[116px] pb-12 flex flex-col relative pl-[6.5%]"
     >
@@ -45,12 +46,12 @@ const Cover = () => {
       </p>
       <Link
         href="/offers"
-        className="h-12 w-[70vw] desktop:w-80 mt-12 flex items-center gap-4"
+        className="h-12 w-[70vw] desktop:w-80 mt-12 flex items-center gap-4 shadow-md rounded-full"
       >
         <Button
           title="Offers"
-          color={theme.text}
-          background={theme.fill}
+          color={theme.secondaryText}
+          background={theme.btn}
           icon={<IoMdArrowDropright size={24} />}
           onClick={() => undefined}
         />

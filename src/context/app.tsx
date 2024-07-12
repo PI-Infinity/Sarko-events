@@ -28,9 +28,10 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
   //** theme */
   const [theme, setTheme] = useState({
     id: "blue",
-    gradient: "linear-gradient(black, #001429, #007aff)",
+    gradient: "linear-gradient(#001429, #007aff)",
     fill: "#007aff",
     text: "#f7fbff",
+    secondaryText: "",
   });
 
   useLayoutEffect(() => {
@@ -174,16 +175,6 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
   // mobile menu state
   const [mobileMenu, setMobileMenu] = useState(false);
 
-  useEffect(() => {
-    if (isMobile) {
-      if (mobileMenu) {
-        document.body.style.overflowY = "hidden";
-      } else {
-        document.body.style.overflowY = "auto";
-      }
-    }
-  }, [mobileMenu]);
-
   return (
     <>
       <script
@@ -199,6 +190,7 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
           `,
         }}
       />
+
       <AppContext.Provider
         value={{
           theme,
@@ -212,6 +204,7 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
           mobileMenu,
           setMobileMenu,
           isMobile,
+          colors,
         }}
       >
         {children}
@@ -219,3 +212,132 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
     </>
   );
 };
+
+const colors = [
+  {
+    id: "blue",
+    gradient: "linear-gradient(#001429, #007aff)",
+    fill: "#001429",
+    active: "#007aff",
+    btn: "#f7fbff",
+    text: "#f7fbff",
+    secondaryText: "#001429",
+  },
+  {
+    id: "red",
+    gradient: "linear-gradient(#001429, #e42f22)",
+    fill: "#001429",
+    active: "#e42f22",
+    btn: "#f7fbff",
+    text: "#f7fbff",
+    secondaryText: "#001429",
+  },
+  {
+    id: "black",
+    gradient: "linear-gradient(#000, #333)",
+    fill: "#111",
+    active: "#333",
+    btn: "#f7fbff",
+    text: "#f7fbff",
+    secondaryText: "#001429",
+  },
+  {
+    id: "light",
+    gradient: "linear-gradient(#e5e5e5, #f1f1f1)",
+    fill: "#fff",
+    active: "#f1f1f1",
+    btn: "#111",
+    text: "#111",
+    secondaryText: "#f1f1f1",
+  },
+  {
+    id: "green",
+    gradient: "linear-gradient(#001429, #47c232)",
+    fill: "#001429",
+    active: "#47c232",
+    btn: "#f7fbff",
+    text: "#f7fbff",
+    secondaryText: "#001429",
+  },
+  {
+    id: "white",
+    gradient: "linear-gradient(#001429, #f7fbff)",
+    fill: "#001429",
+    active: "#f7fbff",
+    btn: "#f7fbff",
+    text: "#f7fbff",
+    secondaryText: "#001429",
+  },
+  {
+    id: "yellow",
+    gradient: "linear-gradient(#001429, #ffda4a)",
+    fill: "#001429",
+    active: "#ffda4a",
+    btn: "#f7fbff",
+    text: "#f7fbff",
+    secondaryText: "#001429",
+  },
+  {
+    id: "blue-2",
+    gradient: "linear-gradient(#6a11cb, #2575fc)",
+    fill: "#6a11cb",
+    active: "#2575fc",
+    btn: "#f7fbff",
+    text: "#f7fbff",
+    secondaryText: "#6a11cb",
+  },
+  {
+    id: "red-orange",
+    gradient: "linear-gradient(#ee0979, #ff6a00)",
+    fill: "#ee0979",
+    active: "#ff6a00",
+    btn: "#f7fbff",
+    text: "#f7fbff",
+    secondaryText: "#ee0979",
+  },
+  {
+    id: "blue-light",
+    gradient: "linear-gradient(#0072ff, #00c6ff)",
+    fill: "#0072ff",
+    active: "#00c6ff",
+    btn: "#f7fbff",
+    text: "#f7fbff",
+    secondaryText: "#0072ff",
+  },
+  {
+    id: "red-orange-dark",
+    gradient: "linear-gradient(#f85032, #e73827)",
+    fill: "#f85032",
+    active: "#e73827",
+    btn: "#f7fbff",
+    text: "#f7fbff",
+    secondaryText: "#f85032",
+  },
+  {
+    id: "pink-light",
+    gradient: "linear-gradient(#ff0844, #ffb199)",
+    fill: "#ff0844",
+    active: "#ffb199",
+    btn: "#f7fbff",
+    text: "#f7fbff",
+    secondaryText: "#ff0844",
+  },
+  {
+    id: "blue-dark",
+    gradient: "linear-gradient(#2b5876, #4e4376)",
+    fill: "#2b5876",
+    active: "#2b5876",
+    btn: "#f7fbff",
+    text: "#f7fbff",
+    secondaryText: "#4e4376",
+  },
+  {
+    id: "purple-light",
+    gradient: "linear-gradient(#834d9b, #d04ed6)",
+    fill: "#834d9b",
+    active: "#d04ed6",
+    btn: "#f7fbff",
+    text: "#f7fbff",
+    secondaryText: "#834d9b",
+  },
+];

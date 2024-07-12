@@ -27,7 +27,7 @@ const Header = () => {
       }}
     >
       <ProgressBar
-        height="0.2rem"
+        height="0.25rem"
         color="#f7fbff"
         options={{ showSpinner: false }}
         shallowRouting
@@ -38,8 +38,17 @@ const Header = () => {
       py-4 desktop:py-[20px] px-[5%] border-b-[1.5px] border-b-[rgba(255,255,255,0.1)]"
       >
         <Link href="/" className="flex items-center gap-4 scale-up ">
-          <Image src="/logo-white.png" width={48} height={48} alt="tp" />
-          <h1 className="text-[32px] text-textlight cursor-pointer whitespace-nowrap">
+          <Image
+            src="/logo-white.png"
+            width={48}
+            height={48}
+            alt="tp"
+            color={theme.text}
+          />
+          <h1
+            style={{ color: theme.text }}
+            className="text-[32px] text-textlight cursor-pointer whitespace-nowrap"
+          >
             TP-Showcase
           </h1>
         </Link>
@@ -50,13 +59,12 @@ const Header = () => {
               <Link href={item.path} key={item.path}>
                 <h4
                   style={{
-                    color: pathname === item.path ? theme.fill : "inherit",
-                    borderColor:
-                      pathname === item.path ? theme.fill : "inherit",
+                    color: theme.text,
+                    borderColor: theme.text,
                     transition: "ease-in 200ms",
                   }}
                   className={`cursor-pointer hover:opacity-[1] ${
-                    pathname === item.path ? "opacity-1" : "opacity-[0.7]"
+                    pathname === item.path ? "opacity-1" : "opacity-[0.5]"
                   }`}
                 >
                   {item.label}
@@ -66,7 +74,7 @@ const Header = () => {
           })}
         </div>
         <div className="desktop:hidden" onClick={() => setMobileMenu(true)}>
-          <CiMenuFries color={theme.fill} size={28} />
+          <CiMenuFries color={theme.text} size={28} />
         </div>
       </header>
     </HeadRoom>

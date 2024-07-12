@@ -33,19 +33,34 @@ body {
 
 @keyframes slide {
   0% {
-    transform: translateX(0%);
+    transform: translateX(40%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-105%);
+  }
+}
+@keyframes slideMobile {
+  0% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(-105%);
   }
 }
 
 .logos {
-  animation: slide 300s linear infinite;
+  animation: slide 30s linear infinite;
+}
+
+@media (max-width: 768px) {
+  .logos {
+    animation: slideMobile 30s linear infinite;
+  }
 }
 
 .logos-slide {
   display: flex;
+  width: 100%;
 }
 
 /* from bottom to top*/

@@ -107,7 +107,7 @@ const Projects = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="rounded-full py-1 px-3 text-sm font-semibold shadow-sm cursor-pointer hover:opacity-[0.8]"
-                    style={{ background: theme.fill, color: theme.text }}
+                    style={{ background: theme.active, color: theme.text }}
                     href={item.link}
                   >
                     Link
@@ -117,7 +117,7 @@ const Projects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="rounded-full py-1 px-3 text-sm font-semibold shadow-sm cursor-pointer hover:opacity-[0.8]"
-                      style={{ background: theme.fill, color: theme.text }}
+                      style={{ background: theme.active, color: theme.text }}
                       href={item.android}
                     >
                       Android
@@ -128,7 +128,7 @@ const Projects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="rounded-full py-1 px-3 text-sm font-semibold shadow-sm cursor-pointer hover:opacity-[0.8]"
-                      style={{ background: theme.fill, color: theme.text }}
+                      style={{ background: theme.active, color: theme.text }}
                       href={item.ios}
                     >
                       iOS
@@ -143,7 +143,7 @@ const Projects = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full py-1 px-3 text-sm font-semibold shadow-sm cursor-pointer hover:opacity-[0.8]"
-                style={{ background: theme.fill, color: theme.text }}
+                style={{ background: theme.active, color: theme.text }}
                 href={item.link}
               >
                 Link
@@ -153,7 +153,7 @@ const Projects = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-full py-1 px-3 text-sm font-semibold shadow-sm cursor-pointer hover:opacity-[0.8]"
-                  style={{ background: theme.fill, color: theme.text }}
+                  style={{ background: theme.active, color: theme.text }}
                   href={item.android}
                 >
                   Android
@@ -164,7 +164,7 @@ const Projects = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-full py-1 px-3 text-sm font-semibold shadow-sm cursor-pointer hover:opacity-[0.8]"
-                  style={{ background: theme.fill, color: theme.text }}
+                  style={{ background: theme.active, color: theme.text }}
                   href={item.ios}
                 >
                   iOS

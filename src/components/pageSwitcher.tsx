@@ -41,7 +41,7 @@ const PageSwitcher = () => {
             className="w-16 h-16 rounded-full border-[1px] border-[rgba(255,255,255,0.1)]
       shadow-md flex items-center justify-center cursor-pointer hover:opacity-[0.8]"
           >
-            <IoMdArrowDropleft size={40} color={theme.fill} />
+            <IoMdArrowDropleft size={40} color={theme.text} />
           </Link>
         </div>
       )}
@@ -75,7 +75,7 @@ const PageSwitcher = () => {
             className="w-16 h-16 rounded-full border-[1px] border-[rgba(255,255,255,0.1)]
       shadow-md flex items-center justify-center cursor-pointer hover:opacity-[0.8]"
           >
-            <IoMdArrowDropright size={40} color={theme.fill} />
+            <IoMdArrowDropright size={40} color={theme.text} />
           </Link>
         </div>
       )}

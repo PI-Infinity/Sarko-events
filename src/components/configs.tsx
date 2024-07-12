@@ -6,42 +6,10 @@ import ReactCountryFlag from "react-country-flag";
 
 const Configs = () => {
   const pathname = usePathname();
-  // colors
-  const colors = [
-    {
-      id: "blue",
-      gradient: "linear-gradient(black, #001429, #007aff)",
-      fill: "#007aff",
-      text: "#f7fbff",
-    },
-    {
-      id: "red",
-      gradient: "linear-gradient(black, #001429, #e42f22)",
-      fill: "#e42f22",
-      text: "#f7fbff",
-    },
-    {
-      id: "green",
-      gradient: "linear-gradient(black, #001429, #47c232)",
-      fill: "#47c232",
-      text: "#f7fbff",
-    },
-    {
-      id: "white",
-      gradient: "linear-gradient(black, #001429, #f7fbff)",
-      fill: "#f7fbff",
-      text: "#111",
-    },
-    {
-      id: "yellow",
-      gradient: "linear-gradient(black, #001429, #ffda4a)",
-      fill: "#ffda4a",
-      text: "#111",
-    },
-  ];
 
   // app context
-  const { theme, setTheme, loading, language, setLanguage } = useAppContext();
+  const { theme, setTheme, loading, language, setLanguage, colors } =
+    useAppContext();
 
   const handleChangeTheme = (value: any) => {
     setTheme(value);
@@ -69,7 +37,7 @@ const Configs = () => {
             <div
               onClick={() => handleChangeTheme(item)}
               key={item.id}
-              style={{ background: item.fill }}
+              style={{ background: item.active }}
               className={`scale-up w-7 h-7 rounded-full
 ${
   theme.id === item.id && "border-[2px]"
@@ -78,7 +46,7 @@ ${
           );
         })}
       </div>
-      <div className="flex flex-col items-center gap-2">
+      {/* <div className="flex flex-col items-center gap-2">
         <div
           className={` ${
             language !== "en"
@@ -115,7 +83,7 @@ ${
             aria-label="Georgia"
           />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

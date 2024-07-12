@@ -8,7 +8,10 @@ const Stack = () => {
   const { loading, theme, skills } = useAppContext();
 
   return (
-    <div className="flex-1 w-full flex items-center justify-center gap-2">
+    <div
+      style={{ color: theme.text }}
+      className="flex-1 w-full flex items-center justify-center gap-2"
+    >
       {/* <PageSwitcher /> */}
       <div
         style={{
@@ -31,81 +34,8 @@ const Stack = () => {
                   className="mx-12 flex items-center justify-center gap-4"
                 >
                   <h4
-                    style={{ color: "#f7fbff" }}
                     className="font-custom font-[700]
               text-md whitespace-nowrap"
-                  >
-                    {item.id}
-                  </h4>
-                </div>
-              );
-            })}
-          </div>
-          <div className="logos-slide">
-            {skills.map((item: any) => {
-              return (
-                <div
-                  key={item.id}
-                  className="mx-12 flex items-center justify-center gap-4"
-                >
-                  <h4
-                    style={{ color: "#f7fbff" }}
-                    className="font-custom font-[700]
-              text-md whitespace-nowrap"
-                  >
-                    {item.id}
-                  </h4>
-                </div>
-              );
-            })}
-          </div>
-          <div className="logos-slide">
-            {skills.map((item: any) => {
-              return (
-                <div
-                  key={item.id}
-                  style={{ color: "#f7fbff" }}
-                  className="mx-12 flex items-center justify-center gap-4"
-                >
-                  <h4
-                    className="font-custom font-[700]
-              text-md whitespace-nowrap"
-                  >
-                    {item.id}
-                  </h4>
-                </div>
-              );
-            })}
-          </div>
-          <div className="logos-slide">
-            {skills.map((item: any) => {
-              return (
-                <div
-                  key={item.id}
-                  style={{ color: "#f7fbff" }}
-                  className="mx-12 flex items-center justify-center gap-4"
-                >
-                  <h4
-                    className="font-custom font-[700]
-              text-md whitespace-nowrap"
-                  >
-                    {item.id}
-                  </h4>
-                </div>
-              );
-            })}
-          </div>
-          <div className="logos-slide">
-            {skills.map((item: any) => {
-              return (
-                <div
-                  style={{ color: "#f7fbff" }}
-                  key={item.id}
-                  className="mx-12 flex items-center justify-center gap-4"
-                >
-                  <h4
-                    className="font-custom font-[700]
-              text-md text-textlight whitespace-nowrap"
                   >
                     {item.id}
                   </h4>
