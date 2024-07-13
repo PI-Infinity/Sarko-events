@@ -26,7 +26,7 @@ const MobileMenu = () => {
             <Link href={item.path} key={item.path}>
               <h4
                 style={{
-                  color: pathname === item.path ? theme.active : "inherit",
+                  color: pathname === item.path ? theme.active : theme.text,
                   transition: "ease-in 200ms",
                 }}
                 className={`cursor-pointer hover:opacity-[1] ${

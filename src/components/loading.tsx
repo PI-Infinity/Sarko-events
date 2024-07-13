@@ -8,15 +8,15 @@ export const Loading = () => {
   return (
     <div
       style={{ display: loading ? "flex" : "none" }}
-      className="text-textlight fixed w-full z-40 h-full flex-col items-center justify-center gap-4"
+      className="fixed w-full z-40 h-full flex-col items-center justify-center gap-4"
     >
-      <h1 style={{ color: theme.text }} className="text-[20px] text-textlight">
+      <h1 style={{ color: theme.text }} className="text-[20px]">
         TP-Showcase
       </h1>
       <BarLoader
         height={6}
         width={200}
-        color={theme.text}
+        color={theme.active}
         className="rounded-full"
       />
     </div>
