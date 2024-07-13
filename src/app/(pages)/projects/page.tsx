@@ -58,6 +58,7 @@ const Projects = () => {
       link: "https://elanofficial.ge",
     },
   ];
+
   return (
     <div
       style={{ display: loading ? "none" : "flex" }}
@@ -69,8 +70,9 @@ const Projects = () => {
       {projects?.map((item: any, index: number) => {
         return (
           <div
+            style={{ background: theme.background2 }}
             className="w-full  desktop:w-[60%] shadow-sm rounded-xl flex
-          flex-col gap-4 p-4 bg-[rgba(255,255,255,0.05)]"
+          flex-col gap-4 p-4"
             key={index}
           >
             <div className="flex items-center">
@@ -93,7 +95,7 @@ const Projects = () => {
               </div>
               <div
                 style={{ color: theme.text }}
-                className="desktop:h-[150px] h-[100px] p-4 desktop:p-6 rounded-[10px] w-full ml-2 desktop:ml-4 shadow-sm bg-[rgba(255,255,255,0.02)]
+                className="desktop:h-[150px] h-[100px] p-4 desktop:p-6 rounded-[10px] w-full ml-2 desktop:ml-4 shadow-sm border-[1.5px] border-[rgba(255,255,255,0.02)]
             flex items-center justify-between relative"
               >
                 {item.comment === "Mobile only" && !isMobile && (

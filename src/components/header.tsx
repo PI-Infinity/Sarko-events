@@ -18,7 +18,7 @@ const Header = () => {
     <HeadRoom
       downTolerance={10}
       upTolerance={10}
-      className="fixed w-full z-10"
+      className="fixed w-full z-10 shadow-sm"
       style={{
         display: loading || pathname.includes("/projects/") ? "none" : "flex",
         backdropFilter: "blur(10px)",
@@ -35,7 +35,7 @@ const Header = () => {
       <header
         className="w-full h-full
       flex items-center justify-between
-      py-4 desktop:py-[20px] px-[5%] border-b-[1.5px] border-b-[rgba(255,255,255,0.1)]"
+      py-4 desktop:py-[20px] px-[5%] shadow-sm border-b-[1px] border-b-[rgba(255,255,255,0.1)]"
       >
         <Link href="/" className="flex items-center gap-4 scale-up">
           <div

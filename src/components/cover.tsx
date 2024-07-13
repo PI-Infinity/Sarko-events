@@ -10,7 +10,9 @@ import Img from "./image";
 const Cover = () => {
   // app context
   const { theme } = useAppContext();
-
+  console.log(
+    "https://drive.google.com/file/d/1NpRdxWx6f-lz6yVH9gmT6YtCfum0tiOd/view?usp=share_link"
+  );
   return (
     <div
       style={{ color: theme.text }}

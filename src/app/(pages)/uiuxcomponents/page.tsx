@@ -63,8 +63,9 @@ const Components = () => {
       {components?.map((item: any, index: number) => {
         return (
           <div
+            style={{ background: theme.background2 }}
             className="w-full  desktop:w-[60%] shadow-sm rounded-xl flex
-          flex-col gap-4 p-4 bg-[rgba(255,255,255,0.05)]"
+          flex-col gap-4 p-4"
             key={index}
           >
             <div className="flex items-center">
