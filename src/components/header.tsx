@@ -26,6 +26,7 @@ const Header = () => {
       }}
     >
       <ProgressBar
+        key={theme.active}
         height="0.25rem"
         color={theme.active}
         options={{ showSpinner: false }}
