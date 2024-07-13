@@ -1,7 +1,7 @@
 "use client";
 import Button from "@/components/button";
+import Img from "@/components/image";
 import { useAppContext } from "@/context/app";
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
 import { CiMobile3 } from "react-icons/ci";
@@ -75,11 +75,14 @@ const Projects = () => {
                   minHeight: isMobile ? "100px" : "150px",
                 }}
               >
-                <Image
-                  className="object-cover rounded-xl"
+                <Img
                   src={item.img}
                   alt="img"
-                  fill
+                  style={{
+                    aspectRatio: 1,
+                    zIndex: 0,
+                    width: "100%",
+                  }}
                 />
               </div>
               <div

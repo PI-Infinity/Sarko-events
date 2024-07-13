@@ -1,12 +1,31 @@
 "use client";
-import React from "react";
-import { RiJavascriptFill } from "react-icons/ri";
-import Button from "./button";
-import { IoMdArrowDropright } from "react-icons/io";
 import { useAppContext } from "@/context/app";
-import Image from "next/image";
 import Link from "next/link";
 import ReactCountryFlag from "react-country-flag";
+import { IoMdArrowDropright } from "react-icons/io";
+import { RiJavascriptFill } from "react-icons/ri";
+import Button from "./button";
+import { useEffect, useRef, useState } from "react";
+
+const VideoPlayer = () => {
+  return (
+    <div className="relative w-[72px] h-[72px] flex items-center justify-center overflow-hidden rounded-full">
+      <video
+        src="/video.mp4"
+        autoPlay
+        loop
+        muted
+        controls={false}
+        playsInline
+        style={{
+          position: "relative",
+          top: "20px",
+        }}
+        onCanPlay={() => console.log("Video can play")}
+      />
+    </div>
+  );
+};
 
 const Cover = () => {
   // app context
@@ -20,7 +39,7 @@ const Cover = () => {
     >
       <div className="flex flex-col desktop:flex-row desktop:items-center gap-[24px]">
         <div className="relative w-[72px]">
-          <div className="absolute left-[0px] top-[-5px] z-10">
+          <div className="absolute left-[0px] top-[-5px] z-20">
             <ReactCountryFlag
               className="emojiFlag"
               countryCode="GE"
@@ -30,20 +49,7 @@ const Cover = () => {
               aria-label="Georgia"
             />
           </div>
-          <div className="w-[72px] h-[72px] flex items-center justify-center overflow-hidden rounded-full">
-            <video
-              className="object-cover  relative top-[20px]"
-              src="/video.mp4"
-              controls={false}
-              playsInline
-              poster="/path-to-poster-image.jpg"
-              autoPlay
-              loop
-            >
-              Your browser does not support the video tag.{" "}
-              <a href="/video.mp4">Download the video</a>.
-            </video>
-          </div>
+          <VideoPlayer />
         </div>
         <h1 className="text-[48px] leading-[56px] max-w-[50vw] desktop:text-[72px]">
           Tornike Pirtakhia

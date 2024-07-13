@@ -1,7 +1,7 @@
 "use client";
 import Button from "@/components/button";
+import Img from "@/components/image";
 import { useAppContext } from "@/context/app";
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
 import { CiMobile3 } from "react-icons/ci";
@@ -68,14 +68,23 @@ const Components = () => {
             key={index}
           >
             <div className="flex items-center">
-              <Image
-                className="object-cover rounded-xl"
-                src={item.img}
-                width={isMobile ? 100 : 150}
-                height={isMobile ? 100 : 150}
-                alt="img"
-              />
-
+              <div
+                className="relative overflow-hidden"
+                style={{
+                  minWidth: isMobile ? "100px" : "150px",
+                  minHeight: isMobile ? "100px" : "150px",
+                }}
+              >
+                <Img
+                  src={item.img}
+                  alt="img"
+                  style={{
+                    aspectRatio: 1,
+                    zIndex: 0,
+                    width: "100%",
+                  }}
+                />
+              </div>
               <div
                 style={{ color: theme.text }}
                 className="desktop:h-[150px] h-[100px] p-4 desktop:p-6 rounded-[10px] w-full ml-2 desktop:ml-4 shadow-sm bg-[rgba(255,255,255,0.02)]
