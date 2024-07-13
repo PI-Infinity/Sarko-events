@@ -75,7 +75,7 @@ body {
   }
 }
 .slide-in-top {
-  animation: slideInFromBottom 0.7s ease-out forwards;
+  animation: slideInFromBottom 0.5s ease-out forwards;
 }
 /* from right to left*/
 @keyframes slideInFromRight {
@@ -89,7 +89,7 @@ body {
   }
 }
 .slide-in-left {
-  animation: slideInFromRight 0.7s ease-out forwards;
+  animation: slideInFromRight 0.5s ease-out forwards;
 }
 /* from left to rigth*/
 @keyframes slideInFromLeft {
@@ -103,7 +103,7 @@ body {
   }
 }
 .slide-in-right {
-  animation: slideInFromLeft 0.7s ease-out forwards;
+  animation: slideInFromLeft 0.5s ease-out forwards;
 }
 /* scale up*/
 @keyframes scaleUp {
@@ -117,5 +117,5 @@ body {
   }
 }
 .scale-up {
-  animation: scaleUp 0.7s ease-out forwards;
+  animation: scaleUp 0.5s ease-out forwards;
 }

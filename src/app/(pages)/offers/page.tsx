@@ -17,7 +17,7 @@ const Offers = () => {
       className="w-full h-[95vh]
     desktop:pr-[8%] pt-[100px] desktop:pt-[140px] text-white
     flex-col items-center
-    overflow-y-auto"
+    overflow-y-auto pb-4"
     >
       <div className="w-[100%] p-4 px-8 desktop:w-[70%] pb-32 desktop:px-24 slide-in-top flex flex-col items-center gap-6">
         <h2 className="text-2xl font-bold mb-2 desktop:mb-4 whitespace-nowrap w-full">
@@ -306,7 +306,7 @@ const Offers = () => {
           </div>
           <Link
             href="/projects"
-            className="h-12 w-[100%] desktop:hidden mt-12 flex items-center gap-4 shadow-md rounded-full"
+            className="h-12 w-[100%] desktop:hidden mt-8 flex items-center gap-4 shadow-md rounded-full"
           >
             <Button
               title="Projects"

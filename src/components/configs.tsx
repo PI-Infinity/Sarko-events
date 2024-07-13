@@ -17,7 +17,7 @@ const Configs = () => {
   };
   return (
     <div
-      className={`fixed py-3 right-[3%] desktop:right-[5%] bottom-16 desktop:bottom-auto desktop:top-36 w-12 h-[69vh] desktop:h-[70vh] desktop:h-[70vh] rounded-full
+      className={`fixed py-3 right-[3%] desktop:right-[5%] bottom-16 desktop:bottom-auto desktop:top-36 w-12 h-[68vh] desktop:h-[70vh] desktop:h-[70vh] rounded-full
       ${
         loading || pathname !== "/" ? "hidden" : "flex"
       } flex-col items-center justify-between 
