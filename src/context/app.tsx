@@ -171,9 +171,28 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
     { path: "/skills", label: "Skills" },
     { path: "/contact", label: "Contact" },
   ];
-
   // mobile menu state
   const [mobileMenu, setMobileMenu] = useState(false);
+
+  useEffect(() => {
+    // Ensure the body has the transition set
+    document.body.style.transition = "right 200ms ease-in";
+
+    if (mobileMenu) {
+      document.body.style.position = "relative";
+      document.body.style.right = "100px";
+    } else {
+      document.body.style.position = "relative";
+      document.body.style.right = "0px";
+    }
+
+    // Cleanup function to reset styles when component unmounts
+    return () => {
+      document.body.style.position = "";
+      document.body.style.right = "";
+      document.body.style.transition = "";
+    };
+  }, [mobileMenu]);
 
   return (
     <>

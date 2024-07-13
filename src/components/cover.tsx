@@ -6,6 +6,7 @@ import { IoMdArrowDropright } from "react-icons/io";
 import { useAppContext } from "@/context/app";
 import Image from "next/image";
 import Link from "next/link";
+import ReactCountryFlag from "react-country-flag";
 
 const Cover = () => {
   // app context
@@ -18,13 +19,29 @@ const Cover = () => {
     desktop:mt-[100px] pt-[116px] pb-12 flex flex-col relative pl-[6.5%]"
     >
       <div className="flex flex-col desktop:flex-row desktop:items-center gap-[24px]">
-        <Image
-          className="object-cover rounded-full"
-          src="/tp.jpg"
-          width={72}
-          height={72}
-          alt="img"
-        />
+        <div className="relative w-[72px]">
+          <div className="absolute left-[0px] top-[-5px] z-10">
+            <ReactCountryFlag
+              className="emojiFlag"
+              countryCode="GE"
+              style={{
+                fontSize: 24,
+              }}
+              aria-label="Georgia"
+            />
+          </div>
+          <div className="w-[72px] h-[72px] flex items-center justify-center overflow-hidden rounded-full">
+            <video
+              className="object-cover rounded-full relative top-[20px]"
+              src="/video.mp4"
+              width={72}
+              height={72}
+              autoPlay
+              loop
+              muted
+            />
+          </div>
+        </div>
         <h1 className="text-[48px] leading-[56px] max-w-[50vw] desktop:text-[72px]">
           Tornike Pirtakhia
         </h1>
@@ -44,6 +61,7 @@ const Cover = () => {
         software. I am excited to bring my expertise to new projects and drive
         innovation."
       </p>
+
       <Link
         href="/offers"
         className="h-12 w-[70vw] desktop:w-80 mt-12 flex items-center gap-4 shadow-md rounded-full"

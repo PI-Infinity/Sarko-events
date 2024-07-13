@@ -1,8 +1,11 @@
 "use client";
+import Button from "@/components/button";
 import { useAppContext } from "@/context/app";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect } from "react";
 import { CiMobile3 } from "react-icons/ci";
+import { IoMdArrowDropright } from "react-icons/io";
 
 const Components = () => {
   const { theme, loading, isMobile } = useAppContext();
@@ -174,6 +177,18 @@ const Components = () => {
           </div>
         );
       })}
+      <Link
+        href="/skills"
+        className="h-12 w-[100%] desktop:hidden mt-12 flex items-center gap-4 shadow-md rounded-full"
+      >
+        <Button
+          title="Skills"
+          color={theme.secondaryText}
+          background={theme.btn}
+          icon={<IoMdArrowDropright size={24} />}
+          onClick={() => undefined}
+        />
+      </Link>
     </div>
   );
 };

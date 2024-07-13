@@ -1,6 +1,9 @@
 "use client";
+import Button from "@/components/button";
 import { useAppContext } from "@/context/app";
+import Link from "next/link";
 import React, { useEffect } from "react";
+import { IoMdArrowDropright } from "react-icons/io";
 import { MdDone } from "react-icons/md";
 
 const Offers = () => {
@@ -12,11 +15,11 @@ const Offers = () => {
     <div
       style={{ display: loading ? "none" : "flex", color: theme.text }}
       className="w-full h-[95vh]
-    pr-[8%] pt-[116px] desktop:pt-[164px] text-white
+    desktop:pr-[8%] pt-[100px] desktop:pt-[164px] text-white
     flex-col items-center
     overflow-y-auto"
     >
-      <div className="w-[90%] desktop:w-[70%] pb-32 desktop:px-24 slide-in-top flex flex-col items-center gap-6">
+      <div className="w-[100%] p-4 desktop:w-[70%] pb-32 desktop:px-24 slide-in-top flex flex-col items-center gap-6">
         <h2 className="text-2xl font-bold mb-2 desktop:mb-4 whitespace-nowrap w-full">
           What I Can Create
         </h2>
@@ -301,6 +304,18 @@ const Offers = () => {
               </div>
             </div>
           </div>
+          <Link
+            href="/projects"
+            className="h-12 w-[100%] desktop:hidden mt-12 flex items-center gap-4 shadow-md rounded-full"
+          >
+            <Button
+              title="Projects"
+              color={theme.secondaryText}
+              background={theme.btn}
+              icon={<IoMdArrowDropright size={24} />}
+              onClick={() => undefined}
+            />
+          </Link>
         </div>
       </div>
     </div>
