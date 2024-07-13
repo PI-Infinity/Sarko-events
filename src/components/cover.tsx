@@ -32,14 +32,17 @@ const Cover = () => {
           </div>
           <div className="w-[72px] h-[72px] flex items-center justify-center overflow-hidden rounded-full">
             <video
-              className="object-cover rounded-full relative top-[20px]"
+              className="object-cover  relative top-[20px]"
               src="/video.mp4"
-              width={72}
-              height={72}
+              controls={false}
+              playsInline
+              poster="/path-to-poster-image.jpg"
               autoPlay
               loop
-              muted
-            />
+            >
+              Your browser does not support the video tag.{" "}
+              <a href="/video.mp4">Download the video</a>.
+            </video>
           </div>
         </div>
         <h1 className="text-[48px] leading-[56px] max-w-[50vw] desktop:text-[72px]">

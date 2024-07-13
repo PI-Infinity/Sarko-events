@@ -45,6 +45,9 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
         setLoading(false);
       }, 300);
     } else {
+      document.body.style.background = colors[0].gradient;
+      document.documentElement.style.background = colors[0].fill;
+      setTheme(colors[0]);
       setTimeout(() => {
         setLoading(false);
       }, 300);
