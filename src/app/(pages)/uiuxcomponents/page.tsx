@@ -69,7 +69,7 @@ const Components = () => {
           >
             <div className="flex items-center">
               <div
-                className="relative overflow-hidden"
+                className="relative overflow-hidden rounded-xl"
                 style={{
                   minWidth: isMobile ? "100px" : "150px",
                   minHeight: isMobile ? "100px" : "150px",
@@ -111,7 +111,7 @@ const Components = () => {
                     rel="noopener noreferrer"
                     className="rounded-full py-1 px-3 text-sm font-semibold shadow-sm cursor-pointer hover:opacity-[0.8]"
                     style={{
-                      background: theme.text,
+                      background: theme.active,
                       color: theme.secondaryText,
                     }}
                     href={item.link}
@@ -124,7 +124,7 @@ const Components = () => {
                       rel="noopener noreferrer"
                       className="rounded-full py-1 px-3 text-sm font-semibold shadow-sm cursor-pointer hover:opacity-[0.8]"
                       style={{
-                        background: theme.text,
+                        background: theme.active,
                         color: theme.secondaryText,
                       }}
                       href={item.android}
@@ -138,7 +138,7 @@ const Components = () => {
                       rel="noopener noreferrer"
                       className="rounded-full py-1 px-3 text-sm font-semibold shadow-sm cursor-pointer hover:opacity-[0.8]"
                       style={{
-                        background: theme.text,
+                        background: theme.active,
                         color: theme.secondaryText,
                       }}
                       href={item.ios}
@@ -155,7 +155,7 @@ const Components = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full py-1 px-3 text-sm font-semibold shadow-sm cursor-pointer hover:opacity-[0.8]"
-                style={{ background: theme.text, color: theme.secondaryText }}
+                style={{ background: theme.active, color: theme.secondaryText }}
                 href={item.link}
               >
                 Link
@@ -165,7 +165,10 @@ const Components = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-full py-1 px-3 text-sm font-semibold shadow-sm cursor-pointer hover:opacity-[0.8]"
-                  style={{ background: theme.text, color: theme.secondaryText }}
+                  style={{
+                    background: theme.active,
+                    color: theme.secondaryText,
+                  }}
                   href={item.android}
                 >
                   Android
@@ -176,7 +179,10 @@ const Components = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-full py-1 px-3 text-sm font-semibold shadow-sm cursor-pointer hover:opacity-[0.8]"
-                  style={{ background: theme.text, color: theme.secondaryText }}
+                  style={{
+                    background: theme.active,
+                    color: theme.secondaryText,
+                  }}
                   href={item.ios}
                 >
                   iOS

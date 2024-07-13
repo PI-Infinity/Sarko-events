@@ -119,3 +119,8 @@ body {
 .scale-up {
   animation: scaleUp 0.5s ease-out forwards;
 }
+
+/* Add this to your CSS file or a <style> block in your component */
+.placeholder-white::placeholder {
+  color: #e5e5e5;
+}

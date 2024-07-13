@@ -12,7 +12,7 @@ const Configs = () => {
   const handleChangeTheme = (value: any) => {
     setTheme(value);
     localStorage.setItem("tp-showcase:theme", JSON.stringify(value));
-    document.documentElement.style.background = value.fill;
+    document.documentElement.style.background = value.background;
     document.body.style.background = value.gradient;
   };
   return (
@@ -35,12 +35,18 @@ const Configs = () => {
             <div
               onClick={() => handleChangeTheme(item)}
               key={item.id}
-              style={{ background: item.active }}
+              style={{ background: item.main }}
               className={`scale-up w-7 h-7 rounded-full
 ${
   theme.id === item.id && "border-[2px]"
-} border-textlight cursor-pointer hover:opacity-[0.9]`}
-            />
+} border-textlight cursor-pointer hover:opacity-[0.9]
+flex items-center justify-center`}
+            >
+              <div
+                className="w-2 h-2 rounded-full relative"
+                style={{ background: item.active }}
+              />
+            </div>
           );
         })}
       </div>

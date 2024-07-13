@@ -16,6 +16,12 @@ const Projects = () => {
 
   const projects = [
     {
+      id: "E-Store",
+      img: "/tp.jpg",
+      path: true,
+      link: "/projects/e-commerce",
+    },
+    {
       id: "Sarko Events",
       img: "/tp.jpg",
     },
@@ -69,7 +75,7 @@ const Projects = () => {
           >
             <div className="flex items-center">
               <div
-                className="relative overflow-hidden"
+                className="relative overflow-hidden rounded-xl"
                 style={{
                   minWidth: isMobile ? "100px" : "150px",
                   minHeight: isMobile ? "100px" : "150px",
@@ -111,7 +117,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     className="rounded-full py-1 px-3 text-sm font-semibold shadow-sm cursor-pointer hover:opacity-[0.8]"
                     style={{
-                      background: theme.text,
+                      background: theme.active,
                       color: theme.secondaryText,
                     }}
                     href={item.link}
@@ -124,7 +130,7 @@ const Projects = () => {
                       rel="noopener noreferrer"
                       className="rounded-full py-1 px-3 text-sm font-semibold shadow-sm cursor-pointer hover:opacity-[0.8]"
                       style={{
-                        background: theme.text,
+                        background: theme.active,
                         color: theme.secondaryText,
                       }}
                       href={item.android}
@@ -138,7 +144,7 @@ const Projects = () => {
                       rel="noopener noreferrer"
                       className="rounded-full py-1 px-3 text-sm font-semibold shadow-sm cursor-pointer hover:opacity-[0.8]"
                       style={{
-                        background: theme.text,
+                        background: theme.active,
                         color: theme.secondaryText,
                       }}
                       href={item.ios}
@@ -155,7 +161,7 @@ const Projects = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full py-1 px-3 text-sm font-semibold shadow-sm cursor-pointer hover:opacity-[0.8]"
-                style={{ background: theme.text, color: theme.secondaryText }}
+                style={{ background: theme.active, color: theme.secondaryText }}
                 href={item.link}
               >
                 Link
@@ -165,7 +171,10 @@ const Projects = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-full py-1 px-3 text-sm font-semibold shadow-sm cursor-pointer hover:opacity-[0.8]"
-                  style={{ background: theme.text, color: theme.secondaryText }}
+                  style={{
+                    background: theme.active,
+                    color: theme.secondaryText,
+                  }}
                   href={item.android}
                 >
                   Android
@@ -176,7 +185,10 @@ const Projects = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-full py-1 px-3 text-sm font-semibold shadow-sm cursor-pointer hover:opacity-[0.8]"
-                  style={{ background: theme.text, color: theme.secondaryText }}
+                  style={{
+                    background: theme.active,
+                    color: theme.secondaryText,
+                  }}
                   href={item.ios}
                 >
                   iOS

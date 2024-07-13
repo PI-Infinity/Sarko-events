@@ -1,16 +1,21 @@
 "use client";
 
 import { useAppContext } from "@/context/app";
-import PageSwitcher from "./pageSwitcher-mobile";
+import { usePathname } from "next/navigation";
 
 const Stack = () => {
   // app context
   const { loading, theme, skills } = useAppContext();
 
+  const pathname = usePathname();
+
   return (
     <div
-      style={{ color: theme.text }}
-      className="flex-1 w-full flex items-center justify-center gap-2"
+      style={{
+        color: theme.text,
+        display: !pathname.includes("/projects/") ? "flex" : "none",
+      }}
+      className="flex-1 w-full items-center justify-center gap-2"
     >
       {/* <PageSwitcher /> */}
       <div

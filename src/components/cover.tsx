@@ -19,16 +19,6 @@ const Cover = () => {
     >
       <div className="flex flex-col desktop:flex-row desktop:items-center gap-[16px]">
         <div className="relative w-[72px]">
-          <div className="absolute left-[0px] top-[-5px] z-20">
-            <ReactCountryFlag
-              className="emojiFlag"
-              countryCode="GE"
-              style={{
-                fontSize: 24,
-              }}
-              aria-label="Georgia"
-            />
-          </div>
           <div className="relative w-[72px] h-[72px] flex items-center justify-center overflow-hidden rounded-full">
             <Img
               src="/tp.gif"
@@ -59,7 +49,7 @@ const Cover = () => {
 
       <Link
         href="/offers"
-        className="h-12 w-[70vw] desktop:w-80 mt-8 desktop:mt-12 flex items-center gap-4 shadow-md rounded-full"
+        className="h-12 w-[70vw] desktop:w-80 mt-8 desktop:mt-14 flex items-center gap-4 shadow-md rounded-full"
       >
         <Button
           title="Offers"

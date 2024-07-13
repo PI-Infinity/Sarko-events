@@ -1,13 +1,11 @@
 "use client";
 import { useAppContext } from "@/context/app";
-import React from "react";
-import HeadRoom from "react-headroom";
 import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { MdList } from "react-icons/md";
-import { CiMenuFries } from "react-icons/ci";
-import Image from "next/image";
+import HeadRoom from "react-headroom";
+import { CgMenuRight } from "react-icons/cg";
 
 const Header = () => {
   // theme
@@ -22,14 +20,14 @@ const Header = () => {
       upTolerance={10}
       className="fixed w-full z-10"
       style={{
-        display: loading ? "none" : "flex",
+        display: loading || pathname.includes("/projects/") ? "none" : "flex",
         backdropFilter: "blur(10px)",
         WebkitBackdropFilter: "blur(10px)",
       }}
     >
       <ProgressBar
         height="0.25rem"
-        color="#f7fbff"
+        color={theme.active}
         options={{ showSpinner: false }}
         shallowRouting
       />
@@ -41,15 +39,36 @@ const Header = () => {
         <Link href="/" className="flex items-center gap-4 scale-up">
           <div
             className={`${
-              theme.id === "light" &&
+              (theme.id === "light" ||
+                theme.id === "white&red" ||
+                theme.id === "gray-red") &&
               "h-[48px] w-[48px] flex items-center justify-center rounded-full"
             }`}
-            style={{ background: theme.id === "light" ? theme.text : "none" }}
+            style={{
+              background:
+                theme.id === "light" ||
+                theme.id === "white&red" ||
+                theme.id === "gray-red"
+                  ? theme.text
+                  : "none",
+            }}
           >
             <Image
               src="/logo-white.png"
-              width={theme.id === "light" ? 36 : 42}
-              height={theme.id === "light" ? 36 : 42}
+              width={
+                theme.id === "light" ||
+                theme.id === "white&red" ||
+                theme.id === "gray-red"
+                  ? 36
+                  : 42
+              }
+              height={
+                theme.id === "light" ||
+                theme.id === "white&red" ||
+                theme.id === "gray-red"
+                  ? 36
+                  : 42
+              }
               alt="tp"
               color={theme.text}
             />
@@ -68,7 +87,7 @@ const Header = () => {
               <Link href={item.path} key={item.path}>
                 <h4
                   style={{
-                    color: theme.text,
+                    color: pathname === item.path ? theme.active : theme.text,
                     borderColor: theme.text,
                     transition: "ease-in 200ms",
                   }}
@@ -83,7 +102,7 @@ const Header = () => {
           })}
         </div>
         <div className="desktop:hidden" onClick={() => setMobileMenu(true)}>
-          <CiMenuFries color={theme.text} size={28} />
+          <CgMenuRight color={theme.active} size={32} />
         </div>
       </header>
     </HeadRoom>

@@ -24,7 +24,7 @@ const Img = ({ src, alt, onClick, style }: any) => {
         alignItems: "center",
         justifyContent: "center",
       }}
-      className="text-gray-300 rounded-xl"
+      className="text-gray-300"
       onClick={onClick}
     >
       <div

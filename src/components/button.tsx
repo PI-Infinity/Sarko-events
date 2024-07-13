@@ -33,7 +33,7 @@ const Button: React.FC<PropsType> = ({
         onClick={!loading ? onClick : undefined}
         className={`relative w-full h-full rounded-full flex items-center justify-center gap-2 bg-gray-300  cursor-${
           disabled ? "default" : "pointer"
-        } hover:${disabled ? "none" : "brightness-105"} font-semibold`}
+        } hover:${disabled ? "none" : "opacity-[0.9]"} font-semibold`}
       >
         {loading && <CircularProgress sx={{ color: "white" }} size={20} />}
         {title}

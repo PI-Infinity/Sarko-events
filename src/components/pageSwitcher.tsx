@@ -13,7 +13,7 @@ const PageSwitcher = () => {
 
   return (
     <>
-      {pathname !== "/" && (
+      {pathname !== "/" && !pathname.includes("/projects/") && (
         <div
           className={`fixed left-[5%] top-36 h-[70vh] rounded-full
       hidden ${
@@ -45,7 +45,7 @@ const PageSwitcher = () => {
           </Link>
         </div>
       )}
-      {pathname !== "/contact" && (
+      {pathname !== "/contact" && !pathname.includes("/projects/") && (
         <div
           className={`absolute ${
             pathname === "/" ? "right-[15%]" : "right-[5%]"

@@ -1,7 +1,7 @@
 "use client";
 import Button from "@/components/button";
 import { useAppContext } from "@/context/app";
-import { Link } from "@mui/material";
+import Link from "next/link";
 import React, { useEffect } from "react";
 import { IoMdArrowDropright } from "react-icons/io";
 import { MdDone } from "react-icons/md";
@@ -26,7 +26,7 @@ const Skills = () => {
               style={{ color: theme.text }}
               className="font-custom font-[700] flex items-center gap-2 text-md text-textlight whitespace-nowrap"
             >
-              <MdDone color={theme.text} size={24} />
+              <MdDone color={theme.active} size={24} />
               {item.id}
             </h4>
           </div>
@@ -34,7 +34,7 @@ const Skills = () => {
       })}
       <Link
         href="/contact"
-        className="no-underline h-12 w-[100%] desktop:hidden mt-12 flex items-center gap-4 shadow-md rounded-full"
+        className="h-12 w-[100%] desktop:hidden mt-12 flex items-center gap-4 shadow-md rounded-full"
       >
         <Button
           title="Contact"
