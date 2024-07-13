@@ -1,8 +1,6 @@
 "use client";
 import { useAppContext } from "@/context/app";
 import { usePathname } from "next/navigation";
-import React from "react";
-import ReactCountryFlag from "react-country-flag";
 
 const Configs = () => {
   const pathname = usePathname();

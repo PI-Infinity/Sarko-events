@@ -265,8 +265,8 @@ const colors = [
   },
   {
     id: "light",
-    gradient: "linear-gradient(#e5e5e5, #f1f1f1)",
-    fill: "#fff",
+    gradient: "linear-gradient(#e9e9e9, #f1f1f1)",
+    fill: "#e9e9e9",
     active: "#f1f1f1",
     btn: "#111",
     text: "#111",
@@ -282,10 +282,10 @@ const colors = [
     secondaryText: "#001429",
   },
   {
-    id: "white",
+    id: "white&black",
     gradient: "linear-gradient(#001429, #f7fbff)",
     fill: "#001429",
-    active: "#f7fbff",
+    active: "#001429",
     btn: "#f7fbff",
     text: "#f7fbff",
     secondaryText: "#001429",

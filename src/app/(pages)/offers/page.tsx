@@ -15,11 +15,11 @@ const Offers = () => {
     <div
       style={{ display: loading ? "none" : "flex", color: theme.text }}
       className="w-full h-[95vh]
-    desktop:pr-[8%] pt-[100px] desktop:pt-[164px] text-white
+    desktop:pr-[8%] pt-[100px] desktop:pt-[140px] text-white
     flex-col items-center
     overflow-y-auto"
     >
-      <div className="w-[100%] p-4 desktop:w-[70%] pb-32 desktop:px-24 slide-in-top flex flex-col items-center gap-6">
+      <div className="w-[100%] p-4 px-8 desktop:w-[70%] pb-32 desktop:px-24 slide-in-top flex flex-col items-center gap-6">
         <h2 className="text-2xl font-bold mb-2 desktop:mb-4 whitespace-nowrap w-full">
           What I Can Create
         </h2>
