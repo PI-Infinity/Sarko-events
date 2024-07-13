@@ -19,7 +19,7 @@ const Contact = () => {
         className="cursor-pointer flex items center gap-2"
         style={{ textDecoration: "underline", color: theme.text }}
       >
-        <MdEmail size={isMobile ? 24 : 32} color="" />{" "}
+        <MdEmail size={isMobile ? 24 : 32} color={theme.active} />{" "}
         <h3 className="text-md desktop:text-xl" style={{ color: theme.text }}>
           Tornike.Pirtakhia@Gmail.com
         </h3>
@@ -29,7 +29,7 @@ const Contact = () => {
         className="cursor-pointer flex items center gap-2"
         style={{ textDecoration: "underline", color: theme.text }}
       >
-        <FaLinkedin size={isMobile ? 24 : 32} color="" />
+        <FaLinkedin size={isMobile ? 24 : 32} color={theme.active} />
         <h3 className="text-md desktop:text-xl" style={{ color: theme.text }}>
           Tornike Pirtakhia
         </h3>
