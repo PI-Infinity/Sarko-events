@@ -1,6 +1,7 @@
 "use client";
 import { useAppContext } from "@/context/app";
 import { usePathname } from "next/navigation";
+import ReactCountryFlag from "react-country-flag";
 
 const Configs = () => {
   const pathname = usePathname();
@@ -17,7 +18,7 @@ const Configs = () => {
   };
   return (
     <div
-      className={`fixed py-3 right-[3%] desktop:right-[5%] bottom-16 desktop:bottom-auto desktop:top-36 w-12 h-[70vh] desktop:h-[70vh] desktop:h-[70vh] rounded-full
+      className={`desktop:fixed py-3 right-[3%] desktop:right-[5%] bottom-16 desktop:bottom-auto desktop:top-36 w-12 desktop:h-[70vh] rounded-full
       ${
         loading || pathname !== "/" ? "hidden" : "flex"
       } flex-col items-center justify-between 
@@ -29,7 +30,7 @@ const Configs = () => {
         background: "rgba(255,255,255,0.05)",
       }}
     >
-      <div className="flex flex-col items-center justify-center gap-3 h-full">
+      <div className="flex flex-col items-center justify-center gap-3">
         {colors.map((item: any) => {
           return (
             <div
@@ -41,16 +42,11 @@ ${
   theme.id === item.id && "border-[2px]"
 } border-textlight cursor-pointer hover:opacity-[0.9]
 flex items-center justify-center`}
-            >
-              <div
-                className="w-2 h-2 rounded-full relative"
-                style={{ background: item.active }}
-              />
-            </div>
+            />
           );
         })}
       </div>
-      {/* <div className="flex flex-col items-center gap-2">
+      <div className="flex flex-col items-center gap-2">
         <div
           className={` ${
             language !== "en"
@@ -87,7 +83,26 @@ flex items-center justify-center`}
             aria-label="Georgia"
           />
         </div>
-      </div> */}
+
+        <div
+          className={` ${
+            language !== "en"
+              ? "hover:opacity-[0.8] cursor-pointer"
+              : "cursor-default"
+          }`}
+        >
+          <ReactCountryFlag
+            className="emojiFlag"
+            onClick={() => setLanguage("ru")}
+            countryCode="RU"
+            style={{
+              opacity: language === "ru" ? 1 : 0.5,
+              fontSize: 24,
+            }}
+            aria-label="RU"
+          />
+        </div>
+      </div>
     </div>
   );
 };

@@ -1,7 +1,8 @@
 "use client";
 import { useAppContext } from "@/context/app";
 import { useEffect } from "react";
-import { FaLinkedin } from "react-icons/fa";
+import { FaLinkedin, FaMobile } from "react-icons/fa";
+import { FaMobileButton } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 
 const Contact = () => {
@@ -21,7 +22,7 @@ const Contact = () => {
       >
         <MdEmail size={isMobile ? 24 : 32} color={theme.active} />{" "}
         <h3 className="text-md desktop:text-xl" style={{ color: theme.text }}>
-          Tornike.Pirtakhia@Gmail.com
+          Sarko.events@gmail.com
         </h3>
       </a>
       <a
@@ -29,9 +30,9 @@ const Contact = () => {
         className="cursor-pointer flex items center gap-2"
         style={{ textDecoration: "underline", color: theme.text }}
       >
-        <FaLinkedin size={isMobile ? 24 : 32} color={theme.active} />
+        <FaMobileButton size={isMobile ? 24 : 32} color={theme.active} />
         <h3 className="text-md desktop:text-xl" style={{ color: theme.text }}>
-          Tornike Pirtakhia
+          +995597233355
         </h3>
       </a>
     </div>

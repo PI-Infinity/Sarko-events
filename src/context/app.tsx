@@ -76,84 +76,14 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // skills list
-  const skills = [
-    {
-      id: "HTML/CSS",
-    },
-    {
-      id: "JavaScript",
-    },
-    {
-      id: "TypeScript",
-    },
-    {
-      id: "ReactJs",
-    },
-    {
-      id: "NextJs",
-    },
-    {
-      id: "React Native / Expo",
-    },
-    {
-      id: "NodeJs",
-    },
-    {
-      id: "ExpressJs",
-    },
-    {
-      id: "MongoDB",
-    },
-    {
-      id: "GraphQl",
-    },
-    {
-      id: "Socket.io",
-    },
-    {
-      id: "UI/UX Design",
-    },
-    {
-      id: "TailwindCss",
-    },
-    {
-      id: "Material UI",
-    },
-    {
-      id: "Apple Developer",
-    },
-    {
-      id: "Firebase",
-    },
-    {
-      id: "Google API Services",
-    },
-    {
-      id: "Cloudinary",
-    },
-    {
-      id: "Rest API",
-    },
-    {
-      id: "Vercel",
-    },
-    {
-      id: "Heroku",
-    },
-    {
-      id: "More...",
-    },
-  ];
-
   /**
    * languages
    */
-  const [language, setLanguage] = useState("ka");
+  const [language, setLanguage] = useState("en");
   const [activeLanguage, setActiveLanguage] = useState<any>("");
 
   useEffect(() => {
-    let appLang = localStorage.getItem("sarko-events:language") || "ka";
+    let appLang = localStorage.getItem("sarko-events:language") || "en";
     setLanguage(appLang);
   }, []);
 
@@ -170,11 +100,9 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
 
   // nav items
   const menuItems = [
-    { path: "/", label: "About" },
+    { path: "/", label: "Home" },
     { path: "/offers", label: "Offers" },
-    { path: "/projects", label: "Projects" },
-    { path: "/uiuxcomponents", label: "UI/UX Components" },
-    { path: "/skills", label: "Skills" },
+    { path: "/gallery", label: "Gallery" },
     { path: "/contact", label: "Contact" },
   ];
   // mobile menu state
@@ -221,7 +149,6 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
           theme,
           setTheme,
           loading,
-          skills,
           activeLanguage,
           language,
           setLanguage,
@@ -241,32 +168,9 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
 const colors = [
   {
     id: "black",
-    gradient: "linear-gradient(#080808, #151515)",
+    gradient: "linear-gradient(#080808, #151515, #080808)",
     main: "#151515",
     background: "#080808",
-    background2: "rgba(255,255,255,0.02)",
-    active: "#ffe400",
-    btn: "#ffe400",
-    text: "#f7fbff",
-    secondaryText: "#001429",
-  },
-  {
-    id: "blue-lightblue",
-    gradient: "linear-gradient(#0b0c10, #1f2833)",
-    main: "#1f2833",
-    background: "#0b0c10",
-    background2: "rgba(255,255,255,0.02)",
-    active: "#66fcf1",
-    btn: "#66fcf1",
-    text: "#f7fbff",
-    secondaryText: "#0b0c10",
-  },
-
-  {
-    id: "red",
-    gradient: "linear-gradient(#001429, #e42f22)",
-    main: "#e42f22",
-    background: "#001429",
     background2: "rgba(255,255,255,0.02)",
     active: "#f7fbff",
     btn: "#f7fbff",
@@ -276,7 +180,7 @@ const colors = [
 
   {
     id: "light",
-    gradient: "linear-gradient(#f1f1f1, #fff)",
+    gradient: "linear-gradient(#f1f1f1, #fff, #f1f1f1)",
     main: "#f1f1f1",
     background: "#f1f1f1",
     background2: "rgba(255,255,255,1)",
@@ -284,104 +188,5 @@ const colors = [
     btn: "#111",
     text: "#111",
     secondaryText: "#f1f1f1",
-  },
-  {
-    id: "black-green",
-    gradient: "linear-gradient(#272727, #151515)",
-    main: "#151515",
-    background: "#272727",
-    background2: "rgba(255,255,255,0.02)",
-    active: "#14a76c",
-    btn: "#14a76c",
-    text: "#f7fbff",
-    secondaryText: "#001429",
-  },
-
-  {
-    id: "blue",
-    gradient: "linear-gradient(#001429, #007aff)",
-    main: "#007aff",
-    background: "#001429",
-    background2: "rgba(255,255,255,0.02)",
-    active: "#ffe400",
-    btn: "#ffe400",
-    text: "#f7fbff",
-    secondaryText: "#001429",
-  },
-  {
-    id: "green",
-    gradient: "linear-gradient(#001429, #001429)",
-    main: "#001429",
-    background: "#001429",
-    background2: "rgba(255,255,255,0.02)",
-    active: "#47c232",
-    btn: "#47c232",
-    text: "#f7fbff",
-    secondaryText: "#f7fbff",
-  },
-  {
-    id: "white&red",
-    gradient: "linear-gradient(#fff, #f1f1f1)",
-    main: "#f1f1f1",
-    background: "#fff",
-    background2: "rgba(255,255,255,1)",
-    active: "#D11D27",
-    btn: "#D11D27",
-    text: "#050505",
-    secondaryText: "#fff",
-  },
-  {
-    id: "black-orange",
-    gradient: "linear-gradient(#272727, #151515)",
-    main: "#151515",
-    background: "#272727",
-    background2: "rgba(255,255,255,0.02)",
-    active: "#ff652f",
-    btn: "#ff652f",
-    text: "#f7fbff",
-    secondaryText: "#f7fbff",
-  },
-  // {
-  //   id: "yellow",
-  //   gradient: "linear-gradient(#111, #222)",
-  //   main: "#001429",
-  //   background: "#001429",
-  //   active: "#ffe400",
-  //   btn: "#ffe400",
-  //   text: "#f7fbff",
-  //   secondaryText: "#001429",
-  // },
-  {
-    id: "blue-2",
-    gradient: "linear-gradient(#6a11cb, #2575fc)",
-    main: "#6a11cb",
-    background: "#6a11cb",
-    background2: "rgba(255,255,255,0.02)",
-    active: "#f7fbff",
-    btn: "#f7fbff",
-    text: "#f7fbff",
-    secondaryText: "#6a11cb",
-  },
-  {
-    id: "blue-dark",
-    gradient: "linear-gradient(#2b5876, #4e4376)",
-    main: "#2b5876",
-    background: "#2b5876",
-    background2: "rgba(255,255,255,0.02)",
-    active: "#f7fbff",
-    btn: "#f7fbff",
-    text: "#f7fbff",
-    secondaryText: "#4e4376",
-  },
-  {
-    id: "gray-red",
-    gradient: "linear-gradient(#e3e2df, #e3e2df)",
-    main: "#e3e2df",
-    background: "#e3e2df",
-    background2: "rgba(255,255,255,0.3)",
-    active: "#9a1750",
-    btn: "linear-gradient(45deg, #9a1750, #ee4c7c)",
-    text: "#222",
-    secondaryText: "#f7fbff",
   },
 ];

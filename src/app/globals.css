@@ -28,7 +28,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
 }
 
 @keyframes slide {
@@ -49,7 +48,7 @@ body {
 }
 
 .logos {
-  animation: slide 30s linear infinite;
+  animation: slide 20s linear infinite;
 }
 
 @media (max-width: 768px) {

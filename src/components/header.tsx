@@ -6,6 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import HeadRoom from "react-headroom";
 import { CgMenuRight } from "react-icons/cg";
+import Img from "./image";
 
 const Header = () => {
   // theme
@@ -37,52 +38,19 @@ const Header = () => {
       flex items-center justify-between
       py-4 desktop:py-[20px] px-[5%] shadow-sm border-b-[1px] border-b-[rgba(255,255,255,0.1)]"
       >
-        <Link href="/" className="flex items-center gap-4 scale-up">
-          <div
-            className={`${
-              (theme.id === "light" ||
-                theme.id === "white&red" ||
-                theme.id === "gray-red") &&
-              "h-[48px] w-[48px] flex items-center justify-center rounded-full"
-            }`}
-            style={{
-              background:
-                theme.id === "light" ||
-                theme.id === "white&red" ||
-                theme.id === "gray-red"
-                  ? theme.text
-                  : "none",
-            }}
-          >
-            <Image
-              src="/logo-white.png"
-              width={
-                theme.id === "light" ||
-                theme.id === "white&red" ||
-                theme.id === "gray-red"
-                  ? 36
-                  : 42
-              }
-              height={
-                theme.id === "light" ||
-                theme.id === "white&red" ||
-                theme.id === "gray-red"
-                  ? 36
-                  : 42
-              }
-              alt="tp"
-              color={theme.text}
-            />
-          </div>
-          <h1
-            style={{ color: theme.text }}
-            className="text-[32px] text-textlight cursor-pointer whitespace-nowrap"
-          >
-            Sarko Events
-          </h1>
-        </Link>
+        <div className="w-1/2">
+          <Link href="/" className="flex items-center gap-4 scale-up">
+            <div className="relative w-[140px] h-[50px] flex items-center justify-center">
+              <Img
+                src={theme.id === "light" ? "/logo-black.png" : "/logo.png"}
+                alt="Sarko"
+                style={{ width: "100%", height: "100%" }}
+              />
+            </div>
+          </Link>
+        </div>
 
-        <div className="hidden slide-in-left desktop:flex items-center gap-[48px] text-textlight text-[16px] font-custom font-[600]">
+        <div className="w-1/2 hidden slide-in-left desktop:flex items-center justify-end gap-[48px] text-textlight text-[16px] font-custom font-[600]">
           {menuItems.map((item: any) => {
             return (
               <Link href={item.path} key={item.path}>
@@ -103,7 +71,7 @@ const Header = () => {
           })}
         </div>
         <div className="desktop:hidden" onClick={() => setMobileMenu(true)}>
-          <CgMenuRight color={theme.active} size={32} />
+          <CgMenuRight color={theme.active} size={40} />
         </div>
       </header>
     </HeadRoom>

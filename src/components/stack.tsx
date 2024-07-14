@@ -5,9 +5,20 @@ import { usePathname } from "next/navigation";
 
 const Stack = () => {
   // app context
-  const { loading, theme, skills } = useAppContext();
+  const { loading, theme } = useAppContext();
 
   const pathname = usePathname();
+
+  // offers
+
+  const offers = [
+    { id: "weddings", label: "Weddings" },
+    { id: "corporateEvents", label: "Corporate events" },
+    { id: "presentations", label: "Company/product presentations" },
+    { id: "conferences", label: "Conferences" },
+    { id: "teambuildings", label: "Teambuildings" },
+    { id: "festivalOrganizations", label: "Festival organization" },
+  ];
 
   return (
     <div
@@ -32,7 +43,7 @@ const Stack = () => {
       >
         <div className="flex logos">
           <div className="logos-slide">
-            {skills.map((item: any) => {
+            {offers.map((item: any) => {
               return (
                 <div
                   key={item.id}
@@ -42,7 +53,7 @@ const Stack = () => {
                     className="font-custom font-[700]
               text-md whitespace-nowrap"
                   >
-                    {item.id}
+                    {item.label}
                   </h4>
                 </div>
               );
