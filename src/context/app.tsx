@@ -157,6 +157,7 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
           setMobileMenu,
           isMobile,
           colors,
+          gallery,
         }}
       >
         {children}
@@ -164,6 +165,44 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
     </>
   );
 };
+
+const gallery = [
+  {
+    id: "weddings",
+    label: "Weddings",
+    img: "/weddings.png",
+    path: true,
+    link: "/gallery/weddings",
+  },
+  {
+    id: "corporations",
+    label: "Corporate Events",
+    img: "/corporation.jpg",
+    path: true,
+    link: "/gallery/corporations",
+  },
+  {
+    id: "presentations",
+    label: "Company / Product Presentations",
+    img: "/presentation.png",
+    path: true,
+    link: "/gallery/presentations",
+  },
+  {
+    id: "teambuildings",
+    label: "Teambuildings",
+    img: "/teambuilding.jpg",
+    path: true,
+    link: "/gallery/teambuildings",
+  },
+  {
+    id: "festivals",
+    label: "Festival Organisations",
+    img: "/corporation.jpg",
+    path: true,
+    link: "/gallery/festivals",
+  },
+];
 
 const colors = [
   {

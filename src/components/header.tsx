@@ -39,7 +39,10 @@ const Header = () => {
       py-4 desktop:py-[20px] px-[5%] shadow-sm border-b-[1px] border-b-[rgba(255,255,255,0.1)]"
       >
         <div className="w-1/2">
-          <Link href="/" className="flex items-center gap-4 scale-up">
+          <Link
+            href="/"
+            className="flex items-center gap-4 scale-up cursor-pointer"
+          >
             <div className="relative w-[140px] h-[50px] flex items-center justify-center">
               <Img
                 src={theme.id === "light" ? "/logo-black.png" : "/logo.png"}
