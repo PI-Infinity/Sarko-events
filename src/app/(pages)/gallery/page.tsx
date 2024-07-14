@@ -13,64 +13,35 @@ const Gallery = () => {
 
   return (
     <div
-      style={{ display: loading ? "none" : "flex" }}
-      className="slide-in-top w-full h-[95vh] w-full
-     pt-[100px] desktop:pt-[140px] text-white
-      flex-col items-center gap-4
-      overflow-y-auto pb-[140px] px-4"
+      style={{ display: loading ? "none" : "grid" }}
+      className="slide-in-top w-full w-full
+     pt-[100px] desktop:pt-[120px] text-white gap-4
+      overflow-y-auto pb-[120px] px-4 grid-cols-2 desktop:grid-cols-3 desktop:px-[5%]"
     >
       {gallery?.map((item: any, index: number) => {
         return (
-          <div
+          <Link
+            href={item.link}
             style={{ background: theme.background2 }}
-            className="w-full  desktop:w-[60%] shadow-sm rounded-xl flex
-          flex-col gap-4 p-4 text-red-500"
+            className="w-full shadow-sm rounded-xl flex items-center justify-center
+           gap-4 relative"
             key={index}
           >
-            <div className="flex items-center">
-              <div
-                className="relative overflow-hidden rounded-xl"
+            <div className="relative overflow-hidden rounded-xl w-full h-full">
+              <Img
+                src={item.img}
+                alt="img"
                 style={{
-                  minWidth: isMobile ? "100px" : "250px",
-                  minHeight: isMobile ? "100px" : "250px",
+                  aspectRatio: 1,
+                  zIndex: 0,
+                  width: "100%",
                 }}
-              >
-                <Img
-                  src={item.img}
-                  alt="img"
-                  style={{
-                    aspectRatio: 1,
-                    zIndex: 0,
-                    width: "100%",
-                  }}
-                />
-              </div>
-              <div
-                style={{ color: theme.text }}
-                className="desktop:h-[100%] h-[full] p-4 desktop:p-6 rounded-[10px] w-full ml-2 desktop:ml-4 shadow-sm border-[1.5px] border-[rgba(255,255,255,0.02)]
-            flex items-center justify-between relative"
-              >
-                <div className="fle flex-col gap-1">
-                  <h4 className="text-xl">{item.label}</h4>
-                  <p className="mt-2 text-sm font-custom">{item.description}</p>
-                </div>
-                <Link
-                  href={`${item.link}`}
-                  className="mt-4 font-custom desktop:flex gap-4"
-                >
-                  <p
-                    className="rounded-full py-1 px-3 text-sm font-semibold shadow-sm cursor-pointer hover:opacity-[0.8]"
-                    style={{
-                      background: theme.active,
-                      color: theme.secondaryText,
-                    }}
-                  >
-                    Link
-                  </p>
-                </Link>
-              </div>
+              />
             </div>
-          </div>
+            <strong className="absolute top-4 left-4 py-1 px-3 rounded-full bg-[rgba(0,0,0,0.5)] text-sm">
+              {item.label}
+            </strong>
+          </Link>
         );
       })}
     </div>

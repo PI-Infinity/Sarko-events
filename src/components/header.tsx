@@ -74,7 +74,7 @@ const Header = () => {
           })}
         </div>
         <div className="desktop:hidden" onClick={() => setMobileMenu(true)}>
-          <CgMenuRight color={theme.active} size={40} />
+          <CgMenuRight color={theme.active} size={32} />
         </div>
       </header>
     </HeadRoom>

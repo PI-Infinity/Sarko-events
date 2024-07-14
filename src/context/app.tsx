@@ -189,6 +189,13 @@ const gallery = [
     link: "/gallery/presentations",
   },
   {
+    id: "conferences",
+    label: "Conferences",
+    img: "/conference.jpg",
+    path: true,
+    link: "/gallery/conferences",
+  },
+  {
     id: "teambuildings",
     label: "Teambuildings",
     img: "/teambuilding.jpg",

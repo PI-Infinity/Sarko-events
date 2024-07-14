@@ -10,7 +10,7 @@ import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
 const Main = () => {
   // app context
-  const { theme, loading, isMobile } = useAppContext();
+  const { theme, loading, gallery } = useAppContext();
 
   const videoRef = useRef<HTMLVideoElement>(null);
   const videoRefMob = useRef<HTMLVideoElement>(null);
@@ -108,7 +108,7 @@ const Main = () => {
           color: theme.text,
           background: theme.background,
         }}
-        className="w-full h-[95vh]
+        className="w-full
     text-white
     flex-col items-center relative z-30 mt-[-30px]"
       >
@@ -116,103 +116,38 @@ const Main = () => {
           <h2 className="text-3xl font-bold py-6 desktop:mb-4 whitespace-nowrap w-full pl-[5%]">
             What We Create
           </h2>
-          <div className="list-disc list-inside w-full flex flex-col items-center gap-2 px-[2%]">
-            <div className="w-full flex flex-col desktop:flex-row items-center desktop:gap-2">
-              <div
-                style={{ transition: "ease-in 200ms" }}
-                className="relative w-[100%] h-[200px]  shadow-md flex flex-col items-center justify-center cursor-pointer  hover:opacity-[0.9]"
-              >
-                <div className="w-full text-red-500 h-[500px] overflow-hidden">
-                  <Img
-                    src="/weddings.png"
-                    alt="weddings"
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                    }}
-                  />
-                </div>
-                <strong className="absolute top-2 left-2 py-1 px-3 rounded-full bg-[rgba(0,0,0,0.4)] text-sm">
-                  Weddings
-                </strong>
-              </div>
-              <div
-                style={{ transition: "ease-in 200ms" }}
-                className="relative w-[100%] h-[200px]  shadow-md flex flex-col items-center justify-center cursor-pointer  hover:opacity-[0.9]"
-              >
-                <div className="w-[100%] text-red-500  desktop:min-w-[500px] h-[500px] desktop:h-[600px] overflow-hidden ">
-                  <Img
-                    src="/corporation.jpg"
-                    alt="corporations"
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                    }}
-                  />
-                </div>
-                <strong className="absolute top-2 left-2 py-1 px-3 rounded-full bg-[rgba(0,0,0,0.5)] text-sm">
-                  Corporations
-                </strong>
-              </div>
-              <div
-                style={{ transition: "ease-in 200ms" }}
-                className="relative w-[100%] h-[200px]  shadow-md flex flex-col items-center justify-center cursor-pointer hover:opacity-[0.9]"
-              >
-                <div className="w-[100%] text-red-500  desktop:min-w-[500px] h-[500px] desktop:h-[600px] overflow-hidden ">
-                  <Img
-                    src="/presentation.png"
-                    alt="presentations"
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                    }}
-                  />
-                </div>
-                <strong className="absolute top-2 left-2 py-1 px-3 rounded-full bg-[rgba(0,0,0,0.5)] text-sm">
-                  Company/product presentations
-                </strong>
-              </div>
-            </div>
-            <div className="w-full flex flex-col desktop:flex-row items-center desktop:gap-2">
-              <div
-                style={{ transition: "ease-in 200ms" }}
-                className="relative w-[100%] h-[200px]  shadow-md flex flex-col items-center justify-center cursor-pointer hover:opacity-[0.9] "
-              >
-                <strong className="absolute top-2 left-2 py-1 px-3 rounded-full bg-[rgba(0,0,0,0.5)] text-sm">
-                  Conferences
-                </strong>
-              </div>
-              <div
-                style={{ transition: "ease-in 200ms" }}
-                className="relative w-[100%] h-[200px]  shadow-md flex flex-col items-center justify-center cursor-pointer  hover:opacity-[0.9]"
-              >
-                <div className="w-[100%] text-red-500  desktop:min-w-[500px] h-[500px] desktop:h-[600px] overflow-hidden ">
-                  <Img
-                    src="/teambuilding.jpg"
-                    alt="teambuildings"
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                    }}
-                  />
-                </div>
-                <strong className="absolute top-2 left-2 py-1 px-3 rounded-full bg-[rgba(0,0,0,0.5)] text-sm">
-                  Teambuildings
-                </strong>
-              </div>
-              <div
-                style={{ transition: "ease-in 200ms" }}
-                className="relative w-[100%] h-[200px]  shadow-md  flex flex-col items-center justify-center cursor-pointer hover:opacity-[0.9] "
-              >
-                <strong className="absolute top-2 left-2 py-1 px-3 rounded-full bg-[rgba(0,0,0,0.5)] text-sm">
-                  Festival organizations
-                </strong>
-              </div>
-            </div>
+          <div
+            style={{ display: loading ? "none" : "grid" }}
+            className="slide-in-top w-full w-full
+      text-white gap-4
+      overflow-y-auto pb-[120px] px-4 grid-cols-1 desktop:grid-cols-3 desktop:px-[2.5%]"
+          >
+            {gallery?.map((item: any, index: number) => {
+              return (
+                <Link
+                  href={item.link}
+                  style={{ background: theme.background2 }}
+                  className="w-full h-[300px] shadow-sm rounded-xl flex items-center justify-center
+            gap-4 relative"
+                  key={index}
+                >
+                  <div className="relative overflow-hidden rounded-xl w-full h-full flex items-center">
+                    <Img
+                      src={item.img}
+                      alt="img"
+                      style={{
+                        aspectRatio: 1,
+                        zIndex: 0,
+                        width: "100%",
+                      }}
+                    />
+                  </div>
+                  <strong className="absolute top-4 left-4 py-1 px-3 rounded-full bg-[rgba(0,0,0,0.5)] text-sm">
+                    {item.label}
+                  </strong>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </div>
