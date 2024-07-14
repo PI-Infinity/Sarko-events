@@ -21,10 +21,10 @@ const Projects = () => {
       path: true,
       link: "/projects/e-commerce",
     },
-    {
-      id: "Sarko Events",
-      img: "/tp.jpg",
-    },
+    // {
+    //   id: "Sarko Events",
+    //   img: "/tp.jpg",
+    // },
     {
       id: "Geo - Market",
       description: "Unique georgian online marketplace",
