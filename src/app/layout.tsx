@@ -26,7 +26,7 @@ export default function RootLayout({
           <Header />
           <MobileMenu />
           <main className="flex-grow w-full h-full">{children}</main>
-          <Stack />
+          {/* <Stack /> */}
           {/* <Configs /> */}
         </AppContextWrapper>
         {/* <Footer /> */}
