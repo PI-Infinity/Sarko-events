@@ -37,7 +37,7 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
   });
 
   useLayoutEffect(() => {
-    const localTheme = localStorage.getItem("tp-showcase:theme");
+    const localTheme = localStorage.getItem("sarko-events:theme");
     if (localTheme) {
       let parseObject = JSON.parse(localTheme);
       console.log(parseObject);
@@ -153,7 +153,7 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
   const [activeLanguage, setActiveLanguage] = useState<any>("");
 
   useEffect(() => {
-    let appLang = localStorage.getItem("tp-showcase:language") || "ka";
+    let appLang = localStorage.getItem("sarko-events:language") || "ka";
     setLanguage(appLang);
   }, []);
 
@@ -164,7 +164,7 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
       } else {
         setActiveLanguage(ka);
       }
-      localStorage.setItem("tp-showcase:language", language);
+      localStorage.setItem("sarko-events:language", language);
     }
   }, [language]);
 
@@ -206,7 +206,7 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
         dangerouslySetInnerHTML={{
           __html: `
             (function() {
-              const theme = localStorage.getItem('tp-showcase:theme');
+              const theme = localStorage.getItem('sarko-events:theme');
               if (theme) {
                 document.body.style.background = JSON.parse(theme).gradient;
               }

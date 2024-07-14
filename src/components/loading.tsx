@@ -11,7 +11,7 @@ export const Loading = () => {
       className="fixed w-full z-40 h-full flex-col items-center justify-center gap-4"
     >
       <h1 style={{ color: theme.text }} className="text-[20px]">
-        TP-Showcase
+        Sarko-Events
       </h1>
       <BarLoader
         height={6}

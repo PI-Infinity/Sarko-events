@@ -78,7 +78,7 @@ export const EStoreAppContextWrapper: React.FC<contextProps> = ({
         dangerouslySetInnerHTML={{
           __html: `
             (function() {
-              const theme = localStorage.getItem('tp-showcase:theme');
+              const theme = localStorage.getItem('sarko-events:theme');
               if (theme) {
                 document.body.style.background = JSON.parse(theme).gradient;
               }

@@ -78,7 +78,7 @@ const Header = () => {
             style={{ color: theme.text }}
             className="text-[32px] text-textlight cursor-pointer whitespace-nowrap"
           >
-            TP-Showcase
+            Sarko Events
           </h1>
         </Link>
 

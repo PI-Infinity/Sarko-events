@@ -11,7 +11,7 @@ const Configs = () => {
 
   const handleChangeTheme = (value: any) => {
     setTheme(value);
-    localStorage.setItem("tp-showcase:theme", JSON.stringify(value));
+    localStorage.setItem("sarko-events:theme", JSON.stringify(value));
     document.documentElement.style.background = value.background;
     document.body.style.background = value.gradient;
   };
