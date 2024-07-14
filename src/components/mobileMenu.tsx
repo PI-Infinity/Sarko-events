@@ -112,25 +112,6 @@ const MobileMenu = () => {
           />
         </div>
       </div>
-      <div
-        className="flex items-center gap-3 w-full mt-4"
-        onClick={(e) => e.stopPropagation()}
-      >
-        {colors.map((item: any) => {
-          return (
-            <div
-              onClick={() => handleChangeTheme(item)}
-              key={item.id}
-              style={{ background: item.main }}
-              className={`scale-up w-7 h-7 rounded-full
-${
-  theme.id === item.id && "border-[2px]"
-} border-textlight cursor-pointer hover:opacity-[0.9]
-flex items-center justify-center`}
-            />
-          );
-        })}
-      </div>
     </div>
   );
 };
