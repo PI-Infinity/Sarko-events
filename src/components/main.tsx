@@ -59,9 +59,9 @@ const Main = () => {
             }
           />
         </video>
-        {!isLoaded && (
-          <div className="absolute h-[100vh] z-20 flex w-full">
-            <MoonLoader size={24} color={theme.text} className="mt-24 ml-8" />
+        {isLoaded && (
+          <div className="absolute top-28 right-8 z-20">
+            <MoonLoader size={24} color={theme.text} className="" />
           </div>
         )}
       </div>
@@ -92,7 +92,7 @@ const Main = () => {
         )}
       </div>
 
-      <div className="z-10 w-full h-full px-[5%] absolute top-[16vh] desktop:top-[30vh]">
+      <div className="z-10 w-full h-full px-[5%] absolute top-[12vh] desktop:top-[30vh]">
         <div className="flex desktop:items-center gap-[8px] mt-4 desktop:mt-8">
           <h1 className="text-[48px] leading-[56px] desktop:text-[64px] font-[700] text-shadow-lg">
             Your events management solution
