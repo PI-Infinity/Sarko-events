@@ -15,10 +15,7 @@ const Offers = () => {
   return (
     <div
       style={{ display: loading ? "none" : "flex", color: theme.text }}
-      className="w-full h-[95vh]
-    desktop:pr-[8%] pt-[100px] desktop:pt-[140px] text-white
-    flex-col items-center
-    pb-4"
+      className="pt-[100px] desktop:pt-[120px] pb-[200px] desktop:pb-[220px]"
     >
       <div className="w-[100%] p-4 px-[5%] pb-32 desktop:px-24 slide-in-top flex flex-col items-center gap-6">
         <h2 className="text-2xl font-bold mb-2 desktop:mb-4 whitespace-nowrap w-full">

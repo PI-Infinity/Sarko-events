@@ -24,6 +24,10 @@ const nextConfig = {
       addUtilities(newUtilities, ["responsive", "hover"]);
     },
   ],
+  env: {
+    EMAIL: "sarkoevents@gmail.com",
+    EMAIL_APP_PASSWORD: "dedb ddyh cszk oxdx",
+  },
 };
 
 export default nextConfig;

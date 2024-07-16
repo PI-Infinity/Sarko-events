@@ -40,7 +40,6 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
     const localTheme = localStorage.getItem("sarko-events:theme");
     if (localTheme) {
       let parseObject = JSON.parse(localTheme);
-      console.log(parseObject);
       document.body.style.background = parseObject.gradient;
       document.documentElement.style.background = parseObject.background;
       setTheme(parseObject);
@@ -109,6 +108,11 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
   const [mobileMenu, setMobileMenu] = useState(false);
 
   useEffect(() => {
+    if (mobileMenu) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
     // Ensure the body has the transition set
     document.body.style.transition = "right 200ms ease-in";
 
@@ -127,6 +131,9 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
       document.body.style.transition = "";
     };
   }, [mobileMenu]);
+
+  // open request form
+  const [active, setActive] = useState(false);
 
   return (
     <>
@@ -158,6 +165,8 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
           isMobile,
           colors,
           gallery,
+          active,
+          setActive,
         }}
       >
         {children}
@@ -191,7 +200,7 @@ const gallery = [
   {
     id: "conferences",
     label: "Conferences",
-    img: "/conference.jpg",
+    img: "/presentation.png",
     path: true,
     link: "/gallery/conferences",
   },
@@ -203,11 +212,11 @@ const gallery = [
     link: "/gallery/teambuildings",
   },
   {
-    id: "festivals",
-    label: "Festival Organisations",
-    img: "/corporation.jpg",
+    id: "other",
+    label: "Other",
+    img: "/teambuilding.jpg",
     path: true,
-    link: "/gallery/festivals",
+    link: "/gallery/other",
   },
 ];
 

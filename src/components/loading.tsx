@@ -10,7 +10,7 @@ export const Loading = () => {
       style={{ display: loading ? "flex" : "none" }}
       className="fixed w-full z-40 h-full flex-col items-center justify-center gap-4"
     >
-      <h1 style={{ color: theme.text }} className="text-[20px]">
+      <h1 style={{ color: theme.text }} className="text-[20px] font-bold">
         Sarko-Events
       </h1>
       <BarLoader

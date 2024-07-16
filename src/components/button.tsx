@@ -35,9 +35,10 @@ const Button: React.FC<PropsType> = ({
           disabled ? "default" : "pointer"
         } hover:${disabled ? "none" : "opacity-[0.9]"} font-semibold`}
       >
-        {loading && <CircularProgress sx={{ color: "white" }} size={20} />}
+        <div>{icon}</div>
+
         {title}
-        <div className="absolute right-4">{icon}</div>
+        {loading && <CircularProgress sx={{ color: "white" }} size={20} />}
       </div>
     </>
   );

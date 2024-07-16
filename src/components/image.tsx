@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { FaUser } from "react-icons/fa";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
@@ -28,7 +27,7 @@ const Img = ({ src, alt, onClick, style }: any) => {
       onClick={onClick}
     >
       <div
-        className="opacity-1 absolute -top-1  w-full h-full opacity"
+        className="opacity-0.3 absolute -top-1  w-full h-full opacity"
         style={{ opacity: load ? 0 : 1, transition: "ease-out 250ms" }}
       >
         <Skeleton className="h-full w-full" />

@@ -5,24 +5,10 @@ import { usePathname } from "next/navigation";
 import ReactCountryFlag from "react-country-flag";
 
 const MobileMenu = () => {
-  const {
-    menuItems,
-    theme,
-    setTheme,
-    mobileMenu,
-    setMobileMenu,
-    colors,
-    language,
-    setLanguage,
-  } = useAppContext();
+  const { menuItems, theme, mobileMenu, setMobileMenu, language, setLanguage } =
+    useAppContext();
   const pathname = usePathname();
 
-  const handleChangeTheme = (value: any) => {
-    setTheme(value);
-    localStorage.setItem("sarko-events:theme", JSON.stringify(value));
-    document.documentElement.style.background = value.background;
-    document.body.style.background = value.gradient;
-  };
   return (
     <div
       style={{

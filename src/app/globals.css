@@ -22,12 +22,20 @@
   padding: 0;
 }
 
+/* globals.css */
+html,
 body {
-  font-family: "CircularStd", "Inter", sans-serif;
-  min-height: 100vh;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 @keyframes slide {
