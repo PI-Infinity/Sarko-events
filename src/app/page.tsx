@@ -3,8 +3,8 @@ import Main from "@/components/main";
 import { useAppContext } from "@/context/app";
 import { usePathname } from "next/navigation";
 import Contact from "./(pages)/contact/page";
-import Projects from "./(pages)/gallery/page";
-import Offers from "./(pages)/offers/page";
+import Gallery from "./(pages)/whatwecreate/page";
+import Offers from "./(pages)/whatwecreate/[id]/offers";
 import { Footer } from "@/components/footer";
 
 export default function Home() {
@@ -20,10 +20,8 @@ export default function Home() {
 
       {pathname === "/" ? (
         <Main />
-      ) : pathname === "/offers" ? (
-        <Offers />
-      ) : pathname === "/gallery" ? (
-        <Projects />
+      ) : pathname === "/whatwecreate" ? (
+        <Gallery />
       ) : pathname === "/contact" ? (
         <Contact />
       ) : null}

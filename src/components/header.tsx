@@ -1,7 +1,6 @@
 "use client";
 import { useAppContext } from "@/context/app";
 import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import HeadRoom from "react-headroom";
@@ -45,7 +44,7 @@ const Header = () => {
           >
             <div className="relative w-[140px] h-[50px] flex items-center justify-center">
               <Img
-                src={theme.id === "light" ? "/logo-black.png" : "/logo.png"}
+                src="/sarko-logo.png"
                 alt="Sarko"
                 style={{ width: "100%", height: "100%" }}
               />

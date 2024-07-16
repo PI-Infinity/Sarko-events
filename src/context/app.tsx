@@ -100,8 +100,8 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
   // nav items
   const menuItems = [
     { path: "/", label: "Home" },
-    { path: "/offers", label: "Offers" },
-    { path: "/gallery", label: "Gallery" },
+    { path: "/about", label: "About" },
+    { path: "/whatwecreate", label: "What We Create" },
     { path: "/contact", label: "Contact" },
   ];
   // mobile menu state
@@ -109,9 +109,9 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
 
   useEffect(() => {
     if (mobileMenu) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflowY = "hidden";
     } else {
-      document.body.style.overflow = "auto";
+      document.body.style.overflowY = "auto";
     }
     // Ensure the body has the transition set
     document.body.style.transition = "right 200ms ease-in";
@@ -181,42 +181,42 @@ const gallery = [
     label: "Weddings",
     img: "/weddings.png",
     path: true,
-    link: "/gallery/weddings",
+    link: "/whatwecreate/weddings",
   },
   {
     id: "corporations",
     label: "Corporate Events",
     img: "/corporation.jpg",
     path: true,
-    link: "/gallery/corporations",
+    link: "/whatwecreate/corporations",
   },
   {
     id: "presentations",
     label: "Company / Product Presentations",
     img: "/presentation.png",
     path: true,
-    link: "/gallery/presentations",
+    link: "/whatwecreate/presentations",
   },
   {
     id: "conferences",
     label: "Conferences",
     img: "/presentation.png",
     path: true,
-    link: "/gallery/conferences",
+    link: "/whatwecreate/conferences",
   },
   {
     id: "teambuildings",
     label: "Teambuildings",
     img: "/teambuilding.jpg",
     path: true,
-    link: "/gallery/teambuildings",
+    link: "/whatwecreate/teambuildings",
   },
   {
     id: "other",
     label: "Other",
     img: "/teambuilding.jpg",
     path: true,
-    link: "/gallery/other",
+    link: "/whatwecreate/other",
   },
 ];
 

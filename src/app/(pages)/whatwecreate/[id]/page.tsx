@@ -4,6 +4,7 @@ import { useAppContext } from "@/context/app";
 import { usePathname } from "next/navigation";
 import { useState, useEffect, useCallback } from "react";
 import { useInView } from "react-intersection-observer";
+import Offers from "./offers";
 
 const Page = () => {
   const pathname = usePathname();
@@ -31,16 +32,9 @@ const Page = () => {
   return (
     <div
       style={{ display: loading ? "none" : "flex" }}
-      className="w-full flex-col items-center pt-[90px] desktop:pt-[100px] gap-2 slide-in-right desktop:overflow-hidden pb-[330px]"
+      className="w-full flex-col items-center pt-[90px] desktop:pt-[100px] gap-2 slide-in-right desktop:overflow-hidden pb-8 px-[5%]"
     >
-      <div className="w-full px-[5%] flex">
-        <h2
-          className="text-xl font-[700] my-2 desktop:my-6"
-          style={{ color: theme.text }}
-        >
-          {gallery.find((i: any) => i.id === pathname.split("/")[2]).label}
-        </h2>
-      </div>
+      <Offers type={pathname.split("/")[2]} />
       <div className="w-full grid grid-cols-1 desktop:grid-cols-5 gap-2 px-2">
         {list?.slice(0, itemsToShow).map((item: any, index: number) => {
           return (

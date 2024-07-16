@@ -16,38 +16,42 @@ const Contact = () => {
   return (
     <div
       style={{ display: loading ? "none" : "flex" }}
-      className="ovefflow-hidden w-[100%] slide-in-right pt-[116px] desktop:pt-[150px] flex-col items-center h-[100vh] px-8 gap-4 desktop:gap-8"
+      className="oveflow-hidden w-[100%] slide-in-top pt-[100px] pb-[64px] flex-col desktop:flex-row items-center desktop:items-start px-[5%] gap-4 desktop:gap-8"
     >
-      <div className="flex flex-col gap-4 w-1/3">
+      <div className="w-full desktop:w-1/3 flex justify-center">
+        <RequestForm />
+      </div>
+      <div className="flex flex-col gap-4 w-full desktop:w-1/3 relative top-24 left-24">
         <a
           href="mailto:Tornike.Pirtakhia@Gmail.com"
           className="cursor-pointer flex items-center gap-2"
           style={{ textDecoration: "underline", color: theme.text }}
         >
           <MdEmail size={isMobile ? 24 : 32} color={theme.active} />{" "}
-          <h3 className="text-md desktop:text-xl" style={{ color: theme.text }}>
+          <span
+            className="text-md desktop:text-xl"
+            style={{ color: theme.text }}
+          >
             Sarko.events@gmail.com
-          </h3>
+          </span>
         </a>
-        <a
-          href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQHjIwoDMKvnSAAAAZCihvVAHc0X9RgNI5llxtNO8w7l5eNNEruRoBtt1FvTg93soohFdTedci2hbl_OETM_jI2lm6l4sYRk8au_FM1D9nG-2CskdhwZCCCw8FMfTbxrZbSMhug=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Ftornike-pirtakhia-2b9b57201%3Futm_source%3Dshare%26utm_campaign%3Dshare_via%26utm_content%3Dprofile%26utm_medium%3Dios_app"
+        <div
           className="cursor-pointer flex items center gap-2"
           style={{ textDecoration: "underline", color: theme.text }}
         >
           <FaMobileButton size={isMobile ? 24 : 32} color={theme.active} />
-          <h3 className="text-md desktop:text-xl" style={{ color: theme.text }}>
+          <div
+            className="text-md desktop:text-xl"
+            style={{ color: theme.text }}
+          >
             <a
               href="tel:+995597233355"
               style={{ color: "inherit", textDecoration: "none" }}
             >
               +995597233355
             </a>
-          </h3>
-        </a>
-      </div>
-
-      <div className="mt-8 w-1/3 flex justify-center pb-[100px]">
-        <RequestForm />
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -11,9 +11,12 @@ export const Footer = () => {
   const { loading, theme, language, setLanguage } = useAppContext();
   return (
     <div
-      style={{ display: pathname === "/contact" || loading ? "none" : "flex" }}
-      className="absolute bottom-0 h-[300px] z-40 px-[5%] pt-8 pb-6 w-full
-      border-t-[1.5px] border-t-[rgba(255,255,255,0.1)]
+      style={{
+        display: loading ? "none" : "flex",
+        background: theme.background,
+      }}
+      className="h-[300px] z-40 px-[5%] pt-8 pb-6 w-full
+      border-t-[0.5px] border-t-[rgba(255,255,255,0.1)]
       flex-col justify-between"
     >
       <div className="w-full flex justify-between">
@@ -23,7 +26,7 @@ export const Footer = () => {
         >
           <div className="relative w-[100px] h-[35px] flex items-center justify-center">
             <Img
-              src={theme.id === "light" ? "/logo-black.png" : "/logo.png"}
+              src={theme.id === "light" ? "/logo-black.png" : "/sarko-logo.png"}
               alt="Sarko"
               style={{ width: "100%", height: "100%" }}
             />

@@ -5,17 +5,17 @@ import Link from "next/link";
 import { useEffect } from "react";
 
 const Gallery = () => {
-  const { theme, loading, isMobile, gallery } = useAppContext();
+  const { theme, loading, gallery } = useAppContext();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
-    <div className="w-full h-full flex-grow pt-[94px] desktop:pt-[120px] pb-[340px]">
+    <div className="w-full h-full flex-grow pt-[94px] desktop:pt-[120px] pb-8">
       <div
         style={{ display: loading ? "none" : "grid" }}
-        className="slide-in-top w-full
+        className="slide-in-right w-full
      text-white gap-4
       px-2 grid-cols-1 desktop:grid-cols-3 desktop:px-[5%]"
       >
