@@ -23,7 +23,7 @@ const Offers = ({ type }: any) => {
             <div className="flex gap-24 items-center max-h-[15vw]">
               <div className="flex flex-col gap-4">
                 <strong className="text-2xl my-6">
-                  {item?.title.en && item?.title[language]}
+                  {item?.title.en && item?.title.en}
                 </strong>
                 <div className="grid grid-cols-2 gap-2">
                   {item?.subtitles?.map((i: any, x: number) => {
