@@ -9,7 +9,6 @@ const Offers = ({ type }: any) => {
     window.scrollTo(0, 0);
   }, []);
 
-  console.log(type);
   const item = texts && texts.find((i: any) => i.value === type);
 
   return (
