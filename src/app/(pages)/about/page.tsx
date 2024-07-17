@@ -6,11 +6,11 @@ const AboutUs = () => {
   const { theme, language, loading } = useAppContext();
   return (
     <div
-      className="w-full h-full px-6 py-12 pt-[140px] slide-in-top flex flex-col items-center"
+      className="w-full h-full px-4 py-4 pt-[100px] slide-in-top flex flex-col items-center"
       style={{ color: theme.text, display: loading ? "none" : "flex" }}
     >
-      <div className="flex w-full items-center justify-center gap-4">
-        <div className="relative overflow-hidden rounded-xl w-1/4 h-full flex items-center">
+      <div className="flex w-full items-center justify-center gap-4 mb-4">
+        <div className="relative overflow-hidden rounded-xl w-full desktop:w-1/4 h-full flex items-center">
           <Img
             src={"/we.jpeg"}
             alt="img"
@@ -21,7 +21,7 @@ const AboutUs = () => {
             }}
           />
         </div>
-        <div className="relative overflow-hidden rounded-xl w-1/4 h-full flex items-center">
+        <div className="hidden relative overflow-hidden rounded-xl w-1/4 h-full desktop:flex items-center">
           <Img
             src={"/we2.jpeg"}
             alt="img"
@@ -37,20 +37,24 @@ const AboutUs = () => {
       {texts.map((item: any, index: number) => {
         return (
           <div className="w-full desktop:max-w-[50%] mx-auto">
-            <div className="mt-8">
-              <h2 className="text-2xl mb-4 font-semibold">
+            <div className="mt-4">
+              <h2 className="text-xl mb-2 font-semibold">
                 {item.title[language]}
               </h2>
               {item?.list[language] && (
-                <ul className="list-disc pl-5 text-lg">
+                <ul className="list-disc pl-5 text-md">
                   {item?.list[language].map((i: any, index: number) => {
-                    return <li key={index}>{i}</li>;
+                    return (
+                      <li key={index} className="italic">
+                        {i}
+                      </li>
+                    );
                   })}
                 </ul>
               )}
             </div>
-            <div className="mt-8">
-              <p className="text-lg">{item.description[language]}</p>
+            <div className="mt-4">
+              <p className="text-md italic">{item.description[language]}</p>
             </div>
           </div>
         );

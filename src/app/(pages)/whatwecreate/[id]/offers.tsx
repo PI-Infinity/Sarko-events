@@ -9,6 +9,7 @@ const Offers = ({ type }: any) => {
     window.scrollTo(0, 0);
   }, []);
 
+  console.log(type);
   const item = texts && texts.find((i: any) => i.value === type);
 
   return (
@@ -233,7 +234,7 @@ const texts = [
   },
   {
     img: "/corporation.jpg",
-    value: "corporations",
+    value: "conferences",
     title: { en: "Conference", ru: "Конференция", ka: "კონფერენცია" },
     subtitles: [
       {
