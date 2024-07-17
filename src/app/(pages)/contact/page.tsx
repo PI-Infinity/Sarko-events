@@ -25,7 +25,7 @@ const Contact = () => {
   return (
     <div
       style={{ display: loading ? "none" : "flex" }}
-      className="oveflow-hidden w-[100%] slide-in-top pt-[100px] desktop:pt-[72px] flex-col desktop:flex-row items-center desktop:items-start px-[5%] gap-4 desktop:gap-8 pb-[64px] desktop:pb-[8px]"
+      className="oveflow-hidden w-[100%] slide-in-top pt-[100px] desktop:pt-[72px] flex-col desktop:flex-row items-center desktop:items-start px-4 desktop:px-[5%] gap-4 desktop:gap-8 pb-[64px] desktop:pb-[8px]"
     >
       <div className="w-full desktop:w-1/3 flex justify-center">
         <RequestForm />

@@ -61,7 +61,7 @@ const MobileMenu = () => {
           onClick={() => setLanguage("en")}
           style={{
             opacity: language === "en" ? 1 : 0.5,
-            fontSize: "16px",
+            fontSize: "14px",
             color: theme.text,
           }}
           className={` ${
@@ -81,7 +81,7 @@ const MobileMenu = () => {
           onClick={() => setLanguage("ka")}
           style={{
             opacity: language === "ka" ? 1 : 0.5,
-            fontSize: "16px",
+            fontSize: "14px",
             color: theme.text,
           }}
         >
@@ -97,7 +97,7 @@ const MobileMenu = () => {
           onClick={() => setLanguage("ru")}
           style={{
             opacity: language === "ru" ? 1 : 0.5,
-            fontSize: "16px",
+            fontSize: "14px",
             color: theme.text,
           }}
         >

@@ -119,7 +119,7 @@ const RequestForm = () => {
     },
   ];
   return (
-    <div className="flex flex-col gap-4 w-full desktop:w-[720px] desktop:py-8">
+    <div className="flex flex-col gap-2 w-full desktop:w-[720px] desktop:py-8">
       <h3
         style={{ color: theme.text }}
         className="font-bold text-[24px] desktop:my-4"
