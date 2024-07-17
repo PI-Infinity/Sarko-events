@@ -189,20 +189,6 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
 
   return (
     <>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            (function() {
-              const theme = localStorage.getItem('sarko-events:theme');
-              if (theme) {
-                document.body.style.background = JSON.parse(theme).gradient;
-              }
-            })();
-
-          `,
-        }}
-      />
-
       <AppContext.Provider
         value={{
           theme,

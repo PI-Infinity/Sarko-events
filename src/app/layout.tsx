@@ -34,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" style={{ background: "#050505" }}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <link
