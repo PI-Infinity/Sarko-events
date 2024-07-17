@@ -10,7 +10,7 @@ import { IoMdHeart } from "react-icons/io";
 
 const Main = () => {
   // app context
-  const { theme, loading, gallery, setActive } = useAppContext();
+  const { theme, loading, gallery, activeLanguage } = useAppContext();
 
   const videoRef = useRef<HTMLVideoElement>(null);
   const videoRefMob = useRef<HTMLVideoElement>(null);
@@ -54,13 +54,13 @@ const Main = () => {
         <div className="z-20 w-full h-full px-[6.5%] absolute top-0 flex flex-col items-center justify-center">
           <div className="flex gap-[8px] mt-4 flex flex-col gap-4 items-center">
             <h1 className="w-[100%] text-[32px] leading-[40px] font-[700] text-shadow-lg text-center">
-              გაერთიანდი...
+              {activeLanguage.unite}
             </h1>
             <h1 className="w-[100%] text-[32px] leading-[40px] font-[700] text-shadow-lg text-center">
-              იზეიმე...
+              {activeLanguage.celebrate}
             </h1>
             <h1 className="w-[100%] text-[32px] leading-[40px] font-[700] text-shadow-lg text-center">
-              შთააგონე...
+              {activeLanguage.inspire}
             </h1>
           </div>
 
@@ -70,7 +70,7 @@ const Main = () => {
               className="h-12 w-[100%] desktop:w-[400px] border-[1px] border-[rgba(255,255,255,0.2)] rounded-full"
             >
               <Button
-                title={"Start Planning"}
+                title={activeLanguage.startPlanning}
                 background="rgba(255,255,255,1)"
                 color={theme.background}
                 onClick={() => undefined}
@@ -79,8 +79,7 @@ const Main = () => {
             </Link>
             <div className="mt-4">
               <h3 className="opacity-[0.3] text-white flex items-center gap-2">
-                We'll create your beautiful days!{" "}
-                <IoMdHeart color="red" size={24} />
+                {activeLanguage.loveText} <IoMdHeart color="red" size={24} />
               </h3>
             </div>
           </div>
@@ -113,7 +112,8 @@ const Main = () => {
         <div className="z-20 w-full h-full px-[6.5%] absolute top-[30vh] flex flex-col items-center">
           <div className="flex items-center gap-[8px] mt-[15vh]">
             <h1 className="leading-[72px] text-[48px] font-[700] text-shadow-lg">
-              გაერთიანდი... იზეიმე... შთააგონე...
+              {activeLanguage.unite} {activeLanguage.celebrate}{" "}
+              {activeLanguage.inspire}
             </h1>
           </div>
 
@@ -123,7 +123,7 @@ const Main = () => {
               className="h-12 w-[100%] desktop:w-[400px] border-[1px] border-[rgba(255,255,255,0.2)] rounded-full"
             >
               <Button
-                title={"Start Planning"}
+                title={activeLanguage.startPlanning}
                 background="rgba(255,255,255,1)"
                 color={theme.background}
                 onClick={() => undefined}
@@ -132,7 +132,7 @@ const Main = () => {
             </Link>
             <div className="mt-4">
               <h3 className="opacity-[0.3] text-white flex items-center gap-2">
-                We'll create your beautiful days!{" "}
+                {activeLanguage.loveText}
                 <IoMdHeart color="red" size={24} />
               </h3>
             </div>
@@ -150,7 +150,7 @@ const Main = () => {
       >
         <div className="z-30 w-[100%] py-12 flex flex-col items-center gap-6">
           <h2 className="text-2xl font-bold py-4 pb-2 desktop:mb-4 whitespace-nowrap w-full text-center">
-            What We Create
+            {activeLanguage.whatWeCreate}
           </h2>
           <div
             style={{ display: loading ? "none" : "grid" }}
@@ -194,7 +194,7 @@ const Main = () => {
               className="h-12 w-full desktop:w-1/3 border-[1px] border-[rgba(255,255,255,0.2)] rounded-full"
             >
               <Button
-                title={"Start Planning"}
+                title={activeLanguage.startPlanning}
                 background="rgba(255,255,255,1)"
                 color={theme.background}
                 onClick={() => undefined}

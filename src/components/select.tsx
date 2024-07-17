@@ -1,4 +1,3 @@
-import { useAppContext } from "@/context/app";
 import React from "react";
 import Select from "react-select";
 
@@ -12,7 +11,7 @@ export default function SelectComponent({ data, value, setValue }: any) {
     }),
     placeholder: (provided: any) => ({
       ...provided,
-      color: "gray",
+      color: "black",
     }),
     singleValue: (provided: any) => ({
       ...provided,

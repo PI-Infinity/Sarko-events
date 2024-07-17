@@ -9,8 +9,7 @@ import Img from "./image";
 
 const Header = () => {
   // theme
-  const { theme, loading, menuItems, setMobileMenu, isMobile } =
-    useAppContext();
+  const { theme, loading, menuItems, setMobileMenu } = useAppContext();
 
   const pathname = usePathname();
 
@@ -37,20 +36,18 @@ const Header = () => {
       flex items-center justify-between
       py-4 desktop:py-[20px] px-[5%] shadow-sm border-b-[1px] border-b-[rgba(255,255,255,0.1)]"
       >
-        <div className="w-1/2">
-          <Link
-            href="/"
-            className="flex items-center gap-4 scale-up cursor-pointer"
-          >
-            <div className="relative w-[140px] h-[50px] flex items-center justify-center">
-              <Img
-                src="/sarko-logo.png"
-                alt="Sarko"
-                style={{ width: "100%", height: "100%" }}
-              />
-            </div>
-          </Link>
-        </div>
+        <Link
+          href="/"
+          className="flex items-center gap-4 scale-up cursor-pointer"
+        >
+          <div className="relative w-[140px] h-[50px] flex items-center justify-center">
+            <Img
+              src="/sarko-logo.png"
+              alt="Sarko"
+              style={{ width: "100%", height: "100%" }}
+            />
+          </div>
+        </Link>
 
         <div className="w-1/2 hidden slide-in-left desktop:flex items-center justify-end gap-[48px] text-textlight text-[16px] font-custom font-[600]">
           {menuItems.map((item: any) => {

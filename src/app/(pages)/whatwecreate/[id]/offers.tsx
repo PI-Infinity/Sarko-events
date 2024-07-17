@@ -9,7 +9,6 @@ const Offers = ({ type }: any) => {
     window.scrollTo(0, 0);
   }, []);
 
-  console.log(type);
   const item = texts && texts.find((i: any) => i.value === type);
 
   return (
@@ -23,7 +22,11 @@ const Offers = ({ type }: any) => {
             <div className="flex gap-24 items-center px-2">
               <div className="flex flex-col gap-4">
                 <strong className="text-2xl desktop:my-6">
-                  {item?.title.en && item?.title.en}
+                  {language === "en"
+                    ? item?.title.en
+                    : language === "ka"
+                    ? item?.title.ka
+                    : item?.title.ru}
                 </strong>
                 <div className="grid desktop:grid-cols-2 gap-2">
                   {item?.subtitles?.map((i: any, x: number) => {

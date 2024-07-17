@@ -38,7 +38,7 @@ const Button: React.FC<PropsType> = ({
         <div>{icon}</div>
 
         {title}
-        {loading && <CircularProgress sx={{ color: "white" }} size={20} />}
+        {loading && <CircularProgress sx={{ color: "black" }} size={20} />}
       </div>
     </>
   );

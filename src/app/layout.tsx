@@ -8,6 +8,7 @@ import { Footer } from "@/components/footer";
 import MobileMenu from "@/components/mobileMenu";
 import Popup from "@/components/popup";
 import Head from "next/head";
+import SimpleSnackbar from "@/components/snackbar";
 
 export const metadata: Metadata = {
   openGraph: {
@@ -59,6 +60,7 @@ export default function RootLayout({
           {/* <Stack /> */}
           {/* <Configs /> */}
           {/* <Popup /> */}
+          <SimpleSnackbar />
           <Footer />
         </AppContextWrapper>
       </body>

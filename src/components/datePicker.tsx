@@ -3,15 +3,20 @@ import React from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-export const DatePickerComponent = ({ date, setDate }: any) => {
+export const DatePickerComponent = ({
+  startingDate,
+  setStartingDate,
+  endingDate,
+  setEndingDate,
+}: any) => {
   const { theme } = useAppContext();
-  const { activeLanguage, isMobile } = useAppContext();
+  const { activeLanguage } = useAppContext();
 
   return (
     <div className={`flex items-center gap-6 `}>
-      <div className="flex items-center gap-4 text-sm font-semibold w-full italic">
+      <div className="flex flex-col desktop:flex-row items-center gap-4 text-sm font-semibold w-full italic">
         <div
-          className="flex items-center justify-between gap-4 w-full "
+          className="flex items-center justify-between gap-4 w-full pl-16 desktop:pl-0"
           style={{
             border: `1px solid ${theme.line}`,
             borderRadius: "10px",
@@ -22,17 +27,17 @@ export const DatePickerComponent = ({ date, setDate }: any) => {
               color: theme.text,
             }}
           >
-            Start:
+            {activeLanguage.start}:
           </span>
           <DatePicker
-            selected={date}
-            onChange={(dt: any) => setDate(dt)}
+            selected={startingDate}
+            onChange={(dt: any) => setStartingDate(dt)}
             dateFormat="dd/MMMM/yyyy"
             className="w-full h-14 py-2 px-3 rounded-xl focus:outline-none text-[16px]"
           />
         </div>
         <div
-          className="flex items-center justify-between w-full gap-4"
+          className="flex items-center justify-between w-full gap-4 pl-16 desktop:pl-0"
           style={{
             border: `1px solid ${theme.line}`,
             borderRadius: "10px",
@@ -43,11 +48,11 @@ export const DatePickerComponent = ({ date, setDate }: any) => {
               color: theme.text,
             }}
           >
-            End:
+            {activeLanguage.end}:
           </span>
           <DatePicker
-            selected={date}
-            onChange={(dt: any) => setDate(dt)}
+            selected={endingDate}
+            onChange={(dt: any) => setEndingDate(dt)}
             dateFormat="dd/MMMM/yyyy"
             className="w-full h-14 py-2 px-3 rounded-xl focus:outline-none text-[16px]"
           />

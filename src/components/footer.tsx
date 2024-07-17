@@ -1,13 +1,18 @@
 "use client";
 import { useAppContext } from "@/context/app";
-import { usePathname } from "next/navigation";
-import React from "react";
-import Img from "./image";
 import Link from "next/link";
-import ReactCountryFlag from "react-country-flag";
+import Img from "./image";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaTelegram,
+  FaTiktok,
+  FaWhatsapp,
+  FaYoutube,
+} from "react-icons/fa";
 
 export const Footer = () => {
-  const pathname = usePathname();
   const { loading, theme, language, setLanguage } = useAppContext();
   return (
     <div
@@ -15,14 +20,14 @@ export const Footer = () => {
         display: loading ? "none" : "flex",
         background: theme.background,
       }}
-      className="h-[300px] z-40 px-[5%] pt-8 pb-6 w-full
+      className="z-40 px-[5%] pt-8 pb-6 w-full
       border-t-[0.5px] border-t-[rgba(255,255,255,0.1)]
-      flex-col justify-between"
+      flex-col"
     >
-      <div className="w-full flex justify-between">
+      <div className="w-full flex flex-col desktop:flex-row desktop:items-center desktop:justify-between gap-12">
         <Link
           href="/"
-          className="flex items-center gap-4 scale-up cursor-pointer"
+          className="desktop:w-1/3 flex items-center gap-4 scale-up cursor-pointer"
         >
           <div className="relative w-[100px] h-[35px] flex items-center justify-center">
             <Img
@@ -32,24 +37,44 @@ export const Footer = () => {
             />
           </div>
         </Link>
-        <div className="flex items-center gap-4">
+        <div className="desktop:w-1/3 flex items-center desktop:justify-center gap-4">
+          <div>
+            <FaFacebook color={theme.text} size={20} />
+          </div>
+          <div>
+            <FaInstagram color={theme.text} size={20} />
+          </div>
+          <div>
+            <FaTiktok color={theme.text} size={20} />
+          </div>
+          <div>
+            <FaYoutube color={theme.text} size={20} />
+          </div>
+          <div>
+            <FaTelegram color={theme.text} size={20} />
+          </div>
+          <div>
+            <FaWhatsapp color={theme.text} size={20} />
+          </div>
+          <div>
+            <FaLinkedin color={theme.text} size={20} />
+          </div>
+        </div>
+        <div className="desktop:w-1/3 flex justify-end desktop:items-center flex-col desktop:flex-row gap-2 desktop:gap-8">
           <div
+            onClick={() => setLanguage("en")}
+            style={{
+              opacity: language === "en" ? 1 : 0.5,
+              fontSize: "16px",
+              color: theme.text,
+            }}
             className={` ${
               language !== "en"
                 ? "hover:opacity-[0.8] cursor-pointer"
                 : "cursor-default"
             }`}
           >
-            <ReactCountryFlag
-              className="emojiFlag"
-              onClick={() => setLanguage("en")}
-              countryCode="GB"
-              style={{
-                opacity: language === "en" ? 1 : 0.5,
-                fontSize: 16,
-              }}
-              aria-label="GB"
-            />
+            English
           </div>
           <div
             className={` ${
@@ -57,17 +82,14 @@ export const Footer = () => {
                 ? "hover:opacity-[0.8] cursor-pointer"
                 : "cursor-default"
             }`}
+            onClick={() => setLanguage("ka")}
+            style={{
+              opacity: language === "ka" ? 1 : 0.5,
+              fontSize: "16px",
+              color: theme.text,
+            }}
           >
-            <ReactCountryFlag
-              className="emojiFlag"
-              onClick={() => setLanguage("ka")}
-              countryCode="GE"
-              style={{
-                opacity: language === "ka" ? 1 : 0.5,
-                fontSize: 16,
-              }}
-              aria-label="Georgia"
-            />
+            ქართული
           </div>
 
           <div
@@ -76,22 +98,22 @@ export const Footer = () => {
                 ? "hover:opacity-[0.8] cursor-pointer"
                 : "cursor-default"
             }`}
+            onClick={() => setLanguage("ru")}
+            style={{
+              opacity: language === "ru" ? 1 : 0.5,
+              fontSize: "16px",
+              color: theme.text,
+            }}
           >
-            <ReactCountryFlag
-              className="emojiFlag"
-              onClick={() => setLanguage("ru")}
-              countryCode="RU"
-              style={{
-                opacity: language === "ru" ? 1 : 0.5,
-                fontSize: 16,
-              }}
-              aria-label="RU"
-            />
+            Русский
           </div>
         </div>
       </div>
 
-      <div style={{ color: theme.text }} className="z-10 flex items-center">
+      <div
+        style={{ color: theme.text }}
+        className="z-10 flex items-center mt-auto pt-12"
+      >
         &copy; Copyright
       </div>
     </div>

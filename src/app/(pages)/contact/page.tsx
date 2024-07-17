@@ -3,7 +3,16 @@ import Button from "@/components/button";
 import RequestForm from "@/components/request-form";
 import { useAppContext } from "@/context/app";
 import { useEffect } from "react";
-import { FaLinkedin, FaMobile } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaMobile,
+  FaTelegram,
+  FaTiktok,
+  FaWhatsapp,
+  FaYoutube,
+} from "react-icons/fa";
 import { FaMobileButton } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 
@@ -16,12 +25,12 @@ const Contact = () => {
   return (
     <div
       style={{ display: loading ? "none" : "flex" }}
-      className="oveflow-hidden w-[100%] slide-in-top pt-[100px] flex-col desktop:flex-row items-center desktop:items-start px-[5%] gap-4 desktop:gap-8 pb-[64px]"
+      className="oveflow-hidden w-[100%] slide-in-top pt-[100px] desktop:pt-[72px] flex-col desktop:flex-row items-center desktop:items-start px-[5%] gap-4 desktop:gap-8 pb-[64px] desktop:pb-[8px]"
     >
       <div className="w-full desktop:w-1/3 flex justify-center">
         <RequestForm />
       </div>
-      <div className="flex flex-col gap-4 w-full desktop:w-1/3 relative dekstop:top-24 desktop:left-24">
+      <div className="flex flex-col gap-4 w-full desktop:w-1/3 relative desktop:top-24 desktop:left-24">
         <a
           href="mailto:sarko.events@Gmail.com"
           className="cursor-pointer flex items-center gap-2"
@@ -50,6 +59,29 @@ const Contact = () => {
             >
               +995597233355
             </a>
+          </div>
+        </div>{" "}
+        <div className="flex items-center gap-4 mt-8">
+          <div>
+            <FaFacebook color={theme.text} size={20} />
+          </div>
+          <div>
+            <FaInstagram color={theme.text} size={20} />
+          </div>
+          <div>
+            <FaTiktok color={theme.text} size={20} />
+          </div>
+          <div>
+            <FaYoutube color={theme.text} size={20} />
+          </div>
+          <div>
+            <FaTelegram color={theme.text} size={20} />
+          </div>
+          <div>
+            <FaWhatsapp color={theme.text} size={20} />
+          </div>
+          <div>
+            <FaLinkedin color={theme.text} size={20} />
           </div>
         </div>
       </div>

@@ -7,7 +7,7 @@ import {
   useLayoutEffect,
   useState,
 } from "react";
-import { en, ka } from "../languages/list";
+import { en, ka, ru } from "../languages/list";
 
 /**
  * App state context
@@ -90,8 +90,10 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
     if (language) {
       if (language === "en") {
         setActiveLanguage(en);
-      } else {
+      } else if (language === "ka") {
         setActiveLanguage(ka);
+      } else {
+        setActiveLanguage(ru);
       }
       localStorage.setItem("sarko-events:language", language);
     }
@@ -99,10 +101,10 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
 
   // nav items
   const menuItems = [
-    { path: "/", label: "Home" },
-    { path: "/about", label: "About" },
-    { path: "/whatwecreate", label: "What We Create" },
-    { path: "/contact", label: "Contact" },
+    { path: "/", label: activeLanguage.main },
+    { path: "/about", label: activeLanguage.about },
+    { path: "/whatwecreate", label: activeLanguage.whatWeCreate },
+    { path: "/contact", label: activeLanguage.contact },
   ];
   // mobile menu state
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -134,6 +136,56 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
 
   // open request form
   const [active, setActive] = useState(false);
+
+  const gallery = [
+    {
+      id: "weddings",
+      label: activeLanguage.weddings,
+      img: "/weddings.png",
+      path: true,
+      link: "/whatwecreate/weddings",
+    },
+    {
+      id: "corporations",
+      label: activeLanguage.corporations,
+      img: "/corporation.jpg",
+      path: true,
+      link: "/whatwecreate/corporations",
+    },
+    {
+      id: "presentations",
+      label: activeLanguage.presentations,
+      img: "/presentation.png",
+      path: true,
+      link: "/whatwecreate/presentations",
+    },
+    {
+      id: "conferences",
+      label: activeLanguage.conferences,
+      img: "/presentation.png",
+      path: true,
+      link: "/whatwecreate/conferences",
+    },
+    {
+      id: "teambuildings",
+      label: activeLanguage.teambuildings,
+      img: "/teambuilding.jpg",
+      path: true,
+      link: "/whatwecreate/teambuildings",
+    },
+    {
+      id: "other",
+      label: activeLanguage.other,
+      img: "/teambuilding.jpg",
+      path: true,
+      link: "/whatwecreate/other",
+    },
+  ];
+
+  /**
+   * Alerts
+   */
+  const [alert, setAlert] = useState({ active: false, type: "", text: "" });
 
   return (
     <>
@@ -167,6 +219,8 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
           gallery,
           active,
           setActive,
+          alert,
+          setAlert,
         }}
       >
         {children}
@@ -174,51 +228,6 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
     </>
   );
 };
-
-const gallery = [
-  {
-    id: "weddings",
-    label: "Weddings",
-    img: "/weddings.png",
-    path: true,
-    link: "/whatwecreate/weddings",
-  },
-  {
-    id: "corporations",
-    label: "Corporate Events",
-    img: "/corporation.jpg",
-    path: true,
-    link: "/whatwecreate/corporations",
-  },
-  {
-    id: "presentations",
-    label: "Company / Product Presentations",
-    img: "/presentation.png",
-    path: true,
-    link: "/whatwecreate/presentations",
-  },
-  {
-    id: "conferences",
-    label: "Conferences",
-    img: "/presentation.png",
-    path: true,
-    link: "/whatwecreate/conferences",
-  },
-  {
-    id: "teambuildings",
-    label: "Teambuildings",
-    img: "/teambuilding.jpg",
-    path: true,
-    link: "/whatwecreate/teambuildings",
-  },
-  {
-    id: "other",
-    label: "Other",
-    img: "/teambuilding.jpg",
-    path: true,
-    link: "/whatwecreate/other",
-  },
-];
 
 const colors = [
   {

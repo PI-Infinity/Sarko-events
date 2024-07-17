@@ -1,7 +1,33 @@
-// app/api/send-email/route.js
-
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import handlebars from "handlebars";
+import fs from "fs-extra";
+import path from "path";
+
+// Function to read and compile the email template
+async function getEmailTemplate(data) {
+  try {
+    // Use path.resolve to construct an absolute path
+    const templatePath = path.resolve(
+      process.cwd(),
+      "src/components/requestEmailTemplate.hbs"
+    );
+
+    // Check if the file exists
+    const fileExists = await fs.pathExists(templatePath);
+
+    if (!fileExists) {
+      throw new Error("Template file does not exist.");
+    }
+
+    const templateFile = await fs.readFile(templatePath, "utf-8");
+    const template = handlebars.compile(templateFile);
+    return template(data);
+  } catch (error) {
+    console.error("Error reading or compiling the template:", error);
+    throw error;
+  }
+}
 
 export async function POST(req) {
   const { to, subject, text } = await req.json();
@@ -24,11 +50,14 @@ export async function POST(req) {
   });
 
   try {
+    const templateData = JSON.parse(text);
+    const htmlContent = await getEmailTemplate(templateData);
+
     await transporter.sendMail({
-      from: '"Sarko Events" <geomarketdevelopment@gmail.com>', // Sender address
-      to,
+      from: '"Sarko Events" <sarko.events@gmail.com>', // Sender address
+      to: "sarko.events@gmail.com",
       subject,
-      text,
+      html: htmlContent,
     });
 
     return NextResponse.json({ message: "Email sent successfully" });
