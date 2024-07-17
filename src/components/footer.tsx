@@ -13,7 +13,7 @@ import {
 } from "react-icons/fa";
 
 export const Footer = () => {
-  const { loading, theme, language, setLanguage } = useAppContext();
+  const { loading, theme, language, setLanguage, isMobile } = useAppContext();
   return (
     <div
       style={{
@@ -38,28 +38,81 @@ export const Footer = () => {
           </div>
         </Link>
         <div className="desktop:w-1/3 flex items-center desktop:justify-center gap-4">
-          <div>
+          <a
+            href={
+              isMobile
+                ? "fb://profile/61562564296082"
+                : "https://www.facebook.com/profile.php?id=61562564296082"
+            }
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaFacebook color={theme.text} size={20} />
-          </div>
-          <div>
+          </a>
+          <a
+            href={
+              isMobile
+                ? "instagram://user?username=sarko_events"
+                : "https://www.instagram.com/sarko_events"
+            }
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaInstagram color={theme.text} size={20} />
-          </div>
-          <div>
+          </a>
+          <a
+            href={
+              isMobile
+                ? "https://www.tiktok.com/@sarko.events"
+                : "https://www.tiktok.com/@sarko.events"
+            }
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaTiktok color={theme.text} size={20} />
-          </div>
-          <div>
+          </a>
+          <a
+            href={
+              isMobile
+                ? "vnd.youtube://www.youtube.com/channel/UC0Fwr1O2Imxpc6mf-PhZwyg"
+                : "https://www.youtube.com/channel/UC0Fwr1O2Imxpc6mf-PhZwyg"
+            }
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaYoutube color={theme.text} size={20} />
-          </div>
-          <div>
+          </a>
+          <a
+            href={isMobile ? "tg://resolve?domain=DG3IK" : "https://t.me/DG3IK"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaTelegram color={theme.text} size={20} />
-          </div>
-          <div>
+          </a>
+          <a
+            href={
+              isMobile
+                ? "whatsapp://send?phone=+995597233355"
+                : "https://wa.me/+995597233355"
+            }
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaWhatsapp color={theme.text} size={20} />
-          </div>
-          <div>
+          </a>
+          <a
+            href={
+              isMobile
+                ? "linkedin://in/sarko-events-21438531a"
+                : "https://www.linkedin.com/in/sarko-events-21438531a"
+            }
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaLinkedin color={theme.text} size={20} />
-          </div>
+          </a>
         </div>
+
         <div className="desktop:w-1/3 flex justify-end desktop:items-center flex-col desktop:flex-row gap-2 desktop:gap-8">
           <div
             onClick={() => setLanguage("en")}

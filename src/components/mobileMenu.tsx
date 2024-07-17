@@ -2,19 +2,15 @@
 import { useAppContext } from "@/context/app";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import ReactCountryFlag from "react-country-flag";
 import {
   FaFacebook,
   FaInstagram,
-  FaLanguage,
   FaLinkedin,
   FaTelegram,
   FaTiktok,
   FaWhatsapp,
   FaYoutube,
 } from "react-icons/fa";
-import { IoMdGlobe } from "react-icons/io";
-import { MdLanguage } from "react-icons/md";
 
 const MobileMenu = () => {
   const { menuItems, theme, mobileMenu, setMobileMenu, language, setLanguage } =
@@ -108,27 +104,55 @@ const MobileMenu = () => {
         onClick={(e) => e.stopPropagation()}
         className="desktop:w-1/3 flex items-center desktop:justify-center gap-4"
       >
-        <div>
+        <a
+          href="fb://profile/61562564296082"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaFacebook color={theme.text} size={20} />
-        </div>
-        <div>
+        </a>
+        <a
+          href="instagram://user?username=sarko_events"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaInstagram color={theme.text} size={20} />
-        </div>
-        <div>
+        </a>
+        <a
+          href="https://www.tiktok.com/@sarko.events"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaTiktok color={theme.text} size={20} />
-        </div>
-        <div>
+        </a>
+        <a
+          href="vnd.youtube://www.youtube.com/channel/UC0Fwr1O2Imxpc6mf-PhZwyg"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaYoutube color={theme.text} size={20} />
-        </div>
-        <div>
+        </a>
+        <a
+          href="tg://resolve?domain=DG3IK"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaTelegram color={theme.text} size={20} />
-        </div>
-        <div>
+        </a>
+        <a
+          href="whatsapp://send?phone=+995597233355"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaWhatsapp color={theme.text} size={20} />
-        </div>
-        <div>
+        </a>
+        <a
+          href="linkedin://in/sarko-events-21438531a"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaLinkedin color={theme.text} size={20} />
-        </div>
+        </a>
       </div>
     </div>
   );
