@@ -3,7 +3,7 @@ import { Loading } from "@/components/loading";
 import { AppContextWrapper } from "@/context/app";
 import type { Metadata } from "next";
 import "./globals.css";
-
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Footer } from "@/components/footer";
 import MobileMenu from "@/components/mobileMenu";
 import Popup from "@/components/popup";
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
         url: "/banner.webp",
         width: 800,
         height: 600,
-        alt: "Geo Market",
+        alt: "Sarko Events",
       },
     ],
   },
@@ -50,16 +50,31 @@ export default function RootLayout({
           href="/sarko-logo.png"
         />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-PRTE7FTLBK"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-PRTE7FTLBK');
+            `,
+          }}
+        />
       </Head>
       <body>
         <AppContextWrapper>
+          <GoogleAnalytics gaId="G-PRTE7FTLBK" />
           <Loading />
           <Header />
           <MobileMenu />
           <main className="flex-grow w-full">{children}</main>
           {/* <Stack /> */}
           {/* <Configs /> */}
-          {/* <Popup /> */}
+          <Popup />
           <SimpleSnackbar />
           <Footer />
         </AppContextWrapper>
