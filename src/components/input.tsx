@@ -67,7 +67,7 @@ export const Input: React.FC<PropsType> = ({
         type={type}
         enterKeyHint={returnKeyType}
         maxLength={maxLength || 50}
-        className={`${padding ? padding : "p-4"} w-full rounded-xl ${
+        className={`${padding ? padding : "px-4 py-3"} w-full rounded-xl ${
           disabled ? "text-gray-400" : "text-black"
         } bg-white focus:outline-none`}
         onKeyDown={onKeyDown}

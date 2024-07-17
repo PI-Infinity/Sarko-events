@@ -5,9 +5,9 @@ export default function SelectComponent({ data, value, setValue }: any) {
   const customStyles = {
     control: (provided: any) => ({
       ...provided,
-      height: "56px", // 48px for h-12
-      borderRadius: "0.75rem", // For rounded-xl
-      boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)", // For shadow-xl
+      height: "52px",
+      borderRadius: "0.75rem",
+      boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
     }),
     placeholder: (provided: any) => ({
       ...provided,
@@ -20,7 +20,7 @@ export default function SelectComponent({ data, value, setValue }: any) {
   };
 
   return (
-    <div className="w-full h-14 rounded-xl bg-red-500">
+    <div className="w-full h-13 rounded-xl">
       <Select
         options={data}
         styles={customStyles}

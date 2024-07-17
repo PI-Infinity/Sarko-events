@@ -166,7 +166,7 @@ const RequestForm = () => {
           label={activeLanguage.phone + "*"}
         />
       </div>
-      <div className="max-h-16" onClick={(e) => e.stopPropagation()}>
+      <div className="max-h-14" onClick={(e) => e.stopPropagation()}>
         <SelectComponent
           value={eventType}
           setValue={setEventType}

@@ -148,7 +148,7 @@ const Main = () => {
         }}
         className="w-full text-white flex-col items-center relative z-30 mt-[-30px]"
       >
-        <div className="z-30 w-[100%] py-12 flex flex-col items-center gap-6">
+        <div className="z-30 w-[100%] py-12 pt-4 flex flex-col items-center gap-6">
           <h2 className="text-2xl font-bold py-4 pb-2 desktop:mb-4 whitespace-nowrap w-full text-center">
             {activeLanguage.whatWeCreate}
           </h2>

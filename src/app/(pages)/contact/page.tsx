@@ -25,7 +25,7 @@ const Contact = () => {
   return (
     <div
       style={{ display: loading ? "none" : "flex" }}
-      className="oveflow-hidden w-[100%] slide-in-top pt-[100px] desktop:pt-[72px] flex-col desktop:flex-row items-center desktop:items-start px-4 desktop:px-[5%] gap-4 desktop:gap-8 pb-[64px] desktop:pb-[8px]"
+      className="oveflow-hidden w-[100%] slide-in-top pt-[100px] desktop:pt-[72px] flex-col desktop:flex-row items-center desktop:items-start px-6 desktop:px-[5%] gap-4 desktop:gap-8 pb-[64px] desktop:pb-[8px]"
     >
       <div className="w-full desktop:w-1/3 flex justify-center">
         <RequestForm />
@@ -61,29 +61,6 @@ const Contact = () => {
             </a>
           </div>
         </div>{" "}
-        <div className="flex items-center gap-4 mt-8">
-          <div>
-            <FaFacebook color={theme.text} size={20} />
-          </div>
-          <div>
-            <FaInstagram color={theme.text} size={20} />
-          </div>
-          <div>
-            <FaTiktok color={theme.text} size={20} />
-          </div>
-          <div>
-            <FaYoutube color={theme.text} size={20} />
-          </div>
-          <div>
-            <FaTelegram color={theme.text} size={20} />
-          </div>
-          <div>
-            <FaWhatsapp color={theme.text} size={20} />
-          </div>
-          <div>
-            <FaLinkedin color={theme.text} size={20} />
-          </div>
-        </div>
       </div>
     </div>
   );

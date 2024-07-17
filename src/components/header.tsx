@@ -17,7 +17,7 @@ const Header = () => {
     <HeadRoom
       downTolerance={10}
       upTolerance={10}
-      className="fixed w-full z-10 shadow-sm"
+      className="fixed w-full z-10"
       style={{
         display: loading || pathname.includes("/projects/") ? "none" : "flex",
         backdropFilter: "blur(10px)",

@@ -44,7 +44,7 @@ export const ka = {
   about: "ჩვენ შესახებ",
   whatWeCreate: "რას ვქმნით",
   contact: "კონტაქტი",
-  startPlanning: "დაგეგმე",
+  startPlanning: "დაიწყე დაგეგმვა",
   unite: "გაერთიანდი... ",
   celebrate: "იზეიმე... ",
   inspire: "შთააგონე...",

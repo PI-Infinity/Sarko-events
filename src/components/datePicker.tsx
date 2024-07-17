@@ -13,10 +13,10 @@ export const DatePickerComponent = ({
   const { activeLanguage } = useAppContext();
 
   return (
-    <div className={`flex items-center gap-6 `}>
-      <div className="flex flex-col desktop:flex-row items-center gap-4 text-sm font-semibold w-full italic">
+    <div className={`flex items-center gap-4 `}>
+      <div className="flex flex-col desktop:flex-row items-center gap-2 text-sm font-semibold w-full italic">
         <div
-          className="flex items-center justify-between gap-4 w-full pl-16 desktop:pl-0"
+          className="flex items-center justify-between gap-4 w-full pl-8 desktop:pl-0"
           style={{
             border: `1px solid ${theme.line}`,
             borderRadius: "10px",
@@ -33,11 +33,11 @@ export const DatePickerComponent = ({
             selected={startingDate}
             onChange={(dt: any) => setStartingDate(dt)}
             dateFormat="dd/MMMM/yyyy"
-            className="w-full h-14 py-2 px-3 rounded-xl focus:outline-none text-[16px]"
+            className="w-full h-12 py-2 px-3 rounded-xl focus:outline-none text-[16px] max-w-[200px]"
           />
         </div>
         <div
-          className="flex items-center justify-between w-full gap-4 pl-16 desktop:pl-0"
+          className="flex items-center justify-between w-full gap-4 pl-8 desktop:pl-0"
           style={{
             border: `1px solid ${theme.line}`,
             borderRadius: "10px",
@@ -54,7 +54,7 @@ export const DatePickerComponent = ({
             selected={endingDate}
             onChange={(dt: any) => setEndingDate(dt)}
             dateFormat="dd/MMMM/yyyy"
-            className="w-full h-14 py-2 px-3 rounded-xl focus:outline-none text-[16px]"
+            className="w-full h-12 py-2 px-3 rounded-xl focus:outline-none text-[16px] max-w-[200px]"
           />
         </div>
       </div>
