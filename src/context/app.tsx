@@ -162,7 +162,7 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
     {
       id: "conferences",
       label: activeLanguage.conferences,
-      img: "/presentation.png",
+      img: "/conference.jpg",
       path: true,
       link: "/whatwecreate/conferences",
     },
@@ -176,7 +176,7 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
     {
       id: "other",
       label: activeLanguage.other,
-      img: "/teambuilding.jpg",
+      img: "/we.jpeg",
       path: true,
       link: "/whatwecreate/other",
     },
