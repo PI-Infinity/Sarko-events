@@ -16,14 +16,14 @@ const Contact = () => {
   return (
     <div
       style={{ display: loading ? "none" : "flex" }}
-      className="oveflow-hidden w-[100%] slide-in-top pt-[100px] pb-[64px] flex-col desktop:flex-row items-center desktop:items-start px-[5%] gap-4 desktop:gap-8"
+      className="oveflow-hidden w-[100%] slide-in-top pt-[100px] flex-col desktop:flex-row items-center desktop:items-start px-[5%] gap-4 desktop:gap-8 pb-[64px]"
     >
       <div className="w-full desktop:w-1/3 flex justify-center">
         <RequestForm />
       </div>
-      <div className="flex flex-col gap-4 w-full desktop:w-1/3 relative top-24 left-24">
+      <div className="flex flex-col gap-4 w-full desktop:w-1/3 relative dekstop:top-24 desktop:left-24">
         <a
-          href="mailto:Tornike.Pirtakhia@Gmail.com"
+          href="mailto:sarko.events@Gmail.com"
           className="cursor-pointer flex items-center gap-2"
           style={{ textDecoration: "underline", color: theme.text }}
         >

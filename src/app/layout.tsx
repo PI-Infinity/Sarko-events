@@ -58,7 +58,7 @@ export default function RootLayout({
           <main className="flex-grow w-full">{children}</main>
           {/* <Stack /> */}
           {/* <Configs /> */}
-          <Popup />
+          {/* <Popup /> */}
           <Footer />
         </AppContextWrapper>
       </body>

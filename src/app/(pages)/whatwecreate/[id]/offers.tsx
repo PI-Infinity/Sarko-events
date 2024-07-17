@@ -15,17 +15,17 @@ const Offers = ({ type }: any) => {
   return (
     <div
       style={{ display: loading ? "none" : "flex", color: theme.text }}
-      className="w-full py-12 pt-4"
+      className="w-full desktop:py-12 desktop:pt-4 py-6 pt-2"
     >
       <div className="w-[100%] p-4 px-[5%] desktop:px-24 flex flex-col items-center gap-6">
         <div className="w-full flex flex-col gap-16">
           {
-            <div className="flex gap-24 items-center max-h-[15vw]">
+            <div className="flex gap-24 items-center px-2">
               <div className="flex flex-col gap-4">
-                <strong className="text-2xl my-6">
+                <strong className="text-2xl desktop:my-6">
                   {item?.title.en && item?.title.en}
                 </strong>
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid desktop:grid-cols-2 gap-2">
                   {item?.subtitles?.map((i: any, x: number) => {
                     return (
                       <div className="font-custom list-circle list-inside mr-16 w-full">
@@ -170,7 +170,7 @@ const texts = [
     img: "/presentation.png",
     value: "presentations",
     title: {
-      en: "Company/product presentation",
+      en: "Company/Product presentation",
       ru: "Презентация компании/продукта",
       ka: "კომპანიის/პროდუქტის პრეზენტაცია",
     },

@@ -32,7 +32,7 @@ const Page = () => {
   return (
     <div
       style={{ display: loading ? "none" : "flex" }}
-      className="w-full flex-col items-center pt-[90px] desktop:pt-[100px] gap-2 slide-in-right desktop:overflow-hidden pb-8 px-[5%]"
+      className="w-full flex-col items-center pt-[90px] desktop:pt-[100px] gap-2 slide-in-right desktop:overflow-hidden pb-8 px-0 desktop:px-[5%] "
     >
       <Offers type={pathname.split("/")[2]} />
       <div className="w-full grid grid-cols-1 desktop:grid-cols-5 gap-2 px-2">

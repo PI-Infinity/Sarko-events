@@ -118,7 +118,7 @@ const RequestForm = () => {
           label="Comment (Optional)"
         />
       </div>
-      <div className="pb-24">
+      <div className="pb-12">
         <div className="h-12  w-full rounded-full mt-6 shadow-xl">
           <Button
             title="Send Request"

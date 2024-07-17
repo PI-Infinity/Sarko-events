@@ -65,15 +65,18 @@ const Main = () => {
           </div>
 
           <div className="h-12 w-[90%] mt-12 flex items-center rounded-full flex-col">
-            <div className="h-12 w-[100%] desktop:w-[400px] border-[1px] border-[rgba(255,255,255,0.2)] rounded-full">
+            <Link
+              href="/contact"
+              className="h-12 w-[100%] desktop:w-[400px] border-[1px] border-[rgba(255,255,255,0.2)] rounded-full"
+            >
               <Button
                 title={"Start Planning"}
                 background="rgba(255,255,255,1)"
                 color={theme.background}
-                onClick={() => setActive(true)}
+                onClick={() => undefined}
                 icon={<MdCalendarMonth size={24} />}
               />
-            </div>
+            </Link>
             <div className="mt-4">
               <h3 className="opacity-[0.3] text-white flex items-center gap-2">
                 We'll create your beautiful days!{" "}
@@ -115,15 +118,18 @@ const Main = () => {
           </div>
 
           <div className="h-12 w-[90%] mt-12 flex flex-col items-center justify-center rounded-full">
-            <div className="h-12 w-[100%] desktop:w-[400px] border-[1px] border-[rgba(255,255,255,0.2)] rounded-full">
+            <Link
+              href="/contact"
+              className="h-12 w-[100%] desktop:w-[400px] border-[1px] border-[rgba(255,255,255,0.2)] rounded-full"
+            >
               <Button
                 title={"Start Planning"}
                 background="rgba(255,255,255,1)"
                 color={theme.background}
-                onClick={() => setActive(true)}
+                onClick={() => undefined}
                 icon={<MdCalendarMonth size={24} />}
               />
-            </div>
+            </Link>
             <div className="mt-4">
               <h3 className="opacity-[0.3] text-white flex items-center gap-2">
                 We'll create your beautiful days!{" "}
@@ -183,15 +189,18 @@ const Main = () => {
             })}
           </div>
           <div className="w-full mt-4 flex items-center justify-center px-4 desktop:mt-16">
-            <div className="h-12 w-full desktop:w-1/3 border-[1px] border-[rgba(255,255,255,0.2)] rounded-full">
+            <Link
+              href="/contact"
+              className="h-12 w-full desktop:w-1/3 border-[1px] border-[rgba(255,255,255,0.2)] rounded-full"
+            >
               <Button
                 title={"Start Planning"}
                 background="rgba(255,255,255,1)"
                 color={theme.background}
-                onClick={() => setActive(true)}
+                onClick={() => undefined}
                 icon={<MdCalendarMonth size={24} />}
               />
-            </div>
+            </Link>
           </div>
         </div>
       </div>
