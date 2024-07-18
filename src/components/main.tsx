@@ -77,11 +77,11 @@ const Main = () => {
                 icon={<MdCalendarMonth size={24} />}
               />
             </Link>
-            <div className="mt-4">
+            {/* <div className="mt-4">
               <h3 className="opacity-[0.3] text-white flex items-center gap-2">
                 {activeLanguage.loveText} <IoMdHeart color="red" size={24} />
               </h3>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -130,12 +130,12 @@ const Main = () => {
                 icon={<MdCalendarMonth size={24} />}
               />
             </Link>
-            <div className="mt-4">
+            {/* <div className="mt-4">
               <h3 className="opacity-[0.3] text-white flex items-center gap-2">
                 {activeLanguage.loveText}
                 <IoMdHeart color="red" size={24} />
               </h3>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
