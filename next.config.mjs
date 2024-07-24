@@ -3,7 +3,7 @@ const nextConfig = {
   pageExtensions: ["mdx", "md", "jsx", "js", "tsx", "ts"],
   reactStrictMode: false,
   images: {
-    domains: ["res.cloudinary.com"],
+    domains: ["res.cloudinary.com", "storage.googleapis.com"],
   },
   extend: {
     textShadow: {

@@ -64,1114 +64,1106 @@ export default Page;
 
 const weddings = [
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964526/IMG_2057_rohwig.jpg",
+    link: "/images/weddings/IMG_1654.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964526/IMG_2058_oo3oko.jpg",
+    link: "/images/weddings/IMG_1655.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964524/IMG_2053_s7re8i.jpg",
+    link: "/images/weddings/IMG_1656.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964524/IMG_2056_e57nay.jpg",
+    link: "/images/weddings/IMG_1657.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964524/IMG_2055_i1ejmg.jpg",
+    link: "/images/weddings/IMG_1658.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964522/IMG_2054_gb8qey.jpg",
+    link: "/images/weddings/IMG_1659.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964475/IMG_2052_bhmwyu.jpg",
+    link: "/images/weddings/IMG_1660.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964474/IMG_2051_j3cu76.jpg",
+    link: "/images/weddings/IMG_1661.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964473/IMG_2050_r5dws6.jpg",
+    link: "/images/weddings/IMG_1662.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964474/IMG_1798_ojwy9k.jpg",
+    link: "/images/weddings/IMG_1697.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964471/IMG_1797_yytngu.jpg",
+    link: "/images/weddings/IMG_1698.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964470/IMG_1796_tjaeul.jpg",
+    link: "/images/weddings/IMG_1700.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964469/IMG_1795_hqxjxq.jpg",
+    link: "/images/weddings/IMG_1701.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964468/IMG_1794_jnfuoc.jpg",
+    link: "/images/weddings/IMG_1702.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964467/IMG_1793_lwldwh.jpg",
+    link: "/images/weddings/IMG_1703.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964466/IMG_1792_rxqnmh.jpg",
-    project: "1",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964464/IMG_1791_pxd4hw.jpg",
-    project: "1",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964542/IMG_2105_sbilsc.jpg",
-    project: "2",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964541/IMG_2104_g2ntwy.jpg",
-    project: "2",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964540/IMG_2102_dasnd2.jpg",
-    project: "2",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964539/IMG_2101_xjz46j.jpg",
-    project: "2",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964538/IMG_2099_opbafs.jpg",
-    project: "2",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964537/IMG_2094_lidhfu.jpg",
-    project: "2",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964535/IMG_2090_blhdhy.jpg",
-    project: "2",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964534/IMG_2089_rfoqkq.jpg",
-    project: "2",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964533/IMG_2088_l80frl.jpg",
-    project: "2",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964532/IMG_2087_tiytm3.jpg",
-    project: "2",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964531/IMG_2086_l0wy5i.jpg",
-    project: "2",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964530/IMG_2084_k72sjo.jpg",
-    project: "2",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964529/IMG_2083_ukgudu.jpg",
-    project: "2",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964528/IMG_2082_t3qj16.jpg",
-    project: "2",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964527/IMG_2081_wjuyeb.jpg",
-    project: "2",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964463/IMG_1790_iexvrh.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964462/IMG_1789_hfaggh.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964461/IMG_1788_psdtcj.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964460/IMG_1787_ddezqo.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964459/IMG_1786_jwftva.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964457/IMG_1785_zx3y4w.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964456/IMG_1784_fcw3m2.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964455/IMG_1783_zdvfzp.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964454/IMG_1782_evhpfo.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964451/IMG_1781_b8by5e.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964451/IMG_1780_sfnqf8.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964450/IMG_1779_exypc7.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964037/IMG_1778_r3oyte.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964035/IMG_1777_agbdqz.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964028/IMG_1776_gv9k18.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964025/IMG_1775_evfmsa.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964016/IMG_1774_uz4juy.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964015/IMG_1773_zepqsh.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964007/IMG_1772_h8do9s.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964005/IMG_1771_ui8aot.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964000/IMG_1755_okc7db.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963995/IMG_1754_c1op44.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963992/IMG_1753_mij7ox.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963986/IMG_1752_zkdcrf.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963983/IMG_1751_tqck3v.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963978/IMG_1750_mpr4br.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963975/IMG_1749_fwjguu.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963968/IMG_1748_txoede.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963966/IMG_1723_o8fqfx.jpg",
-    project: "4",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963959/IMG_1722_ds8uam.jpg",
-    project: "4",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963957/IMG_1721_xvpl1w.jpg",
-    project: "4",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963951/IMG_1720_i9lmvb.jpg",
-    project: "4",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963950/IMG_1719_fqikjg.jpg",
-    project: "4",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963945/IMG_1718_khlcwj.jpg",
-    project: "4",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963942/IMG_1717_odfmwr.jpg",
-    project: "4",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963936/IMG_1716_v4upvo.jpg",
-    project: "4",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963933/IMG_1715_h15acc.jpg",
-    project: "4",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963928/IMG_1714_lleok8.jpg",
-    project: "4",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963924/IMG_1713_u4tzxi.jpg",
-    project: "5",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963918/IMG_1712_vcmlgs.jpg",
-    project: "5",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963917/IMG_1711_yqxcq0.jpg",
-    project: "5",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963912/IMG_1710_kzqqxe.jpg",
-    project: "5",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963911/IMG_1709_xin44o.jpg",
-    project: "5",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963906/IMG_1708_bbxpfw.jpg",
-    project: "5",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963903/IMG_1707_pflknc.jpg",
-    project: "5",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963898/IMG_1706_e4wnrr.jpg",
-    project: "5",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963896/IMG_1705_k93mm9.jpg",
-    project: "5",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963891/IMG_1704_ehgyum.jpg",
-    project: "6",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963890/IMG_1703_vf0pun.jpg",
-    project: "5",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963887/IMG_1702_fibhxv.jpg",
-    project: "5",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963884/IMG_1701_xlkjvm.jpg",
-    project: "6",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963881/IMG_1700_gyjc4d.jpg",
-    project: "5",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963879/IMG_1697_m5k2jk.jpg",
-    project: "5",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963876/IMG_1662_q5bgsj.jpg",
-    project: "6",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963873/IMG_1661_eursxu.jpg",
-    project: "5",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963870/IMG_1660_yka2or.jpg",
-    project: "5",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963869/IMG_1659_uskhbz.jpg",
-    project: "6",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963866/IMG_1658_semeru.jpg",
-    project: "5",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963865/IMG_1657_gelba0.jpg",
-    project: "5",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963863/IMG_1656_sgaupz.jpg",
-    project: "6",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963862/IMG_1655_iv1jvy.jpg",
-    project: "5",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963861/IMG_1654_chgydk.jpg",
-    project: "5",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720963860/IMG_1698_ox7qgu.jpg",
-    project: "6",
-  },
-];
-const corporations = [
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957692/IMG_2125_vbli5b.jpg",
-    project: "1",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957693/IMG_2115_fmlzqd.jpg",
-    project: "1",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957692/IMG_2124_l68ys6.jpg",
-    project: "1",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957672/IMG_2126_oswf9q.jpg",
-    project: "1",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957692/IMG_2121_xzgxbk.jpg",
-    project: "1",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957692/IMG_2120_yyqmil.jpg",
-    project: "1",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957692/IMG_2119_dovze0.jpg",
-    project: "1",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957692/IMG_2116_nx0db8.jpg",
-    project: "1",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957691/IMG_2113_cjehsz.jpg",
-    project: "1",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957691/IMG_2114_q44dpq.jpg",
-    project: "1",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957691/IMG_1769_ex6bcw.jpg",
-    project: "2",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957691/IMG_1767_sl5gly.jpg",
-    project: "2",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957691/IMG_1765_slh0gj.jpg",
-    project: "2",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957691/IMG_1768_nncgqp.jpg",
-    project: "2",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957691/IMG_1764_mgb1eo.jpg",
-    project: "2",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957690/IMG_1761_uynto4.jpg",
-    project: "2",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957690/IMG_1760_e7mkqm.jpg",
-    project: "2",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957690/IMG_1757_m4956l.jpg",
-    project: "2",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957690/IMG_1758_msxek2.jpg",
-    project: "2",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957690/IMG_1759_fwfeha.jpg",
-    project: "2",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957690/IMG_1747_ywf2vq.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957690/IMG_1745_btdrfy.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957689/IMG_1740_uxcxfr.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957689/IMG_1743_jnarv0.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957689/IMG_1741_swxl8f.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957689/IMG_1643_y3k9sz.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957689/IMG_1636_nezd47.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957689/IMG_1742_xbuzbc.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957688/IMG_1635_wzssh1.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957688/IMG_1739_xrrdgl.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957688/IMG_1642_chro83.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957688/IMG_1640_sccb0k.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957688/IMG_1641_te739v.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957687/IMG_1634_i6yezr.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957687/IMG_1639_lqxkze.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957686/IMG_1638_drv7be.jpg",
-    project: "3",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957687/IMG_1625_hq2bsu.jpg",
-    project: "4",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957686/IMG_1633_rvfkdq.jpg",
-    project: "4",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957685/IMG_1631_u6d3kk.jpg",
-    project: "4",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957685/IMG_1031_d0oaoa.jpg",
-    project: "4",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957685/IMG_1624_fgig68.jpg",
-    project: "4",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957683/IMG_1627_eazkdj.jpg",
-    project: "4",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957682/IMG_1033_f1ncze.jpg",
-    project: "4",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957682/IMG_1030_ypklrx.jpg",
-    project: "4",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957681/IMG_1010_zwgba3.jpg",
-    project: "4",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957680/IMG_1019_tkqxmq.jpg",
-    project: "4",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957680/IMG_1013_bvz5lg.jpg",
-    project: "4",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957679/IMG_1027_aj4wr1.jpg",
-    project: "4",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957679/IMG_1012_pjfufd.jpg",
-    project: "4",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957678/IMG_1025_lzpig7.jpg",
-    project: "4",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957678/IMG_1028_wdexyb.jpg",
-    project: "4",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957678/IMG_1018_ymxqq6.jpg",
-    project: "4",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957676/IMG_1016_byrb6o.jpg",
-    project: "4",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957675/IMG_1023_shobua.jpg",
-    project: "4",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957670/IMG_0649_uzetwb.heic",
-    project: "4",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720957669/IMG_1026_h7akvi.jpg",
-    project: "4",
-  },
-];
-const presentations = [
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964574/IMG_1672_jxsgxc.jpg",
-    project: "1",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964572/IMG_1671_nrpbv0.jpg",
-    project: "1",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964568/IMG_1670_fbz52i.jpg",
-    project: "1",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964566/IMG_1669_n3yfu7.jpg",
-    project: "1",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964561/IMG_1668_wj4n9p.jpg",
-    project: "1",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964561/IMG_1667_jgvlhd.jpg",
-    project: "1",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964559/IMG_1666_xs93vh.jpg",
-    project: "1",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964556/IMG_1665_qhsvrp.jpg",
-    project: "1",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964554/IMG_1664_w3i3yb.jpg",
-    project: "1",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964552/IMG_1617_tqawzl.jpg",
-    project: "2",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964547/IMG_1614_publp9.jpg",
-    project: "2",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964545/IMG_1613_bcb78e.jpg",
-    project: "2",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964544/IMG_1612_et5owr.jpg",
-    project: "2",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964550/IMG_1616_iqwun7.jpg",
-    project: "2",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720964549/IMG_1615_avuvcr.jpg",
-    project: "2",
-  },
-];
-const teambuildings = [
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962291/IMG_2422_ou6u56.jpg",
-    project: "1",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962288/IMG_2420_hogyv5.jpg",
-    project: "1",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962283/IMG_2414_n9pafz.jpg",
-    project: "1",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962305/IMG_2426_zntr9r.jpg",
-    project: "1",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962300/IMG_2425_hdkzzl.jpg",
-    project: "1",
-  },
-  {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962298/IMG_2424_j1w6sc.jpg",
+    link: "/images/weddings/IMG_1704.JPG",
     project: "1",
   },
 
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962284/IMG_2419_ytuedl.jpg",
+    link: "/images/weddings/IMG_1714.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962277/IMG_2411_b5wdiy.jpg",
+    link: "/images/weddings/IMG_1715.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962278/IMG_2413_vwyazm.jpg",
+    link: "/images/weddings/IMG_1716.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962269/IMG_2409_pmcyzg.jpg",
+    link: "/images/weddings/IMG_1717.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962264/IMG_2408_a5yoen.jpg",
+    link: "/images/weddings/IMG_1718.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962263/IMG_2406_p8sjtq.jpg",
+    link: "/images/weddings/IMG_1719.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962258/IMG_2405_hgtmyz.jpg",
+    link: "/images/weddings/IMG_1720.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962257/IMG_2398_vkdty4.jpg",
+    link: "/images/weddings/IMG_1721.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962252/IMG_2396_wfktjn.jpg",
+    link: "/images/weddings/IMG_1722.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962251/IMG_2392_ofnnzd.jpg",
+    link: "/images/weddings/IMG_1723.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962246/IMG_2390_gqmnl1.jpg",
+    link: "/images/weddings/IMG_1748.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962245/IMG_2389_fgekfx.jpg",
+    link: "/images/weddings/IMG_1749.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962241/IMG_2386_zqesel.jpg",
+    link: "/images/weddings/IMG_1750.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962240/IMG_2385_taa7ai.jpg",
+    link: "/images/weddings/IMG_1751.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962235/IMG_2384_dsqem0.jpg",
+    link: "/images/weddings/IMG_1752.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962234/IMG_2383_vgtscc.jpg",
+    link: "/images/weddings/IMG_1753.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962229/IMG_2382_gmflsd.jpg",
+    link: "/images/weddings/IMG_1754.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962228/IMG_2379_si0js0.jpg",
+    link: "/images/weddings/IMG_1755.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962224/IMG_2378_akbemc.jpg",
+    link: "/images/weddings/IMG_1771.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962222/IMG_2377_jbfmuu.jpg",
+    link: "/images/weddings/IMG_1772.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962218/IMG_2376_tlhqtv.jpg",
+    link: "/images/weddings/IMG_1773.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962217/IMG_2375_lc3y7i.jpg",
+    link: "/images/weddings/IMG_1774.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962212/IMG_2374_pxlzdd.jpg",
+    link: "/images/weddings/IMG_1775.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962211/IMG_2373_jgnpjr.jpg",
+    link: "/images/weddings/IMG_1776.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962207/IMG_2372_wxpqce.jpg",
+    link: "/images/weddings/IMG_1777.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962206/IMG_2370_udgaue.jpg",
+    link: "/images/weddings/IMG_1778.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962202/IMG_2366_t3h0z3.jpg",
+    link: "/images/weddings/IMG_1779.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962201/IMG_2364_vhxpig.jpg",
+    link: "/images/weddings/IMG_1780.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962196/IMG_2362_ibm1we.jpg",
+    link: "/images/weddings/IMG_1781.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962195/IMG_2361_eaucjc.jpg",
+    link: "/images/weddings/IMG_1782.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962191/IMG_2359_nwdc9a.jpg",
+    link: "/images/weddings/IMG_1783.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962190/IMG_2356_l4z5sq.jpg",
+    link: "/images/weddings/IMG_1784.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962179/IMG_2350_dorz1g.jpg",
+    link: "/images/weddings/IMG_1785.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962184/IMG_2351_tc0ede.jpg",
+    link: "/images/weddings/IMG_1786.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962184/IMG_2351_tc0ede.jpg",
+    link: "/images/weddings/IMG_1787.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962174/IMG_2347_russvy.jpg",
+    link: "/images/weddings/IMG_1788.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962172/IMG_2346_tmty5o.jpg",
+    link: "/images/weddings/IMG_1789.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962168/IMG_2345_snyqfy.jpg",
+    link: "/images/weddings/IMG_1790.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962167/IMG_2343_tkiyty.jpg",
+    link: "/images/weddings/IMG_1791.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962162/IMG_2341_rxehbn.jpg",
+    link: "/images/weddings/IMG_1792.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962157/IMG_2339_w4ikte.jpg",
+    link: "/images/weddings/IMG_1793.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962163/IMG_2342_aasdkd.jpg",
+    link: "/images/weddings/IMG_1794.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962156/IMG_2338_om7sn6.jpg",
+    link: "/images/weddings/IMG_1795.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962152/IMG_2336_oqbfwt.jpg",
+    link: "/images/weddings/IMG_1796.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962151/IMG_2334_cj9epe.jpg",
+    link: "/images/weddings/IMG_1797.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962146/IMG_2333_qiqqta.jpg",
+    link: "/images/weddings/IMG_1798.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962145/IMG_2332_decmf9.jpg",
+    link: "/images/weddings/IMG_2050.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962141/IMG_2331_wud3rn.jpg",
+    link: "/images/weddings/IMG_2051.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962140/IMG_2330_chtjus.jpg",
+    link: "/images/weddings/IMG_2052.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962136/IMG_2328_onj3yx.jpg",
+    link: "/images/weddings/IMG_2053.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962135/IMG_2326_siqujw.jpg",
+    link: "/images/weddings/IMG_2054.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962130/IMG_2322_rrzvf5.jpg",
+    link: "/images/weddings/IMG_2055.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962129/IMG_2320_ko0ows.jpg",
+    link: "/images/weddings/IMG_2056.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962125/IMG_2319_m8edat.jpg",
+    link: "/images/weddings/IMG_2057.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962124/IMG_2318_ieajlh.jpg",
+    link: "/images/weddings/IMG_2058.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962120/IMG_2317_uf8tv4.jpg",
+    link: "/images/weddings/IMG_2081.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962119/IMG_2314_l6veep.jpg",
+    link: "/images/weddings/IMG_2082.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962115/IMG_2312_dkteys.jpg",
+    link: "/images/weddings/IMG_2083.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962114/IMG_2311_h4pziv.jpg",
+    link: "/images/weddings/IMG_2084.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962110/IMG_2310_qm0zr9.jpg",
+    link: "/images/weddings/IMG_2086.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962109/IMG_2309_vo2wjw.jpg",
+    link: "/images/weddings/IMG_2087.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962106/IMG_2308_exldnq.jpg",
+    link: "/images/weddings/IMG_2088.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962105/IMG_2306_nekyno.jpg",
+    link: "/images/weddings/IMG_2089.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962100/IMG_2305_nlfo0v.jpg",
+    link: "/images/weddings/IMG_2090.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962099/IMG_2303_cu15qy.jpg",
+    link: "/images/weddings/IMG_2094.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962096/IMG_2302_t5itlr.jpg",
+    link: "/images/weddings/IMG_2099.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962094/IMG_2301_vd9mz5.jpg",
+    link: "/images/weddings/IMG_2101.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962090/IMG_2300_rwcnv6.jpg",
+    link: "/images/weddings/IMG_2102.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962090/IMG_2299_fgs0cb.jpg",
+    link: "/images/weddings/IMG_2104.jpg",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962085/IMG_2298_pbymmm.jpg",
+    link: "/images/weddings/IMG_2102.JPG",
     project: "1",
   },
+];
+const corporations = [
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962084/IMG_2297_l4bbwn.jpg",
+    link: "/images/corporates/IMG_2125.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962081/IMG_2295_eqsnzl.jpg",
+    link: "/images/corporates/IMG_2126.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962079/IMG_2294_tvgvgm.jpg",
+    link: "/images/corporates/IMG_2113.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962077/IMG_2293_n8q8sy.jpg",
+    link: "/images/corporates/IMG_2114.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962072/IMG_2292_mxscj1.jpg",
+    link: "/images/corporates/IMG_2115.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962071/IMG_2289_lmtbok.jpg",
+    link: "/images/corporates/IMG_2116.JPG",
     project: "1",
   },
+
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962067/IMG_2288_pzymyx.jpg",
+    link: "/images/corporates/IMG_2119.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962066/IMG_2287_ysqwpr.jpg",
+    link: "/images/corporates/IMG_2120.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962061/IMG_2286_hzizck.jpg",
+    link: "/images/corporates/IMG_2121.JPG",
     project: "1",
   },
+
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962060/IMG_2285_vkc4le.jpg",
+    link: "/images/corporates/IMG_2124.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962056/IMG_2284_csrjxq.jpg",
+    link: "/images/corporates/IMG_0649.HEIC",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962055/IMG_2283_iu1se3.jpg",
+    link: "/images/corporates/IMG_1011.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962050/IMG_2282_yjv8uy.jpg",
+    link: "/images/corporates/IMG_1012.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962049/IMG_2281_smrtbb.jpg",
+    link: "/images/corporates/IMG_1013.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962045/IMG_2280_c6auk8.jpg",
+    link: "/images/corporates/IMG_1016.JPG",
     project: "1",
   },
+
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962043/IMG_2278_dyzj3t.jpg",
+    link: "/images/corporates/IMG_1019.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962039/IMG_2277_kgdfdz.jpg",
+    link: "/images/corporates/IMG_1021.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962038/IMG_2276_as288d.jpg",
+    link: "/images/corporates/IMG_1022.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962035/IMG_2275_uuf0l5.jpg",
+    link: "/images/corporates/IMG_1023.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962034/IMG_2274_jjg2sy.jpg",
+    link: "/images/corporates/IMG_1026.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962030/IMG_2273_gdp2n0.jpg",
+    link: "/images/corporates/IMG_1027.JPG",
     project: "1",
   },
+
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962029/IMG_2271_ygcmxz.jpg",
+    link: "/images/corporates/IMG_1030.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962027/IMG_2270_uczluf.jpg",
+    link: "/images/corporates/IMG_1031.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962025/IMG_2268_l9dgpr.jpg",
+    link: "/images/corporates/IMG_1033.JPG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962023/IMG_2267_tpukly.jpg",
+    link: "/images/corporates/IMG_1624.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962022/IMG_2266_efciyk.jpg",
+    link: "/images/corporates/IMG_1625.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962020/IMG_2265_dwlqtm.jpg",
+    link: "/images/corporates/IMG_1626.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962018/IMG_2264_w6dtjw.jpg",
+    link: "/images/corporates/IMG_1627.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962016/IMG_2263_erkgaf.jpg",
+    link: "/images/corporates/IMG_1628.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962015/IMG_2262_nyuypk.jpg",
+    link: "/images/corporates/IMG_1629.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962013/IMG_2261_ddbtdo.jpg",
+    link: "/images/corporates/IMG_1630.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962013/IMG_2260_u5j6wb.jpg",
+    link: "/images/corporates/IMG_1631.PNG",
     project: "1",
   },
   {
-    link: "https://res.cloudinary.com/djsadepig/image/upload/v1720962012/IMG_2258_muy9gt.jpg",
+    link: "/images/corporates/IMG_1633.PNG",
     project: "1",
   },
   {
-    link: "hhttps://res.cloudinary.com/djsadepig/image/upload/v1720962012/IMG_2256_za9klp.jpg",
+    link: "/images/corporates/IMG_1634.PNG",
+    project: "1",
+  },
+  {
+    link: "/images/corporates/IMG_1635.PNG",
+    project: "1",
+  },
+  {
+    link: "/images/corporates/IMG_1636.PNG",
+    project: "1",
+  },
+  {
+    link: "/images/corporates/IMG_1638.PNG",
+    project: "1",
+  },
+  {
+    link: "/images/corporates/IMG_1639.PNG",
+    project: "1",
+  },
+  {
+    link: "/images/corporates/IMG_1640.PNG",
+    project: "1",
+  },
+  {
+    link: "/images/corporates/IMG_1641.PNG",
+    project: "1",
+  },
+  {
+    link: "/images/corporates/IMG_1642.PNG",
+    project: "1",
+  },
+  {
+    link: "/images/corporates/IMG_1643.PNG",
+    project: "1",
+  },
+  {
+    link: "/images/corporates/IMG_1739.PNG",
+    project: "1",
+  },
+  {
+    link: "/images/corporates/IMG_1740.PNG",
+    project: "1",
+  },
+  {
+    link: "/images/corporates/IMG_1741.PNG",
+    project: "1",
+  },
+  {
+    link: "/images/corporates/IMG_1742.PNG",
+    project: "1",
+  },
+  {
+    link: "/images/corporates/IMG_1743.PNG",
+    project: "1",
+  },
+  {
+    link: "/images/corporates/IMG_1745.PNG",
+    project: "1",
+  },
+  {
+    link: "/images/corporates/IMG_1747.PNG",
+    project: "1",
+  },
+
+  {
+    link: "/images/corporates/IMG_1758.PNG",
+    project: "1",
+  },
+  {
+    link: "/images/corporates/IMG_1759.PNG",
+    project: "1",
+  },
+  {
+    link: "/images/corporates/IMG_1760.PNG",
+    project: "1",
+  },
+  {
+    link: "/images/corporates/IMG_1761.PNG",
+    project: "1",
+  },
+  {
+    link: "/images/corporates/IMG_1763.PNG",
+    project: "1",
+  },
+  {
+    link: "/images/corporates/IMG_1764.PNG",
+    project: "1",
+  },
+  {
+    link: "/images/corporates/IMG_1765.PNG",
+    project: "1",
+  },
+  {
+    link: "/images/corporates/IMG_1767.PNG",
+    project: "1",
+  },
+  {
+    link: "/images/corporates/IMG_1768.PNG",
+    project: "1",
+  },
+  {
+    link: "/images/corporates/IMG_1769.PNG",
+    project: "1",
+  },
+];
+const presentations = [
+  {
+    link: "/images/presentations/IMG_1617.PNG",
+    project: "1",
+  },
+  {
+    link: "/images/presentations/IMG_1612.PNG",
+    project: "1",
+  },
+  {
+    link: "/images/presentations/IMG_1613.PNG",
+    project: "1",
+  },
+  {
+    link: "/images/presentations/IMG_1615.PNG",
+    project: "1",
+  },
+  {
+    link: "/images/presentations/IMG_1616.PNG",
+    project: "1",
+  },
+
+  {
+    link: "/images/presentations/IMG_1664.PNG",
+    project: "1",
+  },
+  {
+    link: "/images/presentations/IMG_1665.PNG",
+    project: "1",
+  },
+  {
+    link: "/images/presentations/IMG_1666.PNG",
+    project: "1",
+  },
+  {
+    link: "/images/presentations/IMG_1667.PNG",
+    project: "1",
+  },
+  {
+    link: "/images/presentations/IMG_1668.PNG",
+    project: "1",
+  },
+  {
+    link: "/images/presentations/IMG_1669.PNG",
+    project: "1",
+  },
+  {
+    link: "/images/presentations/IMG_1670.PNG",
+    project: "1",
+  },
+  {
+    link: "/images/presentations/IMG_1671.PNG",
+    project: "1",
+  },
+  {
+    link: "/images/presentations/IMG_1672.PNG",
+    project: "1",
+  },
+];
+const teambuildings = [
+  {
+    link: "/images/teambuildings/IMG_2334.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2331.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2332.jpg",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2333.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2336.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2338.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2339.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2341.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2342.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2343.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2345.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2346.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2347.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2349.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2350.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2351.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2355.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2356.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2359.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2361.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2362.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2364.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2366.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2370.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2372.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2373.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2374.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2375.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2376.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2377.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2326.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2328.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2330.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2378.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2379.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2382.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2383.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2342.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2385.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2386.jpg",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2389.jpg",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2390.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2392.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2396.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2398.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2405.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2406.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2408.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2409.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2410.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2411.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2413.JPG",
+    project: "1",
+  },
+
+  {
+    link: "/images/teambuildings/IMG_2414.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2419.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2420.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2422.JPG",
+    project: "1",
+  },
+
+  {
+    link: "/images/teambuildings/IMG_2423.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2424.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2425.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2426.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2256.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2258.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2260.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2261.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2262.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2263.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2264.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2265.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2266.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2267.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2268.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2270.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2271.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2273.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2274.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2275.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2276.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2277.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2278.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2280.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2281.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2282.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2283.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2284.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2285.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2286.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2287.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2288.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2289.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2292.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2293.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2294.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2295.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2297.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2298.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2299.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2300.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2301.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2302.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2303.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2305.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2306.jpg",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2308.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2309.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2310.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2311.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2312.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2314.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2317.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2318.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2319.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2320.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2322.JPG",
     project: "1",
   },
 ];

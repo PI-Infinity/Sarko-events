@@ -44,7 +44,7 @@ const Main = () => {
           playsInline
           preload="auto"
         >
-          <source src="https://firebasestorage.googleapis.com/v0/b/sako-videos.appspot.com/o/-4356524820746039304.MP4?alt=media&token=10090a60-b7ee-45f6-9f8f-566c798328f5" />
+          <source src="/videos/mob.MP4" />
         </video>
         {!isLoaded && (
           <div className="absolute top-28 right-[5%] z-20">
@@ -102,7 +102,7 @@ const Main = () => {
           playsInline
           preload="auto"
         >
-          <source src="https://firebasestorage.googleapis.com/v0/b/sako-videos.appspot.com/o/LastOne.mp4?alt=media&token=580d3047-7edf-41a0-ab92-8c4e0552798c" />
+          <source src="/videos/LastOne.mp4" />
         </video>
         {!isLoaded && (
           <div className="absolute h-[100vh] z-20 flex w-full">
