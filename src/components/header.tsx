@@ -19,7 +19,13 @@ const Header = () => {
       upTolerance={10}
       className="fixed w-full z-10"
       style={{
-        display: loading || pathname.includes("/projects/") ? "none" : "flex",
+        display:
+          loading ||
+          pathname.includes("/projects/") ||
+          (pathname?.split("/")[1] === "whatwecreate" &&
+            pathname?.split("/")[3])
+            ? "none"
+            : "flex",
         backdropFilter: "blur(10px)",
         WebkitBackdropFilter: "blur(10px)",
       }}

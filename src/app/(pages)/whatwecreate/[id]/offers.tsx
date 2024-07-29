@@ -28,20 +28,24 @@ const Offers = ({ type }: any) => {
                     ? item?.title.ka
                     : item?.title.ru}
                 </strong>
-                <div className="grid desktop:grid-cols-2 gap-2">
+                <ul
+                  className="grid desktop:grid-cols-2 gap-2"
+                  style={{ listStyleType: "circle" }}
+                >
                   {item?.subtitles?.map((i: any, x: number) => {
                     return (
-                      <div className="font-custom list-circle list-inside mr-16 w-full">
-                        <div className="flex gap-2 text-md italic">
-                          <div>
-                            <MdDone color={"#66fcf1"} size={24} />
-                          </div>
+                      <div key={x} className="font-custom mr-16 w-full">
+                        <div className="flex gap-2 items-center text-md italic">
+                          <div
+                            className="h-2 w-2 rounded-full"
+                            style={{ background: theme.text }}
+                          />
                           {i[language]}
                         </div>
                       </div>
                     );
                   })}
-                </div>
+                </ul>
               </div>
             </div>
           }

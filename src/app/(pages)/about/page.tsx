@@ -1,64 +1,103 @@
 "use client";
+import Button from "@/components/button";
 import Img from "@/components/image";
 import { useAppContext } from "@/context/app";
+import Link from "next/link";
+import { MdCalendarMonth } from "react-icons/md";
 
 const AboutUs = () => {
-  const { theme, language, loading } = useAppContext();
+  const { theme, language, loading, activeLanguage } = useAppContext();
   return (
     <div
-      className="w-full h-full px-4 py-4 pt-[100px] slide-in-top flex flex-col items-center"
+      className="flex-1"
       style={{ color: theme.text, display: loading ? "none" : "flex" }}
     >
-      <div className="flex w-full items-center justify-center gap-4 mb-4">
-        <div className="relative overflow-hidden rounded-xl w-full desktop:w-1/4 h-full flex items-center">
-          <Img
-            src={"/we.jpeg"}
-            alt="img"
-            style={{
-              aspectRatio: 1,
-              zIndex: 0,
-              width: "100%",
-            }}
+      <div
+        style={{
+          background:
+            "linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0))",
+        }}
+        className="fixed desktop:hidden bottom-0 left-0 py-4 z-50 bg-[] w-full mt-4 flex items-center justify-center px-4 desktop:mt-4"
+      >
+        <Link
+          href="/contact"
+          className=" h-12 w-full desktop:w-1/3 border-[1px] border-[rgba(255,255,255,0.2)] rounded-full"
+        >
+          <Button
+            title={activeLanguage.startPlanning}
+            background="rgba(255,255,255,1)"
+            color={theme.background}
+            onClick={() => undefined}
+            icon={<MdCalendarMonth size={24} />}
           />
+        </Link>
+      </div>
+      <div className="w-full h-full px-4 py-4 pt-[100px] slide-in-top flex flex-col items-center">
+        <div className="flex w-full items-center justify-center gap-4 mb-4">
+          <div className="relative overflow-hidden rounded-xl w-full desktop:w-1/4 h-full flex items-center">
+            <Img
+              src={"/we.jpeg"}
+              alt="img"
+              style={{
+                aspectRatio: 1,
+                zIndex: 0,
+                width: "100%",
+              }}
+            />
+          </div>
+          <div className="hidden relative overflow-hidden rounded-xl w-1/4 h-full desktop:flex items-center">
+            <Img
+              src={"/we2.jpg"}
+              alt="img"
+              style={{
+                aspectRatio: 1,
+                zIndex: 0,
+                width: "100%",
+              }}
+            />
+          </div>
         </div>
-        <div className="hidden relative overflow-hidden rounded-xl w-1/4 h-full desktop:flex items-center">
-          <Img
-            src={"/we2.jpeg"}
-            alt="img"
-            style={{
-              aspectRatio: 1,
-              zIndex: 0,
-              width: "100%",
-            }}
-          />
+
+        {texts.map((item: any, index: number) => {
+          return (
+            <div className="w-full desktop:max-w-[50%] mx-auto">
+              <div className="mt-4">
+                <h2 className="text-xl mb-2 font-semibold">
+                  {item.title[language]}
+                </h2>
+                {item?.list[language] && (
+                  <ul className="list-disc pl-5 text-md">
+                    {item?.list[language].map((i: any, index: number) => {
+                      return (
+                        <li key={index} className="italic">
+                          {i}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                )}
+              </div>
+              <div className="mt-4">
+                <p className="text-md italic">{item.description[language]}</p>
+              </div>
+            </div>
+          );
+        })}
+        <div className="hidden my-16 z-50 w-full desktop:flex items-center justify-center px-4">
+          <Link
+            href="/contact"
+            className="h-12 w-full desktop:w-[400px] border-[1px] border-[rgba(255,255,255,0.2)] rounded-full"
+          >
+            <Button
+              title={activeLanguage.startPlanning}
+              background="rgba(255,255,255,1)"
+              color={theme.background}
+              onClick={() => undefined}
+              icon={<MdCalendarMonth size={24} />}
+            />
+          </Link>
         </div>
       </div>
-
-      {texts.map((item: any, index: number) => {
-        return (
-          <div className="w-full desktop:max-w-[50%] mx-auto">
-            <div className="mt-4">
-              <h2 className="text-xl mb-2 font-semibold">
-                {item.title[language]}
-              </h2>
-              {item?.list[language] && (
-                <ul className="list-disc pl-5 text-md">
-                  {item?.list[language].map((i: any, index: number) => {
-                    return (
-                      <li key={index} className="italic">
-                        {i}
-                      </li>
-                    );
-                  })}
-                </ul>
-              )}
-            </div>
-            <div className="mt-4">
-              <p className="text-md italic">{item.description[language]}</p>
-            </div>
-          </div>
-        );
-      })}
     </div>
   );
 };

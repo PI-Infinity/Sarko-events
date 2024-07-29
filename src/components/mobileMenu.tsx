@@ -11,10 +11,18 @@ import {
   FaWhatsapp,
   FaYoutube,
 } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 const MobileMenu = () => {
-  const { menuItems, theme, mobileMenu, setMobileMenu, language, setLanguage } =
-    useAppContext();
+  const {
+    isMobile,
+    menuItems,
+    theme,
+    mobileMenu,
+    setMobileMenu,
+    language,
+    setLanguage,
+  } = useAppContext();
   const pathname = usePathname();
 
   return (
@@ -25,7 +33,7 @@ const MobileMenu = () => {
         transition: "ease-in 200ms",
       }}
       onClick={() => setMobileMenu(false)}
-      className={`fixed z-30 top-0 ${
+      className={`fixed z-50 top-0 ${
         mobileMenu ? "right-0 opacity-[1]" : "right-[-100%] opacity-[0.5]"
       } h-screen w-full slide-in-left desktop:hidden flex flex-col gap-[48px]
     text-textlight text-[16px] font-custom font-[600] px-[10%] pt-[40px]`}
@@ -105,20 +113,27 @@ const MobileMenu = () => {
         className="desktop:w-1/3 flex items-center desktop:justify-center gap-4"
       >
         <a
+          href="mailto:sarko.events@Gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <MdEmail color={theme.text} size={isMobile ? 28 : 24} />
+        </a>
+        <a
           href="fb://profile/61562564296082"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaFacebook color={theme.text} size={20} />
+          <FaFacebook color={theme.text} size={isMobile ? 24 : 20} />
         </a>
         <a
           href="instagram://user?username=sarko_events"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaInstagram color={theme.text} size={20} />
+          <FaInstagram color={theme.text} size={isMobile ? 24 : 20} />
         </a>
-        <a
+        {/* <a
           href="https://www.tiktok.com/@sarko.events"
           target="_blank"
           rel="noopener noreferrer"
@@ -131,28 +146,28 @@ const MobileMenu = () => {
           rel="noopener noreferrer"
         >
           <FaYoutube color={theme.text} size={20} />
-        </a>
+        </a> */}
         <a
           href="tg://resolve?domain=DG3IK"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaTelegram color={theme.text} size={20} />
+          <FaTelegram color={theme.text} size={isMobile ? 24 : 20} />
         </a>
         <a
           href="whatsapp://send?phone=+995597233355"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaWhatsapp color={theme.text} size={20} />
+          <FaWhatsapp color={theme.text} size={isMobile ? 24 : 20} />
         </a>
-        <a
+        {/* <a
           href="linkedin://in/sarko-events-21438531a"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FaLinkedin color={theme.text} size={20} />
-        </a>
+        </a> */}
       </div>
     </div>
   );

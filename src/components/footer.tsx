@@ -11,6 +11,7 @@ import {
   FaWhatsapp,
   FaYoutube,
 } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 export const Footer = () => {
   const { loading, theme, language, setLanguage, isMobile } = useAppContext();
@@ -39,6 +40,13 @@ export const Footer = () => {
         </Link>
         <div className="desktop:w-1/3 flex items-center desktop:justify-center gap-4">
           <a
+            href="mailto:sarko.events@Gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <MdEmail color={theme.text} size={isMobile ? 28 : 24} />
+          </a>
+          <a
             href={
               isMobile
                 ? "fb://profile/61562564296082"
@@ -47,7 +55,7 @@ export const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaFacebook color={theme.text} size={20} />
+            <FaFacebook color={theme.text} size={isMobile ? 24 : 20} />
           </a>
           <a
             href={
@@ -58,9 +66,9 @@ export const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaInstagram color={theme.text} size={20} />
+            <FaInstagram color={theme.text} size={isMobile ? 24 : 20} />
           </a>
-          <a
+          {/* <a
             href={
               isMobile
                 ? "https://www.tiktok.com/@sarko.events"
@@ -70,8 +78,8 @@ export const Footer = () => {
             rel="noopener noreferrer"
           >
             <FaTiktok color={theme.text} size={20} />
-          </a>
-          <a
+          </a> */}
+          {/* <a
             href={
               isMobile
                 ? "vnd.youtube://www.youtube.com/channel/UC0Fwr1O2Imxpc6mf-PhZwyg"
@@ -81,13 +89,13 @@ export const Footer = () => {
             rel="noopener noreferrer"
           >
             <FaYoutube color={theme.text} size={20} />
-          </a>
+          </a> */}
           <a
             href={isMobile ? "tg://resolve?domain=DG3IK" : "https://t.me/DG3IK"}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaTelegram color={theme.text} size={20} />
+            <FaTelegram color={theme.text} size={isMobile ? 24 : 20} />
           </a>
           <a
             href={
@@ -98,9 +106,9 @@ export const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaWhatsapp color={theme.text} size={20} />
+            <FaWhatsapp color={theme.text} size={isMobile ? 24 : 20} />
           </a>
-          <a
+          {/* <a
             href={
               isMobile
                 ? "linkedin://in/sarko-events-21438531a"
@@ -110,7 +118,7 @@ export const Footer = () => {
             rel="noopener noreferrer"
           >
             <FaLinkedin color={theme.text} size={20} />
-          </a>
+          </a> */}
         </div>
 
         <div className="desktop:w-1/3 flex justify-end desktop:items-center flex-col desktop:flex-row gap-2 desktop:gap-8">

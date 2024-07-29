@@ -64,7 +64,7 @@ const Main = () => {
             </h1>
           </div>
 
-          <div className="h-12 w-[90%] mt-12 flex items-center rounded-full flex-col">
+          <div className="h-12 w-[80%] mt-12 flex items-center rounded-full flex-col">
             <Link
               href="/contact"
               className="h-12 w-[100%] desktop:w-[400px] border-[1px] border-[rgba(255,255,255,0.2)] rounded-full"
@@ -120,7 +120,7 @@ const Main = () => {
           <div className="h-12 w-[90%] mt-12 flex flex-col items-center justify-center rounded-full">
             <Link
               href="/contact"
-              className="h-12 w-[100%] desktop:w-[400px] border-[1px] border-[rgba(255,255,255,0.2)] rounded-full"
+              className="h-12 w-[100%] desktop:w-[350px] border-[1px] border-[rgba(255,255,255,0.2)] rounded-full"
             >
               <Button
                 title={activeLanguage.startPlanning}
@@ -161,10 +161,10 @@ const Main = () => {
                 <Link
                   href={item.link}
                   style={{ background: theme.background2 }}
-                  className="w-full h-[250px] shadow-sm rounded-xl flex items-center justify-center gap-4 relative"
+                  className="w-full h-[250px] shadow-sm desktop:rounded-xl rounded-md flex items-center justify-center gap-4 relative"
                   key={index}
                 >
-                  <div className="relative overflow-hidden rounded-xl w-full h-full flex items-center">
+                  <div className="relative overflow-hidden desktop:rounded-xl rounded-md w-full h-full flex items-center">
                     <Img
                       src={item.img}
                       alt="img"
@@ -188,7 +188,7 @@ const Main = () => {
               );
             })}
           </div>
-          <div className="w-full mt-4 flex items-center justify-center px-4 desktop:mt-16">
+          <div className="w-full mt-4 flex items-center justify-center px-4 desktop:mt-4">
             <Link
               href="/contact"
               className="h-12 w-full desktop:w-1/3 border-[1px] border-[rgba(255,255,255,0.2)] rounded-full"
