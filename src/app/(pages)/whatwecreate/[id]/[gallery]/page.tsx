@@ -74,7 +74,7 @@ const Gallery = () => {
         className="w-full h-full min-h-[100vh] desktop:p-4 p-2"
       >
         <MdClose
-          color="red"
+          color={theme.text}
           className="ml-auto cursor-pointer mb-2 desktop:mb-4"
           size={40}
           onClick={handleBack}

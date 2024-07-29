@@ -40,13 +40,6 @@ export const Footer = () => {
         </Link>
         <div className="desktop:w-1/3 flex items-center desktop:justify-center gap-4">
           <a
-            href="mailto:sarko.events@Gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <MdEmail color={theme.text} size={isMobile ? 28 : 24} />
-          </a>
-          <a
             href={
               isMobile
                 ? "fb://profile/61562564296082"
@@ -119,6 +112,13 @@ export const Footer = () => {
           >
             <FaLinkedin color={theme.text} size={20} />
           </a> */}
+          <a
+            href="mailto:sarko.events@Gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <MdEmail color={theme.text} size={isMobile ? 28 : 24} />
+          </a>
         </div>
 
         <div className="desktop:w-1/3 flex justify-end desktop:items-center flex-col desktop:flex-row gap-2 desktop:gap-8">

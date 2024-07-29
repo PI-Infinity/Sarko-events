@@ -113,13 +113,6 @@ const MobileMenu = () => {
         className="desktop:w-1/3 flex items-center desktop:justify-center gap-4"
       >
         <a
-          href="mailto:sarko.events@Gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <MdEmail color={theme.text} size={isMobile ? 28 : 24} />
-        </a>
-        <a
           href="fb://profile/61562564296082"
           target="_blank"
           rel="noopener noreferrer"
@@ -168,6 +161,13 @@ const MobileMenu = () => {
         >
           <FaLinkedin color={theme.text} size={20} />
         </a> */}
+        <a
+          href="mailto:sarko.events@Gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <MdEmail color={theme.text} size={isMobile ? 28 : 24} />
+        </a>
       </div>
     </div>
   );
