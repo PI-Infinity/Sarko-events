@@ -519,14 +519,6 @@ const corporations = [
     project: "2",
   },
   {
-    link: "/images/corporates/IMG_1021.JPG",
-    project: "2",
-  },
-  {
-    link: "/images/corporates/IMG_1022.JPG",
-    project: "2",
-  },
-  {
     link: "/images/corporates/IMG_1023.JPG",
     project: "2",
   },
