@@ -73,7 +73,7 @@ const Gallery = () => {
         </Link>
       </div>
       {showButton && (
-        <div className="w-full fixed bottom-[72px] z-[100] desktop:bottom-8 right-0 desktop:right-6 flex items-center justify-center desktop:justify-end">
+        <div className="w-full fixed bottom-[84px] z-[100] desktop:bottom-8 right-0 right-6 flex items-center justify-end">
           <div
             style={{
               display: loading ? "none" : "flex",
