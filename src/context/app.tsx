@@ -160,18 +160,18 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
       link: "/whatwecreate/presentations",
     },
     {
-      id: "conferences",
-      label: activeLanguage.conferences,
-      img: "/conference.jpg",
-      path: true,
-      link: "/whatwecreate/conferences",
-    },
-    {
       id: "teambuildings",
       label: activeLanguage.teambuildings,
       img: "/teambuilding.jpg",
       path: true,
       link: "/whatwecreate/teambuildings",
+    },
+    {
+      id: "conferences",
+      label: activeLanguage.conferences,
+      img: "/conference.jpg",
+      path: true,
+      link: "/whatwecreate/conferences",
     },
     {
       id: "other",

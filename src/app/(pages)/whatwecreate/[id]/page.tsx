@@ -51,28 +51,41 @@ export default Page;
 const events = [
   { event: "1", type: "weddings", cover: "/images/weddings/IMG_1654.PNG" },
   { event: "2", type: "weddings", cover: "/images/weddings/IMG_1697.JPG" },
-  { event: "3", type: "weddings", cover: "/images/weddings/IMG_1748.PNG" },
-  { event: "4", type: "weddings", cover: "/images/weddings/IMG_2050.PNG" },
-  { event: "5", type: "weddings", cover: "/images/weddings/IMG_2081.JPG" },
+  { event: "3", type: "weddings", cover: "/images/weddings/IMG_1704.JPG" },
+  { event: "4", type: "weddings", cover: "/images/weddings/IMG_1748.PNG" },
+  { event: "5", type: "weddings", cover: "/images/weddings/IMG_1786.PNG" },
+  { event: "6", type: "weddings", cover: "/images/weddings/IMG_1791.PNG" },
+  { event: "7", type: "weddings", cover: "/images/weddings/IMG_2051.PNG" },
+  { event: "8", type: "weddings", cover: "/images/weddings/IMG_2081.JPG" },
   {
     event: "1",
     type: "corporations",
-    cover: "/images/corporates/IMG_2125.JPG",
+    cover: "/images/corporates/IMG_0649 latest.jpg",
   },
   {
     event: "2",
     type: "corporations",
-    cover: "/images/corporates/IMG_0649.HEIC",
+    cover: "/images/corporates/IMG_1624.png",
   },
   {
     event: "3",
     type: "corporations",
-    cover: "/images/corporates/IMG_1624.PNG",
+    cover: "/images/corporates/IMG_1634.png",
   },
   {
     event: "4",
     type: "corporations",
-    cover: "/images/corporates/IMG_1739.PNG",
+    cover: "/images/corporates/IMG_1741.png",
+  },
+  {
+    event: "5",
+    type: "corporations",
+    cover: "/images/corporates/IMG_1759.png",
+  },
+  {
+    event: "6",
+    type: "corporations",
+    cover: "/images/corporates/IMG_2114.jpg",
   },
   {
     event: "1",
@@ -87,6 +100,6 @@ const events = [
   {
     event: "1",
     type: "teambuildings",
-    cover: "/images/teambuildings/IMG_2334.JPG",
+    cover: "/images/teambuildings/IMG_2267.jpg",
   },
 ];
