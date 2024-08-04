@@ -6,13 +6,15 @@ import { LuGalleryVertical } from "react-icons/lu";
 import Offers from "./offers";
 import Button from "@/components/button";
 import { MdCalendarMonth } from "react-icons/md";
+import { useState } from "react";
 
 const Page = () => {
   const pathname = usePathname();
   const { loading, theme, activeLanguage } = useAppContext();
+  const [loadingImgs, setLoadingImgs] = useState();
 
   return (
-    <div>
+    <div style={{ display: loading ? "none" : "flex" }}>
       <div
         style={{
           background:
@@ -124,6 +126,6 @@ const events = [
   {
     event: "1",
     type: "teambuildings",
-    cover: "/images/teambuildings/IMG_2267.JPG",
+    cover: "/images/teambuildings/IMG_2355.JPG",
   },
 ];

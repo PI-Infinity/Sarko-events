@@ -51,7 +51,7 @@ const Gallery = () => {
   };
 
   return (
-    <div>
+    <div style={{ display: loading ? "none" : "flex" }}>
       <div
         style={{
           background:
@@ -359,10 +359,6 @@ const weddings = [
   },
   {
     link: "/images/weddings/IMG_2102.JPG",
-    project: "8",
-  },
-  {
-    link: "/images/weddings/IMG_2104.JPG",
     project: "8",
   },
   {
