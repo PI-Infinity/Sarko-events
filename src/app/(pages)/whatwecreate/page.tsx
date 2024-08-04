@@ -23,7 +23,7 @@ const Gallery = () => {
           background:
             "linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0))",
         }}
-        className="fixed desktop:hidden bottom-0 left-0 py-4 z-50 bg-[] w-full mt-4 flex items-center justify-center px-4 desktop:mt-4"
+        className="fixed desktop:hidden bottom-0 left-0 py-6 z-50 bg-[] w-full mt-4 flex items-center justify-center px-4 desktop:mt-4"
       >
         <Link
           href="/contact"

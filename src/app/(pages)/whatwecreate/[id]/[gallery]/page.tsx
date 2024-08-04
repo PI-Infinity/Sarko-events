@@ -1,14 +1,16 @@
 "use client";
 
+import Button from "@/components/button";
 import { useAppContext } from "@/context/app";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import { MdArrowDropUp, MdClose } from "react-icons/md";
+import { MdArrowDropUp, MdCalendarMonth, MdClose } from "react-icons/md";
 
 const Gallery = () => {
   const pathname = usePathname();
 
-  const { theme, loading } = useAppContext();
+  const { theme, loading, activeLanguage } = useAppContext();
 
   const list =
     pathname.split("/")[2] === "corporations"
@@ -49,16 +51,40 @@ const Gallery = () => {
   };
 
   return (
-    <>
-      {showButton && (
-        <div
-          style={{
-            display: loading ? "none" : "flex",
-            background: theme.background,
-          }}
-          className="fixed bottom-4 right-4 desktop:right-6 rounded-full z-[100] cursor-pointer"
+    <div>
+      <div
+        style={{
+          background:
+            "linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0))",
+        }}
+        className="fixed desktop:hidden bottom-0 left-0 py-6 z-50 bg-[] w-full mt-4 flex items-center justify-center px-4 desktop:mt-4"
+      >
+        <Link
+          href="/contact"
+          className=" h-12 w-full desktop:w-1/3 border-[1px] border-[rgba(255,255,255,0.2)] rounded-full"
         >
-          <MdArrowDropUp size={40} color={theme.text} onClick={scrollToTop} />
+          <Button
+            title={activeLanguage.startPlanning}
+            background="rgba(255,255,255,1)"
+            color={theme.background}
+            onClick={() => undefined}
+            icon={<MdCalendarMonth size={24} />}
+          />
+        </Link>
+      </div>
+      {showButton && (
+        <div className="w-full fixed bottom-[72px] z-[100] desktop:bottom-8 right-0 desktop:right-6 flex items-center justify-center desktop:justify-end">
+          <div
+            style={{
+              display: loading ? "none" : "flex",
+              background: theme.background,
+              width: "40px",
+              height: "40px",
+            }}
+            className="rounded-full  cursor-pointer"
+          >
+            <MdArrowDropUp size={40} color={theme.text} onClick={scrollToTop} />
+          </div>
         </div>
       )}
       <div
@@ -97,7 +123,7 @@ const Gallery = () => {
             })}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
