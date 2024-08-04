@@ -109,7 +109,7 @@ const events = [
   {
     event: "6",
     type: "corporations",
-    cover: "/images/corporates/IMG_2114.PNG",
+    cover: "/images/corporates/IMG_2114.JPG",
   },
   {
     event: "1",
