@@ -414,7 +414,7 @@ const weddings = [
 ];
 const corporations = [
   {
-    link: "/images/corporates/IMG_0649 latest.JPG",
+    link: "/images/corporates/IMG_0649.JPG",
     project: "1",
   },
   {
