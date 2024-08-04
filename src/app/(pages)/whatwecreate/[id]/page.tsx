@@ -84,32 +84,32 @@ const events = [
   {
     event: "1",
     type: "corporations",
-    cover: "/images/corporates/IMG_0649 latest.jpg",
+    cover: "/images/corporates/IMG_0649.JPG",
   },
   {
     event: "2",
     type: "corporations",
-    cover: "/images/corporates/IMG_1624.png",
+    cover: "/images/corporates/IMG_1624.PNG",
   },
   {
     event: "3",
     type: "corporations",
-    cover: "/images/corporates/IMG_1634.png",
+    cover: "/images/corporates/IMG_1634.PNG",
   },
   {
     event: "4",
     type: "corporations",
-    cover: "/images/corporates/IMG_1741.png",
+    cover: "/images/corporates/IMG_1741.PNG",
   },
   {
     event: "5",
     type: "corporations",
-    cover: "/images/corporates/IMG_1759.png",
+    cover: "/images/corporates/IMG_1759.PNG",
   },
   {
     event: "6",
     type: "corporations",
-    cover: "/images/corporates/IMG_2114.jpg",
+    cover: "/images/corporates/IMG_2114.PNG",
   },
   {
     event: "1",
@@ -124,6 +124,6 @@ const events = [
   {
     event: "1",
     type: "teambuildings",
-    cover: "/images/teambuildings/IMG_2267.jpg",
+    cover: "/images/teambuildings/IMG_2267.JPG",
   },
 ];
