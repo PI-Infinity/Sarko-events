@@ -362,7 +362,7 @@ const weddings = [
     project: "8",
   },
   {
-    link: "/images/weddings/IMG_2104.jpg",
+    link: "/images/weddings/IMG_2104.JPG",
     project: "8",
   },
   {
@@ -414,233 +414,233 @@ const weddings = [
 ];
 const corporations = [
   {
-    link: "/images/corporates/IMG_0649 latest.jpg",
+    link: "/images/corporates/IMG_0649 latest.JPG",
     project: "1",
   },
   {
-    link: "/images/corporates/IMG_1016.jpg",
+    link: "/images/corporates/IMG_1016.JPG",
     project: "1",
   },
   {
-    link: "/images/corporates/IMG_1011.jpg",
+    link: "/images/corporates/IMG_1011.JPG",
     project: "1",
   },
   {
-    link: "/images/corporates/IMG_1019.jpg",
+    link: "/images/corporates/IMG_1019.JPG",
     project: "1",
   },
   {
-    link: "/images/corporates/IMG_1033.jpg",
+    link: "/images/corporates/IMG_1033.JPG",
     project: "1",
   },
   {
-    link: "/images/corporates/IMG_1018.jpg",
+    link: "/images/corporates/IMG_1018.JPG",
     project: "1",
   },
   {
-    link: "/images/corporates/IMG_1013.jpg",
-    project: "1",
-  },
-
-  {
-    link: "/images/corporates/IMG_1023.jpg",
-    project: "1",
-  },
-  {
-    link: "/images/corporates/IMG_1030.jpg",
-    project: "1",
-  },
-  {
-    link: "/images/corporates/IMG_1026.jpg",
+    link: "/images/corporates/IMG_1013.JPG",
     project: "1",
   },
 
   {
-    link: "/images/corporates/IMG_1031.jpg",
+    link: "/images/corporates/IMG_1023.JPG",
     project: "1",
   },
   {
-    link: "/images/corporates/IMG_1027.jpg",
+    link: "/images/corporates/IMG_1030.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/corporates/IMG_1026.JPG",
     project: "1",
   },
 
   {
-    link: "/images/corporates/IMG_1624.png",
+    link: "/images/corporates/IMG_1031.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/corporates/IMG_1027.JPG",
+    project: "1",
+  },
+
+  {
+    link: "/images/corporates/IMG_1624.PNG",
     project: "2",
   },
 
   {
-    link: "/images/corporates/IMG_1626.png",
+    link: "/images/corporates/IMG_1626.PNG",
     project: "2",
   },
   {
-    link: "/images/corporates/IMG_1625.png",
+    link: "/images/corporates/IMG_1625.PNG",
     project: "2",
   },
   {
-    link: "/images/corporates/IMG_1633.png",
+    link: "/images/corporates/IMG_1633.PNG",
     project: "2",
   },
   {
-    link: "/images/corporates/IMG_1627.png",
+    link: "/images/corporates/IMG_1627.PNG",
     project: "2",
   },
   {
-    link: "/images/corporates/IMG_1628.png",
-    project: "2",
-  },
-
-  {
-    link: "/images/corporates/IMG_1630.png",
-    project: "2",
-  },
-  {
-    link: "/images/corporates/IMG_1629.png",
-    project: "2",
-  },
-  {
-    link: "/images/corporates/IMG_1631.png",
+    link: "/images/corporates/IMG_1628.PNG",
     project: "2",
   },
 
   {
-    link: "/images/corporates/IMG_1634.png",
+    link: "/images/corporates/IMG_1630.PNG",
+    project: "2",
+  },
+  {
+    link: "/images/corporates/IMG_1629.PNG",
+    project: "2",
+  },
+  {
+    link: "/images/corporates/IMG_1631.PNG",
+    project: "2",
+  },
+
+  {
+    link: "/images/corporates/IMG_1634.PNG",
     project: "3",
   },
   {
-    link: "/images/corporates/IMG_1635.png",
+    link: "/images/corporates/IMG_1635.PNG",
     project: "3",
   },
   {
-    link: "/images/corporates/IMG_1636.png",
+    link: "/images/corporates/IMG_1636.PNG",
     project: "3",
   },
   {
-    link: "/images/corporates/IMG_1638.png",
+    link: "/images/corporates/IMG_1638.PNG",
     project: "3",
   },
   {
-    link: "/images/corporates/IMG_1639.png",
+    link: "/images/corporates/IMG_1639.PNG",
     project: "3",
   },
   {
-    link: "/images/corporates/IMG_1640.png",
+    link: "/images/corporates/IMG_1640.PNG",
     project: "3",
   },
   {
-    link: "/images/corporates/IMG_1641.png",
+    link: "/images/corporates/IMG_1641.PNG",
     project: "3",
   },
   {
-    link: "/images/corporates/IMG_1642.png",
+    link: "/images/corporates/IMG_1642.PNG",
     project: "3",
   },
   {
-    link: "/images/corporates/IMG_1643.png",
+    link: "/images/corporates/IMG_1643.PNG",
     project: "3",
   },
   {
-    link: "/images/corporates/IMG_1740.png",
+    link: "/images/corporates/IMG_1740.PNG",
     project: "4",
   },
   {
-    link: "/images/corporates/IMG_1741.png",
+    link: "/images/corporates/IMG_1741.PNG",
     project: "4",
   },
   {
-    link: "/images/corporates/IMG_1742.png",
+    link: "/images/corporates/IMG_1742.PNG",
     project: "4",
   },
   {
-    link: "/images/corporates/IMG_1743.png",
+    link: "/images/corporates/IMG_1743.PNG",
     project: "4",
   },
   {
-    link: "/images/corporates/IMG_1745.png",
+    link: "/images/corporates/IMG_1745.PNG",
     project: "4",
   },
   {
-    link: "/images/corporates/IMG_1759.png",
+    link: "/images/corporates/IMG_1759.PNG",
     project: "5",
   },
   {
-    link: "/images/corporates/IMG_1757.png",
+    link: "/images/corporates/IMG_1757.PNG",
     project: "5",
   },
   {
-    link: "/images/corporates/IMG_1758.png",
+    link: "/images/corporates/IMG_1758.PNG",
     project: "5",
   },
 
   {
-    link: "/images/corporates/IMG_1760.png",
+    link: "/images/corporates/IMG_1760.PNG",
     project: "5",
   },
   {
-    link: "/images/corporates/IMG_1761.png",
+    link: "/images/corporates/IMG_1761.PNG",
     project: "5",
   },
   {
-    link: "/images/corporates/IMG_1763.png",
-    project: "5",
-  },
-
-  {
-    link: "/images/corporates/IMG_1766.png",
+    link: "/images/corporates/IMG_1763.PNG",
     project: "5",
   },
 
   {
-    link: "/images/corporates/IMG_1767.png",
+    link: "/images/corporates/IMG_1766.PNG",
+    project: "5",
+  },
+
+  {
+    link: "/images/corporates/IMG_1767.PNG",
     project: "5",
   },
   {
-    link: "/images/corporates/IMG_1768.png",
+    link: "/images/corporates/IMG_1768.PNG",
     project: "5",
   },
   {
-    link: "/images/corporates/IMG_1769.png",
+    link: "/images/corporates/IMG_1769.PNG",
     project: "5",
   },
   {
-    link: "/images/corporates/IMG_2125.jpg",
+    link: "/images/corporates/IMG_2125.JPG",
     project: "6",
   },
   {
-    link: "/images/corporates/IMG_2114.jpg",
+    link: "/images/corporates/IMG_2114.JPG",
     project: "6",
   },
   {
-    link: "/images/corporates/IMG_2126.jpg",
+    link: "/images/corporates/IMG_2126.JPG",
     project: "6",
   },
 
   {
-    link: "/images/corporates/IMG_2115.jpg",
+    link: "/images/corporates/IMG_2115.JPG",
     project: "6",
   },
   {
-    link: "/images/corporates/IMG_2116.jpg",
+    link: "/images/corporates/IMG_2116.JPG",
     project: "6",
   },
   {
-    link: "/images/corporates/IMG_2113.jpg",
+    link: "/images/corporates/IMG_2113.JPG",
     project: "6",
   },
   {
-    link: "/images/corporates/IMG_2119.jpg",
+    link: "/images/corporates/IMG_2119.JPG",
     project: "6",
   },
   {
-    link: "/images/corporates/IMG_2120.jpg",
+    link: "/images/corporates/IMG_2120.JPG",
     project: "6",
   },
   {
-    link: "/images/corporates/IMG_2121.jpg",
+    link: "/images/corporates/IMG_2121.JPG",
     project: "6",
   },
   {
-    link: "/images/corporates/IMG_2124.jpg",
+    link: "/images/corporates/IMG_2124.JPG",
     project: "6",
   },
 ];
@@ -705,82 +705,82 @@ const presentations = [
 ];
 const teambuildings = [
   {
-    link: "/images/teambuildings/IMG_2345.jpg",
+    link: "/images/teambuildings/IMG_2345.JPG",
     project: "1",
   },
 
   {
-    link: "/images/teambuildings/IMG_2379.jpg",
+    link: "/images/teambuildings/IMG_2379.JPG",
     project: "1",
   },
   {
-    link: "/images/teambuildings/IMG_2355.jpg",
-    project: "1",
-  },
-
-  {
-    link: "/images/teambuildings/IMG_2366.jpg",
+    link: "/images/teambuildings/IMG_2355.JPG",
     project: "1",
   },
 
   {
-    link: "/images/teambuildings/IMG_2385.jpg",
-    project: "1",
-  },
-  {
-    link: "/images/teambuildings/IMG_2392.jpg",
-    project: "1",
-  },
-  {
-    link: "/images/teambuildings/IMG_2336.jpg",
-    project: "1",
-  },
-  {
-    link: "/images/teambuildings/IMG_2426.jpg",
-    project: "1",
-  },
-  {
-    link: "/images/teambuildings/IMG_2258.jpg",
+    link: "/images/teambuildings/IMG_2366.JPG",
     project: "1",
   },
 
   {
-    link: "/images/teambuildings/IMG_2338.jpg",
+    link: "/images/teambuildings/IMG_2385.JPG",
     project: "1",
   },
   {
-    link: "/images/teambuildings/IMG_2318.jpg",
+    link: "/images/teambuildings/IMG_2392.JPG",
     project: "1",
   },
   {
-    link: "/images/teambuildings/IMG_2299.jpg",
-    project: "1",
-  },
-
-  {
-    link: "/images/teambuildings/IMG_2260.jpg",
-    project: "1",
-  },
-
-  {
-    link: "/images/teambuildings/IMG_2266.jpg",
+    link: "/images/teambuildings/IMG_2336.JPG",
     project: "1",
   },
   {
-    link: "/images/teambuildings/IMG_2278.jpg",
+    link: "/images/teambuildings/IMG_2426.JPG",
     project: "1",
   },
   {
-    link: "/images/teambuildings/IMG_2267.jpg",
+    link: "/images/teambuildings/IMG_2258.JPG",
     project: "1",
   },
 
   {
-    link: "/images/teambuildings/IMG_2273.jpg",
+    link: "/images/teambuildings/IMG_2338.JPG",
     project: "1",
   },
   {
-    link: "/images/teambuildings/IMG_2268.jpg",
+    link: "/images/teambuildings/IMG_2318.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2299.JPG",
+    project: "1",
+  },
+
+  {
+    link: "/images/teambuildings/IMG_2260.JPG",
+    project: "1",
+  },
+
+  {
+    link: "/images/teambuildings/IMG_2266.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2278.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2267.JPG",
+    project: "1",
+  },
+
+  {
+    link: "/images/teambuildings/IMG_2273.JPG",
+    project: "1",
+  },
+  {
+    link: "/images/teambuildings/IMG_2268.JPG",
     project: "1",
   },
 ];
