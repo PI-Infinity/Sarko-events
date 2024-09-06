@@ -7,6 +7,7 @@ import { MoonLoader } from "react-spinners";
 import Img from "./image";
 import Button from "./button";
 import { IoMdHeart } from "react-icons/io";
+import Image from "next/image";
 
 const Main = () => {
   // app context
@@ -31,7 +32,19 @@ const Main = () => {
     >
       <div className="w-full desktop:hidden mt-[-50px] flex items-center h-[100vh] overflow-hidden relative">
         <div className="w-full bg-[rgba(0,0,0,0.4)] absolute z-10" />
-        <video
+        <div className="relative overflow-hidden desktop:rounded-xl rounded-md w-full h-full flex items-center">
+          <Image
+            src="/images/bg.png"
+            alt="img"
+            fill
+            priority
+            style={{
+              objectFit: "cover",
+            }}
+          />
+        </div>
+
+        {/* <video
           ref={videoRefMob}
           className={`transition-opacity duration-1000 ${
             isLoaded ? "opacity-100" : "opacity-0"
@@ -45,7 +58,7 @@ const Main = () => {
           preload="auto"
         >
           <source src="/videos/mob.MP4" />
-        </video>
+        </video> */}
         {!isLoaded && (
           <div className="absolute top-28 right-[5%] z-20">
             <MoonLoader size={24} color={theme.text} />
@@ -64,10 +77,10 @@ const Main = () => {
             </h1>
           </div>
 
-          <div className="h-12 w-[80%] mt-12 flex items-center rounded-full flex-col">
+          <div className="h-12 w-[90%] mt-12 flex items-center rounded-full flex-col">
             <Link
               href="/contact"
-              className="h-12 w-[100%] desktop:w-[400px] border-[1px] border-[rgba(255,255,255,0.2)] rounded-full"
+              className="h-12 flex items-center justify-center gap-4 bg-white text-black font-bold w-[100%] desktop:w-[400px] border-[1px] border-[rgba(255,255,255,0.2)] rounded-full"
             >
               <Button
                 title={activeLanguage.startPlanning}
@@ -154,26 +167,31 @@ const Main = () => {
           </h2>
           <div
             style={{ display: loading ? "none" : "grid" }}
-            className="w-full text-white gap-4 overflow-y-auto grid-cols-1 desktop:grid-cols-3 px-[2.5%]"
+            className="w-full text-white desktop:gap-4 gap-2 overflow-y-auto grid-cols-1 desktop:grid-cols-3 desktop:px-[2.5%]"
           >
             {gallery?.map((item: any, index: number) => {
               return (
                 <Link
                   href={item.link}
                   style={{ background: theme.background2 }}
-                  className="w-full h-[250px] shadow-sm desktop:rounded-xl rounded-md flex items-center justify-center gap-4 relative"
+                  className="w-full  h-[250px] shadow-sm desktop:rounded-xl rounded-md flex items-center justify-center gap-4 relative"
                   key={index}
                 >
-                  <div className="relative overflow-hidden desktop:rounded-xl rounded-md w-full h-full flex items-center">
-                    <Img
-                      src={item.img}
-                      alt="img"
-                      style={{
-                        aspectRatio: 1,
-                        zIndex: 0,
-                        width: "100%",
-                      }}
-                    />
+                  <div className="relative  overflow-hidden desktop:rounded-xl w-full h-full flex items-center">
+                    <div
+                      style={{ transition: "ease-in 200ms" }}
+                      className="w-full h-full hover:scale-[1.1] flex items-cemter justify-center"
+                    >
+                      <Img
+                        src={item.img}
+                        alt="img"
+                        style={{
+                          aspectRatio: 1,
+                          zIndex: 0,
+                          width: "100%",
+                        }}
+                      />
+                    </div>
                   </div>
                   <strong
                     style={{
