@@ -22,6 +22,8 @@ export default function Home() {
         <Gallery />
       ) : pathname === "/contact" ? (
         <Contact />
+      ) : pathname === "/offers" ? (
+        <Offers />
       ) : null}
     </main>
   );

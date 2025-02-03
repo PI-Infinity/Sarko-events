@@ -130,7 +130,7 @@ const RequestForm = () => {
         <Input
           type="text"
           value={name}
-          onChange={(e) => setName(e.target.value)}
+          onChange={(e: any) => setName(e.target.value)}
           label={activeLanguage.fullName + "*"}
         />
       </div>
@@ -138,7 +138,7 @@ const RequestForm = () => {
         <Input
           type="text"
           value={company}
-          onChange={(e) => setCompany(e.target.value)}
+          onChange={(e: any) => setCompany(e.target.value)}
           label={activeLanguage.company + " " + activeLanguage.optional}
         />
       </div>
@@ -146,7 +146,7 @@ const RequestForm = () => {
         <Input
           type="text"
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={(e: any) => setEmail(e.target.value)}
           label={activeLanguage.email + "*"}
         />
       </div>
@@ -154,7 +154,7 @@ const RequestForm = () => {
         <Input
           type="text"
           value={userCountry}
-          onChange={(e) => setUserCountry(e.target.value)}
+          onChange={(e: any) => setUserCountry(e.target.value)}
           label={activeLanguage.country + "*"}
         />
       </div>
@@ -162,11 +162,11 @@ const RequestForm = () => {
         <Input
           type="text"
           value={phone}
-          onChange={(e) => setPhone(e.target.value)}
+          onChange={(e: any) => setPhone(e.target.value)}
           label={activeLanguage.phone + "*"}
         />
       </div>
-      <div className="max-h-14" onClick={(e) => e.stopPropagation()}>
+      <div className="max-h-14" onClick={(e: any) => e.stopPropagation()}>
         <SelectComponent
           value={eventType}
           setValue={setEventType}
@@ -185,7 +185,7 @@ const RequestForm = () => {
         <Input
           type="number"
           value={totalMembers}
-          onChange={(e) => setTotalMembers(e.target.value)}
+          onChange={(e: any) => setTotalMembers(e.target.value)}
           label={activeLanguage.totalOfGuests + " " + activeLanguage.optional}
         />
       </div>
@@ -193,7 +193,7 @@ const RequestForm = () => {
         <Input
           type="text"
           value={comment}
-          onChange={(e) => setComment(e.target.value)}
+          onChange={(e: any) => setComment(e.target.value)}
           label={activeLanguage.comment + " " + activeLanguage.optional}
         />
       </div>

@@ -1,5 +1,5 @@
 "use client";
-import { useAppContext } from "@/context/app";
+import { useAppContext, offers } from "@/context/app";
 import Link from "next/link";
 import { useRef, useState, useEffect } from "react";
 import { MdCalendarMonth, MdKeyboardDoubleArrowRight } from "react-icons/md";
@@ -11,7 +11,7 @@ import Image from "next/image";
 
 const Main = () => {
   // app context
-  const { theme, loading, gallery, activeLanguage } = useAppContext();
+  const { theme, loading, gallery, activeLanguage, language } = useAppContext();
 
   const videoRef = useRef<HTMLVideoElement>(null);
   const videoRefMob = useRef<HTMLVideoElement>(null);
@@ -163,6 +163,52 @@ const Main = () => {
       >
         <div className="z-30 w-[100%] py-12 pt-4 flex flex-col items-center gap-6">
           <h2 className="text-2xl font-bold py-4 pb-2 desktop:mb-4 whitespace-nowrap w-full text-center">
+            {activeLanguage.offers}
+          </h2>
+          <div
+            style={{ display: loading ? "none" : "grid" }}
+            className="w-full text-white desktop:gap-4 gap-2 overflow-y-auto grid-cols-1 desktop:grid-cols-3 desktop:px-[2.5%]"
+          >
+            {offers?.map((item: any, index: number) => {
+              return (
+                <Link
+                  href={"/offers/" + item.value}
+                  style={{ background: theme.background2 }}
+                  className="w-full  h-[250px] shadow-sm desktop:rounded-xl rounded-md flex items-center justify-center gap-4 relative"
+                  key={index}
+                >
+                  <div className="relative  overflow-hidden desktop:rounded-xl w-full h-full flex items-center">
+                    <div
+                      style={{ transition: "ease-in 200ms" }}
+                      className="w-full h-full hover:scale-[1.1] flex items-cemter justify-center"
+                    >
+                      <Img
+                        src={item.img}
+                        alt="img"
+                        style={{
+                          aspectRatio: 1,
+                          zIndex: 0,
+                          width: "100%",
+                        }}
+                      />
+                    </div>
+                  </div>
+                  <strong className="rounded-md absolute top-4 right-4 py-1 px-3 bg-[rgba(0,0,0,0.5)] text-lg">
+                    {item.price}$
+                  </strong>
+                  <div className="p-4 px-2 rounded-xl absolute bottom-4 left-4 flex flex-col gap-2 bg-[rgba(0,0,0,0.5)] max-w-[80%]">
+                    <strong className=" px-3 text-lg">
+                      {item.label[language]}
+                    </strong>
+                    <p className=" px-3 text-sm font-[600]">
+                      {item.description[language]}
+                    </p>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+          <h2 className="text-2xl font-bold py-4 pb-2 desktop:mb-4 whitespace-nowrap w-full text-center">
             {activeLanguage.whatWeCreate}
           </h2>
           <div
@@ -206,6 +252,7 @@ const Main = () => {
               );
             })}
           </div>
+
           <div className="w-full mt-4 flex items-center justify-center px-4 desktop:mt-4">
             <Link
               href="/contact"

@@ -15,6 +15,7 @@ import {
 } from "react-icons/fa";
 import { FaMobileButton } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
+import { usePathname } from "next/navigation";
 
 const Contact = () => {
   const { loading, isMobile, theme } = useAppContext();
