@@ -235,7 +235,7 @@ const Gallery = () => {
     },
   ];
 
-  const [openDetails, setOpenDetails] = useState(null);
+  const [openDetails, setOpenDetails] = useState<any>(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -346,7 +346,7 @@ const Gallery = () => {
             {/* Image */}
             <div className="rounded-xl overflow-hidden w-full min-h-64 flex">
               <Img
-                src={openDetails.img}
+                src={openDetails?.img}
                 alt="img"
                 style={{
                   aspectRatio: 1,
