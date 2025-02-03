@@ -54,7 +54,7 @@ const Gallery = () => {
            gap-4 relative h-[300px]"
                 key={index}
               >
-                <div className="relative overflow-hidden rounded-xl w-full h-full flex items-center">
+                <div className="relative overflow-hidden rounded-xl w-full h-full flex">
                   <Img
                     src={item.img}
                     alt="img"

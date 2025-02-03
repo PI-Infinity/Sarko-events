@@ -103,6 +103,7 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
   const menuItems = [
     { path: "/", label: activeLanguage.main },
     { path: "/about", label: activeLanguage.about },
+    { path: "/offers", label: activeLanguage.offers },
     { path: "/whatwecreate", label: activeLanguage.whatWeCreate },
     { path: "/contact", label: activeLanguage.contact },
   ];

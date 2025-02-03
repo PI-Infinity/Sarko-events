@@ -18,6 +18,7 @@ import { MdEmail } from "react-icons/md";
 
 const Contact = () => {
   const { loading, isMobile, theme } = useAppContext();
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
