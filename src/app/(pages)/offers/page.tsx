@@ -365,7 +365,7 @@ const Gallery = () => {
 
               {/* Details List */}
               <ul className="text-white space-y-2">
-                {openDetails.details[language].map((detail, i) => (
+                {openDetails.details[language].map((detail: any, i: any) => (
                   <li key={i} className="text-start">
                     {detail}
                   </li>
