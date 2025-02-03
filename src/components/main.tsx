@@ -213,7 +213,7 @@ const Main = () => {
           </h2>
           <div
             style={{ display: loading ? "none" : "grid" }}
-            className="w-full text-white desktop:gap-4 gap-2 overflow-y-auto grid-cols-1 desktop:grid-cols-3 desktop:px-[2.5%]"
+            className="w-full text-white desktop:gap-4 gap-2 overflow-y-auto grid-cols-2 desktop:grid-cols-3 desktop:px-[2.5%]"
           >
             {gallery?.map((item: any, index: number) => {
               return (
