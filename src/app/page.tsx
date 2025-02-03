@@ -4,6 +4,7 @@ import { useAppContext } from "@/context/app";
 import { usePathname } from "next/navigation";
 import Contact from "./(pages)/contact/page";
 import Gallery from "./(pages)/whatwecreate/page";
+import Offers from "./(pages)/offers/page";
 
 export default function Home() {
   const { loading } = useAppContext();

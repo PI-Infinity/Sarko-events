@@ -247,7 +247,7 @@ export const offers = [
     value: "/minimum_care",
     img: "/iusticia.webp",
     label: {
-      en: "Minimum care",
+      en: "MINIMUM CARE",
       ka: "მინიმალური ზრუნვა",
       ru: "МИНИМУМ ЗАБОТ",
     },
