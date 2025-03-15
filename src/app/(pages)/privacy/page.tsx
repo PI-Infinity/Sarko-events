@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Cookies from "js-cookie";
 import { useAppContext } from "@/context/app";
+import { Suspense } from "react";
 
 const privacyContent: any = {
   en: {
@@ -194,14 +195,22 @@ const privacyContent: any = {
   },
 };
 
-export default function PrivacyPolicy() {
+export default function PrivacyPolice() {
+  return (
+    <Suspense fallback={<div></div>}>
+      <Main />
+    </Suspense>
+  );
+}
+
+function Main() {
   const [language, setLanguage] = useState("en");
   const searchParams = useSearchParams();
 
   useEffect(() => {
     const langFromCookies = Cookies.get("language") || "en";
     setLanguage(searchParams.get("lang") || langFromCookies);
-  }, [searchParams]);
+  }, [searchParams?.toString()]);
 
   const content: any = privacyContent[language] || privacyContent.en;
 

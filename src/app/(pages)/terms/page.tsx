@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Cookies from "js-cookie";
 import { useAppContext } from "@/context/app";
+import { Suspense } from "react";
 
 const termsContent: any = {
   en: {
@@ -248,7 +249,15 @@ const termsContent: any = {
   },
 };
 
-export default function PrivacyPolicy() {
+export default function Terms() {
+  return (
+    <Suspense fallback={<div></div>}>
+      <Main />
+    </Suspense>
+  );
+}
+
+function Main() {
   const [language, setLanguage] = useState("en");
   const searchParams = useSearchParams();
 
