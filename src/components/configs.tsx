@@ -2,6 +2,7 @@
 import { useAppContext } from "@/context/app";
 import { usePathname } from "next/navigation";
 import ReactCountryFlag from "react-country-flag";
+import Cookies from "js-cookie";
 
 const Configs = () => {
   const pathname = usePathname();
@@ -15,6 +16,12 @@ const Configs = () => {
     localStorage.setItem("sarko-events:theme", JSON.stringify(value));
     document.documentElement.style.background = value.background;
     document.body.style.background = value.gradient;
+  };
+
+  const changeLanguage = (lang: string) => {
+    setLanguage(lang);
+    Cookies.set("language", lang, { expires: 30, path: "/" }); // 🔥 ქუქიში ვწერთ ენას
+    window.location.reload(); // 🔥 გვერდის გადატვირთვა, რომ სერვერი ახალი ენა წაიკითხოს
   };
   return (
     <div
@@ -56,7 +63,7 @@ flex items-center justify-center`}
         >
           <ReactCountryFlag
             className="emojiFlag"
-            onClick={() => setLanguage("en")}
+            onClick={() => changeLanguage("en")}
             countryCode="GB"
             style={{
               opacity: language === "en" ? 1 : 0.5,
@@ -74,7 +81,7 @@ flex items-center justify-center`}
         >
           <ReactCountryFlag
             className="emojiFlag"
-            onClick={() => setLanguage("ka")}
+            onClick={() => changeLanguage("ka")}
             countryCode="GE"
             style={{
               opacity: language === "ka" ? 1 : 0.5,
@@ -93,7 +100,7 @@ flex items-center justify-center`}
         >
           <ReactCountryFlag
             className="emojiFlag"
-            onClick={() => setLanguage("ru")}
+            onClick={() => changeLanguage("ru")}
             countryCode="RU"
             style={{
               opacity: language === "ru" ? 1 : 0.5,

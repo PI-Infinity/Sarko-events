@@ -12,9 +12,17 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import Cookies from "js-cookie";
 
 export const Footer = () => {
-  const { loading, theme, language, setLanguage, isMobile } = useAppContext();
+  const { loading, theme, language, setLanguage, isMobile, activeLanguage } =
+    useAppContext();
+
+  const changeLanguage = (lang: string) => {
+    setLanguage(lang);
+    Cookies.set("language", lang, { expires: 30, path: "/" }); // 🔥 ქუქიში ვწერთ ენას
+    window.location.reload(); // 🔥 გვერდის გადატვირთვა, რომ სერვერი ახალი ენა წაიკითხოს
+  };
   return (
     <div
       style={{
@@ -38,30 +46,31 @@ export const Footer = () => {
             />
           </div>
         </Link>
-        <div className="desktop:w-1/3 flex items-center desktop:justify-center gap-4">
-          <a
-            href={
-              isMobile
-                ? "fb://profile/61562564296082"
-                : "https://www.facebook.com/profile.php?id=61562564296082"
-            }
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaFacebook color={theme.text} size={isMobile ? 24 : 20} />
-          </a>
-          <a
-            href={
-              isMobile
-                ? "instagram://user?username=sarko_events"
-                : "https://www.instagram.com/sarko_events"
-            }
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaInstagram color={theme.text} size={isMobile ? 24 : 20} />
-          </a>
-          {/* <a
+        <div className="flex flex-col gap-[16px] items-start desktop:items-center justify-center">
+          <div className="desktop:w-1/3 flex items-center desktop:justify-center gap-4 ">
+            <a
+              href={
+                isMobile
+                  ? "fb://profile/61562564296082"
+                  : "https://www.facebook.com/profile.php?id=61562564296082"
+              }
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebook color={theme.text} size={isMobile ? 24 : 20} />
+            </a>
+            <a
+              href={
+                isMobile
+                  ? "instagram://user?username=sarko_events"
+                  : "https://www.instagram.com/sarko_events"
+              }
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram color={theme.text} size={isMobile ? 24 : 20} />
+            </a>
+            {/* <a
             href={
               isMobile
                 ? "https://www.tiktok.com/@sarko.events"
@@ -72,7 +81,7 @@ export const Footer = () => {
           >
             <FaTiktok color={theme.text} size={20} />
           </a> */}
-          {/* <a
+            {/* <a
             href={
               isMobile
                 ? "vnd.youtube://www.youtube.com/channel/UC0Fwr1O2Imxpc6mf-PhZwyg"
@@ -83,25 +92,27 @@ export const Footer = () => {
           >
             <FaYoutube color={theme.text} size={20} />
           </a> */}
-          <a
-            href={isMobile ? "tg://resolve?domain=DG3IK" : "https://t.me/DG3IK"}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaTelegram color={theme.text} size={isMobile ? 24 : 20} />
-          </a>
-          <a
-            href={
-              isMobile
-                ? "whatsapp://send?phone=+995597233355"
-                : "https://wa.me/+995597233355"
-            }
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaWhatsapp color={theme.text} size={isMobile ? 24 : 20} />
-          </a>
-          {/* <a
+            <a
+              href={
+                isMobile ? "tg://resolve?domain=DG3IK" : "https://t.me/DG3IK"
+              }
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaTelegram color={theme.text} size={isMobile ? 24 : 20} />
+            </a>
+            <a
+              href={
+                isMobile
+                  ? "whatsapp://send?phone=+995597233355"
+                  : "https://wa.me/+995597233355"
+              }
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaWhatsapp color={theme.text} size={isMobile ? 24 : 20} />
+            </a>
+            {/* <a
             href={
               isMobile
                 ? "linkedin://in/sarko-events-21438531a"
@@ -112,18 +123,46 @@ export const Footer = () => {
           >
             <FaLinkedin color={theme.text} size={20} />
           </a> */}
-          <a
-            href="mailto:sarko.events@Gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <MdEmail color={theme.text} size={isMobile ? 28 : 24} />
-          </a>
+            <a
+              href="mailto:sarko.events@Gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <MdEmail color={theme.text} size={isMobile ? 28 : 24} />
+            </a>
+          </div>
+          <div className="flex desktop:flex-row flex-col desktop:gap-[24px] gap-[8px]">
+            <Link href="/terms" key="privacy">
+              <h6
+                style={{
+                  color: theme.text,
+                  transition: "ease-in 200ms",
+                  textDecoration: "underline",
+                }}
+                className={`cursor-pointer`}
+              >
+                {activeLanguage?.terms_rules_title}
+              </h6>
+            </Link>
+            <Link href="/privacy" key="privacy">
+              <h6
+                style={{
+                  color: theme.text,
+                  transition: "ease-in 200ms",
+                  textDecoration: "underline",
+                }}
+                className={`cursor-pointer hover:opacity-[1] opacity-1 
+                `}
+              >
+                {activeLanguage?.privacy_policy}
+              </h6>
+            </Link>
+          </div>
         </div>
 
         <div className="desktop:w-1/3 flex justify-end desktop:items-center flex-col desktop:flex-row gap-2 desktop:gap-8">
           <div
-            onClick={() => setLanguage("en")}
+            onClick={() => changeLanguage("en")}
             style={{
               opacity: language === "en" ? 1 : 0.5,
               fontSize: "14px",
@@ -143,7 +182,7 @@ export const Footer = () => {
                 ? "hover:opacity-[0.8] cursor-pointer"
                 : "cursor-default"
             }`}
-            onClick={() => setLanguage("ka")}
+            onClick={() => changeLanguage("ka")}
             style={{
               opacity: language === "ka" ? 1 : 0.5,
               fontSize: "14px",
@@ -159,7 +198,7 @@ export const Footer = () => {
                 ? "hover:opacity-[0.8] cursor-pointer"
                 : "cursor-default"
             }`}
-            onClick={() => setLanguage("ru")}
+            onClick={() => changeLanguage("ru")}
             style={{
               opacity: language === "ru" ? 1 : 0.5,
               fontSize: "14px",

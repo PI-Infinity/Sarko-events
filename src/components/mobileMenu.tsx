@@ -12,6 +12,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import Cookies from "js-cookie";
 
 const MobileMenu = () => {
   const {
@@ -25,6 +26,11 @@ const MobileMenu = () => {
   } = useAppContext();
   const pathname = usePathname();
 
+  const changeLanguage = (lang: string) => {
+    setLanguage(lang);
+    Cookies.set("language", lang, { expires: 30, path: "/" }); // 🔥 ქუქიში ვწერთ ენას
+    window.location.reload(); // 🔥 გვერდის გადატვირთვა, რომ სერვერი ახალი ენა წაიკითხოს
+  };
   return (
     <div
       style={{
@@ -62,7 +68,7 @@ const MobileMenu = () => {
         className="flex desktop:items-center flex-col desktop:flex-row gap-2 desktop:gap-8"
       >
         <div
-          onClick={() => setLanguage("en")}
+          onClick={() => changeLanguage("en")}
           style={{
             opacity: language === "en" ? 1 : 0.5,
             fontSize: "14px",
@@ -82,7 +88,7 @@ const MobileMenu = () => {
               ? "hover:opacity-[0.8] cursor-pointer"
               : "cursor-default"
           }`}
-          onClick={() => setLanguage("ka")}
+          onClick={() => changeLanguage("ka")}
           style={{
             opacity: language === "ka" ? 1 : 0.5,
             fontSize: "14px",
@@ -98,7 +104,7 @@ const MobileMenu = () => {
               ? "hover:opacity-[0.8] cursor-pointer"
               : "cursor-default"
           }`}
-          onClick={() => setLanguage("ru")}
+          onClick={() => changeLanguage("ru")}
           style={{
             opacity: language === "ru" ? 1 : 0.5,
             fontSize: "14px",

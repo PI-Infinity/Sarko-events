@@ -11,18 +11,8 @@ const RequestForm = () => {
   const [loading, setLoading] = useState(false);
 
   const [name, setName] = useState("");
-  const [company, setCompany] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [userCountry, setUserCountry] = useState("");
-  const [eventType, setEventType] = useState({
-    id: "wedding",
-    label: "Wedding",
-  });
-  const [eventStartingDate, setEventStartingDate] = useState(new Date());
-  const [eventEndingDate, setEventEndingDate] = useState(new Date());
-  const [totalMembers, setTotalMembers] = useState("");
-  const [comment, setComment] = useState("");
 
   async function sendEmail() {
     if (
@@ -48,15 +38,8 @@ const RequestForm = () => {
         subject: "New Request",
         text: JSON.stringify({
           name: name,
-          company: company,
           phone: phone,
           email: email,
-          country: userCountry,
-          eventType: eventType,
-          startingDate: eventStartingDate,
-          endingDate: eventEndingDate,
-          totalMembers: totalMembers,
-          comment: comment,
         }),
       }),
     });
@@ -73,19 +56,8 @@ const RequestForm = () => {
     });
     if (response.ok) {
       setName("");
-      setCompany("");
       setEmail("");
       setPhone("");
-      setUserCountry("");
-      setLoading(false);
-      setEventType({
-        id: "wedding",
-        label: "Wedding",
-      });
-      setEventStartingDate(new Date());
-      setEventEndingDate(new Date());
-      setTotalMembers("");
-      setComment("");
     } else {
       console.error(result.error);
       setLoading(false);
@@ -134,14 +106,7 @@ const RequestForm = () => {
           label={activeLanguage.fullName + "*"}
         />
       </div>
-      <div className="max-h-16">
-        <Input
-          type="text"
-          value={company}
-          onChange={(e: any) => setCompany(e.target.value)}
-          label={activeLanguage.company + " " + activeLanguage.optional}
-        />
-      </div>
+
       <div className="max-h-16">
         <Input
           type="text"
@@ -150,14 +115,7 @@ const RequestForm = () => {
           label={activeLanguage.email + "*"}
         />
       </div>
-      <div className="max-h-16">
-        <Input
-          type="text"
-          value={userCountry}
-          onChange={(e: any) => setUserCountry(e.target.value)}
-          label={activeLanguage.country + "*"}
-        />
-      </div>
+
       <div className="max-h-16">
         <Input
           type="text"
@@ -166,37 +124,7 @@ const RequestForm = () => {
           label={activeLanguage.phone + "*"}
         />
       </div>
-      <div className="max-h-14" onClick={(e: any) => e.stopPropagation()}>
-        <SelectComponent
-          value={eventType}
-          setValue={setEventType}
-          data={eventTypes}
-        />
-      </div>
-      <div className="desktop:max-h-16">
-        <DatePickerComponent
-          startingDate={eventStartingDate}
-          setStartingDate={setEventStartingDate}
-          endingDate={eventEndingDate}
-          setEndingDate={setEventEndingDate}
-        />
-      </div>
-      <div className="max-h-16">
-        <Input
-          type="number"
-          value={totalMembers}
-          onChange={(e: any) => setTotalMembers(e.target.value)}
-          label={activeLanguage.totalOfGuests + " " + activeLanguage.optional}
-        />
-      </div>
-      <div className="h-24">
-        <Input
-          type="text"
-          value={comment}
-          onChange={(e: any) => setComment(e.target.value)}
-          label={activeLanguage.comment + " " + activeLanguage.optional}
-        />
-      </div>
+
       <div className="pb-12">
         <div className="h-12  w-full rounded-full mt-6 shadow-xl">
           <Button

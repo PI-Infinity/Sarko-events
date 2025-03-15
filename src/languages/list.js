@@ -38,6 +38,14 @@ export const en = {
   english: "English",
   russian: "Russian",
   georgian: "Georgian",
+  accept: "Accept Terms & Privacy",
+  read_and_accept: "Please read and accept our",
+  terms_rules: "Terms & Conditions",
+  and: "and",
+  privacy: "Privacy Policy",
+  terms_rules_title: "Terms & Rules",
+  privacy_policy: "Privacy policy",
+  i_accept: "I Accept",
 };
 
 export const ka = {
@@ -80,6 +88,14 @@ export const ka = {
   english: "ინგლისური",
   russian: "რუსული",
   georgian: "ქართული",
+  accept: "დაეთანხმეთ წესებს და კონფიდენციალურობას",
+  read_and_accept: "გთხოვთ, წაიკითხოთ და დაეთანხმოთ ჩვენს",
+  terms_rules: "წესებს და პირობებს",
+  and: "და",
+  privacy: "კონფიდენციალურობის პოლიტიკას",
+  terms_rules_title: "წესები და პირობები",
+  privacy_policy: "კონფიდენციალურობის პოლიტიკა",
+  i_accept: "ვეთანხმები",
 };
 
 export const ru = {
@@ -122,4 +138,12 @@ export const ru = {
   english: "Английский",
   russian: "Русский",
   georgian: "Грузинский",
+  accept: "Примите условия и политику конфиденциальности",
+  read_and_accept: "Пожалуйста, прочитайте и примите наши",
+  terms_rules: "условия использования",
+  and: "и",
+  privacy: "политику конфиденциальности",
+  terms_rules_title: "Условия и правила",
+  privacy_policy: "Политика конфиденциальности",
+  i_accept: "Я принимаю",
 };
