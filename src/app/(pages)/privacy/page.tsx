@@ -239,7 +239,7 @@ export default function PrivacyPolicy() {
         <h2 className="text-xl font-semibold">{content.collect_info}</h2>
         <h3 className="font-semibold mt-2 mb-2">{content.personal_info}</h3>
         <ul className="list-disc list-inside">
-          {content.personal_info_list.map((item) => (
+          {content.personal_info_list.map((item: any) => (
             <li key={item}>{item}</li>
           ))}
         </ul>
@@ -250,7 +250,7 @@ export default function PrivacyPolicy() {
         </h2>
         <p>{content.share_data_text}</p>
         <ul className="list-disc list-inside mt-2">
-          {content.share_data_list.map((item) => (
+          {content.share_data_list.map((item: any) => (
             <li key={item}>{item}</li>
           ))}
         </ul>
@@ -261,7 +261,7 @@ export default function PrivacyPolicy() {
           {content.rights}
         </h2>
         <ul className="list-disc list-inside">
-          {content.rights_list.map((item) => (
+          {content.rights_list.map((item: any) => (
             <li key={item}>{item}</li>
           ))}
         </ul>

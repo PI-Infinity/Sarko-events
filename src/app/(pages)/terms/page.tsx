@@ -288,7 +288,7 @@ export default function PrivacyPolicy() {
           <span className="font-semibold">[15.03.2025]</span>
         </p>
         <p className="mb-6">{content.intro}</p>
-        {content.sections.map((section, index) => (
+        {content.sections.map((section: any, index: any) => (
           <section key={index} className="mb-6">
             <h2 className="text-2xl font-semibold text-white mb-3">
               {section.title}
