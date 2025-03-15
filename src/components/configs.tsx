@@ -19,7 +19,7 @@ const Configs = () => {
   };
 
   const changeLanguage = (lang: string) => {
-    setLanguage(lang);
+    localStorage.setItem("sarko-events:language", lang);
     Cookies.set("language", lang, { expires: 30, path: "/" }); // 🔥 ქუქიში ვწერთ ენას
     window.location.reload(); // 🔥 გვერდის გადატვირთვა, რომ სერვერი ახალი ენა წაიკითხოს
   };
