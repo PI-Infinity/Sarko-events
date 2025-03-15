@@ -8,7 +8,6 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { Footer } from "@/components/footer";
 import MobileMenu from "@/components/mobileMenu";
 import Popup from "@/components/popup";
-import SimpleSnackbar from "@/components/snackbar";
 
 // 🔥 `generateMetadata()` სერვერის მხარეს ქმნის დინამიურ `metadata`
 export async function generateMetadata(): Promise<Metadata> {
@@ -79,7 +78,6 @@ export default function RootLayout({
           <MobileMenu />
           <main className="flex-grow w-full">{children}</main>
           <Popup />
-          <SimpleSnackbar />
           <Footer />
         </AppContextWrapper>
       </body>

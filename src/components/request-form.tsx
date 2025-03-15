@@ -4,6 +4,7 @@ import Button from "./button";
 import { useAppContext } from "@/context/app";
 import SelectComponent from "./select";
 import { DatePickerComponent } from "./datePicker";
+import SimpleSnackbar from "@/components/snackbar";
 
 const RequestForm = () => {
   const { theme, activeLanguage, setAlert } = useAppContext();
@@ -15,12 +16,7 @@ const RequestForm = () => {
   const [phone, setPhone] = useState("");
 
   async function sendEmail() {
-    if (
-      name?.length < 1 ||
-      email?.length < 1 ||
-      phone?.length < 1 ||
-      userCountry?.length < 1
-    ) {
+    if (name?.length < 1 || email?.length < 1 || phone?.length < 1) {
       return setAlert({
         text: activeLanguage.pleseInputFields,
         type: "warning",
@@ -135,6 +131,7 @@ const RequestForm = () => {
             onClick={() => sendEmail()}
           />
         </div>
+        <SimpleSnackbar />
       </div>
     </div>
   );
