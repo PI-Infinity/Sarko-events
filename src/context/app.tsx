@@ -8,6 +8,9 @@ import {
   useState,
 } from "react";
 import { en, ka, ru } from "../languages/list";
+import { usePathname, useRouter } from "next/navigation";
+import Cookies from "js-cookie";
+
 /**
  * App state context
  */
@@ -79,11 +82,17 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
    */
   const [language, setLanguage] = useState("en");
   const [activeLanguage, setActiveLanguage] = useState<any>("");
-
+  const pathname = usePathname();
   useEffect(() => {
     let appLang = localStorage.getItem("sarko-events:language") || "en";
-    setLanguage(appLang);
-  }, []);
+    let pathLang = pathname.split("/")[1];
+    const lang = pathLang ? pathLang : appLang;
+    setLanguage(lang);
+    Cookies.set("language", lang, {
+      expires: 30,
+      path: "/",
+    }); // 🔥 ქუქიში ვწერთ ენას
+  }, [pathname]);
 
   useEffect(() => {
     if (language) {
@@ -101,11 +110,11 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
 
   // nav items
   const menuItems = [
-    { path: "/", label: activeLanguage.main },
-    { path: "/about", label: activeLanguage.about },
-    { path: "/offers", label: activeLanguage.offers },
-    { path: "/whatwecreate", label: activeLanguage.whatWeCreate },
-    { path: "/contact", label: activeLanguage.contact },
+    { path: `/${language}`, label: activeLanguage.main },
+    { path: `/${language}/about`, label: activeLanguage.about },
+    // { path: "/offers", label: activeLanguage.offers },
+    { path: `/${language}/whatwecreate`, label: activeLanguage.whatWeCreate },
+    { path: `/${language}/contact`, label: activeLanguage.contact },
   ];
   // mobile menu state
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -144,43 +153,43 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
       label: activeLanguage.weddings,
       img: "/weddings.png",
       path: true,
-      link: "/whatwecreate/weddings",
+      link: `/${language}/whatwecreate/weddings`,
     },
     {
       id: "corporations",
       label: activeLanguage.corporations,
       img: "/corporation.jpg",
       path: true,
-      link: "/whatwecreate/corporations",
+      link: `/${language}/whatwecreate/corporations`,
     },
     {
       id: "presentations",
       label: activeLanguage.presentations,
       img: "/presentation.png",
       path: true,
-      link: "/whatwecreate/presentations",
+      link: `/${language}/whatwecreate/presentations`,
     },
     {
       id: "teambuildings",
       label: activeLanguage.teambuildings,
       img: "/teambuilding.jpg",
       path: true,
-      link: "/whatwecreate/teambuildings",
+      link: `/${language}/whatwecreate/teambuildings`,
     },
     {
       id: "conferences",
       label: activeLanguage.conferences,
       img: "/conference.jpg",
       path: true,
-      link: "/whatwecreate/conferences",
+      link: `/${language}/whatwecreate/conferences`,
     },
-    {
-      id: "other",
-      label: activeLanguage.other,
-      img: "/we.jpeg",
-      path: true,
-      link: "/whatwecreate/other",
-    },
+    // {
+    //   id: "other",
+    //   label: activeLanguage.other,
+    //   img: "/we.jpeg",
+    //   path: true,
+    //   link: `${language}/whatwecreate/other",
+    // },
   ];
 
   /**
@@ -248,7 +257,7 @@ export const offers = [
     img: "/iusticia.webp",
     label: {
       en: "MINIMUM CARE",
-      ka: "მინიმალური ზრუნვა",
+      ka: "მინიმალური საზრუნავი",
       ru: "МИНИМУМ ЗАБОТ",
     },
     description: {

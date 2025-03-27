@@ -8,6 +8,7 @@ import { NextSeo } from "next-seo";
 import Head from "next/head";
 
 const AboutUs = () => {
+  console.log("about");
   const { theme, language, loading, activeLanguage } = useAppContext();
   return (
     <>
@@ -23,7 +24,7 @@ const AboutUs = () => {
           className="fixed desktop:hidden bottom-0 left-0 py-6 z-50 bg-[] w-full mt-4 flex items-center justify-center px-4 desktop:mt-4"
         >
           <Link
-            href="/contact"
+            href={`/${language}/contact`}
             className=" h-12 w-full desktop:w-1/3 border-[1px] border-[rgba(255,255,255,0.2)] rounded-full"
           >
             <Button
@@ -88,7 +89,7 @@ const AboutUs = () => {
           })}
           <div className="hidden my-16 z-50 w-full desktop:flex items-center justify-center px-4">
             <Link
-              href="/contact"
+              href={`/${language}/contact`}
               className="h-12 w-full desktop:w-[400px] border-[1px] border-[rgba(255,255,255,0.2)] rounded-full"
             >
               <Button

@@ -46,6 +46,7 @@ export const en = {
   terms_rules_title: "Terms & Rules",
   privacy_policy: "Privacy policy",
   i_accept: "I Accept",
+  offersForNoResidents: "Offers for Non-Resident Couples",
 };
 
 export const ka = {
@@ -96,6 +97,7 @@ export const ka = {
   terms_rules_title: "წესები და პირობები",
   privacy_policy: "კონფიდენციალურობის პოლიტიკა",
   i_accept: "ვეთანხმები",
+  offersForNoResidents: "შეთავაზებები უცხოელი წყვილებისთვის",
 };
 
 export const ru = {
@@ -146,4 +148,5 @@ export const ru = {
   terms_rules_title: "Условия и правила",
   privacy_policy: "Политика конфиденциальности",
   i_accept: "Я принимаю",
+  offersForNoResidents: "Предложения для пар, не проживающих в стране",
 };

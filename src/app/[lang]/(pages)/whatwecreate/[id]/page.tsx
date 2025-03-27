@@ -1,5 +1,5 @@
 "use client";
-import { useAppContext } from "@/context/app";
+import { useAppContext, offers } from "@/context/app";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LuGalleryVertical } from "react-icons/lu";
@@ -7,12 +7,13 @@ import Offers from "./offers";
 import Button from "@/components/button";
 import { MdCalendarMonth } from "react-icons/md";
 import { useState } from "react";
+import Img from "@/components/image";
 
 const Page = () => {
   const pathname = usePathname();
-  const { loading, theme, activeLanguage } = useAppContext();
+  const { loading, theme, activeLanguage, language } = useAppContext();
   const [loadingImgs, setLoadingImgs] = useState();
-
+  console.log("here...");
   return (
     <div style={{ display: loading ? "none" : "flex" }}>
       <div
@@ -23,7 +24,7 @@ const Page = () => {
         className="fixed desktop:hidden bottom-0 left-0 py-6 z-50 bg-[] w-full mt-4 flex items-center justify-center px-4 desktop:mt-4"
       >
         <Link
-          href="/contact"
+          href={`/${language}/contact`}
           className=" h-12 w-full desktop:w-1/3 border-[1px] border-[rgba(255,255,255,0.2)] rounded-full"
         >
           <Button
@@ -39,34 +40,78 @@ const Page = () => {
         style={{ display: loading ? "none" : "flex" }}
         className="w-full flex-col items-center pt-[90px] desktop:pt-[100px] gap-2 slide-in-right desktop:overflow-hidden pb-8 px-0 desktop:px-[5%] relative"
       >
-        <Offers type={pathname.split("/")[2]} />
-        <div className="grid grid-cols-2 desktop:grid-cols-4 gap-4 px-[2.5%]">
-          {events
-            ?.filter((i: any) => i.type === pathname.split("/")[2])
-            .map((item: any, index: number) => {
+        {pathname.split("/")[3] !== "offers" && (
+          <Offers type={pathname.split("/")[3]} />
+        )}
+        {pathname.split("/")[3] === "offers" ? (
+          <div
+            style={{ display: loading ? "none" : "grid" }}
+            className="slide-in-right w-full
+     text-white gap-4
+      px-2 grid-cols-1 desktop:grid-cols-3 desktop:px-[5%]"
+          >
+            {offers?.map((item: any, index: number) => {
               return (
                 <Link
-                  href={pathname + "/" + item.event}
-                  className="w-full aspect-square overflow-hidden rounded-xl hover:opacity-[0.9] cursor-pointer relative"
+                  href={`/${language}/offers/${item.value}`}
+                  style={{ background: theme.background2 }}
+                  className="w-full shadow-sm rounded-xl flex items-center justify-center
+           gap-4 relative h-[300px]"
                   key={index}
-                  style={{ transition: "ease-in 200ms" }}
                 >
-                  <img
-                    src={item.cover}
-                    alt={item.type}
-                    style={{
-                      width: "100%",
-                      objectFit: "cover",
-                      aspectRatio: 1,
-                    }}
-                  />
-                  <div className="absolute z-20 bottom-3 right-3">
-                    <LuGalleryVertical size={20} color="white" />
+                  <div className="relative overflow-hidden rounded-xl w-full h-full flex cursor-pointer hover:opacity-[0.9]">
+                    <Img
+                      src={item.img}
+                      alt="img"
+                      style={{
+                        aspectRatio: 1,
+                        zIndex: 0,
+                        width: "100%",
+                      }}
+                    />
+                  </div>
+
+                  <div className="p-4 px-2 rounded-xl absolute bottom-4 left-4 flex flex-col gap-2 bg-[rgba(0,0,0,0.5)] max-w-[80%]">
+                    <strong className=" px-3 text-lg">
+                      {item.label[language]}
+                    </strong>
+                    <p className=" px-3 text-sm font-[600]">
+                      {item.description[language]}
+                    </p>
                   </div>
                 </Link>
               );
             })}
-        </div>
+          </div>
+        ) : (
+          <div className="grid grid-cols-2 desktop:grid-cols-4 gap-4 px-[2.5%]">
+            {events
+              ?.filter((i: any) => i.type === pathname.split("/")[3])
+              .map((item: any, index: number) => {
+                return (
+                  <Link
+                    href={pathname + "/" + item.event}
+                    className="w-full aspect-square overflow-hidden rounded-xl hover:opacity-[0.9] cursor-pointer relative"
+                    key={index}
+                    style={{ transition: "ease-in 200ms" }}
+                  >
+                    <img
+                      src={item.cover}
+                      alt={item.type}
+                      style={{
+                        width: "100%",
+                        objectFit: "cover",
+                        aspectRatio: 1,
+                      }}
+                    />
+                    <div className="absolute z-20 bottom-3 right-3">
+                      <LuGalleryVertical size={20} color="white" />
+                    </div>
+                  </Link>
+                );
+              })}
+          </div>
+        )}
       </div>
     </div>
   );

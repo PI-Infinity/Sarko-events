@@ -22,6 +22,7 @@ async function getEmailTemplate(data) {
 
     const templateFile = await fs.readFile(templatePath, "utf-8");
     const template = handlebars.compile(templateFile);
+    console.log(data);
     return template(data);
   } catch (error) {
     console.error("Error reading or compiling the template:", error);
@@ -62,6 +63,7 @@ export async function POST(req) {
 
     return NextResponse.json({ message: "Email sent successfully" });
   } catch (error) {
+    console.log(error);
     return NextResponse.json(
       { error: "Failed to send email", details: error.message },
       { status: 500 }

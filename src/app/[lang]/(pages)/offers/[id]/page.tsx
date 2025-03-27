@@ -13,10 +13,13 @@ const page = () => {
   const { loading, theme, activeLanguage, language } = useAppContext();
   const [loadingImgs, setLoadingImgs] = useState();
   const openDetails: any = offers?.find(
-    (o: any) => o.value === "/" + pathname?.split("/")[2]
+    (o: any) => o.value === "/" + pathname?.split("/")[3]
   );
   return (
-    <div className="desktop:pt-32 pt-20 pb-4 flex justify-center items-center bg-[rgba(0,0,0,0.8)] backdrop-blur-[20px] transition-transform duration-300 ease-in-out">
+    <div
+      style={{ display: loading ? "none" : "flex" }}
+      className="desktop:pt-32 pt-20 pb-4 flex justify-center items-center bg-[rgba(0,0,0,0.8)] backdrop-blur-[20px] transition-transform duration-300 ease-in-out"
+    >
       {/* Content Container */}
       <div className="desktop:bg-[#111] pb-4 overflow-hidden shadow-lg desktop:max-w-4xl w-full h-auto relative flex flex-col desktop:rounded-xl">
         {/* Image */}
@@ -51,7 +54,7 @@ const page = () => {
           {/* Bottom Button (Stays Inside) */}
           <div className="mt-8 w-full flex items-center justify-start">
             <Link
-              href={"/contact?offer=" + openDetails?.value}
+              href={`/${language}/contact?offer=` + openDetails?.value}
               className="h-12 w-full desktop:w-[400px] border-[1px] border-[rgba(255,255,255,0.2)] rounded-full"
             >
               <Button

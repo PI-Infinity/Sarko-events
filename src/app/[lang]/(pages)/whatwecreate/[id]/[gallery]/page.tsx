@@ -1,7 +1,7 @@
 "use client";
 
 import Button from "@/components/button";
-import { useAppContext } from "@/context/app";
+import { useAppContext, offers } from "@/context/app";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
@@ -10,23 +10,22 @@ import { MdArrowDropUp, MdCalendarMonth, MdClose } from "react-icons/md";
 const Gallery = () => {
   const pathname = usePathname();
 
-  const { theme, loading, activeLanguage } = useAppContext();
+  const { theme, loading, activeLanguage, language } = useAppContext();
 
   const list =
-    pathname.split("/")[2] === "corporations"
+    pathname.split("/")[3] === "corporations"
       ? corporations
-      : pathname.split("/")[2] === "weddings"
+      : pathname.split("/")[3] === "weddings"
       ? weddings
-      : pathname.split("/")[2] === "presentations"
+      : pathname.split("/")[3] === "presentations"
       ? presentations
-      : pathname.split("/")[2] === "teambuildings"
+      : pathname.split("/")[3] === "teambuildings"
       ? teambuildings
       : [];
 
   const handleBack = () => {
     window.history.back();
   };
-
   const [showButton, setShowButton] = useState(false);
 
   // Show button when scrolled down
@@ -60,7 +59,7 @@ const Gallery = () => {
         className="fixed desktop:hidden bottom-0 left-0 py-6 z-50 bg-[] w-full mt-4 flex items-center justify-center px-4 desktop:mt-4"
       >
         <Link
-          href="/contact"
+          href={`/${language}/contact`}
           className=" h-12 w-full desktop:w-1/3 border-[1px] border-[rgba(255,255,255,0.2)] rounded-full"
         >
           <Button
@@ -95,9 +94,9 @@ const Gallery = () => {
           transition: "ease-in 200ms",
           opacity: pathname?.length > 0 ? "1" : "0",
           overflowY: "auto",
-          display: pathname.split("/")[3] ? "visible" : "none",
+          display: pathname.split("/")[4] ? "visible" : "none",
         }}
-        className="w-full h-full min-h-[100vh] desktop:p-4 p-2"
+        className="w-full h-full min-h-[100vh] desktop:p-4 desktop:mt-24 mt-[80px] p-2"
       >
         <MdClose
           color={theme.text}
@@ -108,7 +107,7 @@ const Gallery = () => {
 
         <div className="w-full grid grid-cols-1 desktop:grid-cols-5 gap-2">
           {list
-            ?.filter((i: any) => i.project === pathname.split("/")[3])
+            ?.filter((i: any) => i.project === pathname.split("/")[4])
             .map((item: any, index: number) => {
               return (
                 <div className="w-full overflow-hidden" key={index}>

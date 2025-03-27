@@ -84,7 +84,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: titles[idKey][lang] || titles[idKey]["en"],
       description: descriptions[idKey][lang] || descriptions[idKey]["en"],
-      url: `https://sarkoevents.shop/event/${params.id}`,
+      url: `https://sarkoevents.com/en/whatwecreate/${params.id}`,
       type: "website",
       siteName: "Sarko Events",
       images: [

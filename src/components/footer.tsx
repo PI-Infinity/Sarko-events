@@ -13,15 +13,23 @@ import {
 } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import Cookies from "js-cookie";
+import { usePathname, useRouter } from "next/navigation";
 
 export const Footer = () => {
   const { loading, theme, language, setLanguage, isMobile, activeLanguage } =
     useAppContext();
-
+  const pathname = usePathname();
+  const router = useRouter();
   const changeLanguage = (lang: string) => {
     localStorage.setItem("sarko-events:language", lang);
     Cookies.set("language", lang, { expires: 30, path: "/" }); // 🔥 ქუქიში ვწერთ ენას
-    window.location.reload(); // 🔥 გვერდის გადატვირთვა, რომ სერვერი ახალი ენა წაიკითხოს
+    // 2. შეცვალე URL → ჩანაცვლებით
+    const segments = pathname.split("/"); // ['', 'ka', 'contact']
+    segments[1] = lang; // შეცვალე ენა
+    const newPath = segments.join("/");
+
+    // 3. გადამისამართება ახალ ენაზე
+    router.push(newPath);
   };
   return (
     <div
@@ -35,7 +43,7 @@ export const Footer = () => {
     >
       <div className="w-full flex flex-col desktop:flex-row desktop:items-center desktop:justify-between gap-12">
         <Link
-          href="/"
+          href={`/${language}`}
           className="desktop:w-1/3 flex items-center gap-4 scale-up cursor-pointer"
         >
           <div className="relative w-[100px] h-[35px] flex items-center justify-center">
@@ -132,24 +140,26 @@ export const Footer = () => {
             </a>
           </div>
           <div className="flex desktop:flex-row flex-col desktop:gap-[24px] gap-[8px]">
-            <Link href="/terms" key="privacy">
+            <Link href={`/${language}/terms`} key="terms">
               <h6
                 style={{
                   color: theme.text,
                   transition: "ease-in 200ms",
                   textDecoration: "underline",
+                  fontSize: "12px",
                 }}
                 className={`cursor-pointer`}
               >
                 {activeLanguage?.terms_rules_title}
               </h6>
             </Link>
-            <Link href="/privacy" key="privacy">
+            <Link href={`/${language}/privacy`} key="privacy">
               <h6
                 style={{
                   color: theme.text,
                   transition: "ease-in 200ms",
                   textDecoration: "underline",
+                  fontSize: "12px",
                 }}
                 className={`cursor-pointer hover:opacity-[1] opacity-1 
                 `}

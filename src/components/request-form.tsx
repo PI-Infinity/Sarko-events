@@ -5,6 +5,7 @@ import { useAppContext } from "@/context/app";
 import SelectComponent from "./select";
 import { DatePickerComponent } from "./datePicker";
 import SimpleSnackbar from "@/components/snackbar";
+import axios from "axios";
 
 const RequestForm = () => {
   const { theme, activeLanguage, setAlert } = useAppContext();
@@ -14,6 +15,7 @@ const RequestForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [comment, setComment] = useState("");
 
   async function sendEmail() {
     if (name?.length < 1 || email?.length < 1 || phone?.length < 1) {
@@ -23,39 +25,43 @@ const RequestForm = () => {
         active: true,
       });
     }
+
     setLoading(true);
-    const response = await fetch("/api/send-email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
+
+    try {
+      const response = await axios.post("/api/send-email", {
         to: "tornike.pirtakhia@gmail.com",
         subject: "New Request",
         text: JSON.stringify({
           name: name,
           phone: phone,
           email: email,
+          comment: comment,
         }),
-      }),
-    });
-    const result = await response.json();
-    alert({
-      text: activeLanguage.requestSentSuccessfully,
-      type: "success",
-      active: true,
-    });
-    setAlert({
-      text: activeLanguage.requestSentSuccessfully,
-      type: "success",
-      active: true,
-    });
-    if (response.ok) {
+      });
+
+      setAlert({
+        text: activeLanguage.requestSentSuccessfully,
+        type: "success",
+        active: true,
+      });
+
       setName("");
       setEmail("");
       setPhone("");
-    } else {
-      console.error(result.error);
+      setComment("");
+    } catch (error: any) {
+      console.error("❌ Email sending failed:", error);
+
+      const errorMessage =
+        error.response?.data?.error || error.message || "Unknown error";
+
+      setAlert({
+        text: `${activeLanguage.errorSendingRequest}: ${errorMessage}`,
+        type: "error",
+        active: true,
+      });
+    } finally {
       setLoading(false);
     }
   }
@@ -118,6 +124,17 @@ const RequestForm = () => {
           value={phone}
           onChange={(e: any) => setPhone(e.target.value)}
           label={activeLanguage.phone + "*"}
+        />
+      </div>
+      <div className="max-h-24 overflow-hidden">
+        <textarea
+          rows={1}
+          value={comment}
+          onChange={(e) => {
+            setComment(e.target.value);
+          }}
+          className="w-full h-24 resize-none bg-white text-black p-2 rounded-xl focus:outline-none"
+          placeholder={`${activeLanguage?.comment} ${activeLanguage?.optional}`}
         />
       </div>
 
