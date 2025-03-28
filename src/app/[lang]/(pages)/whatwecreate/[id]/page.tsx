@@ -85,6 +85,7 @@ const Page = () => {
                     <img
                       src={item.img}
                       alt={item.img}
+                      loading="lazy"
                       style={{
                         width: "100%",
                         zIndex: 0,
@@ -137,6 +138,7 @@ const Page = () => {
                     <img
                       src={item.cover}
                       alt={item.type}
+                      loading="lazy"
                       style={{
                         width: "100%",
                         objectFit: "cover",

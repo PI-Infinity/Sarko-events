@@ -36,7 +36,7 @@ const Img = ({ src, alt, onClick, style }: any) => {
         src={src}
         alt={alt}
         fill
-        priority
+        loading="lazy"
         style={{
           width: "100%",
           height: "100%",
