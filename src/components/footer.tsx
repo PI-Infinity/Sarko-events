@@ -180,7 +180,7 @@ export const Footer = () => {
             }}
             className={` ${
               language !== "en"
-                ? "hover:opacity-[0.8] cursor-pointer"
+                ? "hover:brightness-[0.8] cursor-pointer"
                 : "cursor-default"
             }`}
           >
@@ -189,7 +189,7 @@ export const Footer = () => {
           <div
             className={` ${
               language !== "ka"
-                ? "hover:opacity-[0.8] cursor-pointer"
+                ? "hover:brightness-[0.8] cursor-pointer"
                 : "cursor-default"
             }`}
             onClick={() => changeLanguage("ka")}
@@ -205,7 +205,7 @@ export const Footer = () => {
           <div
             className={` ${
               language !== "en"
-                ? "hover:opacity-[0.8] cursor-pointer"
+                ? "hover:brightness-[0.8] cursor-pointer"
                 : "cursor-default"
             }`}
             onClick={() => changeLanguage("ru")}

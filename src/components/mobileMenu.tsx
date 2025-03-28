@@ -1,7 +1,7 @@
 "use client";
 import { useAppContext } from "@/context/app";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import {
   FaFacebook,
   FaInstagram,
@@ -25,11 +25,17 @@ const MobileMenu = () => {
     setLanguage,
   } = useAppContext();
   const pathname = usePathname();
-
+  const router = useRouter();
   const changeLanguage = (lang: string) => {
     localStorage.setItem("sarko-events:language", lang);
     Cookies.set("language", lang, { expires: 30, path: "/" }); // 🔥 ქუქიში ვწერთ ენას
-    window.location.reload(); // 🔥 გვერდის გადატვირთვა, რომ სერვერი ახალი ენა წაიკითხოს
+    // 2. შეცვალე URL → ჩანაცვლებით
+    const segments = pathname.split("/"); // ['', 'ka', 'contact']
+    segments[1] = lang; // შეცვალე ენა
+    const newPath = segments.join("/");
+
+    // 3. გადამისამართება ახალ ენაზე
+    router.push(newPath);
   };
   return (
     <div
@@ -76,7 +82,7 @@ const MobileMenu = () => {
           }}
           className={` ${
             language !== "en"
-              ? "hover:opacity-[0.8] cursor-pointer"
+              ? "hover:brightness-[0.8] cursor-pointer"
               : "cursor-default"
           }`}
         >
@@ -85,12 +91,12 @@ const MobileMenu = () => {
         <div
           className={` ${
             language !== "ka"
-              ? "hover:opacity-[0.8] cursor-pointer"
+              ? "hover:brightness-[0.8] cursor-pointer"
               : "cursor-default"
           }`}
           onClick={() => changeLanguage("ka")}
           style={{
-            opacity: language === "ka" ? 1 : 0.5,
+            opacity: language == "ka" ? 1 : 0.5,
             fontSize: "14px",
             color: theme.text,
           }}
@@ -100,8 +106,8 @@ const MobileMenu = () => {
 
         <div
           className={` ${
-            language !== "en"
-              ? "hover:opacity-[0.8] cursor-pointer"
+            language !== "ru"
+              ? "hover:brightness-[0.8] cursor-pointer"
               : "cursor-default"
           }`}
           onClick={() => changeLanguage("ru")}
