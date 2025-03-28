@@ -6,6 +6,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { MdArrowDropUp, MdCalendarMonth, MdClose } from "react-icons/md";
+import { BarLoader } from "react-spinners";
+import Image from "next/image";
 
 const Gallery = () => {
   const pathname = usePathname();
@@ -48,6 +50,8 @@ const Gallery = () => {
       behavior: "smooth",
     });
   };
+  const [loaded, setLoaded] = useState(false);
+  console.log(loaded);
 
   return (
     <div style={{ display: loading ? "none" : "flex" }}>
@@ -86,13 +90,27 @@ const Gallery = () => {
           </div>
         </div>
       )}
+      {!loaded && (
+        <div
+          style={{
+            width: "100%",
+            height: "96px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+          className="absolute desktop:top-24 top-[88px] z-10"
+        >
+          <BarLoader height={6} width={120} color={theme.active} />
+        </div>
+      )}
       <div
         style={{
           backdropFilter: "blur(100px)",
           WebkitBackdropFilter: "blur(100px)",
           transform: pathname?.length > 0 ? "scale(1)" : "scale(0)",
           transition: "ease-in 200ms",
-          opacity: pathname?.length > 0 ? "1" : "0",
+          opacity: pathname?.length > 0 && loaded ? "1" : "0",
           overflowY: "auto",
           display: pathname.split("/")[4] ? "visible" : "none",
         }}
@@ -112,10 +130,24 @@ const Gallery = () => {
               return (
                 <div className="w-full overflow-hidden" key={index}>
                   <img
+                    ref={(el) => {
+                      if (el && el.complete) {
+                        // ქეშიდან დატვირთვის შემთხვევა
+                        setTimeout(() => {
+                          setLoaded(true);
+                        }, 300);
+                      }
+                    }}
                     src={item.link}
                     alt="corporations"
+                    loading="lazy"
                     className="desktop:h-[400px]"
                     style={{ width: "100%", objectFit: "cover" }}
+                    onLoad={() => {
+                      setTimeout(() => {
+                        setLoaded(true);
+                      }, 300);
+                    }}
                   />
                 </div>
               );

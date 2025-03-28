@@ -88,7 +88,7 @@ const Gallery = () => {
                 }}
               />
             </div>
-            <strong className="absolute top-4 mx-4 py-1 px-3 rounded-full bg-[rgba(0,0,0,0.5)] text-sm">
+            <strong className="absolute top-4 mx-4 py-1 px-3 rounded-full bg-[rgba(0,0,0,0.5)] text-sm text-center">
               {activeLanguage.offersForNoResidents}
             </strong>
           </Link>

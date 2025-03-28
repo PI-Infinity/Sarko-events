@@ -6,14 +6,17 @@ import { LuGalleryVertical } from "react-icons/lu";
 import Offers from "./offers";
 import Button from "@/components/button";
 import { MdCalendarMonth } from "react-icons/md";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Img from "@/components/image";
+import { BarLoader } from "react-spinners";
 
 const Page = () => {
   const pathname = usePathname();
   const { loading, theme, activeLanguage, language } = useAppContext();
   const [loadingImgs, setLoadingImgs] = useState();
-  console.log("here...");
+
+  const [loaded, setLoaded] = useState(false);
+
   return (
     <div style={{ display: loading ? "none" : "flex" }}>
       <div
@@ -36,6 +39,7 @@ const Page = () => {
           />
         </Link>
       </div>
+
       <div
         style={{ display: loading ? "none" : "flex" }}
         className="w-full flex-col items-center pt-[90px] desktop:pt-[100px] gap-2 slide-in-right desktop:overflow-hidden pb-8 px-0 desktop:px-[5%] relative"
@@ -43,30 +47,62 @@ const Page = () => {
         {pathname.split("/")[3] !== "offers" && (
           <Offers type={pathname.split("/")[3]} />
         )}
+        {!loaded && (
+          <div
+            style={{
+              width: "100%",
+              height: "96px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+            className="mt-25 desktop:mt-4"
+          >
+            <BarLoader height={6} width={120} color={theme.active} />
+          </div>
+        )}
+
         {pathname.split("/")[3] === "offers" ? (
           <div
-            style={{ display: loading ? "none" : "grid" }}
-            className="slide-in-right w-full
-     text-white gap-4
-      px-2 grid-cols-1 desktop:grid-cols-3 desktop:px-[5%]"
+            style={{
+              display: loading ? "none" : "grid",
+            }}
+            className="slide-in-right w-full text-white gap-4 px-2 grid-cols-1 desktop:grid-cols-3 desktop:px-[5%]"
           >
             {offers?.map((item: any, index: number) => {
               return (
                 <Link
                   href={`/${language}/offers/${item.value}`}
-                  style={{ background: theme.background2 }}
+                  style={{
+                    background: theme.background2,
+                    opacity: loaded ? 1 : 0,
+                  }}
                   className="w-full shadow-sm rounded-xl flex items-center justify-center
            gap-4 relative h-[300px]"
                   key={index}
                 >
                   <div className="relative overflow-hidden rounded-xl w-full h-full flex cursor-pointer hover:opacity-[0.9]">
-                    <Img
+                    <img
                       src={item.img}
-                      alt="img"
+                      alt={item.img}
                       style={{
-                        aspectRatio: 1,
-                        zIndex: 0,
                         width: "100%",
+                        zIndex: 0,
+                        objectFit: "cover",
+                        aspectRatio: 1,
+                      }}
+                      ref={(el) => {
+                        if (el && el.complete) {
+                          // ქეშიდან დატვირთვის შემთხვევა
+                          setTimeout(() => {
+                            setLoaded(true);
+                          }, 300);
+                        }
+                      }}
+                      onLoad={() => {
+                        setTimeout(() => {
+                          setLoaded(true);
+                        }, 300);
                       }}
                     />
                   </div>
@@ -84,7 +120,10 @@ const Page = () => {
             })}
           </div>
         ) : (
-          <div className="grid grid-cols-2 desktop:grid-cols-4 gap-4 px-[2.5%]">
+          <div
+            style={{ opacity: loaded ? 1 : 0 }}
+            className="grid grid-cols-2 desktop:grid-cols-4 gap-4 px-[2.5%]"
+          >
             {events
               ?.filter((i: any) => i.type === pathname.split("/")[3])
               .map((item: any, index: number) => {
@@ -102,6 +141,19 @@ const Page = () => {
                         width: "100%",
                         objectFit: "cover",
                         aspectRatio: 1,
+                      }}
+                      ref={(el) => {
+                        if (el && el.complete) {
+                          // ქეშიდან დატვირთვის შემთხვევა
+                          setTimeout(() => {
+                            setLoaded(true);
+                          }, 300);
+                        }
+                      }}
+                      onLoad={() => {
+                        setTimeout(() => {
+                          setLoaded(true);
+                        }, 300);
                       }}
                     />
                     <div className="absolute z-20 bottom-3 right-3">
