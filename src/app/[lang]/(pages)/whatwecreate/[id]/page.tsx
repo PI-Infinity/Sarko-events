@@ -17,6 +17,17 @@ const Page = () => {
 
   const [loaded, setLoaded] = useState(false);
 
+  useEffect(() => {
+    if (pathname) {
+      if (
+        events?.filter((i: any) => i.type === pathname.split("/")[3])
+          ?.length === 0
+      ) {
+        setLoaded(true);
+      }
+    }
+  }, [events, pathname]);
+
   return (
     <div style={{ display: loading ? "none" : "flex" }}>
       <div
