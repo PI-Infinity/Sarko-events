@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import HeadRoom from "react-headroom";
 import { CgMenuRight } from "react-icons/cg";
 import Img from "./image";
+import Image from "next/image";
 
 const Header = () => {
   // theme
@@ -48,7 +49,7 @@ const Header = () => {
           className="flex items-center gap-4 scale-up cursor-pointer"
         >
           <div className="relative w-[140px] h-[50px] flex items-center justify-center">
-            <Img
+            <img
               src="/sarko-logo.png"
               alt="Sarko"
               style={{ width: "100%", height: "100%" }}
