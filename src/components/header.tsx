@@ -12,7 +12,7 @@ const Header = () => {
   // theme
   const { theme, loading, language, menuItems, setMobileMenu } =
     useAppContext();
-
+  //
   const pathname = usePathname();
 
   return (
