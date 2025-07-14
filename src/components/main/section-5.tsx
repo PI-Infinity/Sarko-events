@@ -10,7 +10,7 @@ export const Section5 = ({ sY }: any) => {
   // ძირითადი მოძრაობის მაპირება — ზუსტად შენს ფორმულებზე დაყრდნობით
   const letterP = useTransform(
     scrollY,
-    [isMobile ? 3300 : 5300, isMobile ? 4100 : 6300],
+    [isMobile ? 3200 : 5300, isMobile ? 4250 : 6300],
     [isMobile ? 10 : 15, isMobile ? -15 : -30],
     {
       ease: easeInOut,
@@ -20,7 +20,7 @@ export const Section5 = ({ sY }: any) => {
   return (
     <div
       className="w-full flex flex-col h-[800px] items-center gap-24 justify-center"
-      style={{ position: "absolute", top: isMobile ? "3750px" : "5510px" }}
+      style={{ position: "absolute", top: isMobile ? "3650px" : "5510px" }}
     >
       <div
         className="flex flex-col text-white items-center gap-6 text-[48px] desktop:text-[108px] font-mineFont"

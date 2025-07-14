@@ -15,7 +15,7 @@ const AboutUs = () => {
         className="flex-1 pb-16"
         style={{ color: theme.text, display: loading ? "none" : "flex" }}
       >
-        <div className="w-full h-full px-4 py-4 pt-[24px] desktop:pt-[40px] slide-in-top flex flex-col items-center">
+        <div className="w-full h-full px-4 py-4 pt-[24px] desktop:pt-[40px] flex flex-col items-center">
           <div className="flex w-full items-center justify-center gap-4 mb-4">
             <div className="relative overflow-hidden  w-full desktop:w-1/4 h-full flex items-center">
               <Img

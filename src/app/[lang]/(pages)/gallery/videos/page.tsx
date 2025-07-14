@@ -44,7 +44,7 @@ const Videos = () => {
       </div>
       <div className="w-full border-t-[1px] border-white desktop:py-16 grid grid-cols-1 desktop:grid-cols-2">
         {!load && (
-          <div className="w-full flex justify-center py-4">
+          <div className="w-full flex justify-center py-4 mt-12">
             <MoonLoader size={24} color="white" />
           </div>
         )}

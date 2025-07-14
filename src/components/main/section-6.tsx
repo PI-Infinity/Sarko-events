@@ -10,7 +10,7 @@ export const Section6 = ({ sY }: any) => {
   // ძირითადი მოძრაობის მაპირება — ზუსტად შენს ფორმულებზე დაყრდნობით
   const transfer: any = useTransform(
     scrollY,
-    [isMobile ? 3800 : 5700, isMobile ? 6100 : 8000],
+    [isMobile ? 3750 : 5700, isMobile ? 6100 : 8000],
     [0, 150],
     {
       ease: easeInOut,
@@ -20,7 +20,7 @@ export const Section6 = ({ sY }: any) => {
   return (
     <div
       className="w-full flex flex-col items-center gap-24"
-      style={{ position: "absolute", top: isMobile ? "4500px" : "6400px" }}
+      style={{ position: "absolute", top: isMobile ? "4450px" : "6400px" }}
     >
       <div className="rounded-[40px] absolute right-0 top-40">
         <motion.div

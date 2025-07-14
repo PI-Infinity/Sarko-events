@@ -35,7 +35,7 @@ const Popup = () => {
       >
         <MdClose color="red" size={40} />
       </div>
-      <div className="w-full flex-1 flex justify-center slide-in-top">
+      <div className="w-full flex-1 flex justify-center">
         <RequestForm />
       </div>
     </div>

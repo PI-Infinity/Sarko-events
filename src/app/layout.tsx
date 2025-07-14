@@ -71,7 +71,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body style={{ background: "#050505" }}>
+      <body style={{ background: "#000" }}>
         <AppContextWrapper>
           <SmoothScrollWrapper>
             <GoogleAnalytics gaId="G-PRTE7FTLBK" />
