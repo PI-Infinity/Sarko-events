@@ -38,24 +38,20 @@ export const Footer = () => {
         background: theme.background,
       }}
       className="z-40 px-[5%] pt-8 pb-6 w-full
-      border-t-[0.5px] border-t-[rgba(255,255,255,0.1)]
-      flex-col"
+      border-t-[1px] border-white
+      flex-col z-10"
     >
       <div className="w-full flex flex-col desktop:flex-row desktop:items-center desktop:justify-between gap-12">
         <Link
           href={`/${language}`}
-          className="desktop:w-1/3 flex items-center gap-4 scale-up cursor-pointer"
+          className="desktop:w-1/3 pl-6 desktop:pl-0 flex items-center gap-4 cursor-pointer"
         >
-          <div className="relative w-[100px] h-[35px] flex items-center justify-center">
-            <Img
-              src={theme.id === "light" ? "/logo-black.png" : "/sarko-logo.png"}
-              alt="Sarko"
-              style={{ width: "100%", height: "100%" }}
-            />
+          <div className="font-mineFont text-white text-5xl relative w-[100px] flex items-center justify-center">
+            SARKO
           </div>
         </Link>
         <div className="flex flex-col gap-[16px] items-start desktop:items-center justify-center">
-          <div className="desktop:w-1/3 flex items-center desktop:justify-center gap-4 ">
+          <div className="desktop:w-1/3 flex items-center desktop:justify-center gap-4 mt-4">
             <a
               href={
                 isMobile
@@ -144,7 +140,7 @@ export const Footer = () => {
               <h6
                 style={{
                   color: theme.text,
-                  transition: "ease-in 200ms",
+                  transition: "ease-in 300ms",
                   textDecoration: "underline",
                   fontSize: "12px",
                 }}
@@ -157,7 +153,7 @@ export const Footer = () => {
               <h6
                 style={{
                   color: theme.text,
-                  transition: "ease-in 200ms",
+                  transition: "ease-in 300ms",
                   textDecoration: "underline",
                   fontSize: "12px",
                 }}

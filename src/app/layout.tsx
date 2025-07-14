@@ -6,8 +6,9 @@ import { cookies } from "next/headers"; // 🔥 ენების წაკი�
 import "./globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Footer } from "@/components/footer";
-import MobileMenu from "@/components/mobileMenu";
+import Menu from "@/components/menu";
 import Popup from "@/components/popup";
+import { SmoothScrollWrapper } from "@/components/smoothScroll";
 
 // 🔥 `generateMetadata()` სერვერის მხარეს ქმნის დინამიურ `metadata`
 export async function generateMetadata(): Promise<Metadata> {
@@ -72,13 +73,15 @@ export default function RootLayout({
     <html lang="en">
       <body style={{ background: "#050505" }}>
         <AppContextWrapper>
-          <GoogleAnalytics gaId="G-PRTE7FTLBK" />
-          <Loading />
-          <Header />
-          <MobileMenu />
-          <main className="flex-grow w-full">{children}</main>
-          <Popup />
-          <Footer />
+          <SmoothScrollWrapper>
+            <GoogleAnalytics gaId="G-PRTE7FTLBK" />
+            {/* <Loading /> */}
+            <Header />
+            <Menu />
+            <main className="flex-grow w-full">{children}</main>
+            <Popup />
+            <Footer />
+          </SmoothScrollWrapper>
         </AppContextWrapper>
       </body>
     </html>

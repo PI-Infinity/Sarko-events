@@ -113,36 +113,19 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
     { path: `/${language}`, label: activeLanguage.main },
     { path: `/${language}/about`, label: activeLanguage.about },
     // { path: "/offers", label: activeLanguage.offers },
-    { path: `/${language}/whatwecreate`, label: activeLanguage.whatWeCreate },
+    { path: `/${language}/gallery`, label: activeLanguage.gallery },
     { path: `/${language}/contact`, label: activeLanguage.contact },
   ];
-  // mobile menu state
-  const [mobileMenu, setMobileMenu] = useState(false);
-
+  // mobile openMenu state
+  const [openMenu, setOpenMenu] = useState(false);
   useEffect(() => {
-    if (mobileMenu) {
-      document.body.style.overflowY = "hidden";
+    const target = document.querySelector("body"); // შეცვალე საჭიროებისამებრ
+    if (openMenu) {
+      target!.style.overflowY = "hidden";
     } else {
-      document.body.style.overflowY = "auto";
+      target!.style.overflowY = "auto";
     }
-    // Ensure the body has the transition set
-    document.body.style.transition = "right 200ms ease-in";
-
-    if (mobileMenu) {
-      document.body.style.position = "relative";
-      document.body.style.right = "100px";
-    } else {
-      document.body.style.position = "relative";
-      document.body.style.right = "0px";
-    }
-
-    // Cleanup function to reset styles when component unmounts
-    return () => {
-      document.body.style.position = "";
-      document.body.style.right = "";
-      document.body.style.transition = "";
-    };
-  }, [mobileMenu]);
+  }, [openMenu]);
 
   // open request form
   const [active, setActive] = useState(false);
@@ -153,42 +136,42 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
       label: activeLanguage.weddings,
       img: "/weddings.png",
       path: true,
-      link: `/${language}/whatwecreate/weddings`,
+      link: `/${language}/gallery/weddings`,
     },
     {
       id: "corporations",
       label: activeLanguage.corporations,
       img: "/corporation.jpg",
       path: true,
-      link: `/${language}/whatwecreate/corporations`,
+      link: `/${language}/gallery/corporations`,
     },
     {
       id: "presentations",
       label: activeLanguage.presentations,
       img: "/presentation.png",
       path: true,
-      link: `/${language}/whatwecreate/presentations`,
+      link: `/${language}/gallery/presentations`,
     },
     {
       id: "teambuildings",
       label: activeLanguage.teambuildings,
       img: "/teambuilding.jpg",
       path: true,
-      link: `/${language}/whatwecreate/teambuildings`,
+      link: `/${language}/gallery/teambuildings`,
     },
     {
       id: "conferences",
       label: activeLanguage.conferences,
       img: "/conference.jpg",
       path: true,
-      link: `/${language}/whatwecreate/conferences`,
+      link: `/${language}/gallery/conferences`,
     },
     // {
     //   id: "other",
     //   label: activeLanguage.other,
     //   img: "/we.jpeg",
     //   path: true,
-    //   link: `${language}/whatwecreate/other",
+    //   link: `${language}/gallery/other",
     // },
   ];
 
@@ -208,8 +191,8 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
           language,
           setLanguage,
           menuItems,
-          mobileMenu,
-          setMobileMenu,
+          openMenu,
+          setOpenMenu,
           isMobile,
           colors,
           gallery,
@@ -228,7 +211,7 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
 const colors = [
   {
     id: "black",
-    gradient: "linear-gradient(#080808, #151515, #080808)",
+    gradient: "linear-gradient(#000, #000)",
     main: "#151515",
     background: "#080808",
     background2: "rgba(255,255,255,0.02)",

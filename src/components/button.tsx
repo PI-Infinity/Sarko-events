@@ -31,7 +31,7 @@ const Button: React.FC<PropsType> = ({
           color: disabled ? "white" : color,
         }}
         onClick={!loading ? onClick : undefined}
-        className={`relative w-full h-full rounded-full flex items-center justify-center gap-2 bg-gray-300  cursor-${
+        className={`font-secondFont relative w-full h-full rounded-full flex items-center justify-center gap-2 bg-gray-300  cursor-${
           disabled ? "default" : "pointer"
         } hover:${disabled ? "none" : "opacity-[0.9]"} font-semibold`}
       >

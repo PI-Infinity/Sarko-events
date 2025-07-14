@@ -1,7 +1,7 @@
 export const en = {
   main: "Home",
   about: "About",
-  whatWeCreate: "What We Create",
+  gallery: "Gallery",
   offers: "Offers",
   contact: "Contact",
   startPlanning: "Start Planning",
@@ -52,7 +52,7 @@ export const en = {
 export const ka = {
   main: "მთავარი",
   about: "ჩვენ შესახებ",
-  whatWeCreate: "რას ვქმნით",
+  gallery: "გალერეა",
   offers: "შეთავაზებები",
   contact: "კონტაქტი",
   startPlanning: "დაიწყე დაგეგმვა",
@@ -103,7 +103,7 @@ export const ka = {
 export const ru = {
   main: "Главная",
   about: "О нас",
-  whatWeCreate: "Что мы создаем",
+  gallery: "Галерея",
   offers: "Предложения",
   contact: "Контакт",
   startPlanning: "Начать планирование",

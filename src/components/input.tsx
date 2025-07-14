@@ -30,10 +30,6 @@ export const Input: React.FC<PropsType> = ({
   onChange,
   type,
   maxLength,
-  showPassword,
-  handleClickShowPassword,
-  handleMouseDownPassword,
-  password,
   onKeyDown,
   ref,
   autoFocus,
@@ -55,7 +51,7 @@ export const Input: React.FC<PropsType> = ({
   return (
     <div
       onClick={(e) => e.stopPropagation()}
-      className="rounded-xl w-full h-full shadow-md flex items-center bg-white "
+      className="font-secondFont rounded-xl w-full h-full shadow-md flex items-center"
     >
       <input
         id={id}
@@ -67,29 +63,16 @@ export const Input: React.FC<PropsType> = ({
         type={type}
         enterKeyHint={returnKeyType}
         maxLength={maxLength || 50}
-        className={`${padding ? padding : "px-4 py-3"} w-full rounded-xl ${
+        className={`bg-[transparent] border-[1px] border-white font-secondFont ${
+          padding ? padding : "px-4 py-3"
+        } w-full rounded-xl ${
           disabled ? "text-gray-400" : "text-black"
-        } bg-white focus:outline-none`}
+        } focus:outline-none`}
         onKeyDown={onKeyDown}
         onKeyPress={handleKeyPress}
         disabled={disabled}
         min={0}
       />
-      {password && (
-        <InputAdornment position="end" className="pr-2 bg-white">
-          <IconButton
-            aria-label="toggle password visibility"
-            onClick={handleClickShowPassword}
-            onMouseDown={handleMouseDownPassword}
-          >
-            {showPassword ? (
-              <MdVisibility color={"gray"} size={22} />
-            ) : (
-              <MdVisibilityOff color={"gray"} size={22} />
-            )}
-          </IconButton>
-        </InputAdornment>
-      )}
     </div>
   );
 };

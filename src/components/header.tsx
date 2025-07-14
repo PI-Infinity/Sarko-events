@@ -1,87 +1,55 @@
 "use client";
 import { useAppContext } from "@/context/app";
-import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
 import Link from "next/link";
+import React from "react";
+import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
 import { usePathname } from "next/navigation";
-import HeadRoom from "react-headroom";
-import { CgMenuRight } from "react-icons/cg";
-import Img from "./image";
-import Image from "next/image";
 
 const Header = () => {
-  // theme
-  const { theme, loading, language, menuItems, setMobileMenu } =
-    useAppContext();
-  //
+  const { setOpenMenu, language, theme, isMobile } = useAppContext();
   const pathname = usePathname();
-
   return (
-    <HeadRoom
-      downTolerance={10}
-      upTolerance={10}
-      className="fixed w-full z-10"
-      style={{
-        display:
-          loading ||
-          pathname.includes("/projects/") ||
-          (pathname?.split("/")[1] === "whatwecreate" &&
-            pathname?.split("/")[3])
-            ? "none"
-            : "flex",
-        backdropFilter: "blur(10px)",
-        WebkitBackdropFilter: "blur(10px)",
-      }}
-    >
+    <>
       <ProgressBar
         key={theme.active}
-        height="0.25rem"
+        height={isMobile ? "0.2rem" : "0.25rem"}
         color={theme.active}
         options={{ showSpinner: false }}
         shallowRouting
       />
-      <header
-        className="w-full h-full
-      flex items-center justify-between
-      py-4 desktop:py-[20px] px-[5%] shadow-sm border-b-[1px] border-b-[rgba(255,255,255,0.1)]"
+      <div
+        style={{ transition: "ease-in 300ms" }}
+        className="w-full h-[90px] desktop:h-[105px] flex items-center p-4 desktop:p-0 desktop:px-12 gap-8"
       >
         <Link
           href={`/${language}`}
-          className="flex items-center gap-4 scale-up cursor-pointer"
+          style={{
+            display:
+              pathname === `/${language}` || pathname === `/` ? "none" : "flex",
+          }}
+          className="w-[150px] relative top-[1px] font-mineFont cursor-pointer text-white font-[300] text-[48px] tracking-normal"
         >
-          <div className="relative w-[140px] h-[50px] flex items-center justify-center">
-            <img
-              src="/sarko-logo.png"
-              alt="Sarko"
-              style={{ width: "100%", height: "100%" }}
-            />
-          </div>
+          SARKO
         </Link>
 
-        <div className="w-1/2 hidden slide-in-left desktop:flex items-center justify-end gap-[48px] text-textlight text-[16px] font-custom font-[600]">
-          {menuItems.map((item: any) => {
-            return (
-              <Link href={item.path} key={item.path}>
-                <h4
-                  style={{
-                    color: pathname === item.path ? theme.active : theme.text,
-                    borderColor: theme.text,
-                    transition: "ease-in 200ms",
-                  }}
-                  className={`cursor-pointer hover:opacity-[1] ${
-                    pathname === item.path ? "opacity-1" : "opacity-[0.5]"
-                  }`}
-                >
-                  {item.label}
-                </h4>
-              </Link>
-            );
-          })}
-        </div>
-        <div className="desktop:hidden" onClick={() => setMobileMenu(true)}>
-          <CgMenuRight color={theme.active} size={32} />
-        </div>
-      </header>
-    </HeadRoom>
+        <Link
+          href={`/${language}/contact`}
+          style={{ transition: "ease-in 300ms" }}
+          className="whitespace-nowrap overflow-hidden ml-auto cursor-pointer hover:text-[#135A68] text-white font-[300] font-fakt-nor text-[16px] underline underline-offset-[8px] tracking-normal mb-[2px]"
+        >
+          LET'S CREATE
+        </Link>
+        <button
+          style={{ transition: "ease-in 300ms" }}
+          onClick={() => setOpenMenu((prev: boolean) => !prev)}
+          className="w-[60px] h-[59px] rounded-full border-[1px] border-white hover:border-[#135A68] flex flex-col gap-[9px] justify-center items-center"
+        >
+          <div className="h-[1px] w-[28px] bg-white" />
+          <div className="h-[1px] w-[28px] bg-white" />
+          <div className="h-[1px] w-[28px] bg-white mb-[2px]" />
+        </button>
+      </div>
+    </>
   );
 };
 

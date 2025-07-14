@@ -8,37 +8,16 @@ import { NextSeo } from "next-seo";
 import Head from "next/head";
 
 const AboutUs = () => {
-  console.log("about");
   const { theme, language, loading, activeLanguage } = useAppContext();
   return (
     <>
       <div
-        className="flex-1"
+        className="flex-1 pb-16"
         style={{ color: theme.text, display: loading ? "none" : "flex" }}
       >
-        <div
-          style={{
-            background:
-              "linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0))",
-          }}
-          className="fixed desktop:hidden bottom-0 left-0 py-6 z-50 bg-[] w-full mt-4 flex items-center justify-center px-4 desktop:mt-4"
-        >
-          <Link
-            href={`/${language}/contact`}
-            className=" h-12 w-full desktop:w-1/3 border-[1px] border-[rgba(255,255,255,0.2)] rounded-full"
-          >
-            <Button
-              title={activeLanguage.startPlanning}
-              background="rgba(255,255,255,1)"
-              color={theme.background}
-              onClick={() => undefined}
-              icon={<MdCalendarMonth size={24} />}
-            />
-          </Link>
-        </div>
-        <div className="w-full h-full px-4 py-4 pt-[100px] slide-in-top flex flex-col items-center">
+        <div className="w-full h-full px-4 py-4 pt-[24px] desktop:pt-[40px] slide-in-top flex flex-col items-center">
           <div className="flex w-full items-center justify-center gap-4 mb-4">
-            <div className="relative overflow-hidden rounded-xl w-full desktop:w-1/4 h-full flex items-center">
+            <div className="relative overflow-hidden  w-full desktop:w-1/4 h-full flex items-center">
               <Img
                 src={"/we.jpeg"}
                 alt="img"
@@ -49,7 +28,7 @@ const AboutUs = () => {
                 }}
               />
             </div>
-            <div className="hidden relative overflow-hidden rounded-xl w-1/4 h-full desktop:flex items-center">
+            <div className="hidden relative overflow-hidden  w-1/4 h-full desktop:flex items-center">
               <Img
                 src={"/we2.jpg"}
                 alt="img"
@@ -87,20 +66,6 @@ const AboutUs = () => {
               </div>
             );
           })}
-          <div className="hidden my-16 z-50 w-full desktop:flex items-center justify-center px-4">
-            <Link
-              href={`/${language}/contact`}
-              className="h-12 w-full desktop:w-[400px] border-[1px] border-[rgba(255,255,255,0.2)] rounded-full"
-            >
-              <Button
-                title={activeLanguage.startPlanning}
-                background="rgba(255,255,255,1)"
-                color={theme.background}
-                onClick={() => undefined}
-                icon={<MdCalendarMonth size={24} />}
-              />
-            </Link>
-          </div>
         </div>
       </div>
     </>

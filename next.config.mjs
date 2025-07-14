@@ -4,7 +4,11 @@ const nextConfig = {
   reactStrictMode: false,
 
   images: {
-    domains: ["res.cloudinary.com", "storage.googleapis.com"],
+    domains: [
+      "res.cloudinary.com",
+      "storage.googleapis.com",
+      "firebasestorage.googleapis.com",
+    ],
   },
   extend: {
     textShadow: {
