@@ -1,10 +1,7 @@
 "use client";
-import Button from "@/components/button";
-import Img from "@/components/image";
 import { useAppContext } from "@/context/app";
 import Link from "next/link";
 import { useEffect } from "react";
-import { MdCalendarMonth } from "react-icons/md";
 
 const Gallery = () => {
   const { theme, loading, gallery, language, activeLanguage } = useAppContext();
@@ -41,14 +38,14 @@ const Gallery = () => {
           <div className="desktop:pl-[10%] desktop:h-[90vh] w-full flex items-center justify-center relative bottom-8">
             <GalleryCard
               href={`/${language}/gallery/photos`}
-              defaultImage="/botanical.webp"
+              defaultImage="/couple.webp"
               label="PHOTOS"
             />
           </div>
           <div className="desktop:pr-[10%] desktop:h-[90vh] w-full flex items-center justify-center relative bottom-8">
             <GalleryCard
               href={`/${language}/gallery/videos`}
-              defaultImage="/we.jpeg"
+              defaultImage="/videocover.webp"
               label="VIDEOS"
             />
           </div>
@@ -103,7 +100,7 @@ const GalleryCard = ({ href, defaultImage, label }: any) => {
     >
       <div className="relative overflow-hidden w-full h-full flex ">
         <img
-          src={href?.includes("video") ? images[3] : currentImg}
+          src={currentImg}
           alt="img"
           className="hover:scale-[1.1]"
           style={{
