@@ -72,7 +72,7 @@ const images = [
   "/couple.webp",
 ]; // your image set
 
-export const GalleryCard = ({ href, defaultImage, label }: any) => {
+const GalleryCard = ({ href, defaultImage, label }: any) => {
   const { isMobile } = useAppContext();
   const [hovered, setHovered] = useState(false);
   const [currentImg, setCurrentImg] = useState(defaultImage);

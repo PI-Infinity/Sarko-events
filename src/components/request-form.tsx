@@ -133,7 +133,7 @@ const RequestForm = () => {
           onChange={(e) => {
             setComment(e.target.value);
           }}
-          className="bg-[transparent] border-[1px] border-white w-full h-24 resize-none bg-white text-black p-2 rounded-xl focus:outline-none"
+          className="bg-[transparent] border-[1px] border-white w-full h-24 resize-none text-black p-2 rounded-xl focus:outline-none"
           placeholder={`${activeLanguage?.comment} ${activeLanguage?.optional}`}
         />
       </div>
