@@ -1,19 +1,15 @@
 "use client";
 import { useAppContext } from "@/context/app";
+import Cookies from "js-cookie";
 import Link from "next/link";
-import Img from "./image";
+import { usePathname, useRouter } from "next/navigation";
 import {
   FaFacebook,
   FaInstagram,
-  FaLinkedin,
   FaTelegram,
-  FaTiktok,
   FaWhatsapp,
-  FaYoutube,
 } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import Cookies from "js-cookie";
-import { usePathname, useRouter } from "next/navigation";
 
 export const Footer = () => {
   const { loading, theme, language, setLanguage, isMobile, activeLanguage } =
@@ -52,7 +48,7 @@ export const Footer = () => {
         </Link>
         <div className="flex flex-col gap-[16px] items-start desktop:items-center justify-center">
           <div className="desktop:w-1/3 flex items-center desktop:justify-center gap-4 mt-4">
-            <a
+            {/* <a
               href={
                 isMobile
                   ? "fb://profile/61562564296082"
@@ -62,8 +58,8 @@ export const Footer = () => {
               rel="noopener noreferrer"
             >
               <FaFacebook color={theme.text} size={isMobile ? 24 : 20} />
-            </a>
-            <a
+            </a> */}
+            {/* <a
               href={
                 isMobile
                   ? "instagram://user?username=sarko_events"
@@ -73,7 +69,7 @@ export const Footer = () => {
               rel="noopener noreferrer"
             >
               <FaInstagram color={theme.text} size={isMobile ? 24 : 20} />
-            </a>
+            </a> */}
             {/* <a
             href={
               isMobile

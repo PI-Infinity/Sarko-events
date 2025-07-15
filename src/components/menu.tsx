@@ -1,20 +1,17 @@
 "use client";
 import { useAppContext } from "@/context/app";
+import Cookies from "js-cookie";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import {
   FaFacebook,
   FaInstagram,
-  FaLinkedin,
   FaTelegram,
-  FaTiktok,
   FaWhatsapp,
-  FaYoutube,
 } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
-import Cookies from "js-cookie";
-import { TfiClose } from "react-icons/tfi";
 import { FaMobileButton } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
+import { TfiClose } from "react-icons/tfi";
 
 const Menu = () => {
   const {
@@ -303,20 +300,20 @@ const Menu = () => {
               onClick={(e) => e.stopPropagation()}
               className="mt-4 flex items-center gap-4"
             >
-              <a
+              {/* <a
                 href="fb://profile/61562564296082"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaFacebook color={theme.text} size={18} />
-              </a>
-              <a
+              </a> */}
+              {/* <a
                 href="instagram://user?username=sarko_events"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaInstagram color={theme.text} size={18} />
-              </a>
+              </a> */}
               {/* <a
             href="https://www.tiktok.com/@sarko.events"
             target="_blank"

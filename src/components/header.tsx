@@ -19,23 +19,27 @@ const Header = () => {
       />
       <div
         style={{ transition: "ease-in 300ms" }}
-        className="w-full h-[90px] desktop:h-[105px] flex items-center p-4 desktop:p-0 desktop:px-12 gap-8"
+        className="w-full h-[90px] desktop:h-[105px] flex items-center p-4 desktop:p-0 desktop:px-12 gap-4"
       >
-        <Link
-          href={`/${language}`}
-          style={{
-            display:
-              pathname === `/${language}` || pathname === `/` ? "none" : "flex",
-          }}
-          className="w-[150px] relative top-[1px] font-mineFont cursor-pointer text-white font-[300] text-[48px] tracking-normal"
-        >
-          SARKO
-        </Link>
+        {pathname && (
+          <Link
+            href={`/${language}`}
+            style={{
+              display:
+                pathname === `/${language}` || pathname === `/`
+                  ? "none"
+                  : "flex",
+            }}
+            className="w-[150px] relative top-[1px] font-mineFont cursor-pointer text-white font-[300] text-[48px] tracking-normal"
+          >
+            SARKO
+          </Link>
+        )}
 
         <Link
           href={`/${language}/contact`}
           style={{ transition: "ease-in 300ms" }}
-          className="whitespace-nowrap overflow-hidden ml-auto cursor-pointer hover:text-[#135A68] text-white font-[300] font-fakt-nor text-[16px] underline underline-offset-[8px] tracking-normal mb-[2px]"
+          className="whitespace-nowrap overflow-hidden ml-auto cursor-pointer hover:text-[#135A68] text-white font-[300] font-fakt-nor text-[vw] underline underline-offset-[8px] tracking-normal mb-[2px]"
         >
           LET'S CREATE
         </Link>
