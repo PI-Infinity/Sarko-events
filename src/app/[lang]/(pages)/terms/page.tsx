@@ -248,6 +248,7 @@ const termsContent: any = {
     ],
   },
 };
+//
 
 export default function Terms() {
   return (
