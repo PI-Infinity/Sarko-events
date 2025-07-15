@@ -29,7 +29,7 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: "Sarko Events",
       images: [
         {
-          url: "/banner.webp",
+          url: "/sarko-logo.png",
           width: 800,
           height: 600,
           alt: "Sarko Events",
