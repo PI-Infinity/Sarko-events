@@ -23,12 +23,12 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: titles[lang] || titles["en"],
       description: descriptions[lang] || descriptions["en"],
-      url: "https://sarkoevents.com/terms",
+      url: "https://sarkoevents.com/en/terms",
       type: "website",
       siteName: "Sarko Events",
       images: [
         {
-          url: "/banner.webp",
+          url: "/videocover.webp",
           width: 800,
           height: 600,
           alt: "Sarko Events Terms & Conditions",
