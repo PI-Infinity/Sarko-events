@@ -79,7 +79,7 @@ const Main = () => {
   );
   const workTextOffset: any = useTransform(
     scrollY,
-    [6500, 7800, 7800, 8200],
+    [6500, 7800, 7800, 8750],
     [32, 450, 450, 900],
     {
       ease: easeInOut,
@@ -92,7 +92,7 @@ const Main = () => {
         backgroundColor: bgColor,
         animation: "fadeIn 3s ease-out forwards",
       }}
-      className="h-[6650px] desktop:h-[9720px] w-[100vw] flex flex-col relative overflow-hidden font-secondFont"
+      className="h-[6400px] desktop:h-[9920px] w-[100vw] flex flex-col relative overflow-hidden font-secondFont"
     >
       <Section1 sY={scrollValue} />
       <Section2 />

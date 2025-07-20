@@ -44,10 +44,10 @@ const Contact = () => {
             style={{ color: theme.text }}
           >
             <a
-              href="tel:+995597233355"
+              href="tel:+995599205588"
               style={{ color: "inherit", textDecoration: "none" }}
             >
-              +995597233355
+              +995599205588
             </a>
           </div>
         </div>{" "}

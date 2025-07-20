@@ -104,8 +104,8 @@ export const Footer = () => {
             <a
               href={
                 isMobile
-                  ? "whatsapp://send?phone=+995597233355"
-                  : "https://wa.me/+995597233355"
+                  ? "whatsapp://send?phone=+995599205588"
+                  : "https://wa.me/+995599205588"
               }
               target="_blank"
               rel="noopener noreferrer"

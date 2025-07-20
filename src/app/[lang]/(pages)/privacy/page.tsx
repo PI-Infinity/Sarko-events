@@ -310,8 +310,8 @@ function Main() {
         </h2>
         <p>
           {activeLanguage.phone}:{" "}
-          <a href="tel:+995597233355" className="text-gray-400">
-            +995597233355
+          <a href="tel:+995599205588" className="text-gray-400">
+            +995599205588
           </a>
         </p>
 

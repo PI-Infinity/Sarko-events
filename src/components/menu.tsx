@@ -150,10 +150,10 @@ const Menu = () => {
                     style={{ color: theme.text }}
                   >
                     <a
-                      href="tel:+995597233355"
+                      href="tel:+995599205588"
                       style={{ color: "inherit", textDecoration: "none" }}
                     >
-                      +995597233355
+                      +995599205588
                     </a>
                   </div>
                 </div>
@@ -199,7 +199,7 @@ const Menu = () => {
                   <FaTelegram color={theme.text} size={isMobile ? 24 : 20} />
                 </a>
                 <a
-                  href="whatsapp://send?phone=+995597233355"
+                  href="whatsapp://send?phone=+995599205588"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -287,10 +287,10 @@ const Menu = () => {
                   style={{ color: theme.text }}
                 >
                   <a
-                    href="tel:+995597233355"
+                    href="tel:+995599205588"
                     style={{ color: "inherit", textDecoration: "none" }}
                   >
-                    +995597233355
+                    +995599205588
                   </a>
                 </div>
               </div>
@@ -336,7 +336,7 @@ const Menu = () => {
                 <FaTelegram color={theme.text} size={18} />
               </a>
               <a
-                href="whatsapp://send?phone=+995597233355"
+                href="whatsapp://send?phone=+995599205588"
                 target="_blank"
                 rel="noopener noreferrer"
               >
