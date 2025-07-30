@@ -38,7 +38,7 @@ const Photos = () => {
                 href={`/${language}/gallery/photos/${item?.id}`}
                 key={index}
                 style={{ transition: "ease-in 200ms" }}
-                className="hover:brightness-[0.7] flex items-center justify-between font-mineFont text-[40px] desktop:text-[72px] border-b-[1px] border-white cursor-pointer py-6 desktop:py-0"
+                className="hover:brightness-[0.7] flex items-center justify-between font-mineFont text-[32px] desktop:text-[72px] border-b-[1px] border-white cursor-pointer py-6 desktop:py-0"
                 onMouseEnter={() => setHovered(index)}
                 onMouseLeave={() => setHovered(null)}
               >

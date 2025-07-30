@@ -4,7 +4,8 @@
 
 @font-face {
   font-family: "MineFont";
-  src: url("/fonts/Playfair.ttf") format("woff");
+  src: url("/fonts/Orelo-Expanded-Trial-Medium-BF674e80754b4d7.otf")
+    format("woff");
   font-weight: 700;
   font-style: normal;
 }

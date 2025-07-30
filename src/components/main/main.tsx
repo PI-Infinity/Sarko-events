@@ -92,7 +92,7 @@ const Main = () => {
         backgroundColor: bgColor,
         animation: "fadeIn 3s ease-out forwards",
       }}
-      className="h-[6400px] desktop:h-[9920px] w-[100vw] flex flex-col relative overflow-hidden font-secondFont"
+      className="h-[6130px] desktop:h-[9920px] w-[100vw] flex flex-col relative overflow-hidden font-secondFont"
     >
       <Section1 sY={scrollValue} />
       <Section2 />

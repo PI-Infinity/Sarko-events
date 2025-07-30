@@ -10,7 +10,7 @@ export const Section1 = ({ sY }: any) => {
 
   const sarkoOffset = useTransform(
     scrollY,
-    [isMobile ? 1200 : 1650, isMobile ? 2300 : 2650],
+    [isMobile ? 1400 : 1650, isMobile ? 2500 : 2650],
     [0, -1000],
     {
       ease: easeInOut,
@@ -20,7 +20,7 @@ export const Section1 = ({ sY }: any) => {
   // 👉 All In opacity (starts around 2400 to 5000)
   const allInOpacity = useTransform(
     scrollY,
-    [isMobile ? 750 : 1100, isMobile ? 2450 : 3000],
+    [isMobile ? 1100 : 1100, isMobile ? 2450 : 3000],
     [0, 1],
     {
       ease: easeInOut,
@@ -30,8 +30,8 @@ export const Section1 = ({ sY }: any) => {
   // 👉 All In scale
   const allInScale = useTransform(
     scrollY,
-    [isMobile ? 1050 : 1400, isMobile ? 2200 : 2550],
-    [0.8, 1],
+    [isMobile ? 1250 : 1400, isMobile ? 1800 : 2550],
+    [0.7, 1],
     {
       ease: easeInOut,
     }
@@ -66,16 +66,16 @@ export const Section1 = ({ sY }: any) => {
           position: "relative",
           y: sarkoOffset, // Framer uses y instead of bottom
         }}
-        className="font-mineFont font-[600] text-[108px] desktop:text-[280px] tracking-normal text-white"
+        className="font-mineFont font-[600] text-[80px] desktop:text-[280px] tracking-normal text-white"
       >
-        <div className="flex flex flex-col items-center mt-32 ">
+        <div className="flex flex flex-col items-center mt-28 desktop:mt-32">
           <h1
             className="underline desktop:underline-offset-[32px] underline-offset-[16px] decoration-[3px]"
             style={{ lineHeight: isMobile ? "100px" : "220px" }}
           >
             SARKO
           </h1>
-          <p className="text-[40px] desktop:text-[64px] font-mineFont">
+          <p className="text-[32px] desktop:text-[64px] font-mineFont">
             EVENTS
           </p>
         </div>
@@ -89,7 +89,7 @@ export const Section1 = ({ sY }: any) => {
           scale: allInScale,
           top: allInOffset,
         }}
-        className="font-mineFont font-[600 text-[80px] desktop:text-[160px] tracking-normal text-white"
+        className="font-mineFont font-[600 text-[48px] desktop:text-[160px] tracking-normal text-white"
       >
         NO LIMITS
       </motion.h1>

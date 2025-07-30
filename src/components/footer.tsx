@@ -42,7 +42,7 @@ export const Footer = () => {
           href={`/${language}`}
           className="desktop:w-1/3 pl-6 desktop:pl-0 flex items-center gap-4 cursor-pointer"
         >
-          <div className="font-mineFont text-white text-5xl relative w-[100px] flex items-center justify-center">
+          <div className="font-mineFont text-white text-4xl relative w-[100px] flex items-center justify-center">
             SARKO
           </div>
         </Link>
@@ -99,7 +99,7 @@ export const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaTelegram color={theme.text} size={isMobile ? 24 : 20} />
+              <FaTelegram color={theme.text} size={isMobile ? 20 : 20} />
             </a>
             <a
               href={
@@ -110,7 +110,7 @@ export const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaWhatsapp color={theme.text} size={isMobile ? 24 : 20} />
+              <FaWhatsapp color={theme.text} size={isMobile ? 20 : 20} />
             </a>
             {/* <a
             href={
@@ -128,7 +128,7 @@ export const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <MdEmail color={theme.text} size={isMobile ? 28 : 24} />
+              <MdEmail color={theme.text} size={isMobile ? 23 : 24} />
             </a>
           </div>
           <div className="flex desktop:flex-row flex-col desktop:gap-[24px] gap-[8px]">

@@ -34,7 +34,7 @@ const Videos = () => {
           <MdArrowBack size={32} /> BACK TO GALLERY
         </Link>
         <div>
-          <h1 className="text-[96px] font-mineFont">VIDEO</h1>
+          <h1 className="text-[64px] font-mineFont">VIDEO</h1>
           <p className="text-[16px] desktop:w-1/2 font-secondFont">
             Our events may feel like something out of a dream, but we’re
             grounded in the real work it takes to get there. At SARKO, we

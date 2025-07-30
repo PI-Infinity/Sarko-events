@@ -38,7 +38,7 @@ const Gallery = () => {
           <div className="desktop:pl-[10%] desktop:h-[90vh] w-full flex items-center justify-center relative bottom-8">
             <GalleryCard
               href={`/${language}/gallery/photos`}
-              defaultImage="/couple.webp"
+              defaultImage="/a.IMG_1664.webp"
               label="PHOTOS"
             />
           </div>
@@ -67,6 +67,7 @@ const images = [
   "/freesbe.webp",
   "/mtatsminda.webp",
   "/couple.webp",
+  "/a.IMG_1664.webp",
 ]; // your image set
 
 const GalleryCard = ({ href, defaultImage, label }: any) => {
@@ -100,7 +101,7 @@ const GalleryCard = ({ href, defaultImage, label }: any) => {
     >
       <div className="relative overflow-hidden w-full h-full flex ">
         <img
-          src={currentImg}
+          src={label === "PHOTOS" ? currentImg : defaultImage}
           alt="img"
           className="hover:scale-[1.1]"
           style={{
@@ -112,12 +113,12 @@ const GalleryCard = ({ href, defaultImage, label }: any) => {
           }}
         />
         {hovered && !isMobile && (
-          <strong className="animate-fadeIn absolute bottom-6 left-6 py-2 px-4 text-4xl z-10 bg-black/50 text-white rounded-md font-secondFont transition-opacity duration-300">
+          <strong className="font-mineFont animate-fadeIn absolute bottom-6 left-6 py-2 px-4 text-4xl z-10 bg-black/50 text-white rounded-md transition-opacity duration-300">
             {label}
           </strong>
         )}
         {isMobile && (
-          <strong className="animate-fadeIn absolute bottom-4 left-4 py-2 px-4 text-xl z-10 bg-black/50 text-white rounded-md font-secondFont transition-opacity duration-300">
+          <strong className="font-mineFont animate-fadeIn absolute bottom-4 left-4 py-2 px-4 text-xl z-10 bg-black/50 text-white rounded-md transition-opacity duration-300">
             {label}
           </strong>
         )}

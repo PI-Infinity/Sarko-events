@@ -78,7 +78,7 @@ const Category = () => {
           <MdArrowBack size={32} /> BACK TO GALLERY
         </Link>
         <div>
-          <h1 className="text-[40px] desktop:text-[96px] font-mineFont py-6">
+          <h1 className="text-[32px] desktop:text-[96px] font-mineFont py-6">
             {page?.toUpperCase()}
           </h1>
           <p className="text-[16px] desktop:w-1/2 font-secondFont">

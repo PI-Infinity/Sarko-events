@@ -361,7 +361,7 @@ const Menu = () => {
         )}
         <div
           style={{ lineHeight: isMobile ? "90px" : "320px" }}
-          className="text-[180px] desktop:text-[560px] z-[-1] pt-12 border-t-[1px] border-white  font-mineFont mt-[1px] w-full"
+          className="text-[100px] desktop:text-[400px] z-[-1] pt-12 border-t-[1px] border-white  font-mineFont mt-[1px] w-full"
         >
           <span className="opacity-[0.1]">SARKO</span>
         </div>

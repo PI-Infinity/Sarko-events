@@ -18,15 +18,15 @@ export const Section3 = () => {
 
   return (
     <div
-      className="w-full flex flex-col items-center gap-24 justify-center"
+      className="w-full flex flex-col items-center gap-16 desktop:gap-24 justify-center"
       style={{ position: "absolute", top: isMobile ? "2470px" : "3520px" }}
     >
       {/* მთავარი წრე + blur */}
       <div className="font-mineFont flex flex-col text-white items-center gap-4">
         <motion.div
           style={{
-            fontSize: isMobile ? "48px" : "108px",
-            lineHeight: isMobile ? "40px" : "90px",
+            fontSize: isMobile ? "32px" : "108px",
+            lineHeight: isMobile ? "32px" : "90px",
             position: "relative",
             right: xSarko,
           }}
@@ -35,8 +35,8 @@ export const Section3 = () => {
         </motion.div>
         <motion.div
           style={{
-            fontSize: isMobile ? "48px" : "108px",
-            lineHeight: isMobile ? "40px" : "90px",
+            fontSize: isMobile ? "32px" : "108px",
+            lineHeight: isMobile ? "32px" : "90px",
             position: "relative",
             left: xSarko,
           }}

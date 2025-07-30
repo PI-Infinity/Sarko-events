@@ -20,19 +20,19 @@ export const Section5 = ({ sY }: any) => {
   return (
     <div
       className="w-full flex flex-col h-[800px] items-center gap-24 justify-center"
-      style={{ position: "absolute", top: isMobile ? "3650px" : "5510px" }}
+      style={{ position: "absolute", top: isMobile ? "3480px" : "5510px" }}
     >
       <div
-        className="flex flex-col text-white items-center gap-6 text-[48px] desktop:text-[108px] font-mineFont"
-        style={{ lineHeight: isMobile ? "36px" : "80px" }}
+        className="flex flex-col text-white items-center gap-6 text-[32px] desktop:text-[108px] font-mineFont"
+        style={{ lineHeight: isMobile ? "24px" : "80px" }}
       >
         <p>FOR THOSE</p>
         <p>IN SEARCH OF</p>
         <p>UNFORGETTABLE</p>
       </div>
       <div
-        className="flex text-white items-center gap-2 desktop:gap-6 text-[48px] desktop:text-[108px] font-mineFont"
-        style={{ lineHeight: isMobile ? "36px" : "80px" }}
+        className="flex text-white items-center gap-2 desktop:gap-6 text-[32px] desktop:text-[108px] font-mineFont"
+        style={{ lineHeight: isMobile ? "24px" : "80px" }}
       >
         <p>T</p>
         <motion.div style={{ position: "relative", top: letterP }}>

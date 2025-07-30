@@ -52,7 +52,7 @@ const AboutUs = () => {
                     <ul className="list-disc pl-5 text-md">
                       {item?.list[language].map((i: any, index: number) => {
                         return (
-                          <li key={index} className="italic">
+                          <li key={index} className="">
                             {i}
                           </li>
                         );
@@ -61,7 +61,7 @@ const AboutUs = () => {
                   )}
                 </div>
                 <div className="mt-4">
-                  <p className="text-md italic">{item.description[language]}</p>
+                  <p className="text-md ">{item.description[language]}</p>
                 </div>
               </div>
             );

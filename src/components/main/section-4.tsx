@@ -18,7 +18,7 @@ export const Section4 = ({ sY }: any) => {
   return (
     <div
       className="w-full flex flex-col items-center justify-center"
-      style={{ position: "absolute", top: isMobile ? "2890px" : "4380px" }}
+      style={{ position: "absolute", top: isMobile ? "2800px" : "4380px" }}
     >
       <div
         className="flex flex-col text-white items-center gap-4"
@@ -49,7 +49,7 @@ export const Section4 = ({ sY }: any) => {
             <text
               className="font-mineFont"
               fill="white"
-              fontSize="124"
+              fontSize="90"
               fontWeight="bold"
               letterSpacing="6px"
             >
@@ -59,7 +59,7 @@ export const Section4 = ({ sY }: any) => {
             </text>
           </svg>
         </motion.div>
-        <p className="absolute w-[480px] text-center top-[350px]">
+        <p className="text-[25px] desktop:text-[16px] absolute w-[540px] text-center top-[300px] desktop:top-[365px]">
           At Sarko, No Limits means more than pushing boundaries — it means
           being available 24/7, dreaming with you, and delivering with
           relentless focus. We work around the clock, live inside the details,

@@ -30,7 +30,7 @@ const Header = () => {
                   ? "none"
                   : "flex",
             }}
-            className="w-[150px] relative top-[1px] font-mineFont cursor-pointer text-white font-[300] text-[48px] tracking-normal"
+            className="w-[150px] relative top-[1px] font-mineFont cursor-pointer text-white font-[300] text-[40px] tracking-normal"
           >
             SARKO
           </Link>

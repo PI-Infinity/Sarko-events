@@ -15,7 +15,7 @@ const Contact = () => {
   return (
     <div
       style={{ display: loading ? "none" : "flex" }}
-      className="pt-4 desktop:pt-0 font-secondFont oveflow-hidden w-[100%] flex-col desktop:flex-row items-center desktop:items-start px-6 desktop:px-[5%] gap-4 pb-16 desktop:pb-[24px]"
+      className="pt-4 desktop:pt-0 font-secondFont oveflow-hidden w-[100%] flex-col desktop:flex-row items-center desktop:items-start px-5 desktop:px-[5%] gap-4 pb-16 desktop:pb-[24px]"
     >
       <div className="w-full desktop:w-1/3 flex justify-center">
         <RequestForm />
