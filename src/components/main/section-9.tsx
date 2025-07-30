@@ -9,7 +9,7 @@ export const Section9 = ({ sY }: any) => {
   return (
     <div
       className="font-mineFont text-[#1D8AA0] w-full flex flex-col h-[600px] items-center justify-center"
-      style={{ position: "absolute", top: isMobile ? "5550px" : "9160px" }}
+      style={{ position: "absolute", top: isMobile ? "5540px" : "9160px" }}
     >
       <div className="flex flex-col items-center justify-center h-full">
         <span className="text-xl text-white font-secondFont mb-4 desktop:mb-12">

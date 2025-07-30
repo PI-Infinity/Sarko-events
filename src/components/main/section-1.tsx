@@ -66,7 +66,7 @@ export const Section1 = ({ sY }: any) => {
           position: "relative",
           y: sarkoOffset, // Framer uses y instead of bottom
         }}
-        className="font-mineFont font-[600] text-[80px] desktop:text-[280px] tracking-normal text-white"
+        className="font-mineFont font-[600] text-[96px] desktop:text-[280px] tracking-normal text-white"
       >
         <div className="flex flex flex-col items-center mt-28 desktop:mt-32">
           <h1

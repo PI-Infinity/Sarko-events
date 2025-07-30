@@ -20,7 +20,7 @@ export const Section6 = ({ sY }: any) => {
   return (
     <div
       className="w-full flex flex-col items-center gap-24"
-      style={{ position: "absolute", top: isMobile ? "4400px" : "6700px" }}
+      style={{ position: "absolute", top: isMobile ? "4380px" : "6700px" }}
     >
       <div className="w-full flex items-center justify-between relative">
         <motion.div className="absolute left-[-30px] desktop:mt-[50px] w-[100px] h-[120px] rounded-[10px] desktop:w-[250px] desktop:h-[340px] desktop:rounded-[20px] overflow-hidden">
