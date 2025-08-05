@@ -26,12 +26,12 @@ const Img = ({ src, alt, onClick, style }: any) => {
       className="text-gray-300"
       onClick={onClick}
     >
-      <div
+      {/* <div
         className="opacity-0.3 absolute -top-1  w-full h-full opacity"
         style={{ opacity: load ? 0 : 1, transition: "ease-out 250ms" }}
       >
         <Skeleton className="h-full w-full" />
-      </div>
+      </div> */}
       <Image
         src={src}
         alt={alt}

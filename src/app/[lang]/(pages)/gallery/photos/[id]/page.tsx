@@ -9,6 +9,7 @@ import { Paper, styled } from "@mui/material";
 import { MoonLoader } from "react-spinners";
 import { ref, getDownloadURL, listAll } from "firebase/storage";
 import { storage } from "../../../../../firebase";
+import { OpenedImage } from "../openedImage";
 
 const Category = () => {
   const { theme, loading, gallery, language, isMobile } = useAppContext();
@@ -63,7 +64,7 @@ const Category = () => {
     getAllImagesFromFolder(page);
   }, [page]);
 
-  console.log(imageUrls);
+  const [openedImage, setOpenedImage] = useState(null);
 
   return (
     <div
@@ -100,6 +101,8 @@ const Category = () => {
                   return (
                     <div key={index}>
                       <img
+                        className="cursor-pointer"
+                        onClick={() => setOpenedImage(item)}
                         src={item}
                         onLoad={() => {
                           setTimeout(() => setLoad(true), 500);
@@ -110,7 +113,11 @@ const Category = () => {
                 } else {
                   return (
                     <div key={index}>
-                      <img src={item} />
+                      <img
+                        src={item}
+                        className="cursor-pointer"
+                        onClick={() => setOpenedImage(item)}
+                      />
                     </div>
                   );
                 }
@@ -118,6 +125,12 @@ const Category = () => {
           </Masonry>
         </div>
       </div>
+      {openedImage && (
+        <OpenedImage
+          openedImage={openedImage}
+          setOpenedImage={setOpenedImage}
+        />
+      )}
     </div>
   );
 };

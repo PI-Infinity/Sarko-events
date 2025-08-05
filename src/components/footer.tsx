@@ -40,15 +40,16 @@ export const Footer = () => {
       <div className="w-full flex flex-col desktop:flex-row desktop:items-center desktop:justify-between gap-12">
         <Link
           href={`/${language}`}
-          className="desktop:w-1/3 pl-6 desktop:pl-0 flex items-center gap-4 cursor-pointer"
+          className="desktop:w-1/3 pl-3 desktop:pl-0 flex items-center gap-4 cursor-pointer"
         >
           <div className="font-mineFont text-white text-4xl relative w-[100px] flex items-center justify-center">
             SARKO
           </div>
         </Link>
         <div className="flex flex-col gap-[16px] items-start desktop:items-center justify-center">
-          <div className="desktop:w-1/3 flex items-center desktop:justify-center gap-4 mt-4">
-            {/* <a
+          {!pathname?.includes("contact") && (
+            <div className="desktop:w-1/3 flex items-center desktop:justify-center gap-4 mt-4">
+              {/* <a
               href={
                 isMobile
                   ? "fb://profile/61562564296082"
@@ -59,7 +60,7 @@ export const Footer = () => {
             >
               <FaFacebook color={theme.text} size={isMobile ? 24 : 20} />
             </a> */}
-            {/* <a
+              {/* <a
               href={
                 isMobile
                   ? "instagram://user?username=sarko_events"
@@ -70,7 +71,7 @@ export const Footer = () => {
             >
               <FaInstagram color={theme.text} size={isMobile ? 24 : 20} />
             </a> */}
-            {/* <a
+              {/* <a
             href={
               isMobile
                 ? "https://www.tiktok.com/@sarko.events"
@@ -81,7 +82,7 @@ export const Footer = () => {
           >
             <FaTiktok color={theme.text} size={20} />
           </a> */}
-            {/* <a
+              {/* <a
             href={
               isMobile
                 ? "vnd.youtube://www.youtube.com/channel/UC0Fwr1O2Imxpc6mf-PhZwyg"
@@ -92,27 +93,27 @@ export const Footer = () => {
           >
             <FaYoutube color={theme.text} size={20} />
           </a> */}
-            <a
-              href={
-                isMobile ? "tg://resolve?domain=DG3IK" : "https://t.me/DG3IK"
-              }
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaTelegram color={theme.text} size={isMobile ? 20 : 20} />
-            </a>
-            <a
-              href={
-                isMobile
-                  ? "whatsapp://send?phone=+995599205588"
-                  : "https://wa.me/+995599205588"
-              }
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaWhatsapp color={theme.text} size={isMobile ? 20 : 20} />
-            </a>
-            {/* <a
+              <a
+                href={
+                  isMobile ? "tg://resolve?domain=DG3IK" : "https://t.me/DG3IK"
+                }
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaTelegram color={theme.text} size={isMobile ? 20 : 20} />
+              </a>
+              <a
+                href={
+                  isMobile
+                    ? "whatsapp://send?phone=+995599205588"
+                    : "https://wa.me/+995599205588"
+                }
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaWhatsapp color={theme.text} size={isMobile ? 20 : 20} />
+              </a>
+              {/* <a
             href={
               isMobile
                 ? "linkedin://in/sarko-events-21438531a"
@@ -123,14 +124,15 @@ export const Footer = () => {
           >
             <FaLinkedin color={theme.text} size={20} />
           </a> */}
-            <a
-              href="mailto:sarko.events@Gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <MdEmail color={theme.text} size={isMobile ? 23 : 24} />
-            </a>
-          </div>
+              <a
+                href="mailto:sarko.events@Gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MdEmail color={theme.text} size={isMobile ? 23 : 24} />
+              </a>
+            </div>
+          )}
           <div className="flex desktop:flex-row flex-col desktop:gap-[24px] gap-[8px]">
             <Link href={`/${language}/terms`} key="terms">
               <h6

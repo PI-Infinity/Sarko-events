@@ -69,6 +69,25 @@ export const Section1 = ({ sY }: any) => {
         className="font-mineFont font-[600] text-[96px] desktop:text-[280px] tracking-normal text-white"
       >
         <div className="flex flex flex-col items-center mt-28 desktop:mt-32">
+          {/* <div className="w-[500px] desktop:w-[1400px] desktop:w-[full] h-[300px] flex items-center justify-center">
+            <Img
+              src={"/logo.webp"}
+              alt="img"
+              style={{
+                aspectRatio: 1,
+                zIndex: 0,
+                width: "100%",
+              }}
+            />
+            <div
+              className="absolute desktop:bottom-[80px] bottom-[124px] rounded-full"
+              style={{
+                height: isMobile ? "4px" : "8px",
+                width: "70%",
+                background: "white",
+              }}
+            />
+          </div> */}
           <h1
             className="underline desktop:underline-offset-[32px] underline-offset-[16px] decoration-[3px]"
             style={{ lineHeight: isMobile ? "100px" : "220px" }}
