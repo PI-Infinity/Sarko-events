@@ -4,7 +4,7 @@ import { useAppContext } from "@/context/app";
 import Img from "../image";
 
 export const Section1 = ({ sY }: any) => {
-  const { isMobile } = useAppContext();
+  const { isMobile, language } = useAppContext();
   const { scrollY }: any = useScroll();
 
   // 👉 Sarko Offset (starts after 2400px scroll)
@@ -112,7 +112,7 @@ export const Section1 = ({ sY }: any) => {
         }}
         className="font-mineFont font-[600 text-[48px] desktop:text-[160px] tracking-normal text-white mt-4"
       >
-        NO LIMITS
+        {language === "ru" ? "Без границ" : "NO LIMITS"}
       </motion.h1>
     </div>
   );
