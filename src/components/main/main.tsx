@@ -104,9 +104,9 @@ const Main = () => {
       {/* <Section8 sY={scrollValue} /> */}
       <Section9 sY={scrollValue} />
       {/* Debug / Test */}
-      <div className="fixed top-0 right-0 bg-black text-white p-2 z-50">
+      {/* <div className="fixed top-0 right-0 bg-black text-white p-2 z-50">
         ScrollY: {Math.floor(scrollValue)}px
-      </div>
+      </div> */}
 
       <motion.div
         style={{
