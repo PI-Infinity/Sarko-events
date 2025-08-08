@@ -10,6 +10,7 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import Img from "./image";
 
 export const Footer = () => {
   const { loading, theme, language, setLanguage, isMobile, activeLanguage } =
@@ -33,17 +34,29 @@ export const Footer = () => {
         display: loading ? "none" : "flex",
         background: theme.background,
       }}
-      className="z-40 px-[5%] pt-8 pb-6 w-full
+      className="z-40 px-[3%] pt-8 pb-6 w-full
       border-t-[1px] border-white
       flex-col z-10"
     >
       <div className="w-full flex flex-col desktop:flex-row desktop:items-center desktop:justify-between gap-12">
         <Link
           href={`/${language}`}
-          className="desktop:w-1/3 pl-3 desktop:pl-0 flex items-center gap-4 cursor-pointer"
+          className="desktop:w-1/3 desktop:pl-0 flex items-center gap-4 cursor-pointer"
         >
-          <div className="font-mineFont text-white text-4xl relative w-[100px] flex items-center justify-center">
-            SARKO
+          <div
+            style={{
+              filter: "brightness(0.85)",
+            }}
+            className="w-[150px] h-[35px] flex items-center justify-center"
+          >
+            <Img
+              src={"/logo1.webp"}
+              alt="img"
+              style={{
+                height: "100%",
+                width: "100%",
+              }}
+            />
           </div>
         </Link>
         <div className="flex flex-col gap-[16px] items-start desktop:items-center justify-center">

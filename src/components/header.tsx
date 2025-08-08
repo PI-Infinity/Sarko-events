@@ -5,6 +5,7 @@ import React from "react";
 import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
 import { usePathname } from "next/navigation";
 import Headroom from "react-headroom";
+import Img from "./image";
 
 const Header = () => {
   const { setOpenMenu, language, theme, isMobile } = useAppContext();
@@ -30,7 +31,7 @@ const Header = () => {
           style={{ transition: "ease-in 300ms" }}
           className="w-full h-[90px] desktop:h-[105px] flex items-center p-4 desktop:p-0 desktop:px-12 gap-4"
         >
-          {pathname && (
+          {pathname && pathname !== `/${language}` && (
             <Link
               href={`/${language}`}
               style={{
@@ -39,9 +40,23 @@ const Header = () => {
                     ? "none"
                     : "flex",
               }}
-              className="w-[150px] relative top-[1px] font-mineFont cursor-pointer text-white font-[300] text-[40px] tracking-normal"
+              className="w-[150px] h-[35px] relative top-[1px] font-mineFont cursor-pointer text-white font-[300] text-[40px] tracking-normal"
             >
-              SARKO
+              <div
+                style={{
+                  filter: "brightness(0.85)",
+                }}
+                className="w-[150px] flex items-center justify-center"
+              >
+                <Img
+                  src={"/logo1.webp"}
+                  alt="img"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                  }}
+                />
+              </div>
             </Link>
           )}
 

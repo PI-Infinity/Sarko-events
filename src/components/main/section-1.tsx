@@ -21,7 +21,7 @@ export const Section1 = ({ sY }: any) => {
   // 👉 All In opacity (starts around 2400 to 5000)
   const allInOpacity = useTransform(
     scrollY,
-    [isMobile ? 1100 : 1100, isMobile ? 2450 : 3000],
+    [isMobile ? 1100 : 1100, isMobile ? 2250 : 3000],
     [0, 1],
     {
       ease: easeInOut,
@@ -41,8 +41,8 @@ export const Section1 = ({ sY }: any) => {
   // 👉 all in Offset (starts after 2400px scroll)
   const allInOffset = useTransform(
     scrollY,
-    [isMobile ? 1700 : 2450, isMobile ? 3000 : 3750],
-    [120, -1000],
+    [isMobile ? 1150 : 2400, isMobile ? 1600 : 2500, isMobile ? 3000 : 3000],
+    isMobile ? [50, 50, -1000] : [150, 150, -1000],
     {
       ease: easeInOut,
     }
@@ -54,7 +54,7 @@ export const Section1 = ({ sY }: any) => {
       style={{
         position: "fixed",
         zIndex: 10,
-        top: isMobile ? "175px" : "150px",
+        top: isMobile ? "270px" : "150px",
         display: parseInt(sY) > 3100 ? "none" : "flex",
       }}
     >
@@ -62,7 +62,7 @@ export const Section1 = ({ sY }: any) => {
       <motion.h1
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 3, ease: "easeOut" }}
+        transition={{ duration: 4, ease: "easeOut" }}
         style={{
           position: "relative",
           y: sarkoOffset, // Framer uses y instead of bottom
@@ -70,23 +70,18 @@ export const Section1 = ({ sY }: any) => {
         className="font-mineFont font-[600] text-[96px] desktop:text-[280px] tracking-normal text-white"
       >
         <div className="flex flex flex-col items-center mt-8 desktop:mt-32">
-          <div className="w-[450px] desktop:w-[1200px] desktop:w-[full] h-[300px] flex items-center justify-center">
+          <div
+            style={{
+              filter: "brightness(0.85)",
+            }}
+            className="w-[350px] desktop:w-[900px] desktop:h-[300px] h-[120px] flex items-center justify-center"
+          >
             <Img
               src={"/logo.webp"}
               alt="img"
               style={{
-                aspectRatio: 1,
-                zIndex: 0,
+                height: "100%",
                 width: "100%",
-                filter: "brightness(0.85)",
-              }}
-            />
-            <div
-              className="absolute desktop:bottom-[90px] bottom-[126.5px] rounded-full"
-              style={{
-                height: isMobile ? "3px" : "8px",
-                width: "70%",
-                background: "white",
               }}
             />
           </div>
@@ -110,7 +105,7 @@ export const Section1 = ({ sY }: any) => {
           scale: allInScale,
           top: allInOffset,
         }}
-        className="font-mineFont font-[600 text-[48px] desktop:text-[160px] tracking-normal text-white mt-4"
+        className="font-mineFont font-[600 text-[48px] desktop:text-[160px] tracking-normal text-white"
       >
         {language === "ru" ? "Без границ" : "NO LIMITS"}
       </motion.h1>
