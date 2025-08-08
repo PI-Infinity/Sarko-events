@@ -73,7 +73,7 @@ const Header = () => {
           >
             {language === "ru"
               ? "ДАВАЙТЕ ТВОРИТЬ"
-              : language === "en"
+              : language === "en" || language === "ka"
               ? "LET'S CREATE"
               : ""}
           </Link>
