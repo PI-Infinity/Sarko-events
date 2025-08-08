@@ -166,13 +166,6 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
       path: true,
       link: `/${language}/gallery/conferences`,
     },
-    // {
-    //   id: "other",
-    //   label: activeLanguage.other,
-    //   img: "/we.jpeg",
-    //   path: true,
-    //   link: `${language}/gallery/other",
-    // },
   ];
 
   /**

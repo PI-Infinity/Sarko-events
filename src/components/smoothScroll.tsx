@@ -9,7 +9,7 @@ export const SmoothScrollWrapper = ({
 }) => {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.5, // ოდნავ შენელებული, მაგრამ არა inertia-იანი
+      duration: 1, // ოდნავ შენელებული, მაგრამ არა inertia-იანი
     });
 
     function raf(time: number) {

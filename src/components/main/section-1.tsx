@@ -1,6 +1,7 @@
 import React from "react";
 import { easeInOut, motion, useScroll, useTransform } from "framer-motion";
 import { useAppContext } from "@/context/app";
+import Img from "../image";
 
 export const Section1 = ({ sY }: any) => {
   const { isMobile } = useAppContext();
@@ -68,8 +69,8 @@ export const Section1 = ({ sY }: any) => {
         }}
         className="font-mineFont font-[600] text-[96px] desktop:text-[280px] tracking-normal text-white"
       >
-        <div className="flex flex flex-col items-center mt-28 desktop:mt-32">
-          {/* <div className="w-[500px] desktop:w-[1400px] desktop:w-[full] h-[300px] flex items-center justify-center">
+        <div className="flex flex flex-col items-center mt-8 desktop:mt-32">
+          <div className="w-[450px] desktop:w-[1200px] desktop:w-[full] h-[300px] flex items-center justify-center">
             <Img
               src={"/logo.webp"}
               alt="img"
@@ -77,18 +78,19 @@ export const Section1 = ({ sY }: any) => {
                 aspectRatio: 1,
                 zIndex: 0,
                 width: "100%",
+                filter: "brightness(0.85)",
               }}
             />
             <div
-              className="absolute desktop:bottom-[80px] bottom-[124px] rounded-full"
+              className="absolute desktop:bottom-[90px] bottom-[126.5px] rounded-full"
               style={{
-                height: isMobile ? "4px" : "8px",
+                height: isMobile ? "3px" : "8px",
                 width: "70%",
                 background: "white",
               }}
             />
-          </div> */}
-          <h1
+          </div>
+          {/* <h1
             className="underline desktop:underline-offset-[32px] underline-offset-[16px] decoration-[3px]"
             style={{ lineHeight: isMobile ? "100px" : "220px" }}
           >
@@ -96,7 +98,7 @@ export const Section1 = ({ sY }: any) => {
           </h1>
           <p className="text-[32px] desktop:text-[64px] font-mineFont">
             EVENTS
-          </p>
+          </p> */}
         </div>
       </motion.h1>
 
@@ -108,7 +110,7 @@ export const Section1 = ({ sY }: any) => {
           scale: allInScale,
           top: allInOffset,
         }}
-        className="font-mineFont font-[600 text-[48px] desktop:text-[160px] tracking-normal text-white"
+        className="font-mineFont font-[600 text-[48px] desktop:text-[160px] tracking-normal text-white mt-4"
       >
         NO LIMITS
       </motion.h1>

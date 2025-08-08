@@ -8,7 +8,7 @@ export const Section7 = ({ sY }: any) => {
   return (
     <div
       className="font-mineFont text-white text-center w-full flex flex-col items-center gap-16 desktop:gap-24"
-      style={{ position: "absolute", top: isMobile ? "5300px" : "8550px" }}
+      style={{ position: "absolute", top: isMobile ? "5250px" : "8550px" }}
     >
       <p
         className="text-[32px] desktop:text-[108px] w-[90%] desktop:w-[800px]"
