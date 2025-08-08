@@ -23,7 +23,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: titles[lang] || titles["en"],
       description: descriptions[lang] || descriptions["en"],
-      url: "https://sarkoevents.com/en/gallery/photos",
+      url: "https://sarkoevents.com/en/gallery",
       type: "website",
       siteName: "Sarko Events",
       images: [

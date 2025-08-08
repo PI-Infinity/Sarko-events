@@ -288,7 +288,7 @@ function Main() {
 
   return (
     <div
-      className="p-6 text-white desktop:px-12 flex-col"
+      className="mt-20 p-6 px-4 text-white desktop:px-12 flex-col"
       style={{ display: loading ? "none" : "flex" }}
     >
       <div className="max-w-4xl text-white">

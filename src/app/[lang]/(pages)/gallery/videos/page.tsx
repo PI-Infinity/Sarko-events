@@ -26,7 +26,7 @@ const Videos = () => {
 
   return (
     <div
-      className="w-full z-0 desktop:px-[5%] gap-12 flex-col"
+      className="w-full z-0 desktop:px-[5%] gap-12 flex-col mt-24"
       style={{ color: theme.text, display: loading ? "none" : "flex" }}
     >
       <div className="w-full mt-6 px-[5%] desktop:px-[0] desktop:mt-12 flex flex-col gap-2 desktop:gap-12">
