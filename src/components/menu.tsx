@@ -118,7 +118,7 @@ const Menu = () => {
                 style={{ lineHeight: "72px" }}
                 className="font-mineFont text-[90px] text-white w-1/2"
               >
-                LET'S CREATE
+                {language === "ru" ? "ДАВАЙТЕ ТВОРИТЬ" : "LET'S CREATE"}
               </h1>
               <div className="mt-6 border-y-[1px] border-white w-1/2 font-secondFont p-4 flex flex-col gap-4">
                 <h3 className="mb-2 text-xl font-secondFont">

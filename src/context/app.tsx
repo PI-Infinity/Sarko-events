@@ -80,7 +80,7 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
   /**
    * languages
    */
-  const [language, setLanguage] = useState("en");
+  const [language, setLanguage] = useState("");
   const [activeLanguage, setActiveLanguage] = useState<any>("");
   const pathname = usePathname();
   useEffect(() => {

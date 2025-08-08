@@ -26,36 +26,47 @@ export const Section5 = ({ sY }: any) => {
         className="flex flex-col text-white items-center gap-6 text-[32px] desktop:text-[108px] font-mineFont"
         style={{ lineHeight: isMobile ? "24px" : "80px" }}
       >
-        <p>FOR THOSE</p>
-        <p>IN SEARCH OF</p>
-        <p>UNFORGETTABLE</p>
+        <p>{language === "ru" ? `ДЛЯ ТЕХ` : `FOR THOSE`}</p>
+        <p>{language === "ru" ? `КТО ХОЧЕТ ПРЕВРАТИТЬ` : `IN SEARCH OF`}</p>
+        <p>{language === "ru" ? `В НЕЧТО ИДЕЮ` : `UNFORGETTABLE`}</p>
       </div>
       <div
         className="flex text-white items-center gap-2 desktop:gap-6 text-[32px] desktop:text-[108px] font-mineFont"
         style={{ lineHeight: isMobile ? "24px" : "80px" }}
       >
-        <p>T</p>
+        <p>{language === "ru" ? `Н` : "T"}</p>
         <motion.div style={{ position: "relative", top: letterP }}>
-          <p>R</p>
+          <p>{language === "ru" ? `Е` : "R"}</p>
         </motion.div>
-        <p>A</p>
+        <p>{language === "ru" ? `З` : "A"}</p>
         <motion.div style={{ position: "relative", top: letterP }}>
-          <p>N</p>
+          <p>{language === "ru" ? `А` : "N"}</p>
         </motion.div>
-        <p>S</p>
+        <p>{language === "ru" ? `Б` : "S"}</p>
         <motion.div style={{ position: "relative", top: letterP }}>
-          <p>F</p>
+          <p>{language === "ru" ? `Ы` : "F"}</p>
         </motion.div>
-        <p>O</p>
+        <p>{language === "ru" ? `В` : "O"}</p>
         <motion.div style={{ position: "relative", top: letterP }}>
-          <p>R</p>
+          <p>{language === "ru" ? `А` : "R"}</p>
         </motion.div>
-        <p>M</p>
+        <p>{language === "ru" ? `Е` : "M"}</p>
+        <motion.div style={{ position: "relative", top: letterP }}>
+          <p>{language === "ru" ? `М` : ""}</p>
+        </motion.div>
+        <p>{language === "ru" ? `О` : ""}</p>
+        <motion.div style={{ position: "relative", top: letterP }}>
+          <p>{language === "ru" ? `Е` : ""}</p>
+        </motion.div>
       </div>
       <p className="text-white text-[16px] w-[90%] desktop:w-[600px] text-center">
-        You bring the vision. Sarko brings the transformation. With bold
+        {language === "ru"
+          ? `"ВЫ МЕЧТАЕТЕ — МЫ ВОПЛОЩАЕМ.
+СМЕЛО. ЭЛЕГАНТНО. С ЗАБОТОЙ О КАЖДОЙ ДЕТАЛИ.
+МЫ ПРЕВРАЩАЕМ ИДЕИ В СОБЫТИЯ, КОТОРЫЕ ХОЧЕТСЯ ПЕРЕЖИТЬ СНОВА И СНОВА."`
+          : ` You bring the vision. Sarko brings the transformation. With bold
         creativity, deep collaboration, and execution that feels effortless — we
-        turn imagination into immersive, unforgettable events.
+        turn imagination into immersive, unforgettable events.`}
       </p>
       {/* {isMobile && (
         <Link

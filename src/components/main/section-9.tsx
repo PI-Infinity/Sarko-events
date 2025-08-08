@@ -12,8 +12,10 @@ export const Section9 = ({ sY }: any) => {
       style={{ position: "absolute", top: isMobile ? "5470px" : "9160px" }}
     >
       <div className="flex flex-col items-center justify-center h-full">
-        <span className="text-[18px] desktop:text-xl text-white font-secondFont  desktop:mb-12">
-          Ready for a vision that dares to be different?
+        <span className="text-[18px] desktop:text-xl text-white font-secondFont  desktop:mb-12 text-center">
+          {language === "ru"
+            ? `ГОТОВЫ ВОПЛОТИТЬ НЕЧТО ПО-НАСТОЯЩЕМУ УНИКАЛЬНОЕ?`
+            : "Ready for a vision that dares to be different?"}
         </span>
         <div
           style={{ transition: "ease-in 300ms" }}
@@ -24,12 +26,14 @@ export const Section9 = ({ sY }: any) => {
             className="text-[32px] desktop:text-[120px] underline underline-offset-[16px] desktop:underline-offset-[32px] decoration-[3px]"
             style={{ lineHeight: isMobile ? "80px" : "100px" }}
           >
-            LET'S CREATE .
+            {language === "ru" ? "ДАВАЙТЕ ТВОРИТЬ" : "LET'S CREATE"} .
           </Link>
 
           <div className="w-full h-[1px]  desktop:mt-4" />
           <span className="text-xl font-secondFont desktop:mt-4">
-            BEGIN YOUR JOURNAY
+            {language === "ru"
+              ? "СДЕЛАЙТЕ ШАГ НАВСТРЕЧУ ИСТОРИИ"
+              : "BEGIN YOUR JOURNAY"}
           </span>
         </div>
       </div>

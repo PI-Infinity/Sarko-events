@@ -107,7 +107,7 @@ export const Section1 = ({ sY }: any) => {
         }}
         className="font-mineFont font-[600 text-[48px] desktop:text-[160px] tracking-normal text-white"
       >
-        {language === "ru" ? "Без границ" : "NO LIMITS"}
+        {language === "ru" ? "БЕЗ ГРАНИЦ" : "NO LIMITS"}
       </motion.h1>
     </div>
   );

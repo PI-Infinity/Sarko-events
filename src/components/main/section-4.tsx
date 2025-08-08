@@ -49,22 +49,27 @@ export const Section4 = ({ sY }: any) => {
             <text
               className="font-mineFont"
               fill="white"
-              fontSize="90"
+              fontSize={language === "ru" ? "64" : "90"}
               fontWeight="bold"
               letterSpacing="6px"
             >
               <textPath href="#circlePath" startOffset="0%">
-                ALWAYS ON. ALWAYS IN. ALL THE WAY.
+                {language === "ru" ? `ВСЕГДА РЯДОМ` : `ALWAYS ON`}.{" "}
+                {language === "ru" ? `ВСЕГДА ВОВЛЕЧЕНЫ` : `ALWAYS IN`}.{" "}
+                {language === "ru" ? `ВСЕГДА НА МАКСИМУМ.` : `ALL THE WAY.`}
               </textPath>
             </text>
           </svg>
         </motion.div>
         <p className="text-[25px] desktop:text-[16px] absolute w-[540px] text-center top-[300px] desktop:top-[365px]">
-          At Sarko, No Limits means more than pushing boundaries — it means
+          {language === "ru"
+            ? `"В SARKO “БЕЗ ГРАНИЦ” — ЭТО НЕ ПРОСТО СЛОВА. ЭТО НАША ВОВЛЕЧЕННОСТЬ 24/7. ЭТО КОГДА МЫ МЕЧТАЕМ ВМЕСТЕ С ВАМИ, ЖИВЁМ В ДЕТАЛЯХ И ДОБИВАЕМСЯ СОВЕРШЕНСТВА.
+НИКАКИХ ПЕРЕРЫВОВ. НИКАКИХ ОПРАВДАНИЙ. ТОЛЬКО РЕЗУЛЬТАТ."`
+            : `At Sarko, No Limits means more than pushing boundaries — it means
           being available 24/7, dreaming with you, and delivering with
           relentless focus. We work around the clock, live inside the details,
           and stay obsessed with getting it right. No breaks. No excuses. Just
-          results.
+          results.`}
         </p>
       </div>
       {/* {isMobile && (

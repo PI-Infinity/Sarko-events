@@ -4,7 +4,7 @@ import { HiArrowSmallRight } from "react-icons/hi2";
 import { useAppContext } from "@/context/app";
 
 export const Section7 = ({ sY }: any) => {
-  const { isMobile } = useAppContext();
+  const { isMobile, language } = useAppContext();
   return (
     <div
       className="font-mineFont text-white text-center w-full flex flex-col items-center gap-16 desktop:gap-24"
@@ -14,13 +14,15 @@ export const Section7 = ({ sY }: any) => {
         className="text-[32px] desktop:text-[108px] w-[90%] desktop:w-[800px]"
         style={{ lineHeight: isMobile ? "40px" : "96px" }}
       >
-        WE DON’T DESIGN FOR SARKO
+        {language === "ru"
+          ? `SARKO, ЭТО НЕ ДЛЯ НАС`
+          : "WE DON’T DESIGN FOR SARKO"}
       </p>
       <p
         style={{ lineHeight: isMobile ? "40px" : "96px" }}
         className="w-[70%] text-[32px] desktop:text-[108px]"
       >
-        WE DESIGN FOR YOU
+        {language === "ru" ? `SARKO, ЭТО ПРО ВАС!` : "WE DESIGN FOR YOU"}
       </p>
     </div>
   );

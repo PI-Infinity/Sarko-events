@@ -5,7 +5,7 @@ import { useAppContext } from "@/context/app";
 export const Section3 = () => {
   const { scrollY } = useScroll();
 
-  const { isMobile } = useAppContext();
+  const { isMobile, language } = useAppContext();
   // ძირითადი მოძრაობის მაპირება — ზუსტად შენს ფორმულებზე დაყრდნობით
   const xSarko = useTransform(
     scrollY,
@@ -31,7 +31,7 @@ export const Section3 = () => {
             right: xSarko,
           }}
         >
-          MOMENTS THAT
+          {language === "ru" ? "МГНОВЕНИЯ" : "MOMENTS THAT"}
         </motion.div>
         <motion.div
           style={{
@@ -41,14 +41,13 @@ export const Section3 = () => {
             left: xSarko,
           }}
         >
-          OUTLAST TIME
+          {language === "ru" ? "ВНЕ ВРЕМЕНИ" : "OUTLAST TIME"}
         </motion.div>
       </div>
       <p className="text-white w-[90%] desktop:w-[600px] text-center font-secondFont">
-        We don’t just create events — we craft moments that outlast time itself.
-        Our work elevates prestige, amplifies presence, and builds the kind of
-        trust only possible through relentless overdelivery. At Sarko, the
-        mission is clear: To bring to life what others can only imagine.
+        {language === "ru"
+          ? "МЫ СОЗДАЁМ НЕ ПРОСТО СОБЫТИЯ — МЫ СОЗДАЁМ ЛЕГЕНДЫ. ВАША МЕЧТА — НАША ЗАБОТА. ВАШ СТИЛЬ — НАША ЭСТЕТИКА. ВАШЕ ДОВЕРИЕ — НАША ОТВЕТСТВЕННОСТЬ."
+          : "We don’t just create events — we craft moments that outlast time itself. Our work elevates prestige, amplifies presence, and builds the kind of trust only possible through relentless overdelivery. At Sarko, the mission is clear: To bring to life what others can only imagine."}
       </p>
     </div>
   );

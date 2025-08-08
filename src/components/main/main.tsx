@@ -117,7 +117,7 @@ const Main = () => {
         className="right-8 text-white p-2 z-10 flex items-center gap-3"
       >
         <p className="text-[16px] desktop:text-[21px] tracking-wide">
-          KEEP SCROLLING
+          {language === "ru" ? "ПРОДОЛЖАЙТЕ ПРОКРУТИТЬ" : "KEEP SCROLLING"}
         </p>
         <SlArrowDown size={24} />
       </motion.div>
@@ -155,7 +155,11 @@ const Main = () => {
           }}
           className="right-8 text-white p-2 z-10 flex items-center gap-3"
         >
-          <p className="text-[21px] tracking-wide">SEE OUR WORK</p>
+          <p className="text-[21px] tracking-wide">
+            {language === "ru"
+              ? "ВДОХНОВИТЬСЯ НАШИМИ ПРОЕКТАМИ"
+              : "SEE OUR WORK"}
+          </p>
           <HiArrowSmallRight size={32} />
         </motion.div>
       )}
