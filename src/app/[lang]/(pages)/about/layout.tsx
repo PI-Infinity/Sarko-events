@@ -7,15 +7,15 @@ export async function generateMetadata(): Promise<Metadata> {
 
   // 🔥 ენების მიხედვით სათაურები და აღწერები
   const titles: Record<string, string> = {
-    en: "Sarko Events – Experts in Event Planning",
-    ka: "Sarko Events – ექსპერტი ღონისძიებების ორგანიზებაში",
-    ru: "Sarko Events – эксперты в организации мероприятий",
+    en: "About Us – Why Choose Sarko Events for Your Special Day",
+    ka: "ჩვენს შესახებ – ვინ ვართ ჩვენ და რატომ Sarko Events",
+    ru: "О нас – почему выбирают Sarko Events для важных событий",
   };
 
   const descriptions: Record<string, string> = {
-    en: "We create unique events with meticulous attention to detail! Meet our professional team and plan the perfect event. 🚀",
-    ka: "ჩვენ ვქმნით უნიკალურ ივენთებს დეტალებზე მაქსიმალური ყურადღებით! გაიცანი ჩვენი პროფესიონალი გუნდი და დაგეგმე სრულყოფილი ღონისძიება. 🚀",
-    ru: "Мы создаем уникальные события с максимальным вниманием к деталям! Познакомьтесь с нашей профессиональной командой и организуйте идеальное мероприятие. 🚀",
+    en: "Get to know the team behind Georgia’s finest events. Experience, creativity & attention to detail – discover why clients trust Sarko Events!",
+    ka: "აღმოაჩინე გუნდი, რომელიც ქმნის დაუვიწყარ ივენთებს. გამოცდილება, კრეატიულობა და თითოეულ დეტალზე ზრუნვა – გაიცანი Sarko Events ახლოდან!",
+    ru: "Познакомьтесь с командой, создающей лучшие мероприятия в Грузии. Опыт, креатив и внимание к деталям – вот, что отличает нас!",
   };
 
   return {

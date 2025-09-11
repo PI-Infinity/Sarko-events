@@ -16,13 +16,19 @@ export const Section7 = ({ sY }: any) => {
       >
         {language === "ru"
           ? `SARKO, ЭТО НЕ ДЛЯ НАС`
+          : language === "ka"
+          ? "ჩვენ ვქმნით თქვენთვის "
           : "WE DON’T DESIGN FOR SARKO"}
       </p>
       <p
         style={{ lineHeight: isMobile ? "40px" : "96px" }}
         className="w-[70%] text-[32px] desktop:text-[108px]"
       >
-        {language === "ru" ? `SARKO, ЭТО ПРО ВАС!` : "WE DESIGN FOR YOU"}
+        {language === "ru"
+          ? `SARKO, ЭТО ПРО ВАС!`
+          : language === "ka"
+          ? "და არა ჩვენთვის."
+          : "WE DESIGN FOR YOU"}
       </p>
     </div>
   );

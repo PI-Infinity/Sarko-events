@@ -11,6 +11,7 @@ const config: Config = {
       fontFamily: {
         mineFont: ["MineFont", "serif"],
         secondFont: ["SecondFont", "serif"],
+        geoFont: ["geo-font", "serif"],
       },
       screens: {
         tablet: "640px",

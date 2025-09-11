@@ -15,6 +15,8 @@ export const Section9 = ({ sY }: any) => {
         <span className="text-[18px] desktop:text-xl text-white font-secondFont  desktop:mb-12 text-center">
           {language === "ru"
             ? `ГОТОВЫ ВОПЛОТИТЬ НЕЧТО ПО-НАСТОЯЩЕМУ УНИКАЛЬНОЕ?`
+            : language === "ka"
+            ? "მზად ხართ თქვენი ოცნება დაუვიწყარ მოგონებად აქციოთ?"
             : "Ready for a vision that dares to be different?"}
         </span>
         <div
@@ -26,13 +28,20 @@ export const Section9 = ({ sY }: any) => {
             className="text-[32px] desktop:text-[120px] underline underline-offset-[16px] desktop:underline-offset-[32px] decoration-[3px]"
             style={{ lineHeight: isMobile ? "80px" : "100px" }}
           >
-            {language === "ru" ? "ДАВАЙТЕ ТВОРИТЬ" : "LET'S CREATE"} .
+            {language === "ru"
+              ? "ДАВАЙТЕ ТВОРИТЬ"
+              : language === "ka"
+              ? "დაიწყეთ შექმნა"
+              : "LET'S CREATE"}{" "}
+            .
           </Link>
 
           <div className="w-full h-[1px]  desktop:mt-4" />
           <span className="text-xl font-secondFont desktop:mt-4">
             {language === "ru"
               ? "СДЕЛАЙТЕ ШАГ НАВСТРЕЧУ ИСТОРИИ"
+              : language === "ka"
+              ? "დაიწყეთ თქვენი მოგზაურობა."
               : "BEGIN YOUR JOURNAY"}
           </span>
         </div>

@@ -6,15 +6,15 @@ export async function generateMetadata(): Promise<Metadata> {
   const lang = cookieStore.get("language")?.value || "en"; // 🔥 ენის წაკითხვა ქუქიდან
 
   const titles: Record<string, string> = {
-    en: "Everything for Unforgettable Events | Sarko Events",
-    ka: "ყველაფერი დაუვიწყარი ივენთებისთვის | Sarko Events",
-    ru: "Все для незабываемых мероприятий | Sarko Events",
+    en: "Event Videos – Real Joy & Emotion | Sarko Events",
+    ka: "ივენთების ვიდეო – დაუვიწყარი ემოციები | Sarko Events",
+    ru: "Видео мероприятий – настоящие эмоции и радость | Sarko Events",
   };
 
   const descriptions: Record<string, string> = {
-    en: "Sarko Events offers premium event planning – weddings, corporate parties, team-building events, and more. Plan the best event with us!",
-    ka: "Sarko Events გთავაზობთ პრემიუმ ივენთებს – ქორწილები, კორპორატიული საღამოები, თიმ ბილდინგი და მეტი. დაგეგმე საუკეთესო ღონისძიება ჩვენთან ერთად!",
-    ru: "Sarko Events предлагает премиальные мероприятия – свадьбы, корпоративные вечеринки, тимбилдинги и многое другое. Планируйте лучшее событие вместе с нами!",
+    en: "See how we create unforgettable moments. Watch videos for inspiration and ideas for your event!",
+    ka: "გაიგე, როგორ ვაკეთებთ დაუვიწყარ ღონისძიებებს. ვიდეოებიდან შთაბეჭდილებები და ინსპირაცია შენი ივენთისთვის!",
+    ru: "Смотрите, как мы создаём незабываемые события. Видео для вдохновения и идей вашего мероприятия!",
   };
 
   return {

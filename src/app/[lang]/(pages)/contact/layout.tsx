@@ -6,15 +6,15 @@ export async function generateMetadata(): Promise<Metadata> {
   const lang = cookieStore.get("language")?.value || "en"; // 🔥 ენის წაკითხვა ქუქიდან
 
   const titles: Record<string, string> = {
-    en: "Get in Touch | Sarko Events",
-    ka: "დაგვიკავშირდით | Sarko Events",
-    ru: "Свяжитесь с нами | Sarko Events",
+    en: "Contact Us – Start Planning Your Event Today | Sarko Events",
+    ka: "დაგვიკავშირდი – დაგეგმე შენი ივენთი დღესვე | Sarko Events",
+    ru: "Связаться с нами – Начните планировать своё мероприятие | Sarko Events",
   };
 
   const descriptions: Record<string, string> = {
-    en: "Want an unforgettable event? ✨ Contact us today, and let’s create something unique together! 📩",
-    ka: "გინდა დაუვიწყარი ივენთი? ✨ დაგვიკავშირდი დღესვე და ერთად შევქმნათ უნიკალური ღონისძიება! 📩",
-    ru: "Хотите незабываемое мероприятие? ✨ Свяжитесь с нами сегодня, и мы создадим для вас уникальный ивент! 📩",
+    en: "Ready to create an unforgettable event? Get in touch for weddings, corporate events & more. Fast response and personalized service guaranteed!",
+    ka: "გახდი ჩვენი შემდეგი კლიენტი! დაგვიკავშირდი ქორწილის, კორპორატიული ივენთის ან ნებისმიერი ღონისძიების დასაგეგმად – პასუხს მიიღებ სწრაფად!",
+    ru: "Готовы к незабываемому мероприятию? Свяжитесь с нами для организации свадеб, корпоративов и других событий. Ответим быстро!",
   };
 
   return {

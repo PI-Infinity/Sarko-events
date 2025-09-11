@@ -22,9 +22,9 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 
   const descriptions: Record<string, string> = {
-    en: "Make your event unforgettable! 🎉 Sarko Events – corporate parties, weddings, conferences, team-building events, and more. Plan a unique event today! 📅",
-    ka: "გახადე შენი ღონისძიება დაუვიწყარი! 🎉 Sarko Events – კორპორატიული საღამოები, ქორწილები, კონფერენციები, თიმ ბილდინგი და მეტი. დაგეგმე უნიკალური ივენთი დღესვე! 📅",
-    ru: "Сделайте ваше мероприятие незабываемым! 🎉 Sarko Events – корпоративные вечеринки, свадьбы, конференции, тимбилдинги и многое другое. Планируйте уникальное событие уже сегодня! 📅",
+    en: "Wedding & corporate events planning in Georgia. Unique ideas, flawless execution. Book your unforgettable event now with Sarko Events!",
+    ka: "ქორწილები, კორპორატიული ივენთები, თიმ ბილდინგი და სხვა – უნიკალური კონცეფციები და პროფესიონალური მომსახურება. დაგეგმე ივენთი დღესვე!",
+    ru: "Свадьбы, корпоративы, тимбилдинги и другие события под ключ. Уникальные идеи и безупречный сервис. Организуйте праздник мечты уже сегодня!",
   };
 
   return {

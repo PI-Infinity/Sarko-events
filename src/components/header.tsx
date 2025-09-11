@@ -73,9 +73,9 @@ const Header = () => {
           >
             {language === "ru"
               ? "ДАВАЙТЕ ТВОРИТЬ"
-              : language === "en" || language === "ka"
-              ? "LET'S CREATE"
-              : ""}
+              : language === "ka"
+              ? "დაიწყეთ შექმნა"
+              : "LET'S CREATE"}
           </Link>
           {language?.length > 0 && (
             <button

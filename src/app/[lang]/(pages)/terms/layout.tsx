@@ -6,15 +6,15 @@ export async function generateMetadata(): Promise<Metadata> {
   const lang = cookieStore.get("language")?.value || "en"; // 🔥 ენის წაკითხვა ქუქიდან
 
   const titles: Record<string, string> = {
-    en: "Terms & Conditions | Sarko Events",
-    ka: "წესები და პირობები | Sarko Events",
-    ru: "Условия использования | Sarko Events",
+    en: "Terms & Conditions – Service & Booking Terms | Sarko Events",
+    ka: "წესები და პირობები – მომსახურების დეტალური პირობები | Sarko Events",
+    ru: "Условия использования – всё о правилах услуг | Sarko Events",
   };
 
   const descriptions: Record<string, string> = {
-    en: "Read our Terms & Conditions to understand the rules of using Sarko Events. Your rights and responsibilities explained in detail.",
-    ka: "წაიკითხეთ ჩვენი წესები და პირობები, რათა გაიგოთ Sarko Events-ის გამოყენების წესები. აქ დეტალურადაა აღწერილი თქვენი უფლებები და ვალდებულებები.",
-    ru: "Прочитайте наши условия использования, чтобы понять правила работы с Sarko Events. Ваши права и обязанности подробно объяснены.",
+    en: "Read our full terms & conditions to understand your rights and our obligations. Transparency and professionalism guaranteed.",
+    ka: "გაეცანი ჩვენს მომსახურების პირობებს – პასუხისმგებლობები, გარანტიები და ორგანიზაციის წესები დეტალურად აღწერილია აქ.",
+    ru: "Ознакомьтесь с условиями предоставления услуг и бронирования. Честность, ответственность и прозрачность в каждом шаге.",
   };
 
   return {

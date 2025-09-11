@@ -54,9 +54,23 @@ export const Section4 = ({ sY }: any) => {
               letterSpacing="6px"
             >
               <textPath href="#circlePath" startOffset="0%">
-                {language === "ru" ? `ВСЕГДА РЯДОМ` : `ALWAYS ON`}.{" "}
-                {language === "ru" ? `ВСЕГДА ВОВЛЕЧЕНЫ` : `ALWAYS IN`}.{" "}
-                {language === "ru" ? `ВСЕГДА НА МАКСИМУМ.` : `ALL THE WAY.`}
+                {language === "ru"
+                  ? `ВСЕГДА РЯДОМ`
+                  : language === "ka"
+                  ? "ყოველთვის ბოლომდე"
+                  : `ALWAYS ON`}
+                .{" "}
+                {language === "ru"
+                  ? `ВСЕГДА ВОВЛЕЧЕНЫ`
+                  : language === "ka"
+                  ? "პროცესში ჩართული"
+                  : `ALWAYS IN`}
+                .{" "}
+                {language === "ru"
+                  ? `ВСЕГДА НА МАКСИМУМ.`
+                  : language === "ka"
+                  ? ""
+                  : `ALL THE WAY.`}
               </textPath>
             </text>
           </svg>
@@ -65,6 +79,8 @@ export const Section4 = ({ sY }: any) => {
           {language === "ru"
             ? `"В SARKO “БЕЗ ГРАНИЦ” — ЭТО НЕ ПРОСТО СЛОВА. ЭТО НАША ВОВЛЕЧЕННОСТЬ 24/7. ЭТО КОГДА МЫ МЕЧТАЕМ ВМЕСТЕ С ВАМИ, ЖИВЁМ В ДЕТАЛЯХ И ДОБИВАЕМСЯ СОВЕРШЕНСТВА.
 НИКАКИХ ПЕРЕРЫВОВ. НИКАКИХ ОПРАВДАНИЙ. ТОЛЬКО РЕЗУЛЬТАТ."`
+            : language === "ka"
+            ? "Sarko-ში საზღვრების გარეშე ნიშნავს 24/7 ერთგულებას, გაზიარებულ ოცნებებსა და შეუფერხებელ შესრულებას. ჩვენ არ ვჩერდებით, სანამ ყველაფერი სრულყოფილი არ იქნება."
             : `At Sarko, No Limits means more than pushing boundaries — it means
           being available 24/7, dreaming with you, and delivering with
           relentless focus. We work around the clock, live inside the details,

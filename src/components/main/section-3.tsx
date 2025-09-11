@@ -31,7 +31,11 @@ export const Section3 = () => {
             right: xSarko,
           }}
         >
-          {language === "ru" ? "МГНОВЕНИЯ" : "MOMENTS THAT"}
+          {language === "ru"
+            ? "МГНОВЕНИЯ"
+            : language === "ka"
+            ? "მომენტები"
+            : "MOMENTS THAT"}
         </motion.div>
         <motion.div
           style={{
@@ -41,12 +45,18 @@ export const Section3 = () => {
             left: xSarko,
           }}
         >
-          {language === "ru" ? "ВНЕ ВРЕМЕНИ" : "OUTLAST TIME"}
+          {language === "ru"
+            ? "ВНЕ ВРЕМЕНИ"
+            : language === "ka"
+            ? "რომლებიც ისტორიად რჩება"
+            : "OUTLAST TIME"}
         </motion.div>
       </div>
       <p className="text-white w-[90%] desktop:w-[600px] text-center font-secondFont">
         {language === "ru"
           ? "МЫ СОЗДАЁМ НЕ ПРОСТО СОБЫТИЯ — МЫ СОЗДАЁМ ЛЕГЕНДЫ. ВАША МЕЧТА — НАША ЗАБОТА. ВАШ СТИЛЬ — НАША ЭСТЕТИКА. ВАШЕ ДОВЕРИЕ — НАША ОТВЕТСТВЕННОСТЬ."
+          : language === "ka"
+          ? "თქვენი სტილი და ესტეთიკა — ჩვენი საზრუნავია. თქვენი ნდობა — ჩვენი პასუხისმგებლობაა."
           : "We don’t just create events — we craft moments that outlast time itself. Our work elevates prestige, amplifies presence, and builds the kind of trust only possible through relentless overdelivery. At Sarko, the mission is clear: To bring to life what others can only imagine."}
       </p>
     </div>

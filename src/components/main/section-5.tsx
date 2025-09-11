@@ -26,44 +26,67 @@ export const Section5 = ({ sY }: any) => {
         className="flex flex-col text-white items-center gap-6 text-[32px] desktop:text-[108px] font-mineFont"
         style={{ lineHeight: isMobile ? "24px" : "80px" }}
       >
-        <p>{language === "ru" ? `ДЛЯ ТЕХ` : `FOR THOSE`}</p>
-        <p>{language === "ru" ? `КТО ХОЧЕТ ПРЕВРАТИТЬ` : `IN SEARCH OF`}</p>
-        <p>{language === "ru" ? `В НЕЧТО ИДЕЮ` : `UNFORGETTABLE`}</p>
+        <p>
+          {language === "ru"
+            ? `ДЛЯ ТЕХ`
+            : language === "ka"
+            ? "ვისაც"
+            : `FOR THOSE`}
+        </p>
+        <p>
+          {language === "ru"
+            ? `КТО ХОЧЕТ ПРЕВРАТИТЬ`
+            : language === "ka"
+            ? "სურს"
+            : `IN SEARCH OF`}
+        </p>
+        <p>
+          {language === "ru"
+            ? `В НЕЧТО ИДЕЮ`
+            : language === "ka"
+            ? "დაუვიწყარი"
+            : `UNFORGETTABLE`}
+        </p>
       </div>
       <div
         className="flex text-white items-center gap-2 desktop:gap-6 text-[32px] desktop:text-[108px] font-mineFont"
         style={{ lineHeight: isMobile ? "24px" : "80px" }}
       >
-        <p>{language === "ru" ? `Н` : "T"}</p>
+        <p>{language === "ru" ? `Н` : language === "ka" ? "ტ" : "T"}</p>
         <motion.div style={{ position: "relative", top: letterP }}>
-          <p>{language === "ru" ? `Е` : "R"}</p>
+          <p>{language === "ru" ? `Е` : language === "ka" ? "რ" : "R"}</p>
         </motion.div>
-        <p>{language === "ru" ? `З` : "A"}</p>
+        <p>{language === "ru" ? `З` : language === "ka" ? "ა" : "A"}</p>
         <motion.div style={{ position: "relative", top: letterP }}>
-          <p>{language === "ru" ? `А` : "N"}</p>
+          <p>{language === "ru" ? `А` : language === "ka" ? "ნ" : "N"}</p>
         </motion.div>
-        <p>{language === "ru" ? `Б` : "S"}</p>
+        <p>{language === "ru" ? `Б` : language === "ka" ? "ს" : "S"}</p>
         <motion.div style={{ position: "relative", top: letterP }}>
-          <p>{language === "ru" ? `Ы` : "F"}</p>
+          <p>{language === "ru" ? `Ы` : language === "ka" ? "ფ" : "F"}</p>
         </motion.div>
-        <p>{language === "ru" ? `В` : "O"}</p>
+        <p>{language === "ru" ? `В` : language === "ka" ? "ო" : "O"}</p>
         <motion.div style={{ position: "relative", top: letterP }}>
-          <p>{language === "ru" ? `А` : "R"}</p>
+          <p>{language === "ru" ? `А` : language === "ka" ? "რ" : "R"}</p>
         </motion.div>
-        <p>{language === "ru" ? `Е` : "M"}</p>
+        <p>{language === "ru" ? `Е` : language === "ka" ? "მ" : "M"}</p>
         <motion.div style={{ position: "relative", top: letterP }}>
-          <p>{language === "ru" ? `М` : ""}</p>
+          <p>{language === "ru" ? `М` : language === "ka" ? "ა" : ""}</p>
         </motion.div>
-        <p>{language === "ru" ? `О` : ""}</p>
+        <p>{language === "ru" ? `О` : language === "ka" ? "ც" : ""}</p>
         <motion.div style={{ position: "relative", top: letterP }}>
-          <p>{language === "ru" ? `Е` : ""}</p>
+          <p>{language === "ru" ? `Е` : language === "ka" ? "ი" : ""}</p>
         </motion.div>
+        <p>{language === "ru" ? `О` : language === "ka" ? "ა" : ""}</p>
       </div>
       <p className="text-white text-[16px] w-[90%] desktop:w-[600px] text-center">
         {language === "ru"
           ? `"ВЫ МЕЧТАЕТЕ — МЫ ВОПЛОЩАЕМ.
 СМЕЛО. ЭЛЕГАНТНО. С ЗАБОТОЙ О КАЖДОЙ ДЕТАЛИ.
 МЫ ПРЕВРАЩАЕМ ИДЕИ В СОБЫТИЯ, КОТОРЫЕ ХОЧЕТСЯ ПЕРЕЖИТЬ СНОВА И СНОВА."`
+          : language === "ka"
+          ? `თქვენ გვიზიარებთ  ხედვას  — ჩვენ გარდავქმნით მას რეალობად. 
+სითამამე, შეუფერხებელი თანამშრომლობა და ნატიფი შესრულება —
+ჩვენ ვაქცევთ წარმოსახვას ყოვლისმომცველ, დაუვიწყარ მოგონებად.`
           : ` You bring the vision. Sarko brings the transformation. With bold
         creativity, deep collaboration, and execution that feels effortless — we
         turn imagination into immersive, unforgettable events.`}

@@ -6,15 +6,15 @@ export async function generateMetadata(): Promise<Metadata> {
   const lang = cookieStore.get("language")?.value || "en"; // 🔥 ენის წაკითხვა ქუქიდან
 
   const titles: Record<string, string> = {
-    en: "Privacy Policy | Sarko Events",
-    ka: "კონფიდენციალურობის პოლიტიკა | Sarko Events",
-    ru: "Политика конфиденциальности | Sarko Events",
+    en: "Privacy Policy – Your Data Is Safe With Us | Sarko Events",
+    ka: "კონფიდენციალურობის პოლიტიკა – შენი მონაცემები დაცულია | Sarko Events",
+    ru: "Политика конфиденциальности – ваши данные под защитой | Sarko Events",
   };
 
   const descriptions: Record<string, string> = {
-    en: "Read our Privacy Policy to understand how we collect, use, and protect your personal data when you use Sarko Events.",
-    ka: "წაიკითხეთ ჩვენი კონფიდენციალურობის პოლიტიკა, რომ გაიგოთ, როგორ ვაგროვებთ, ვიყენებთ და ვიცავთ თქვენს მონაცემებს Sarko Events-ის გამოყენებისას.",
-    ru: "Прочитайте нашу политику конфиденциальности, чтобы узнать, как мы собираем, используем и защищаем ваши данные при использовании Sarko Events.",
+    en: "We respect your privacy. Learn how we collect, store, and protect your personal information when using our services.",
+    ka: "ჩვენ ვზრუნავთ შენს პირად მონაცემებზე. გაეცანი, როგორ ხდება ინფორმაციის დაცვა და შენახვა ჩვენს სისტემაში.",
+    ru: "Мы ценим вашу конфиденциальность. Узнайте, как мы храним и обрабатываем ваши личные данные с полной безопасностью.",
   };
 
   return {

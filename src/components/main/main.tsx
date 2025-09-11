@@ -116,8 +116,15 @@ const Main = () => {
         }}
         className="right-8 text-white p-2 z-10 flex items-center gap-3"
       >
-        <p className="text-[16px] desktop:text-[21px] tracking-wide">
-          {language === "ru" ? "ПРОДОЛЖАЙТЕ ПРОКРУТИТЬ" : "KEEP SCROLLING"}
+        <p
+          className="text-[16px] desktop:text-[21px] tracking-wide"
+          // style={{ fontFamily: language === "ka" ? "geo-font" : "inherit" }}
+        >
+          {language === "ru"
+            ? "ПРОДОЛЖАЙТЕ ПРОКРУТИТЬ"
+            : language === "ka"
+            ? "განაგრძე სქროლვა"
+            : "KEEP SCROLLING"}
         </p>
         <SlArrowDown size={24} />
       </motion.div>
@@ -158,6 +165,8 @@ const Main = () => {
           <p className="text-[21px] tracking-wide">
             {language === "ru"
               ? "ВДОХНОВИТЬСЯ НАШИМИ ПРОЕКТАМИ"
+              : language === "ka"
+              ? "იხილეთ  ჩვენი ნამუშევრები"
               : "SEE OUR WORK"}
           </p>
           <HiArrowSmallRight size={32} />

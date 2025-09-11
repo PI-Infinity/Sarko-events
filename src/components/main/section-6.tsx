@@ -84,6 +84,8 @@ export const Section6 = ({ sY }: any) => {
         >
           {language === "ru"
             ? "ДУША В КАЖДОМ МГНОВЕНИИ. БЛАГОРОДСТВО В КАЖДОЙ ДЕТАЛИ."
+            : language === "ka"
+            ? "გულისხმით ნაკარნახევი. ამაღლებულად განმტკიცებული."
             : "LED WITH HEART GROUNDED IN GRACE"}
         </motion.p>
       </div>
@@ -141,6 +143,8 @@ export const Section6 = ({ sY }: any) => {
           <p className="text-[16px] tracking-wide">
             {language === "ru"
               ? "ВДОХНОВИТЬСЯ НАШИМИ ПРОЕКТАМИ"
+              : language === "ka"
+              ? "იხილეთ  ჩვენი ნამუშევრები"
               : "SEE OUR WORK"}
           </p>
           <HiArrowSmallRight size={32} />
