@@ -7,7 +7,9 @@ const AboutUs = () => {
   return (
     <>
       <div
-        className="flex-1 pb-16 mt-20"
+        className={`flex-1 pb-16 mt-20 ${
+          language === "ru" ? "font-geoFont" : "font-secondFont"
+        }`}
         style={{ color: theme.text, display: loading ? "none" : "flex" }}
       >
         <div className="w-full h-full px-4 py-4 pt-[24px] desktop:pt-[40px] flex flex-col items-center">

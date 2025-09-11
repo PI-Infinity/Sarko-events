@@ -8,11 +8,15 @@ export const Section9 = ({ sY }: any) => {
   const { language, isMobile } = useAppContext();
   return (
     <div
-      className="font-mineFont text-[#1D8AA0] w-full flex flex-col h-[600px] items-center justify-center"
+      className={`text-[#1D8AA0] w-full flex flex-col h-[600px] items-center justify-center`}
       style={{ position: "absolute", top: isMobile ? "5470px" : "9160px" }}
     >
       <div className="flex flex-col items-center justify-center h-full">
-        <span className="text-[18px] desktop:text-xl text-white font-secondFont  desktop:mb-12 text-center">
+        <span
+          className={`${
+            language === "ru" ? "font-geoFont" : "font-secondFont"
+          } text-[18px] desktop:text-xl text-white  desktop:mb-12 text-center`}
+        >
           {language === "ru"
             ? `ГОТОВЫ ВОПЛОТИТЬ НЕЧТО ПО-НАСТОЯЩЕМУ УНИКАЛЬНОЕ?`
             : language === "ka"
@@ -25,7 +29,9 @@ export const Section9 = ({ sY }: any) => {
         >
           <Link
             href={`/${language}/contact`}
-            className="text-[32px] desktop:text-[120px] underline underline-offset-[16px] desktop:underline-offset-[32px] decoration-[3px]"
+            className={`text-[32px] desktop:text-[120px] underline underline-offset-[16px] desktop:underline-offset-[32px] decoration-[3px] ${
+              language === "ru" ? "font-geoFont" : "font-mineFont"
+            }`}
             style={{ lineHeight: isMobile ? "80px" : "100px" }}
           >
             {language === "ru"
@@ -37,7 +43,11 @@ export const Section9 = ({ sY }: any) => {
           </Link>
 
           <div className="w-full h-[1px]  desktop:mt-4" />
-          <span className="text-xl font-secondFont desktop:mt-4">
+          <span
+            className={`text-xl ${
+              language === "ru" ? "font-geoFont" : "font-seondFont"
+            } desktop:mt-4`}
+          >
             {language === "ru"
               ? "СДЕЛАЙТЕ ШАГ НАВСТРЕЧУ ИСТОРИИ"
               : language === "ka"

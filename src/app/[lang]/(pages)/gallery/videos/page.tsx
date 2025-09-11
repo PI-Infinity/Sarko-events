@@ -30,16 +30,47 @@ const Videos = () => {
       style={{ color: theme.text, display: loading ? "none" : "flex" }}
     >
       <div className="w-full mt-6 px-[5%] desktop:px-[0] desktop:mt-12 flex flex-col gap-2 desktop:gap-12">
-        <Link href={`/${language}/gallery`} className="flex items-center gap-2">
-          <MdArrowBack size={32} /> BACK TO GALLERY
+        <Link
+          href={`/${language}/gallery`}
+          className={`flex items-center gap-2 ${
+            language === "ru" ? "font-geoFont" : "font-secondFont"
+          }`}
+        >
+          <MdArrowBack size={32} />{" "}
+          {language === "ka"
+            ? "გალერეაში დაბრუნება"
+            : language === "ru"
+            ? "ВЕРНУТЬСЯ В ГАЛЕРЕЮ"
+            : "BACK TO GALLERY"}
         </Link>
         <div>
-          <h1 className="text-[64px] font-mineFont">VIDEO</h1>
-          <p className="text-[16px] desktop:w-1/2 font-secondFont">
-            Our events may feel like something out of a dream, but we’re
+          <h1
+            className={`text-[64px] ${
+              language === "ru" ? "font-geoFont" : "font-mineFont"
+            }`}
+          >
+            {language === "ka"
+              ? "ვიდეო"
+              : language === "ru"
+              ? "ВИДЕО"
+              : "VIDEO"}
+          </h1>
+          <p
+            className={`text-[16px] desktop:w-1/2 ${
+              language === "ru" ? "font-geoFont" : "font-secondFont"
+            }`}
+          >
+            {language === "ka"
+              ? `ჩვენი ღონისძიებები შეიძლება სიზმრიდან გადმოსულს ჰგავდეს, მაგრამ ჩვენ რეალურ შრომაზე ვართ ორიენტირებულნი, რაც ამის მისაღწევად არის საჭირო. SARKO-ში ჩვენ ისევე ვაფასებთ კულისებს, როგორც საბოლოო გამოცდილებას. ჩაუღრმავდით იმ პროცესს, რომელიც მაგიას ქმნის.`
+              : language === "ru"
+              ? `Наши мероприятия могут казаться чем-то из области фантастики, но мы
+верим в реальную работу, необходимую для достижения результата. В SARKO мы
+ценим то, что происходит за кулисами, так же, как и финальный
+опыт. Загляните в процесс, который создаёт волшебство.`
+              : `Our events may feel like something out of a dream, but we’re
             grounded in the real work it takes to get there. At SARKO, we
             celebrate the behind-the-scenes just as much as the final
-            experience. Take a peek into the process that powers the magic.
+            experience. Take a peek into the process that powers the magic.`}
           </p>
         </div>
       </div>

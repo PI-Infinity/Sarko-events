@@ -1,3 +1,4 @@
+import { useAppContext } from "@/context/app";
 import CircularProgress from "@mui/material/CircularProgress";
 import { IoMdArrowDropright } from "react-icons/io";
 
@@ -22,6 +23,7 @@ const Button: React.FC<PropsType> = ({
   id,
   icon,
 }) => {
+  const { language } = useAppContext();
   return (
     <>
       <div
@@ -31,7 +33,9 @@ const Button: React.FC<PropsType> = ({
           color: disabled ? "white" : color,
         }}
         onClick={!loading ? onClick : undefined}
-        className={`font-secondFont relative w-full h-full rounded-full flex items-center justify-center gap-2 bg-gray-300  cursor-${
+        className={`${
+          language === "ru" ? "font-geoFont" : "font-secondFont"
+        } relative w-full h-full rounded-full flex items-center justify-center gap-2 bg-gray-300  cursor-${
           disabled ? "default" : "pointer"
         } hover:${disabled ? "none" : "opacity-[0.9]"} font-semibold`}
       >

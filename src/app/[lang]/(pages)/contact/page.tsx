@@ -7,7 +7,7 @@ import { FaMobileButton } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 
 const Contact = () => {
-  const { loading, isMobile, theme } = useAppContext();
+  const { loading, isMobile, theme, language } = useAppContext();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -16,7 +16,9 @@ const Contact = () => {
   return (
     <div
       style={{ display: loading ? "none" : "flex" }}
-      className="mt-24 pt-4 desktop:pt-0 font-secondFont oveflow-hidden w-[100%] flex-col desktop:flex-row items-center desktop:items-start px-5 desktop:px-[5%] pb-16 desktop:pb-[24px]"
+      className={`${
+        language === "ru" ? "font-geoFont" : "font-mineFont"
+      } mt-24 pt-4 desktop:pt-0 font-secondFont oveflow-hidden w-[100%] flex-col desktop:flex-row items-center desktop:items-start px-5 desktop:px-[5%] pb-16 desktop:pb-[24px]`}
     >
       <div className="w-full desktop:w-1/3 flex justify-center">
         <RequestForm />

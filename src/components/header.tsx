@@ -69,7 +69,9 @@ const Header = () => {
             style={{
               transition: "ease-in 300ms",
             }}
-            className="whitespace-nowrap overflow-hidden ml-auto cursor-pointer hover:text-[#135A68] text-white font-[300] font-fakt-nor text-[vw] underline underline-offset-[8px] tracking-normal mb-[2px]"
+            className={`whitespace-nowrap overflow-hidden ml-auto cursor-pointer hover:text-[#135A68] text-white font-[300] font-fakt-nor text-[vw] underline underline-offset-[8px] tracking-normal mb-[2px] ${
+              language === "ru" ? "font-geoFont" : "font-secondFont"
+            }`}
           >
             {language === "ru"
               ? "ДАВАЙТЕ ТВОРИТЬ"

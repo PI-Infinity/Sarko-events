@@ -11,7 +11,9 @@ export default function Home() {
   return (
     <main
       style={{ display: loading ? "none" : "flex" }}
-      className="w-full flex-col items-center"
+      className={`w-full flex-col items-centerm ${
+        language === "ru" ? "font-geoFont" : "font-mineFont"
+      }`}
     >
       <Main />
 

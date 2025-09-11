@@ -12,6 +12,7 @@ const config: Config = {
         mineFont: ["MineFont", "serif"],
         secondFont: ["SecondFont", "serif"],
         geoFont: ["geo-font", "serif"],
+        ruFont: ["ru-font", "serif"],
       },
       screens: {
         tablet: "640px",

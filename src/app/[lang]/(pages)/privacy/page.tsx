@@ -233,7 +233,9 @@ function Main() {
 
   return (
     <div
-      className="mt-20 p-6 px-4 text-white desktop:px-12 flex-col"
+      className={`mt-20 p-6 px-4 text-white desktop:px-12 flex-col ${
+        language === "ru" ? "font-geoFont" : "font-secondFont"
+      }`}
       style={{ display: loading ? "none" : "flex" }}
     >
       <h1 className="text-2xl font-bold">{content.title}</h1>

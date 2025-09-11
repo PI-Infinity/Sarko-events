@@ -105,7 +105,9 @@ export const Section1 = ({ sY }: any) => {
           scale: allInScale,
           top: allInOffset,
         }}
-        className="font-mineFont font-[600 text-[48px] desktop:text-[160px] tracking-normal text-white"
+        className={`${
+          language === "ru" ? "font-geoFont" : "font-mineFont"
+        } font-[600 text-[48px] desktop:text-[160px] tracking-normal text-white`}
       >
         {language === "ru"
           ? "БЕЗ ГРАНИЦ"

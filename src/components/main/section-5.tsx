@@ -23,7 +23,9 @@ export const Section5 = ({ sY }: any) => {
       style={{ position: "absolute", top: isMobile ? "3480px" : "5510px" }}
     >
       <div
-        className="flex flex-col text-white items-center gap-6 text-[32px] desktop:text-[108px] font-mineFont"
+        className={`flex flex-col text-white items-center gap-6 text-[32px] desktop:text-[108px] ${
+          language === "ru" ? "font-geoFont" : "font-mineFont"
+        }`}
         style={{ lineHeight: isMobile ? "24px" : "80px" }}
       >
         <p>
@@ -49,7 +51,9 @@ export const Section5 = ({ sY }: any) => {
         </p>
       </div>
       <div
-        className="flex text-white items-center gap-2 desktop:gap-6 text-[32px] desktop:text-[108px] font-mineFont"
+        className={`flex text-white items-center gap-2 desktop:gap-6 text-[32px] desktop:text-[108px] ${
+          language === "ru" ? "font-geoFont" : "font-mineFont"
+        }`}
         style={{ lineHeight: isMobile ? "24px" : "80px" }}
       >
         <p>{language === "ru" ? `Н` : language === "ka" ? "ტ" : "T"}</p>
@@ -78,7 +82,11 @@ export const Section5 = ({ sY }: any) => {
         </motion.div>
         <p>{language === "ru" ? `О` : language === "ka" ? "ა" : ""}</p>
       </div>
-      <p className="text-white text-[16px] w-[90%] desktop:w-[600px] text-center">
+      <p
+        className={`${
+          language === "ru" ? "font-geoFont" : "font-secondFont"
+        } text-white text-[16px] w-[90%] desktop:w-[600px] text-center`}
+      >
         {language === "ru"
           ? `"ВЫ МЕЧТАЕТЕ — МЫ ВОПЛОЩАЕМ.
 СМЕЛО. ЭЛЕГАНТНО. С ЗАБОТОЙ О КАЖДОЙ ДЕТАЛИ.

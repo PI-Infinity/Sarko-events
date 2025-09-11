@@ -22,7 +22,11 @@ export const Section3 = () => {
       style={{ position: "absolute", top: isMobile ? "2470px" : "3520px" }}
     >
       {/* მთავარი წრე + blur */}
-      <div className="font-mineFont flex flex-col text-white items-center gap-4">
+      <div
+        className={`${
+          language === "ru" ? "font-geoFont" : "font-mineFont"
+        } flex flex-col text-white items-center gap-4`}
+      >
         <motion.div
           style={{
             fontSize: isMobile ? "32px" : "108px",
@@ -52,7 +56,11 @@ export const Section3 = () => {
             : "OUTLAST TIME"}
         </motion.div>
       </div>
-      <p className="text-white w-[90%] desktop:w-[600px] text-center font-secondFont">
+      <p
+        className={`text-white w-[90%] desktop:w-[600px] text-center ${
+          language === "ru" ? "font-geoFont" : "font-secondFont"
+        }`}
+      >
         {language === "ru"
           ? "МЫ СОЗДАЁМ НЕ ПРОСТО СОБЫТИЯ — МЫ СОЗДАЁМ ЛЕГЕНДЫ. ВАША МЕЧТА — НАША ЗАБОТА. ВАШ СТИЛЬ — НАША ЭСТЕТИКА. ВАШЕ ДОВЕРИЕ — НАША ОТВЕТСТВЕННОСТЬ."
           : language === "ka"

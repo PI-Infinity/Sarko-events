@@ -74,9 +74,16 @@ const Category = () => {
       <div className="w-full mt-6 px-[5%] desktop:px-[0] desktop:mt-12 flex flex-col gap-2 desktop:gap-2">
         <Link
           href={`/${language}/gallery/photos`}
-          className="flex items-center gap-2"
+          className={`flex items-center gap-2 ${
+            language === "ru" ? "font-geoFont" : "font-secondFont"
+          }`}
         >
-          <MdArrowBack size={32} /> BACK TO GALLERY
+          <MdArrowBack size={32} />{" "}
+          {language === "ka"
+            ? "გალერეაში დაბრუნება"
+            : language === "ru"
+            ? "ВЕРНУТЬСЯ В ГАЛЕРЕЮ"
+            : "BACK TO GALLERY"}
         </Link>
         <div>
           <h1 className="text-[32px] desktop:text-[96px] font-mineFont py-6">

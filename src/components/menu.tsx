@@ -46,7 +46,9 @@ const Menu = () => {
         }}
         className={`animate-fadeIn fixed z-50 top-0 right-[0] opacity-[1]
         h-screen w-[100vw] flex flex-col
-      text-textlight text-[16px] font-custom font-[600]`}
+      text-textlight text-[16px] font-custom font-[600] ${
+        language === "ru" ? "font-geoFont" : "font-mineFont"
+      }`}
       >
         <div className="z-10 cursor-pointer text-white flex items-center gap-3 w-full justify-end px-4 desktop:px-14 py-6 mt-2 border-y-[1px] border-white">
           <div
@@ -89,7 +91,7 @@ const Menu = () => {
                 language !== "ru"
                   ? "hover:brightness-[0.8] cursor-pointer font-secondFont"
                   : "cursor-default"
-              }`}
+              }${language === "ru" ? "font-geoFont" : "font-mineFont"}`}
               onClick={() => changeLanguage("ru")}
               style={{
                 opacity: language === "ru" ? 1 : 0.5,
@@ -105,9 +107,6 @@ const Menu = () => {
             className="flex items-center gap-2 hover:text-[#135A68]"
             onClick={() => setOpenMenu(false)}
           >
-            {!isMobile && (
-              <h3 className="font-secondFont text-[20px]">CLOSE</h3>
-            )}
             <TfiClose size={32} />
           </div>
         </div>
@@ -116,7 +115,9 @@ const Menu = () => {
             <div className="w-1/2 p-8 pl-16 relative">
               <h1
                 style={{ lineHeight: "72px" }}
-                className="font-mineFont text-[90px] text-white w-1/2"
+                className={`${
+                  language === "ru" ? "font-geoFont" : "font-mineFont"
+                } text-[90px] text-white w-1/2`}
               >
                 {language === "ru"
                   ? "ДАВАЙТЕ ТВОРИТЬ"
@@ -125,7 +126,11 @@ const Menu = () => {
                   : "LET'S CREATE"}
               </h1>
               <div className="mt-6 border-y-[1px] border-white w-1/2 font-secondFont p-4 flex flex-col gap-4">
-                <h3 className="mb-2 text-xl font-secondFont">
+                <h3
+                  className={`mb-2 text-xl ${
+                    language === "ru" ? "font-geoFont" : "font-secondFont"
+                  }`}
+                >
                   TBILISI, GEORGIA
                 </h3>
                 <a
@@ -249,7 +254,9 @@ const Menu = () => {
                           pathname === item.path ? theme.active : theme.text,
                         transition: "ease-in 300ms",
                       }}
-                      className={`font-secondFont text-2xl desktop:text-3xl  cursor-pointer hover:opacity-[1] ${
+                      className={`${
+                        language === "ru" ? "font-geoFont" : "font-secondFont"
+                      } text-2xl desktop:text-3xl  cursor-pointer hover:opacity-[1] ${
                         pathname === item.path ? "opacity-1" : "opacity-[0.5]"
                       }`}
                     >

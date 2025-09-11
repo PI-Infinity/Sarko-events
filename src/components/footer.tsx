@@ -155,7 +155,9 @@ export const Footer = () => {
                   textDecoration: "underline",
                   fontSize: "12px",
                 }}
-                className={`cursor-pointer`}
+                className={`cursor-pointer ${
+                  language === "ru" ? "font-geoFont" : "font-secondFont"
+                }`}
               >
                 {activeLanguage?.terms_rules_title}
               </h6>
@@ -169,7 +171,7 @@ export const Footer = () => {
                   fontSize: "12px",
                 }}
                 className={`cursor-pointer hover:opacity-[1] opacity-1 
-                `}
+                ${language === "ru" ? "font-geoFont" : "font-secondFont"}`}
               >
                 {activeLanguage?.privacy_policy}
               </h6>
@@ -214,7 +216,7 @@ export const Footer = () => {
               language !== "en"
                 ? "hover:brightness-[0.8] cursor-pointer"
                 : "cursor-default"
-            }`}
+            }${language === "ru" ? "font-geoFont" : "font-mineFont"}`}
             onClick={() => changeLanguage("ru")}
             style={{
               opacity: language === "ru" ? 1 : 0.5,

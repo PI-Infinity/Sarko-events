@@ -288,7 +288,9 @@ function Main() {
 
   return (
     <div
-      className="mt-20 p-6 px-4 text-white desktop:px-12 flex-col"
+      className={`${
+        language === "ru" ? "font-geoFont" : "font-secondFont"
+      } mt-20 p-6 px-4 text-white desktop:px-12 flex-col`}
       style={{ display: loading ? "none" : "flex" }}
     >
       <div className="max-w-4xl text-white">

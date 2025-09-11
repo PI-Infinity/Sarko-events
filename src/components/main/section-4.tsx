@@ -47,7 +47,7 @@ export const Section4 = ({ sY }: any) => {
               />
             </defs>
             <text
-              className="font-mineFont"
+              className={language === "ru" ? "font-geoFont" : "font-mineFont"}
               fill="white"
               fontSize={language === "ru" ? "64" : "90"}
               fontWeight="bold"
@@ -75,7 +75,11 @@ export const Section4 = ({ sY }: any) => {
             </text>
           </svg>
         </motion.div>
-        <p className="text-[25px] desktop:text-[16px] absolute w-[540px] text-center top-[300px] desktop:top-[365px]">
+        <p
+          className={`text-[25px] desktop:text-[16px] absolute w-[540px] text-center top-[300px] desktop:top-[365px] ${
+            language === "ru" ? "font-geoFont" : "font-secondFont"
+          }`}
+        >
           {language === "ru"
             ? `"В SARKO “БЕЗ ГРАНИЦ” — ЭТО НЕ ПРОСТО СЛОВА. ЭТО НАША ВОВЛЕЧЕННОСТЬ 24/7. ЭТО КОГДА МЫ МЕЧТАЕМ ВМЕСТЕ С ВАМИ, ЖИВЁМ В ДЕТАЛЯХ И ДОБИВАЕМСЯ СОВЕРШЕНСТВА.
 НИКАКИХ ПЕРЕРЫВОВ. НИКАКИХ ОПРАВДАНИЙ. ТОЛЬКО РЕЗУЛЬТАТ."`

@@ -7,7 +7,9 @@ export const Section7 = ({ sY }: any) => {
   const { isMobile, language } = useAppContext();
   return (
     <div
-      className="font-mineFont text-white text-center w-full flex flex-col items-center gap-16 desktop:gap-24"
+      className={`${
+        language === "ru" ? "font-geoFont" : "font-mineFont"
+      } text-white text-center w-full flex flex-col items-center gap-16 desktop:gap-24`}
       style={{ position: "absolute", top: isMobile ? "5250px" : "8550px" }}
     >
       <p

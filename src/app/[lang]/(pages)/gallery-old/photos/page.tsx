@@ -28,8 +28,18 @@ const Photos = () => {
       style={{ color: theme.text, display: loading ? "none" : "flex" }}
     >
       <div className="w-full mt-6 px-[5%] desktop:px-[0] desktop:mt-12 flex flex-col gap-2 desktop:gap-12">
-        <Link href={`/${language}/gallery`} className="flex items-center gap-2">
-          <MdArrowBack size={32} /> BACK TO GALLERY
+        <Link
+          href={`/${language}/gallery`}
+          className={`flex items-center gap-2 ${
+            language === "ru" ? "font-geoFont" : "font-secondFont"
+          }`}
+        >
+          <MdArrowBack size={32} />{" "}
+          {language === "ka"
+            ? "გალერეაში დაბრუნება"
+            : language === "ru"
+            ? "ВЕРНУТЬСЯ В ГАЛЕРЕЮ"
+            : "BACK TO GALLERY"}
         </Link>
         <div className="w-full flex flex-col">
           {menu?.map((item: any, index: number) => {

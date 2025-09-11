@@ -74,7 +74,11 @@ export const Section6 = ({ sY }: any) => {
           />
         </motion.div>
       </div>
-      <div className="relative my-4 desktop:my-0 bottom-[50px] desktop:bottom-0 w-[90%] desktop:w-[1100px] text-[32px] desktop:text-[124px] text-center font-mineFont  text-white">
+      <div
+        className={`${
+          language === "ru" ? "font-geoFont" : "font-mineFont"
+        } relative my-4 desktop:my-0 bottom-[50px] desktop:bottom-0 w-[90%] desktop:w-[1100px] text-[32px] desktop:text-[124px] text-center   text-white`}
+      >
         <motion.p
           style={{
             position: "relative",
@@ -140,7 +144,11 @@ export const Section6 = ({ sY }: any) => {
           href={`/${language}/gallery`}
           className="hover:text-[#135A68] text-white p-2 z-10 flex items-center gap-3 "
         >
-          <p className="text-[16px] tracking-wide">
+          <p
+            className={`text-[16px] tracking-wide ${
+              language === "ru" ? "font-geoFont" : "font-secondFont"
+            }`}
+          >
             {language === "ru"
               ? "ВДОХНОВИТЬСЯ НАШИМИ ПРОЕКТАМИ"
               : language === "ka"

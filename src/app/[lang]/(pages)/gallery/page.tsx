@@ -14,11 +14,26 @@ const Photos = () => {
   }, []);
 
   const menu = [
-    { id: "weddings", title: "WEDDINGS" },
-    { id: "corporates", title: "CORPORATES" },
-    { id: "teambuildings", title: "TEAMBUILDINGS" },
-    { id: "presentations", title: "PRESENTATIONS" },
-    { id: "videos", title: "VIDEOS" },
+    { id: "weddings", en: "WEDDINGS", ru: "СВАДЬБЫ", ka: "ქორწილები" },
+    {
+      id: "corporates",
+      en: "CORPORATES",
+      ru: "КОРПОРАТИВЫ",
+      ka: "კორპორაიტულები",
+    },
+    {
+      id: "teambuildings",
+      en: "TEAMBUILDINGS",
+      ru: "ТИМБИЛДИНГИ",
+      ka: "თიმბილდინგი",
+    },
+    {
+      id: "presentations",
+      en: "PRESENTATIONS",
+      ru: "ПРЕЗЕНТАЦИИ",
+      ka: "პრეზენტაციები",
+    },
+    { id: "videos", en: "VIDEOS", ru: "ВИДЕО", ka: "ვიდეოები" },
   ];
 
   const [hovered, setHovered]: any = useState(null);
@@ -43,11 +58,17 @@ const Photos = () => {
                 }
                 key={index}
                 style={{ transition: "ease-in 200ms" }}
-                className="hover:brightness-[0.7] flex items-center justify-between font-mineFont text-[32px] desktop:text-[72px] border-b-[1px] border-white cursor-pointer py-6 desktop:py-0"
+                className={`${
+                  language === "ru" ? "font-geoFont" : "font-secondFont"
+                } hover:brightness-[0.7] flex items-center justify-between font-mineFont text-[32px] desktop:text-[72px] border-b-[1px] border-white cursor-pointer py-6 desktop:py-0`}
                 onMouseEnter={() => setHovered(index)}
                 onMouseLeave={() => setHovered(null)}
               >
-                {item.title}
+                {language === "ka"
+                  ? item.ka
+                  : language === "ru"
+                  ? item.ru
+                  : item.en}
                 {!isMobile && hovered === index && (
                   <MdArrowForward
                     className="animate-fadeIn"

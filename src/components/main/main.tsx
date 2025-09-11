@@ -118,7 +118,7 @@ const Main = () => {
       >
         <p
           className="text-[16px] desktop:text-[21px] tracking-wide"
-          // style={{ fontFamily: language === "ka" ? "geo-font" : "inherit" }}
+          style={{ fontFamily: language === "ru" ? "ru-font" : "inherit" }}
         >
           {language === "ru"
             ? "ПРОДОЛЖАЙТЕ ПРОКРУТИТЬ"
@@ -162,7 +162,11 @@ const Main = () => {
           }}
           className="right-8 text-white p-2 z-10 flex items-center gap-3"
         >
-          <p className="text-[21px] tracking-wide">
+          <p
+            className={`text-[21px] tracking-wide ${
+              language === "ru" ? "font-geoFont" : "font-secondFont"
+            }`}
+          >
             {language === "ru"
               ? "ВДОХНОВИТЬСЯ НАШИМИ ПРОЕКТАМИ"
               : language === "ka"
