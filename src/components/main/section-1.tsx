@@ -106,8 +106,10 @@ export const Section1 = ({ sY }: any) => {
           top: allInOffset,
         }}
         className={`${
-          language === "ru" ? "font-geoFont" : "font-mineFont"
-        } font-[600 text-[48px] desktop:text-[160px] tracking-normal text-white`}
+          language === "ru"
+            ? "font-geoFont text-[48px] desktop:text-[140px]"
+            : "font-mineFont text-[48px] desktop:text-[160px]"
+        } font-[600   tracking-normal text-white`}
       >
         {language === "ru"
           ? "БЕЗ ГРАНИЦ"

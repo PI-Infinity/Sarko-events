@@ -8,30 +8,25 @@ export const Section7 = ({ sY }: any) => {
   return (
     <div
       className={`${
-        language === "ru" ? "font-geoFont" : "font-mineFont"
+        language === "ru"
+          ? "font-geoFont text-[32px] desktop:text-[90px]"
+          : "font-mineFont text-[32px] desktop:text-[108px]"
       } text-white text-center w-full flex flex-col items-center gap-16 desktop:gap-24`}
       style={{ position: "absolute", top: isMobile ? "5250px" : "8550px" }}
     >
       <p
-        className="text-[32px] desktop:text-[108px] w-[90%] desktop:w-[800px]"
+        className=" w-[90%] desktop:w-[800px]"
         style={{ lineHeight: isMobile ? "40px" : "96px" }}
-      >
-        {language === "ru"
-          ? `SARKO, ЭТО НЕ ДЛЯ НАС`
-          : language === "ka"
-          ? "ჩვენ ვქმნით თქვენთვის "
-          : "WE DON’T DESIGN FOR SARKO"}
-      </p>
-      <p
-        style={{ lineHeight: isMobile ? "40px" : "96px" }}
-        className="w-[70%] text-[32px] desktop:text-[108px]"
-      >
-        {language === "ru"
-          ? `SARKO, ЭТО ПРО ВАС!`
-          : language === "ka"
-          ? "და არა ჩვენთვის."
-          : "WE DESIGN FOR YOU"}
-      </p>
+        dangerouslySetInnerHTML={{
+          __html:
+            language === "ru"
+              ? `SARKO, ЭТО НЕ ДЛЯ НАС<br>
+         ЭТО ПРО ВАС!`
+              : language === "ka"
+              ? "ჩვენ ვქმნით თქვენთვის<br>და არა ჩვენთვის."
+              : "WE DON’T DESIGN FOR SARKO<br>WE DESIGN FOR YOU",
+        }}
+      />
     </div>
   );
 };

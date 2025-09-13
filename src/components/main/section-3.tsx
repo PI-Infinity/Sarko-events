@@ -58,15 +58,20 @@ export const Section3 = () => {
       </div>
       <p
         className={`text-white w-[90%] desktop:w-[600px] text-center ${
-          language === "ru" ? "font-geoFont" : "font-secondFont"
+          language === "ru" ? "font-geoFont text-md" : "font-secondFont"
         }`}
-      >
-        {language === "ru"
-          ? "МЫ СОЗДАЁМ НЕ ПРОСТО СОБЫТИЯ — МЫ СОЗДАЁМ ЛЕГЕНДЫ. ВАША МЕЧТА — НАША ЗАБОТА. ВАШ СТИЛЬ — НАША ЭСТЕТИКА. ВАШЕ ДОВЕРИЕ — НАША ОТВЕТСТВЕННОСТЬ."
-          : language === "ka"
-          ? "თქვენი სტილი და ესტეთიკა — ჩვენი საზრუნავია. თქვენი ნდობა — ჩვენი პასუხისმგებლობაა."
-          : "We don’t just create events — we craft moments that outlast time itself. Our work elevates prestige, amplifies presence, and builds the kind of trust only possible through relentless overdelivery. At Sarko, the mission is clear: To bring to life what others can only imagine."}
-      </p>
+        dangerouslySetInnerHTML={{
+          __html:
+            language === "ru"
+              ? `МЫ СОЗДАЁМ НЕ ПРОСТО СОБЫТИЯ — МЫ СОЗДАЁМ ЛЕГЕНДЫ.<br>
+          ВАША МЕЧТА — НАША ЗАБОТА.<br>
+          ВАШ СТИЛЬ — НАША ЭСТЕТИКА.<br>
+          ВАШЕ ДОВЕРИЕ — НАША ОТВЕТСТВЕННОСТЬ.`
+              : language === "ka"
+              ? "თქვენი სტილი და ესტეთიკა — ჩვენი საზრუნავია. თქვენი ნდობა — ჩვენი პასუხისმგებლობაა."
+              : "We don’t just create events — we craft moments that outlast time itself. Our work elevates prestige, amplifies presence, and builds the kind of trust only possible through relentless overdelivery. At Sarko, the mission is clear: To bring to life what others can only imagine.",
+        }}
+      />
     </div>
   );
 };

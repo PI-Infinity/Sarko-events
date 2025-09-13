@@ -16,13 +16,17 @@ export const Section9 = ({ sY }: any) => {
           className={`${
             language === "ru" ? "font-geoFont" : "font-secondFont"
           } text-[18px] desktop:text-xl text-white  desktop:mb-12 text-center`}
-        >
-          {language === "ru"
-            ? `ГОТОВЫ ВОПЛОТИТЬ НЕЧТО ПО-НАСТОЯЩЕМУ УНИКАЛЬНОЕ?`
-            : language === "ka"
-            ? "მზად ხართ თქვენი ოცნება დაუვიწყარ მოგონებად აქციოთ?"
-            : "Ready for a vision that dares to be different?"}
-        </span>
+          dangerouslySetInnerHTML={{
+            __html:
+              language === "ru"
+                ? `ХОТИТЕ СОЗДАТЬ НЕЧТО ПО-НАСТОЯЩЕМУ УНИКАЛЬНОЕ?<br>
+              `
+                : language === "ka"
+                ? "მზად ხართ თქვენი ოცნება დაუვიწყარ მოგონებად აქციოთ?"
+                : "Ready for a vision that dares to be different?",
+          }}
+        />
+
         <div
           style={{ transition: "ease-in 300ms" }}
           className="flex flex-col items-center justify-center hover:text-white cursor-pointer"
@@ -39,21 +43,25 @@ export const Section9 = ({ sY }: any) => {
               : language === "ka"
               ? "დაიწყეთ შექმნა"
               : "LET'S CREATE"}{" "}
-            .
+            !
           </Link>
 
           <div className="w-full h-[1px]  desktop:mt-4" />
           <span
+            style={{ textAlign: "center" }}
             className={`text-xl ${
               language === "ru" ? "font-geoFont" : "font-seondFont"
             } desktop:mt-4`}
-          >
-            {language === "ru"
-              ? "СДЕЛАЙТЕ ШАГ НАВСТРЕЧУ ИСТОРИИ"
-              : language === "ka"
-              ? "დაიწყეთ თქვენი მოგზაურობა."
-              : "BEGIN YOUR JOURNAY"}
-          </span>
+            dangerouslySetInnerHTML={{
+              __html:
+                language === "ru"
+                  ? `СДЕЛАЙТЕ ШАГ НАВСТРЕЧУ ИСТОРИИ<br>И МЫ ВОПЛОТИМ ЕЁ В ЖИЗНЬ!
+              `
+                  : language === "ka"
+                  ? "დაიწყეთ თქვენი მოგზაურობა"
+                  : "BEGIN YOUR JOURNAY",
+            }}
+          />
         </div>
       </div>
     </div>

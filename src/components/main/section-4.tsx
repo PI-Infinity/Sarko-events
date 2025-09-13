@@ -76,21 +76,24 @@ export const Section4 = ({ sY }: any) => {
           </svg>
         </motion.div>
         <p
-          className={`text-[25px] desktop:text-[16px] absolute w-[540px] text-center top-[300px] desktop:top-[365px] ${
+          className={`text-[25px] desktop:text-[18px] absolute w-[540px] text-center top-[300px] desktop:top-[365px] ${
             language === "ru" ? "font-geoFont" : "font-secondFont"
           }`}
-        >
-          {language === "ru"
-            ? `"В SARKO “БЕЗ ГРАНИЦ” — ЭТО НЕ ПРОСТО СЛОВА. ЭТО НАША ВОВЛЕЧЕННОСТЬ 24/7. ЭТО КОГДА МЫ МЕЧТАЕМ ВМЕСТЕ С ВАМИ, ЖИВЁМ В ДЕТАЛЯХ И ДОБИВАЕМСЯ СОВЕРШЕНСТВА.
-НИКАКИХ ПЕРЕРЫВОВ. НИКАКИХ ОПРАВДАНИЙ. ТОЛЬКО РЕЗУЛЬТАТ."`
-            : language === "ka"
-            ? "Sarko-ში საზღვრების გარეშე ნიშნავს 24/7 ერთგულებას, გაზიარებულ ოცნებებსა და შეუფერხებელ შესრულებას. ჩვენ არ ვჩერდებით, სანამ ყველაფერი სრულყოფილი არ იქნება."
-            : `At Sarko, No Limits means more than pushing boundaries — it means
+          dangerouslySetInnerHTML={{
+            __html:
+              language === "ru"
+                ? `В Sarko, «без границ» — это не слова.<br>
+Это вовлечённость 24/7, <br>совместные мечты и стремление к совершенству.
+<br> Без пауз. Без оправданий. Только результат.`
+                : language === "ka"
+                ? "Sarko-ში საზღვრების გარეშე ნიშნავს 24/7 ერთგულებას, გაზიარებულ ოცნებებსა და შეუფერხებელ შესრულებას. ჩვენ არ ვჩერდებით, სანამ ყველაფერი სრულყოფილი არ იქნება."
+                : `At Sarko, No Limits means more than pushing boundaries — it means
           being available 24/7, dreaming with you, and delivering with
           relentless focus. We work around the clock, live inside the details,
           and stay obsessed with getting it right. No breaks. No excuses. Just
-          results.`}
-        </p>
+          results.`,
+          }}
+        />
       </div>
       {/* {isMobile && (
         <Link

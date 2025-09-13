@@ -62,9 +62,9 @@ const Menu = () => {
                 fontSize: "14px",
                 color: theme.text,
               }}
-              className={` ${
+              className={`font-secondFont ${
                 language !== "en"
-                  ? "hover:brightness-[0.8] cursor-pointer font-secondFont"
+                  ? "hover:brightness-[0.8] cursor-pointer"
                   : "cursor-default"
               }`}
             >

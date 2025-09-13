@@ -118,10 +118,10 @@ const Main = () => {
       >
         <p
           className="text-[16px] desktop:text-[21px] tracking-wide"
-          style={{ fontFamily: language === "ru" ? "ru-font" : "inherit" }}
+          style={{ fontFamily: language === "ru" ? "geo-font" : "inherit" }}
         >
           {language === "ru"
-            ? "ПРОДОЛЖАЙТЕ ПРОКРУТИТЬ"
+            ? "ПРОДОЛЖАЙТЕ ЛИСТАТЬ"
             : language === "ka"
             ? "განაგრძე სქროლვა"
             : "KEEP SCROLLING"}
@@ -168,7 +168,7 @@ const Main = () => {
             }`}
           >
             {language === "ru"
-              ? "ВДОХНОВИТЬСЯ НАШИМИ ПРОЕКТАМИ"
+              ? "ВДОХНОВЛЯЙТЕС НАШИМИ ПРОЕКТАМИ"
               : language === "ka"
               ? "იხილეთ  ჩვენი ნამუშევრები"
               : "SEE OUR WORK"}

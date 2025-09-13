@@ -10,7 +10,6 @@ import Img from "./image";
 const Header = () => {
   const { setOpenMenu, language, theme, isMobile } = useAppContext();
   const pathname = usePathname();
-  console.log(language);
   return (
     <>
       <ProgressBar

@@ -20,39 +20,42 @@ export const Section5 = ({ sY }: any) => {
   return (
     <div
       className="w-full flex flex-col h-[800px] items-center gap-24 justify-center"
-      style={{ position: "absolute", top: isMobile ? "3480px" : "5510px" }}
+      style={{
+        position: "absolute",
+        top: isMobile ? "3480px" : "5510px",
+        textAlign: "center",
+      }}
     >
       <div
         className={`flex flex-col text-white items-center gap-6 text-[32px] desktop:text-[108px] ${
-          language === "ru" ? "font-geoFont" : "font-mineFont"
+          language === "ru"
+            ? "font-geoFont text-[32px] desktop:text-[90px]"
+            : "font-mineFont font-mineFont text-[32px] desktop:text-[108px]"
         }`}
-        style={{ lineHeight: isMobile ? "24px" : "80px" }}
       >
-        <p>
-          {language === "ru"
-            ? `ДЛЯ ТЕХ`
-            : language === "ka"
-            ? "ვისაც"
-            : `FOR THOSE`}
-        </p>
-        <p>
-          {language === "ru"
-            ? `КТО ХОЧЕТ ПРЕВРАТИТЬ`
-            : language === "ka"
-            ? "სურს"
-            : `IN SEARCH OF`}
-        </p>
-        <p>
-          {language === "ru"
-            ? `В НЕЧТО ИДЕЮ`
-            : language === "ka"
-            ? "დაუვიწყარი"
-            : `UNFORGETTABLE`}
-        </p>
+        <p
+          style={{ lineHeight: isMobile ? "36px" : "80px" }}
+          dangerouslySetInnerHTML={{
+            __html:
+              language === "ru"
+                ? `ДЛЯ ТЕХ<br>
+КТО ХОЧЕТ ПРЕВРАТИТЬ<br>
+ИДЕЮ В НЕЧТО`
+                : language === "ka"
+                ? `ვისაც<br>
+სურს<br>
+დაუვიწყარი`
+                : `FOR THOSE<br>
+IN SEARCH OF<br>
+UNFORGETTABLE`,
+          }}
+        />
       </div>
       <div
-        className={`flex text-white items-center gap-2 desktop:gap-6 text-[32px] desktop:text-[108px] ${
-          language === "ru" ? "font-geoFont" : "font-mineFont"
+        className={`flex text-white items-center gap-2 desktop:gap-6  ${
+          language === "ru"
+            ? "font-geoFont text-[32px] desktop:text-[90px]"
+            : "font-mineFont text-[32px] desktop:text-[108px]"
         }`}
         style={{ lineHeight: isMobile ? "24px" : "80px" }}
       >
@@ -84,13 +87,15 @@ export const Section5 = ({ sY }: any) => {
       </div>
       <p
         className={`${
-          language === "ru" ? "font-geoFont" : "font-secondFont"
-        } text-white text-[16px] w-[90%] desktop:w-[600px] text-center`}
+          language === "ru"
+            ? "font-geoFont text-md"
+            : "font-secondFont text-[16px]"
+        } text-white w-[90%] desktop:w-[600px] text-center`}
       >
         {language === "ru"
-          ? `"ВЫ МЕЧТАЕТЕ — МЫ ВОПЛОЩАЕМ.
-СМЕЛО. ЭЛЕГАНТНО. С ЗАБОТОЙ О КАЖДОЙ ДЕТАЛИ.
-МЫ ПРЕВРАЩАЕМ ИДЕИ В СОБЫТИЯ, КОТОРЫЕ ХОЧЕТСЯ ПЕРЕЖИТЬ СНОВА И СНОВА."`
+          ? `Вы приносите мечту — мы воплощаем её.
+Смело. Элегантно. С заботой о каждой детали.
+Мы превращаем идеи в события, к которым хочется возвращаться снова и снова`
           : language === "ka"
           ? `თქვენ გვიზიარებთ  ხედვას  — ჩვენ გარდავქმნით მას რეალობად. 
 სითამამე, შეუფერხებელი თანამშრომლობა და ნატიფი შესრულება —

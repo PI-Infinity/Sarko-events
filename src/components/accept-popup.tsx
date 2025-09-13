@@ -6,7 +6,7 @@ import { useAppContext } from "@/context/app";
 export default function AcceptPopup() {
   const [showPopup, setShowPopup] = useState(false);
 
-  const { activeLanguage } = useAppContext();
+  const { activeLanguage, language } = useAppContext();
 
   useEffect(() => {
     const hasAccepted = Cookies.get("termsAccepted");
@@ -30,7 +30,7 @@ export default function AcceptPopup() {
           backdropFilter: "blur(30px)",
           WebkitBackdropFilter: "blur(30px)", // ✅ Webkit-prefixed სწორი ფორმა
         }}
-        className="p-6 rounded-lg shadow-lg w-full  text-center animate-slideUp absolute bottom-0"
+        className={`p-6 rounded-lg shadow-lg w-full  text-center animate-slideUp absolute bottom-0 font-secondFont bg-black bg-opacity-30`}
       >
         <h2 className="text-lg font-semibold text-white">
           {activeLanguage?.accept}

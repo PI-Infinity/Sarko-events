@@ -83,7 +83,8 @@ export const Section6 = ({ sY }: any) => {
           style={{
             position: "relative",
             bottom: transfer,
-            lineHeight: isMobile ? "48px" : "100px",
+            lineHeight: isMobile ? (isMobile ? "40px" : "48px") : "100px",
+            fontSize: language === "ru" ? (isMobile ? "32px" : "80px") : "96px",
           }}
         >
           {language === "ru"
@@ -150,7 +151,7 @@ export const Section6 = ({ sY }: any) => {
             }`}
           >
             {language === "ru"
-              ? "ВДОХНОВИТЬСЯ НАШИМИ ПРОЕКТАМИ"
+              ? "ВДОХНОВЛЯЙТЕС НАШИМИ ПРОЕКТАМИ"
               : language === "ka"
               ? "იხილეთ  ჩვენი ნამუშევრები"
               : "SEE OUR WORK"}
