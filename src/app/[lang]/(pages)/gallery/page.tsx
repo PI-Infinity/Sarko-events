@@ -59,7 +59,7 @@ const Photos = () => {
                 key={index}
                 style={{ transition: "ease-in 200ms" }}
                 className={`${
-                  language === "ru" ? "font-geoFont" : "font-secondFont"
+                  language === "ru" ? "font-geoFont" : "font-mineFont"
                 } hover:brightness-[0.7] flex items-center justify-between font-mineFont text-[32px] desktop:text-[72px] border-b-[1px] border-white cursor-pointer py-6 desktop:py-0`}
                 onMouseEnter={() => setHovered(index)}
                 onMouseLeave={() => setHovered(null)}
