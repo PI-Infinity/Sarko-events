@@ -52,7 +52,7 @@ UNFORGETTABLE`,
         />
       </div>
       <div
-        className={`flex text-white items-center gap-2 desktop:gap-6  ${
+        className={`flex text-white justify-center items-center gap-2 desktop:gap-6  ${
           language === "ru"
             ? "font-geoFont text-[32px] desktop:text-[90px]"
             : "font-mineFont text-[32px] desktop:text-[108px]"
@@ -80,10 +80,19 @@ UNFORGETTABLE`,
           <p>{language === "ru" ? `М` : language === "ka" ? "ა" : ""}</p>
         </motion.div>
         <p>{language === "ru" ? `О` : language === "ka" ? "ც" : ""}</p>
-        <motion.div style={{ position: "relative", top: letterP }}>
-          <p>{language === "ru" ? `Е` : language === "ka" ? "ი" : ""}</p>
-        </motion.div>
-        <p>{language === "ru" ? `О` : language === "ka" ? "ა" : ""}</p>
+
+        {language === "ru" ? (
+          <motion.div style={{ position: "relative", top: letterP }}>
+            <p>Е</p>
+          </motion.div>
+        ) : language === "ka" ? (
+          <motion.div style={{ position: "relative", top: letterP }}>
+            <p>ი</p>
+          </motion.div>
+        ) : (
+          ""
+        )}
+        {language === "ru" ? <p>О</p> : language === "ka" ? <p>ა</p> : ""}
       </div>
       <p
         className={`${

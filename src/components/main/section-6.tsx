@@ -83,8 +83,9 @@ export const Section6 = ({ sY }: any) => {
           style={{
             position: "relative",
             bottom: transfer,
-            lineHeight: isMobile ? (isMobile ? "40px" : "48px") : "100px",
-            fontSize: language === "ru" ? (isMobile ? "32px" : "80px") : "96px",
+            lineHeight:
+              language === "ru" ? (isMobile ? "40px" : "48px") : "40px",
+            fontSize: language === "ru" ? (isMobile ? "32px" : "80px") : "32px",
           }}
         >
           {language === "ru"

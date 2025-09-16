@@ -9,7 +9,7 @@ export const Section9 = ({ sY }: any) => {
   return (
     <div
       className={`text-[#1D8AA0] w-full flex flex-col h-[600px] items-center justify-center`}
-      style={{ position: "absolute", top: isMobile ? "5470px" : "9160px" }}
+      style={{ position: "absolute", top: isMobile ? "5400px" : "9160px" }}
     >
       <div className="flex flex-col items-center justify-center h-full">
         <span
