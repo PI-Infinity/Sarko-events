@@ -122,7 +122,7 @@ export const ru = {
   teambuildings: "Тимбилдинги",
   teambuilding: "Тимбилдинг",
   other: "Другое",
-  requestForm: "Форма запроса",
+  requestForm: "ДАВАЙТЕ ТВОРИТЬ",
   fullName: "Полное имя",
   company: "Компания",
   optional: "(Опционально)",

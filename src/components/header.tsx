@@ -32,7 +32,7 @@ const Header = () => {
             transition: "ease-in 300ms",
             animation: "fadeIn 3s ease-out forwards",
           }}
-          className="w-full h-[90px] desktop:h-[105px] flex items-center p-4 desktop:p-0 desktop:px-12 gap-4"
+          className="w-[100%] h-[90px] desktop:h-[105px] flex items-center p-4 desktop:p-0 desktop:px-12 gap-4"
         >
           {pathname && pathname !== `/${language}` && (
             <Link
@@ -62,34 +62,38 @@ const Header = () => {
               </div>
             </Link>
           )}
-
-          <Link
-            href={`/${language}/contact`}
-            style={{
-              transition: "ease-in 300ms",
-            }}
-            className={`whitespace-nowrap overflow-hidden ml-auto cursor-pointer hover:text-[#135A68] text-white font-[300] font-fakt-nor text-[vw] underline underline-offset-[8px] tracking-normal mb-[2px] ${
-              language === "ru" ? "font-geoFont" : "font-secondFont"
-            }`}
-          >
-            {language === "ru"
-              ? "ДАВАЙТЕ ТВОРИТЬ"
-              : language === "ka"
-              ? "დაიწყეთ შექმნა"
-              : "LET'S CREATE"}
-          </Link>
           {language?.length > 0 && (
-            <button
-              style={{
-                transition: "ease-in 300ms",
-              }}
-              onClick={() => setOpenMenu((prev: boolean) => !prev)}
-              className="w-[60px] h-[59px] rounded-full border-[1px] border-white hover:border-[#135A68] flex flex-col gap-[9px] justify-center items-center"
-            >
-              <div className="h-[1px] w-[28px] bg-white" />
-              <div className="h-[1px] w-[28px] bg-white" />
-              <div className="h-[1px] w-[28px] bg-white mb-[2px]" />
-            </button>
+            <div className="flex items-center ml-auto gap-4">
+              {!pathname?.includes("contact") && (
+                <Link
+                  href={`/${language}/contact`}
+                  style={{
+                    transition: "ease-in 300ms",
+                  }}
+                  className={`whitespace-nowrap overflow-hidden cursor-pointer hover:text-[#135A68] text-white font-[300] font-fakt-nor text-[vw] underline underline-offset-[8px] tracking-normal mb-[2px] ${
+                    language === "ru" ? "font-geoFont" : "font-secondFont"
+                  }`}
+                >
+                  {language === "ru"
+                    ? "ДАВАЙТЕ ТВОРИТЬ"
+                    : language === "ka"
+                    ? "დაიწყეთ შექმნა"
+                    : "LET'S CREATE"}
+                </Link>
+              )}
+
+              <button
+                style={{
+                  transition: "ease-in 300ms",
+                }}
+                onClick={() => setOpenMenu((prev: boolean) => !prev)}
+                className="w-[60px] h-[59px] rounded-full border-[1px] border-white hover:border-[#135A68] flex flex-col gap-[9px] justify-center items-center"
+              >
+                <div className="h-[1px] w-[28px] bg-white" />
+                <div className="h-[1px] w-[28px] bg-white" />
+                <div className="h-[1px] w-[28px] bg-white mb-[2px]" />
+              </button>
+            </div>
           )}
         </div>
       </Headroom>

@@ -82,16 +82,13 @@ export const Section4 = ({ sY }: any) => {
           dangerouslySetInnerHTML={{
             __html:
               language === "ru"
-                ? `В Sarko, «без границ» — это не слова.<br>
+                ? `В Sarko, «без границ» — это не просто слова!.<br>
 Это вовлечённость 24/7, <br>совместные мечты и стремление к совершенству.
-<br> Без пауз. Без оправданий. Только результат.`
+<br> Без пауз, Только результат.`
                 : language === "ka"
-                ? "Sarko-ში საზღვრების გარეშე ნიშნავს 24/7 ერთგულებას, გაზიარებულ ოცნებებსა და შეუფერხებელ შესრულებას. ჩვენ არ ვჩერდებით, სანამ ყველაფერი სრულყოფილი არ იქნება."
-                : `At Sarko, No Limits means more than pushing boundaries — it means
-          being available 24/7, dreaming with you, and delivering with
-          relentless focus. We work around the clock, live inside the details,
-          and stay obsessed with getting it right. No breaks. No excuses. Just
-          results.`,
+                ? "Sarko-ში საზღვრების გარეშე ნიშნავს 24/7 ერთგულებას, გაზიარებულ ოცნებებსა და შეუფერხებელ შესრულებას.<br> ჩვენ არ ვჩერდებით სრულყოფილებამდე"
+                : `At Sarko, No Limits means 24/7 dedication,<br> shared dreams, and flawless execution.
+<br>We don’t stop until it’s perfect.`,
           }}
         />
       </div>

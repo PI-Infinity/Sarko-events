@@ -15,12 +15,12 @@ export const Section7 = ({ sY }: any) => {
       style={{ position: "absolute", top: isMobile ? "5250px" : "8550px" }}
     >
       <p
-        className=" w-[90%] desktop:w-[800px]"
+        className=" w-[90%] desktop:w-[1200px] text-center"
         style={{ lineHeight: isMobile ? "40px" : "96px" }}
         dangerouslySetInnerHTML={{
           __html:
             language === "ru"
-              ? `SARKO, ЭТО НЕ ДЛЯ НАС<br>
+              ? `SARKO,ЭТО НЕ ДЛЯ НАС<br>
          ЭТО ПРО ВАС!`
               : language === "ka"
               ? "ჩვენ ვქმნით თქვენთვის<br>და არა ჩვენთვის."

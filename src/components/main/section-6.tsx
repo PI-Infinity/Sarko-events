@@ -19,73 +19,90 @@ export const Section6 = ({ sY }: any) => {
 
   return (
     <div
-      className="w-full flex flex-col items-center gap-24"
+      className="w-full flex flex-col items-center gap-4 w-[100%]"
       style={{ position: "absolute", top: isMobile ? "4380px" : "6700px" }}
     >
-      <div className="w-full flex items-center justify-between relative">
-        <motion.div className="absolute left-[-30px] desktop:mt-[50px] w-[24%] h-[120px] rounded-[10px] desktop:w-[250px] desktop:h-[340px] desktop:rounded-[20px] overflow-hidden">
+      <div className="w-[100%] gap-[2%] flex items-center justify-evenly relative">
+        <motion.div className="desktop:mt-[50px] w-[20%] h-[120px] desktop:h-[340px]">
           <img
             src="/dance.webp"
             alt="Sarko"
             style={{ width: "100%", height: "100%" }}
-            className="grayscale hover:grayscale-0 transition-all duration-300"
+            className="rounded-[10px] 
+desktop:rounded-[20px] relative left-[-10px] grayscale hover:grayscale-0 transition-all duration-300"
           />
         </motion.div>
-        <div className="">
-          <motion.div
-            className="absolute left-[90px] desktop:left-[300px] w-[24%] h-[160px] rounded-[10px] desktop:rounded-3xl desktop:w-[345px] desktop:h-[500px] desktop:rounded-[40px] overflow-hidden"
-            style={{ position: "relative", bottom: transfer }}
-          >
-            <img
-              src="/a.IMG_1664.webp"
-              alt="Sarko"
-              style={{ width: "100%", height: "100%" }}
-              className="grayscale hover:grayscale-0 transition-all duration-300"
-            />
-          </motion.div>
-        </div>
-        <motion.div className="absolute right-[120px] desktop:right-[650px] top-[40px] desktop:top-[200px] w-[22%] h-[120px] rounded-[10px] desktop:w-[270px] desktop:h-[340px] desktop:rounded-[20px] overflow-hidden">
+
+        <motion.div
+          className="w-[26%] h-[140px] desktop:h-[500px] desktop:rounded-[40px]"
+          style={{ position: "relative", bottom: transfer }}
+        >
+          <img
+            src="/a.IMG_1664.webp"
+            alt="Sarko"
+            style={{ width: "100%", height: "100%" }}
+            className="relative left-[-10px] rounded-[10px] desktop:rounded-3xl relative bottom-[40px] grayscale hover:grayscale-0 transition-all duration-300"
+          />
+        </motion.div>
+
+        <motion.div className="right-[120px] desktop:right-[650px] top-[40px] desktop:top-[200px] w-[22%] h-[110px]  desktop:h-[340px]">
           <img
             src="/f.image00033.webp"
             alt="Sarko"
             style={{ width: "100%", height: "100%" }}
-            className="grayscale hover:grayscale-0 transition-all duration-300"
+            className="rounded-[10px]
+desktop:rounded-[20px] relative left-[-10px] top-[20px] grayscale hover:grayscale-0 transition-all duration-300"
           />
         </motion.div>
-        <div className="rounded-[20px] w-[29%] absolute top-[-50px] right-[0] desktop:bottom-[150px]">
+        <div className="rounded-[20px] w-[35%] top-[-50px] right-[0] desktop:bottom-[150px]">
           <motion.div
             style={{ position: "relative", bottom: transfer }}
-            className="w-full h-[60px] mt-[30px] desktop:mt-0 desktop:w-[505px] desktop:h-[345px] rounded-[10px] desktop:rounded-[20px] overflow-hidden"
+            className="w-full h-[80px] mt-[30px] desktop:mt-0 desktop:w-[505px] desktop:h-[345px]"
           >
             <img
               src="/a.230ddebb4d6542d9ff67dd98e812cb97.webp"
               alt="Sarko"
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              className="grayscale hover:grayscale-0 transition-all duration-300"
+              className="rounded-[10px] desktop:rounded-[20px] relative left-[-10px] grayscale hover:grayscale-0 transition-all duration-300"
+            />
+          </motion.div>
+          <motion.div className="w-[90%] top-[70px] desktop:top-[400px] h-[65px] desktop:h-[200px] desktop:w-[300px]">
+            <img
+              src="/2025-07-05-08-42-52-a3agencypro_.webp"
+              alt="Sarko"
+              style={{ width: "100%", height: "100%" }}
+              className="relative top-[10px] desktop:left-[200px] rounded-[10px] desktop:rounded-[24px] grayscale hover:grayscale-0 transition-all duration-300 relative right-[-35px]"
             />
           </motion.div>
         </div>
-        <motion.div className="absolute right-[-10px] desktop:right-[-20px] top-[70px] desktop:top-[400px] w-[24%] h-[65px] rounded-[6px] desktop:rounded-[24px] desktop:w-[270px] desktop:h-[200px] rounded-[10px] desktop:rounded-[40px] overflow-hidden">
-          <img
-            src="/2025-07-05-08-42-52-a3agencypro_.webp"
-            alt="Sarko"
-            style={{ width: "100%", height: "100%" }}
-            className="grayscale hover:grayscale-0 transition-all duration-300"
-          />
-        </motion.div>
       </div>
       <div
         className={`${
           language === "ru" ? "font-geoFont" : "font-mineFont"
-        } relative my-4 desktop:my-0 bottom-[50px] desktop:bottom-0 w-[90%] desktop:w-[1100px] text-[32px] desktop:text-[124px] text-center   text-white`}
+        } relative my-4 desktop:my-0 desktop:bottom-0 w-[100%] desktop:w-[1100px] text-[32px] desktop:text-[124px] text-center flex justify-evenly text-white`}
       >
         <motion.p
           style={{
             position: "relative",
             bottom: transfer,
             lineHeight:
-              language === "ru" ? (isMobile ? "40px" : "48px") : "40px",
-            fontSize: language === "ru" ? (isMobile ? "32px" : "80px") : "32px",
+              language === "ru"
+                ? isMobile
+                  ? "40px"
+                  : "72px"
+                : isMobile
+                ? "40px"
+                : "108px",
+            fontSize:
+              language === "ru"
+                ? isMobile
+                  ? "32px"
+                  : "80px"
+                : isMobile
+                ? "40px"
+                : "108px",
+            width: isMobile ? "auto" : "950px",
+            textAlign: "center",
           }}
         >
           {language === "ru"
@@ -95,47 +112,49 @@ export const Section6 = ({ sY }: any) => {
             : "LED WITH HEART GROUNDED IN GRACE"}
         </motion.p>
       </div>
-      <div className="w-full flex items-center justify-between relative bottom-8">
-        <div className="rounded-[40px] absolute left-[-30px]">
-          <motion.div
-            className="w-[24%] h-[170px] rounded-[20px] desktop:w-[290px] desktop:h-[555px] desktop:rounded-[40px] overflow-hidden"
-            style={{ position: "relative", bottom: transfer }}
-          >
-            <img
-              src="/firework.webp"
-              alt="Sarko"
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              className="grayscale hover:grayscale-0 transition-all duration-300"
-            />
-          </motion.div>
-        </div>
-        <motion.div className="absolute left-[90px] desktop:left-[350px] mb-[30px] desktop:mb-[30px] desktop:mt-[400px] w-[24%] h-[175px] rounded-[16px] desktop:rounded-[20px] desktop:w-[320px] desktop:h-[430px] overflow-hidden desktop:rounded-[40px]">
+      <div className="w-full gap-[2%] flex items-center justify-between relative bottom-4">
+        <motion.div
+          className="w-[24%] h-[190px] desktop:h-[555px] "
+          style={{ position: "relative", bottom: transfer }}
+        >
+          <img
+            src="/firework.webp"
+            alt="Sarko"
+            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            className="rounded-[12px]
+desktop:rounded-[40px] grayscale hover:grayscale-0 transition-all duration-300"
+          />
+        </motion.div>
+
+        <motion.div className="desktop:left-[350px] mb-[30px] desktop:mb-[30px] desktop:mt-[100px] w-[24%] h-[125px] desktop:h-[430px] ">
           <img
             src="/a.b84ba7a596b23080cbd528be171a31f6.webp"
+            alt="Sarko"
+            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            className="rounded-[12px]
+desktop:rounded-[40px] relative bottom-[20px] grayscale hover:grayscale-0 transition-all duration-300"
+          />
+        </motion.div>
+
+        <motion.div
+          className="w-[28%] h-[150px] rounded-[12px] desktop:h-[445px] desktop:rounded-[40px] overflow-hidden"
+          style={{ position: "relative", bottom: transfer }}
+        >
+          <img
+            src="/couple2.webp"
             alt="Sarko"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
             className="grayscale hover:grayscale-0 transition-all duration-300"
           />
         </motion.div>
-        <div className="rounded-[40px] absolute w-[25%] right-[110px] desktop:right-[570px] desktop:mt-[500px]">
-          <motion.div
-            className="w-full h-[150px] rounded-[16px] desktop:w-[335px] desktop:h-[445px] desktop:rounded-[40px] overflow-hidden"
-            style={{ position: "relative", bottom: transfer }}
-          >
-            <img
-              src="/couple2.webp"
-              alt="Sarko"
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              className="grayscale hover:grayscale-0 transition-all duration-300"
-            />
-          </motion.div>
-        </div>
-        <motion.div className="absolute right-[-20px] mb-[50px] desktop:mb-[50px] desktop:right-[70px] desktop:mt-[390px] w-[29%] h-[110px] rounded-[16px] desktop:w-[350px] desktop:h-[365px] overflow-hidden desktop:rounded-[40px]">
+
+        <motion.div className="mb-[50px] desktop:right-[70px]  w-[26%] h-[110px] desktop:h-[365px]">
           <img
             src="/table.webp"
             alt="Sarko"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            className="grayscale hover:grayscale-0 transition-all duration-300"
+            className="rounded-[12px]
+desktop:rounded-[40px] grayscale hover:grayscale-0 transition-all duration-300"
           />
         </motion.div>
       </div>
@@ -152,7 +171,7 @@ export const Section6 = ({ sY }: any) => {
             }`}
           >
             {language === "ru"
-              ? "ВДОХНОВЛЯЙТЕС НАШИМИ ПРОЕКТАМИ"
+              ? "ВДОХНОВИТЕСЬ НАШИМИ ПРОЕКТАМИ"
               : language === "ka"
               ? "იხილეთ  ჩვენი ნამუშევრები"
               : "SEE OUR WORK"}

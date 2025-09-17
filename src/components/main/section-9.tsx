@@ -23,7 +23,7 @@ export const Section9 = ({ sY }: any) => {
               `
                 : language === "ka"
                 ? "მზად ხართ თქვენი ოცნება დაუვიწყარ მოგონებად აქციოთ?"
-                : "Ready for a vision that dares to be different?",
+                : "Ready to turn your dream into an experience?",
           }}
         />
 
@@ -42,7 +42,7 @@ export const Section9 = ({ sY }: any) => {
               ? "ДАВАЙТЕ ТВОРИТЬ"
               : language === "ka"
               ? "დაიწყეთ შექმნა"
-              : "LET'S CREATE"}{" "}
+              : "LET'S CREATE"}
             !
           </Link>
 
@@ -55,7 +55,7 @@ export const Section9 = ({ sY }: any) => {
             dangerouslySetInnerHTML={{
               __html:
                 language === "ru"
-                  ? `СДЕЛАЙТЕ ШАГ НАВСТРЕЧУ ИСТОРИИ<br>И МЫ ВОПЛОТИМ ЕЁ В ЖИЗНЬ!
+                  ? `РАССКАЖИТЕ НАМ О СВОЕЙ МЕЧТЕ<br>И МЫ ВОПЛОТИМ ЕЁ В ЖИЗНЬ!
               `
                   : language === "ka"
                   ? "დაიწყეთ თქვენი მოგზაურობა"

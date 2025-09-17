@@ -104,17 +104,18 @@ export const Section1 = ({ sY }: any) => {
           opacity: allInOpacity,
           scale: allInScale,
           top: allInOffset,
+          lineHeight: language === "ka" ? "64px" : "auto",
         }}
         className={`${
           language === "ru"
             ? "font-geoFont text-[48px] desktop:text-[140px]"
             : "font-mineFont text-[48px] desktop:text-[160px]"
-        } font-[600   tracking-normal text-white`}
+        } font-[600 text-center tracking-normal text-white`}
       >
         {language === "ru"
           ? "БЕЗ ГРАНИЦ"
           : language === "ka"
-          ? "უსაზღვროდ"
+          ? "საზღვრების გარეშე"
           : "NO LIMITS"}
       </motion.h1>
     </div>

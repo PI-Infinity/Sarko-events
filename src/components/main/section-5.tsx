@@ -34,7 +34,13 @@ export const Section5 = ({ sY }: any) => {
         }`}
       >
         <p
-          style={{ lineHeight: isMobile ? "36px" : "80px" }}
+          style={{
+            lineHeight: isMobile
+              ? language === "ka"
+                ? "42px"
+                : "36px"
+              : "96px",
+          }}
           dangerouslySetInnerHTML={{
             __html:
               language === "ru"
@@ -42,7 +48,7 @@ export const Section5 = ({ sY }: any) => {
 КТО ХОЧЕТ ПРЕВРАТИТЬ<br>
 ИДЕЮ В НЕЧТО`
                 : language === "ka"
-                ? `ვისაც<br>
+                ? `ვისაც 
 სურს<br>
 დაუვიწყარი`
                 : `FOR THOSE<br>
@@ -92,27 +98,30 @@ UNFORGETTABLE`,
         ) : (
           ""
         )}
-        {language === "ru" ? <p>О</p> : language === "ka" ? <p>ა</p> : ""}
+        {language === "ru" ? <p></p> : language === "ka" ? <p>ა</p> : ""}
       </div>
       <p
         className={`${
           language === "ru"
-            ? "font-geoFont text-md"
+            ? "font-geoFont text-xl"
             : "font-secondFont text-[16px]"
         } text-white w-[90%] desktop:w-[600px] text-center`}
-      >
-        {language === "ru"
-          ? `Вы приносите мечту — мы воплощаем её.
-Смело. Элегантно. С заботой о каждой детали.
+        dangerouslySetInnerHTML={{
+          __html:
+            language === "ru"
+              ? `Вы приносите мечту — мы воплощаем её.<br>
+Смело, Элегантно, С заботой о каждой детали.
 Мы превращаем идеи в события, к которым хочется возвращаться снова и снова`
-          : language === "ka"
-          ? `თქვენ გვიზიარებთ  ხედვას  — ჩვენ გარდავქმნით მას რეალობად. 
-სითამამე, შეუფერხებელი თანამშრომლობა და ნატიფი შესრულება —
+              : language === "ka"
+              ? `თქვენ გვიზიარებთ  ხედვას, ჩვენ გარდავქმნით მას რეალობად. 
+სითამამე, შეუფერხებელი თანამშრომლობა და ნატიფი შესრულება.<br>
 ჩვენ ვაქცევთ წარმოსახვას ყოვლისმომცველ, დაუვიწყარ მოგონებად.`
-          : ` You bring the vision. Sarko brings the transformation. With bold
-        creativity, deep collaboration, and execution that feels effortless — we
-        turn imagination into immersive, unforgettable events.`}
-      </p>
+              : `You bring the vision — we bring the transformation.
+<br>With bold creativity, seamless collaboration, and effortless execution,
+<br>we turn imagination into immersive, unforgettable experiences.`,
+        }}
+      />
+
       {/* {isMobile && (
         <Link
           style={{ transition: "ease-in 300ms" }}

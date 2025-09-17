@@ -47,29 +47,36 @@ export const Section3 = () => {
             lineHeight: isMobile ? "32px" : "90px",
             position: "relative",
             left: xSarko,
+            textAlign: "center",
+            top: language === "ka" ? "-10px" : "0",
           }}
         >
-          {language === "ru"
-            ? "ВНЕ ВРЕМЕНИ"
-            : language === "ka"
-            ? "რომლებიც ისტორიად რჩება"
-            : "OUTLAST TIME"}
+          <span style={{ lineHeight: language === "ka" ? "40px" : "auto" }}>
+            {language === "ru"
+              ? "ВНЕ ВРЕМЕНИ"
+              : language === "ka"
+              ? "რომლებიც ისტორიად რჩება"
+              : "BECOMES LEGACY"}
+          </span>
         </motion.div>
       </div>
       <p
         className={`text-white w-[90%] desktop:w-[600px] text-center ${
-          language === "ru" ? "font-geoFont text-md" : "font-secondFont"
+          language === "ru" ? "font-geoFont text-xl" : "font-secondFont"
         }`}
         dangerouslySetInnerHTML={{
           __html:
             language === "ru"
-              ? `МЫ СОЗДАЁМ НЕ ПРОСТО СОБЫТИЯ — МЫ СОЗДАЁМ ЛЕГЕНДЫ.<br>
-          ВАША МЕЧТА — НАША ЗАБОТА.<br>
-          ВАШ СТИЛЬ — НАША ЭСТЕТИКА.<br>
-          ВАШЕ ДОВЕРИЕ — НАША ОТВЕТСТВЕННОСТЬ.`
+              ? `
+Мы создаём не просто события — Мы создаём легенды<br>
+          Ваша мечта — Наша забота <br>
+          Ваш стиль  — Наша эстетика<br>
+          Ваше доверие  — Наша ответственность`
               : language === "ka"
-              ? "თქვენი სტილი და ესტეთიკა — ჩვენი საზრუნავია. თქვენი ნდობა — ჩვენი პასუხისმგებლობაა."
-              : "We don’t just create events — we craft moments that outlast time itself. Our work elevates prestige, amplifies presence, and builds the kind of trust only possible through relentless overdelivery. At Sarko, the mission is clear: To bring to life what others can only imagine.",
+              ? "თქვენი სტილი და ესტეთიკა<br> ჩვენი საზრუნავია. <br>თქვენი ნდობა ჩვენი პასუხისმგებლობაა."
+              : `We don’t just create events — we create legacies.<br>
+Prestige, presence, and trust, delivered with precision.
+<br>At Sarko, we bring the unimaginable to life.`,
         }}
       />
     </div>

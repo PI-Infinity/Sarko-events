@@ -8,7 +8,7 @@ import SimpleSnackbar from "@/components/snackbar";
 import axios from "axios";
 
 const RequestForm = () => {
-  const { theme, activeLanguage, setAlert } = useAppContext();
+  const { theme, activeLanguage, setAlert, language } = useAppContext();
 
   const [loading, setLoading] = useState(false);
 
@@ -96,7 +96,9 @@ const RequestForm = () => {
     <div className="flex flex-col gap-2 w-full desktop:w-[720px] desktop:py-8">
       <h3
         style={{ color: theme.text }}
-        className="font-bold text-[24px] desktop:my-4"
+        className={`font-bold text-[24px] desktop:my-4 ${
+          language === "ru" ? "font-geoFont" : "font-secondaryFont"
+        }`}
       >
         {activeLanguage.requestForm}
       </h3>
