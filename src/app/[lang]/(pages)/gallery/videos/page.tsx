@@ -15,8 +15,8 @@ const Videos = () => {
   const videos = [
     { id: "1100285609", orientation: "horizontal", title: "" },
     { id: "1100277440", orientation: "horizontal", title: "" },
-    { id: "1100276059", orientation: "horizontal", title: "" },
     { id: "1101516169", orientation: "horizontal", title: "" },
+    { id: "1100276059", orientation: "horizontal", title: "" },
     { id: "1101515667", orientation: "vertical", title: "" },
     { id: "1123182265", orientation: "vertical", title: "" },
     { id: "1123181909", orientation: "vertical", title: "" },
@@ -82,7 +82,7 @@ const Videos = () => {
           </div>
         )}
         {videos
-          ?.filter((i: any) => i.orientation === "horizontal")
+          ?.filter((i: any) => i.orientation === "vertical")
           ?.map((item: any, index: number) => (
             <div
               key={index}
@@ -94,7 +94,10 @@ const Videos = () => {
             >
               {item?.id?.length > 0 && (
                 <div
-                  className={`relative aspect-video overflow-hidden
+                  style={{
+                    height: 800,
+                  }}
+                  className={`relative overflow-hidden
             `}
                 >
                   <iframe
@@ -112,7 +115,7 @@ const Videos = () => {
             </div>
           ))}
         {videos
-          ?.filter((i: any) => i.orientation === "vertical")
+          ?.filter((i: any) => i.orientation === "horizontal")
           ?.map((item: any, index: number) => (
             <div
               key={index}
@@ -124,10 +127,7 @@ const Videos = () => {
             >
               {item?.id?.length > 0 && (
                 <div
-                  style={{
-                    height: 800,
-                  }}
-                  className={`relative overflow-hidden
+                  className={`relative aspect-video overflow-hidden
             `}
                 >
                   <iframe

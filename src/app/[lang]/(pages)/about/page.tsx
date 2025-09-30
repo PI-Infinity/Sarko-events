@@ -16,7 +16,7 @@ const AboutUs = () => {
           <div className="flex w-full items-center justify-center gap-4 mb-4">
             <div className="relative overflow-hidden  w-full desktop:w-1/4 h-full flex items-center">
               <Img
-                src={"/we.jpeg"}
+                src={"/we.webp"}
                 alt="img"
                 style={{
                   aspectRatio: 1,
