@@ -1,10 +1,8 @@
 "use client";
-import Button from "@/components/button";
-import Img from "@/components/image";
 import { useAppContext } from "@/context/app";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { MdArrowBack, MdCalendarMonth } from "react-icons/md";
+import { MdArrowBack } from "react-icons/md";
 import { MoonLoader } from "react-spinners";
 
 const Videos = () => {

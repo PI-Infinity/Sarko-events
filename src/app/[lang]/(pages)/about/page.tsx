@@ -74,22 +74,22 @@ export default AboutUs;
 const texts = [
   {
     title: {
-      en: "100+ Successful Events",
-      ru: "100+ успешных мероприятий",
-      ka: "100+ წარმატებული ღონისძიება",
+      en: "Successful Events",
+      ru: "Успешные мероприятия",
+      ka: "წარმატებული ღონისძიებები",
     },
     description: {
-      en: "Our team, which has been operating for over 8 years, will help you bring your dreams to life. Over 100 successfully held events are proof of our professionalism and experience.",
-      ru: "Наша команда, работающая более 8 лет, поможет вам воплотить ваши мечты в реальность. Более 100 успешно проведенных мероприятий подтверждают наш профессионализм и опыт.",
-      ka: "ჩვენი გუნდი, რომელიც ოპერირებს უკვე 8 წელიწადზე მეტი დროის განმავლობაში, დაგეხმარებათ თქვენი ოცნებების განხორციელებაში. 100-ზე მეტი წარმატებით ჩატარებული ღონისძიება ჩვენი პროფესიონალიზმისა და გამოცდილების დასტურია.",
+      en: "Our team, which has been operating in Georgia and abroad for years, will help you make your dreams come true. Many successfully held events are proof of our professionalism and experience.",
+      ru: "Наша команда, много лет работающая в Грузии и за рубежом, поможет вам воплотить ваши мечты в реальность. Множество успешно проведенных мероприятий — подтверждение нашего профессионализма и опыта.",
+      ka: "ჩვენი გუნდი, რომელიც წლებია ოპერირებს საქართველოში და ფარგლებს გარეთ, დაგეხმარებათ თქვენი ოცნებების განხორციელებაში. მრავალი წარმატებით ჩატარებული ღონისძიება ჩვენი პროფესიონალიზმისა და გამოცდილების დასტურია.",
     },
     list: [],
   },
   {
     title: {
-      en: "8 Years of Operation in the Global Market",
-      ru: "8 лет работы на мировом рынке",
-      ka: "8 წელი ოპერირება მსოფლიოს ბაზარზე",
+      en: "Operating in the global market",
+      ru: "Работа на мировом рынке",
+      ka: "ოპერირება მსოფლიოს ბაზარზე",
     },
     description: {
       en: "We work in the global market and offer our services in various countries. Our multifaceted experience ensures the best service anywhere in the world.",
