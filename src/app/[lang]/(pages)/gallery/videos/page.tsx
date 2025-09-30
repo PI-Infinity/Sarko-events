@@ -15,11 +15,14 @@ const Videos = () => {
   }, []);
 
   const videos = [
-    { id: "1100285609", title: "" },
-    { id: "1100277440", title: "" },
-    { id: "1100276059", title: "" },
-    // { id: "1101515667", title: "" },
-    { id: "1101516169", title: "" },
+    { id: "1100285609", orientation: "horizontal", title: "" },
+    { id: "1100277440", orientation: "horizontal", title: "" },
+    { id: "1100276059", orientation: "horizontal", title: "" },
+    { id: "1101516169", orientation: "horizontal", title: "" },
+    { id: "1101515667", orientation: "vertical", title: "" },
+    { id: "1123182265", orientation: "vertical", title: "" },
+    { id: "1123181909", orientation: "vertical", title: "" },
+    { id: "1123189566", orientation: "vertical", title: "" },
   ];
 
   const [load, setLoad] = useState(false);
@@ -80,34 +83,69 @@ const Videos = () => {
             <MoonLoader size={24} color="white" />
           </div>
         )}
-        {videos?.map((item: any, index: number) => (
-          <div
-            key={index}
-            style={{ opacity: load ? 1 : 0 }}
-            className={`py-12 desktop:p-12 ${
-              index % 2 === 0 ? "desktop:border-r border-white" : ""
-            }
+        {videos
+          ?.filter((i: any) => i.orientation === "horizontal")
+          ?.map((item: any, index: number) => (
+            <div
+              key={index}
+              style={{ opacity: load ? 1 : 0 }}
+              className={`py-12 desktop:p-12 ${
+                index % 2 === 0 ? "desktop:border-r border-white" : ""
+              }
         ${index < videos.length - 2 ? "border-b border-white" : ""}`}
-          >
-            {item?.id?.length > 0 && (
-              <div
-                className={`relative aspect-video overflow-hidden
+            >
+              {item?.id?.length > 0 && (
+                <div
+                  className={`relative aspect-video overflow-hidden
             `}
-              >
-                <iframe
-                  onLoad={() => {
-                    setTimeout(() => setLoad(true), 500);
+                >
+                  <iframe
+                    onLoad={() => {
+                      setTimeout(() => setLoad(true), 500);
+                    }}
+                    src={`https://player.vimeo.com/video/${item.id}?title=0&byline=0&portrait=0&badge=0`}
+                    className="absolute top-0 left-0 w-full h-full"
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                    allowFullScreen
+                    title={`Vimeo Video ${index}`}
+                  />
+                </div>
+              )}
+            </div>
+          ))}
+        {videos
+          ?.filter((i: any) => i.orientation === "vertical")
+          ?.map((item: any, index: number) => (
+            <div
+              key={index}
+              style={{ opacity: load ? 1 : 0 }}
+              className={`py-12 desktop:p-12 ${
+                index % 2 === 0 ? "desktop:border-r border-white" : ""
+              }
+        ${index < videos.length - 2 ? "border-b border-white" : ""}`}
+            >
+              {item?.id?.length > 0 && (
+                <div
+                  style={{
+                    height: 800,
                   }}
-                  src={`https://player.vimeo.com/video/${item.id}?title=0&byline=0&portrait=0&badge=0`}
-                  className="absolute top-0 left-0 w-full h-full"
-                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-                  allowFullScreen
-                  title={`Vimeo Video ${index}`}
-                />
-              </div>
-            )}
-          </div>
-        ))}
+                  className={`relative overflow-hidden
+            `}
+                >
+                  <iframe
+                    onLoad={() => {
+                      setTimeout(() => setLoad(true), 500);
+                    }}
+                    src={`https://player.vimeo.com/video/${item.id}?title=0&byline=0&portrait=0&badge=0`}
+                    className="absolute top-0 left-0 w-full h-full"
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                    allowFullScreen
+                    title={`Vimeo Video ${index}`}
+                  />
+                </div>
+              )}
+            </div>
+          ))}
       </div>
     </div>
   );
