@@ -47,7 +47,7 @@ desktop:rounded-[20px] relative left-[-10px] grayscale hover:grayscale-0 transit
 
         <motion.div className="right-[120px] desktop:right-[650px] top-[40px] desktop:top-[200px] w-[22%] h-[110px]  desktop:h-[340px]">
           <img
-            src="/f.image00033.webp"
+            src="/we.webp"
             alt="Sarko"
             style={{ width: "100%", height: "100%" }}
             className="rounded-[10px]
